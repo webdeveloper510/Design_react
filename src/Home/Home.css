@@ -1,0 +1,29 @@
+.tabs .nav-link {
+    color: #495057;
+    background-color: #fff !important;
+    border-color: #dee2e6 #dee2e6 #fff !important;
+}
+.tabs .nav-link.active {
+    color: white !important;
+    background-color: #183561 !important;
+    border-color: #183561 #183561 #183561 !important;
+}
+.btn-group {
+    width: 100%;
+}
+.offers {
+    background: #183561bf;
+    padding: 20px;
+    height: 164px;
+    margin: 10px 0px;
+}
+.text-right {
+    text-align: right;
+}
+
+.content {
+    background: #183561bf;
+}
+span.text-yellow {
+    color: orange;
+}
