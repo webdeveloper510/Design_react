@@ -464,7 +464,7 @@ function Home() {
                  <h3 className="my-3">Featured Destinations</h3>
                  <div className="row">
                    <div className="col-md-8">
-                       <img src="Layer4.png" className="img-fluid"/>
+                       <img src="Layer4.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to Greece & cyprus</h3>
                           <p>Amazing deals on all-inclusive holidays with<br/>
@@ -476,7 +476,7 @@ function Home() {
                          </div>
                      </div>
                      <div className="col-md-4">
-                     <img src="Layer3.png" className="img-fluid"/>
+                     <img src="Layer3.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Italy & the lakes</h3>
                       <p>Culture, beauty, beaches & sights<br/>
@@ -491,7 +491,7 @@ function Home() {
                    <div className="row my-4">
                   
                      <div className="col-md-4">
-                     <img src="Layer1.png" className="img-fluid"/>
+                     <img src="Layer1.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Carribean</h3>
                       <p>Shimmering reefs, spicy salsa, reggae,<br/> pirate hideouts to sugar sand beaches</p>
@@ -502,7 +502,7 @@ function Home() {
                      </div>
                       
                        <div className="col-md-8">
-                       <img src="Layer2.png" className="img-fluid"/>
+                       <img src="Layer2.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to the Balearic Islands</h3>
                           <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>

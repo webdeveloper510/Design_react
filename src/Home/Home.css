@@ -37,16 +37,12 @@ i.fa.fa-check-circle{
     padding-right: 9px;
 }
 .overlay1 {
-    position: absolute;
-    width: 41%;
-    margin-top: 13%;
+  
     background: #ffffff85;
     padding: 10px;
 }
 .overlay2.text-right {
-    position: absolute;
-    width: 27%;
-    margin-top: 14.5%;
+    
     background: #ffffff85;
     padding: 10px;
 }
@@ -64,6 +60,7 @@ i.fa.fa-check-circle{
 .holiday {
     background-image: url(../pack2.png);
     height: 248px;
+    padding-top: 48%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -74,6 +71,7 @@ i.fa.fa-check-circle{
 .family {
     background-image: url(../pack.png);
     height: 248px;
+    padding-top: 27%;
     background-repeat: no-repeat;
     background-size: cover;
 }
