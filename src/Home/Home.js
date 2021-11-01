@@ -530,7 +530,7 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="container-fluid">
+                  <div className="container">
                     <h3 className="my-3">Popular Destinations</h3>
                     <div className="row text-center">
                        <div className="col-md-3">
@@ -580,7 +580,7 @@ function Home() {
                       </div>
                   </div>
 
-                  <div className="container-fluid">
+                  <div className="container">
                     <div className="row last-section">
                         <div className="col-md-4 px-5">
                          <h4 className="my-3">Contacting us by Email</h4>

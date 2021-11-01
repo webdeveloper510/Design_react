@@ -2,7 +2,7 @@ import React from 'react'
 import "./Footer.css"
 function Footer() {
     return (
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-md-8">
                     <h4 className="my-3">Legal</h4>
