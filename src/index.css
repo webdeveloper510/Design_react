@@ -19,6 +19,8 @@ a.nav-link {
     color: white;
     background-position: center;
     background-image: url(./home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
 .tabs {padding: 11% 0;}

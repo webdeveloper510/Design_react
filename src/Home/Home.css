@@ -58,18 +58,26 @@ i.fa.fa-check-circle{
     background-image: url(../banner1.png);
     background-position: center top;
     padding-top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .holiday {
     background-image: url(../pack2.png);
     height: 248px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .family {
     background-image: url(../pack.png);
     height: 248px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hotals {
     background-image: url("../home.png");
     padding-top: 66px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .stars {
     margin-top: -15px;
