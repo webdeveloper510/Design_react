@@ -13,10 +13,10 @@ function header() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent text-right">
                 <ul className="navbar-nav  mb-2 m-lg-auto">
                     <li className="nav-item">
-                    <a className="nav-link " aria-current="page" href="#">Travel Alerts</a>
+                    <a className="nav-link " aria-current="page" href="#"><i class="fa fa-exclamation-circle"></i> Travel Alerts</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Shortlist (0)</a>
+                    <a className="nav-link" href="#"><i class="fa fa-heart"></i> Shortlist (0)</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="#">My Bookings</a>

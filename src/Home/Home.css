@@ -20,10 +20,140 @@
 .text-right {
     text-align: right;
 }
+.overlay {
+    background: #ffffffd9;
+    padding: 11px;
+    
+}
+.col-md-4.my-3.d-flex {
+    justify-content: center;
+}
+i.fa.fa-lightbulb-o {
+    font-size: 40px;
+    padding-right: 9px;
+}
+i.fa.fa-check-circle{
+    font-size: 40px;
+    padding-right: 9px;
+}
+.overlay1 {
+    position: absolute;
+    width: 41%;
+    margin-top: 13%;
+    background: #ffffff85;
+    padding: 10px;
+}
+.overlay2.text-right {
+    position: absolute;
+    width: 27%;
+    margin-top: 14.5%;
+    background: #ffffff85;
+    padding: 10px;
+}
+.summer-text {
+    background: #ffffffd6;
+    padding: 34px;
+}
+.summer {
+    background-image: url(../banner1.png);
+    background-position: center top;
+    padding-top: 100px;
+}
+.holiday {
+    background-image: url(../pack2.png);
+    height: 248px;
+}
+.family {
+    background-image: url(../pack.png);
+    height: 248px;
+}
+.hotals {
+    background-image: url("../home.png");
+    padding-top: 66px;
+}
+.stars {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+.stars i {
+    background: #46b946;
+    padding: 3px;
+}
+button.btn.btn-primary {
+    font-size: 15px;
+    background: #01254f !important;
+    border-color: #01254f;
+}
+i.fa.fa-plane {
+    color: #6d75eb;
+    padding-right: 7px;
+}
+span.youro {
+    color: #6a6aeb;
+    font-size: 21px;
+}
 
+.overlay p {
+    font-size: 12px;
+}
 .content {
     background: #183561bf;
 }
 span.text-yellow {
     color: orange;
+}
+
+.over {
+    background: #ffffffc4;
+    margin-top: -13%;
+    position: absolute;
+    margin-left: 16px;
+    padding: 13px;
+}
+.over1 {
+    background: #ffffffc4;
+    margin-top: -15%;
+    position: absolute;
+    margin-left: 16px;
+    padding: 13px;
+}
+.last-section p {
+    color: #033672;
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FFD600;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
 }
