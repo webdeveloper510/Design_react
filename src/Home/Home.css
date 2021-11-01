@@ -67,6 +67,10 @@ i.fa.fa-check-circle{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.lists ul li {
+    display: inline;
+    padding: 14px;
+}
 .family {
     background-image: url(../pack.png);
     height: 248px;
@@ -78,6 +82,19 @@ i.fa.fa-check-circle{
     padding-top: 66px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.Holidays1 {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 80%;
+    position: absolute;
+    display: none;
+}
+
+li.holiday-data:hover .Holidays1 {
+    display: block;
+    z-index: 9;
 }
 .stars {
     margin-top: -15px;

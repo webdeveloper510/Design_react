@@ -8,7 +8,52 @@ function Home() {
                <div className="row">
                    <div className="col"></div>
                    <div className="col-md-12">
+                    
                        <div className="tabs">
+                       <div className="lists">
+                      <ul> 
+                        <li className="holiday-data "> Holidays v  <div className="Holidays1">
+                           <div className="row">
+                             <div className="col-md-4">
+                               <h3>Featured Holidays</h3>
+                               <img src="menu.png" className="img-fluid" height="124px"/>
+                               <ul class="list-group list-group-flush">
+                                  <li class="list-group-item"> Holidays to Greecs & Cyprus &#11166;</li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h3>Holidays </h3>
+                               <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">All-inclusive Holidays  &#11166;</li>
+                                  <li class="list-group-item">Beach Holidays &#11166;</li>
+                                  <li class="list-group-item">Family Holidays &#11166;</li>
+                                  <li class="list-group-item"> Adult Holidays &#11166;</li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h3 style={{opacity:0}}>Holidays </h3>
+                               <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Balaerics Holidays &#11166;</li>
+                                  <li class="list-group-item">Canaries Holidays &#11166;</li>
+                                  <li class="list-group-item">Spain Holidays &#11166;</li>
+                                  <li class="list-group-item"> USA Holidays &#11166;</li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                             <hr/>
+                             <div className="text-right">
+                               <button className="btn btn-light" type="button">ALL HOLIDAYS &#11166;</button>
+                               </div>
+                         </div></li>
+                        <li>flights v</li>
+                        <li>Hostals v</li>
+                        <li>Deals v</li>
+                        <li>Extras v</li>
+                      </ul>
+                       </div>
+                      
                        <ul class="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Package Holidays</button>

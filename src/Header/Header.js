@@ -19,7 +19,7 @@ function header() {
                     <a className="nav-link" href="#"><i class="fa fa-heart"></i> Shortlist (0)</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">My Bookings</a>
+                    <a className="nav-link" href="#">My Bookings </a>
                     </li>
                     <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
