@@ -37,6 +37,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
   position: absolute;
   width: 91%;
   top: 0;
+  max-width: 1200px !important;
   height: 100px;
 }
 .tabs li.nav-item {

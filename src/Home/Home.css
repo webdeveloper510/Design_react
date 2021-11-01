@@ -52,7 +52,7 @@ i.fa.fa-check-circle{
 }
 .summer {
     background-image: url(../banner1.png);
-    background-position: center top;
+    background-position: center bottom;
     padding-top: 100px;
     background-repeat: no-repeat;
     background-size: cover;
