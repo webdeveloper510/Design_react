@@ -336,18 +336,18 @@ function Home() {
                <div className="container ">
                    <h3 className="my-3">Package Holiday Deals</h3>
                    <div className="row">
-                       <div className="col-md-4">
+                       <div className="col-md-4 my-3">
                           <div className="hotals">
                            
                          
                           <div className="overlay">
                                  <div className="row">
-                                    <div className="col-md-8">
+                                    <div className="col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
                                     <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-5">
                                           
@@ -356,10 +356,10 @@ function Home() {
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-6">
                                       <button className="btn ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
+                                        <div className="col-6">
                                         <button className="btn btn-primary">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -367,16 +367,16 @@ function Home() {
                                 
                               </div>
                            </div>
-                           <div className="col-md-4">
+                           <div className="col-md-4 my-3">
                            <div className="hotals">
                            <div className="overlay">
                                  <div className="row">
-                                    <div className="col-md-8">
+                                    <div className="col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
                                     <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-5">
                                             
@@ -385,10 +385,10 @@ function Home() {
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-6">
                                       <button className="btn ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
+                                        <div className="col-6">
                                         <button className="btn btn-primary">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -396,16 +396,16 @@ function Home() {
                                  </div>
                               </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 my-3">
                         <div className="hotals">
                              <div className="overlay">
                                  <div className="row">
-                                    <div className="col-md-8">
+                                    <div className="col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
                                     <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-5">
                                            
@@ -414,10 +414,10 @@ function Home() {
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-6">
                                       <button className="btn ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
+                                        <div className="col-6">
                                         <button className="btn btn-primary">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -430,15 +430,15 @@ function Home() {
                <div className="container">
                  <h3  className="my-3">I am looking for...?</h3>
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 ">
                         <div className="family">
                          <div className="overlay1">
                            <div className="row">
-                             <div className="col-md-7">
+                             <div className="col-7">
                              <p>last minute deals <br/>
                                 from £129 per person</p>
                              </div>
-                              <div className="col-md-5 mt-3 text-right">
+                              <div className="col-5 mt-3 text-right">
                                 <button className="btn btn-primary" type="button">Search Deals
                                   </button>
                               </div>
@@ -446,10 +446,10 @@ function Home() {
                            </div>
                           </div>
                       </div>
-                      <div className="col-md-2">
+                      <div className="col-md-2 col-4">
                         <img src="pack1.png" className="img-fluid"/>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-8">
                             <div className="holiday">
                                 <div className=" overlay2 text-right">
                                    <button className="btn btn-primary" type="button">
@@ -533,7 +533,7 @@ function Home() {
                   <div className="container">
                     <h3 className="my-3">Popular Destinations</h3>
                     <div className="row text-center">
-                       <div className="col-md-3">
+                       <div className="col-md-3 col-6">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -544,7 +544,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 col-6">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -555,7 +555,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 col-6">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -566,7 +566,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 col-6">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>

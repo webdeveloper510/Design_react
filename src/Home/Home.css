@@ -181,3 +181,25 @@ span.text-yellow {
 .rating:hover>input:checked~label:before {
     opacity: 0.4
 }
+@media only screen and (max-width: 768px) {
+
+.holiday {
+  
+    padding-top: 71%;
+   
+}
+.family {
+    background-position: right;
+}
+.col-md-2.col-4 img {
+    height: 100%;
+}
+.over {
+    background: #ffffffc4;
+    margin-top: -49%;
+}
+.over1 {
+    background: #ffffffc4;
+    margin-top: -43%;
+}
+}
