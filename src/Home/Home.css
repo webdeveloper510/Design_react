@@ -182,7 +182,14 @@ span.text-yellow {
     opacity: 0.4
 }
 @media only screen and (max-width: 768px) {
-
+    div#navbarSupportedContent ul li a {
+        color: black !important;
+    }
+    
+    div#navbarSupportedContent {
+        background: white;
+        padding: 10px;
+    }
 .holiday {
   
     padding-top: 71%;
