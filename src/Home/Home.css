@@ -159,6 +159,12 @@ i.fa.fa-check-circle{
     display: none;
     z-index: 99;
 }
+.suggection1 {
+    position: absolute;
+    margin-top: 13px;
+    display: none;
+    z-index: 99;
+}
 .first-list{
     border-top: 1px solid #d7d7d7;
         border-bottom: 1px solid #d7d7d7;
@@ -335,13 +341,12 @@ span.text-yellow {
 }
 
 .rating>input:checked~label:before {
-    opacity: 1
+    opacity: 1;
 }
 
 .rating:hover>input:checked~label:before {
-    opacity: 0.4
+    opacity: 0.4;
 }
-<<<<<<< HEAD
 
 @media only screen and (max-width: 768px) {
     .over { 
@@ -360,8 +365,7 @@ span.text-yellow {
         margin-top: 70px ;
         width: 100%;
     }
-=======
-@media only screen and (max-width: 768px) {
+
     div#navbarSupportedContent ul li a {
         color: black !important;
     }
@@ -389,5 +393,4 @@ span.text-yellow {
     background: #ffffffc4;
     margin-top: -43%;
 }
->>>>>>> 2144adb4dbecb38226406e15f437c1387da93000
 }

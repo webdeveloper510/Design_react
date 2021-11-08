@@ -121,7 +121,7 @@ function Home() {
                                             <label >Departure Airport</label>
                                             <input type="text" class="form-control" />
                                         </div>
-                                        <div className="suggection ">
+                                        <div className="suggection1 ">
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
                                             <li class="list-group-item">An item</li>
@@ -213,7 +213,7 @@ function Home() {
                                             <label >Departure Airport</label>
                                             <input type="text" class="form-control" placeholder="To"/>
                                         </div>
-                                        <div className="suggection ">
+                                        <div className="suggection1 ">
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
                                             <li class="list-group-item">An item</li>
@@ -386,8 +386,7 @@ function Home() {
                                                </div>
                    </div>
                    </div>
-                  
-         
+                
         </div>
         </div>
         <div className="content text-center">
