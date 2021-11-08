@@ -8,43 +8,44 @@ function Home() {
                <div className="row">
                    <div className="col"></div>
                    <div className="col-md-12">
-                    
-                       <div className="tabs">
-                       <div className="lists">
+                        <div className="row mt-5 pt-5">
+                          <div className="col-md-9">
+                          <div className="lists">
                       <ul> 
                         <li className="holiday-data "> Holidays v  <div className="Holidays1">
+                          <div className="arrow-up"></div>
                            <div className="row">
                              <div className="col-md-4">
-                               <h3>Featured Holidays</h3>
+                               <h4>Featured Holidays</h4>
                                <img src="menu.png" className="img-fluid" height="124px"/>
-                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item"> Holidays to Greecs & Cyprus &#11166;</li>
+                               <ul class="list-group list-group-flush first-list">
+                                  <li class="list-group-item"> Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </li>
                                   </ul>
                                </div>
                                <div className="col-md-4">
-                               <h3>Holidays </h3>
+                               <h4>Holidays </h4>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">All-inclusive Holidays  &#11166;</li>
-                                  <li class="list-group-item">Beach Holidays &#11166;</li>
-                                  <li class="list-group-item">Family Holidays &#11166;</li>
-                                  <li class="list-group-item"> Adult Holidays &#11166;</li>
+                                  <li class="list-group-item">All-inclusive Holidays &nbsp;&nbsp; > </li>
+                                  <li class="list-group-item">Beach Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item">Family Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item"> Adult Holidays &nbsp;&nbsp; ></li>
                                  
                                 </ul>
                                  </div>
                                  <div className="col-md-4">
                                  <h3 style={{opacity:0}}>Holidays </h3>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">Balaerics Holidays &#11166;</li>
-                                  <li class="list-group-item">Canaries Holidays &#11166;</li>
-                                  <li class="list-group-item">Spain Holidays &#11166;</li>
-                                  <li class="list-group-item"> USA Holidays &#11166;</li>
+                                  <li class="list-group-item">Balaerics Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item">Canaries Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item">Spain Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item"> USA Holidays &nbsp;&nbsp; ></li>
                                   
                                 </ul>
                                  </div>
                              </div>
                              <hr/>
                              <div className="text-right">
-                               <button className="btn btn-light" type="button">ALL HOLIDAYS &#11166;</button>
+                               <button className="btn btn-light" type="button">ALL HOLIDAYS &nbsp;&nbsp; ></button>
                                </div>
                          </div></li>
                         <li>flights v</li>
@@ -53,6 +54,33 @@ function Home() {
                         <li>Extras v</li>
                       </ul>
                        </div>
+                            </div>
+                            <div className="col-md-3">
+                            <div className="weather">
+                              <div className="row">
+                                  <div className="col-8">
+                                  <h4>Paphos,CYP</h4>
+                              <small style={{fontSize:"12px" }}>9 Aug, Mon - Sunny/Cloudy</small>
+                                    </div>
+                                    <div className="col-4">
+                                      <p className="weather-time">12:43</p>
+                                      </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-6">
+                                       <p className="celc">+25</p>
+                                      </div>
+                                      <div className="col-6 text-center">
+                                      <i class='fa fa-cloud-sun fa-flip-horizontal'></i>
+                                        </div>
+                                  </div>
+                                    
+                                    </div>
+                              </div>
+                          </div>
+                       <div className="tabs">
+                        
+                      
                       
                        <ul class="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -76,11 +104,32 @@ function Home() {
                                             <label >Find Holidays in</label>
                                             <input type="text" class="form-control" />
                                         </div>
+                                        <div className="suggection ">
+                                        <div className="flush"></div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">An item</li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
+                                            <li class="list-group-item">A fourth item</li>
+                                            <li class="list-group-item">And a fifth one</li>
+                                          </ul>
+                                        </div>
                                       </div>
+                                    
                                       <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Departure Airport</label>
                                             <input type="text" class="form-control" />
+                                        </div>
+                                        <div className="suggection ">
+                                        <div className="flush"></div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">An item</li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
+                                            <li class="list-group-item">A fourth item</li>
+                                            <li class="list-group-item">And a fifth one</li>
+                                          </ul>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
@@ -109,19 +158,22 @@ function Home() {
                                    </div>
                                   
                                    <div className="row mt-3">
-                                       <div className="col-md-3">
-                                         <div class="input-group mb-3">
-                                           
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Children 0, Room 1</option>
-                                                <option value="1">Children 1, Room 1</option>
-                                                <option value="2">Children 2, Room 2</option>
-                                              
-                                            </select>
-                                         </div>
+                                       <div className="col-md-4">
+                                       <div class="input-group mb-3">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
+                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                  <div className="bottom-arrow"></div>
+                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
+                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                 
+                                                
+                                              </ul>
+                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
+                                      </div>
                                        </div>
                                       
-                                       <div className="col-md-3">
+                                       <div className="col-md-2">
                                          
                                            </div>
                                            <div className="col-md-3">
@@ -145,11 +197,31 @@ function Home() {
                                             <label >Find Holidays in</label>
                                             <input type="text" class="form-control" placeholder="From"/>
                                         </div>
+                                        <div className="suggection ">
+                                        <div className="flush"></div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">An item</li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
+                                            <li class="list-group-item">A fourth item</li>
+                                            <li class="list-group-item">And a fifth one</li>
+                                          </ul>
+                                        </div>
                                       </div>
                                       <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Departure Airport</label>
                                             <input type="text" class="form-control" placeholder="To"/>
+                                        </div>
+                                        <div className="suggection ">
+                                        <div className="flush"></div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">An item</li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
+                                            <li class="list-group-item">A fourth item</li>
+                                            <li class="list-group-item">And a fifth one</li>
+                                          </ul>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
@@ -222,7 +294,16 @@ function Home() {
                                         <div class="form-group">
                                             <label >Find accommodation in</label>
                                             <input type="text" class="form-control" />
-                                       
+                                            <div className="suggection ">
+                                        <div className="flush"></div>
+                                          <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">An item</li>
+                                            <li class="list-group-item">A second item</li>
+                                            <li class="list-group-item">A third item</li>
+                                            <li class="list-group-item">A fourth item</li>
+                                            <li class="list-group-item">And a fifth one</li>
+                                          </ul>
+                                        </div>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
@@ -341,26 +422,26 @@ function Home() {
                            
                          
                           <div className="overlay">
-                                 <div className="row">
-                                    <div className="col-md-8">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p> <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-5">
+                                            <div className="text-right mt-4">
                                           
                                               <p>   <i class="fa fa-plane"></i> Delta</p>
                                             </div>
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
-                                      <button className="btn ">ADD TO WISHLIST</button>
+                                    <div className="col-md-6 col-6">
+                                      <button className="btn form-control ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
-                                        <button className="btn btn-primary">BOOK & SAVE $59</button>
+                                        <div className="col-md-6 col-6">
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
                                      </div>
@@ -370,26 +451,26 @@ function Home() {
                            <div className="col-md-4">
                            <div className="hotals">
                            <div className="overlay">
-                                 <div className="row">
-                                    <div className="col-md-8">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-5">
+                                            <div className="text-right mt-4">
                                             
                                               <p> <i class="fa fa-plane"></i> Delta</p>
                                             </div>
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
-                                      <button className="btn ">ADD TO WISHLIST</button>
+                                    <div className="col-md-6 col-6">
+                                      <button className="btn form-control">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
-                                        <button className="btn btn-primary">BOOK & SAVE $59</button>
+                                        <div className="col-md-6 col-6">
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
                               
@@ -399,26 +480,26 @@ function Home() {
                         <div className="col-md-4">
                         <div className="hotals">
                              <div className="overlay">
-                                 <div className="row">
-                                    <div className="col-md-8">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
-                                        <div className="col-md-4 text-right">
+                                        <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-5">
+                                            <div className="text-right mt-4">
                                            
                                               <p>  <i class="fa fa-plane"></i>Delta</p>
                                             </div>
                                             </div>    
                                  </div>
                                  <div className="row">
-                                    <div className="col-md-6">
-                                      <button className="btn ">ADD TO WISHLIST</button>
+                                    <div className="col-md-6 col-6">
+                                      <button className="btn form-control">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6">
-                                        <button className="btn btn-primary">BOOK & SAVE $59</button>
+                                        <div className="col-md-6 col-6">
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
                               
@@ -428,17 +509,21 @@ function Home() {
                        </div>
                </div>
                <div className="container">
-                 <h3  className="my-3">I am looking for...?</h3>
+                 <h3  className="my-5">I am looking for...?</h3>
                   <div className="row">
                     <div className="col-md-6">
                         <div className="family">
+                        <div className="bannerpack">
+                                <h3>Family Holidays </h3>
+                             </div>
                          <div className="overlay1">
+                         
                            <div className="row">
-                             <div className="col-md-7">
+                             <div className="col-md-7 col-7">
                              <p>last minute deals <br/>
                                 from £129 per person</p>
                              </div>
-                              <div className="col-md-5 mt-3 text-right">
+                              <div className="col-md-5 mt-3 col-5 text-right">
                                 <button className="btn btn-primary" type="button">Search Deals
                                   </button>
                               </div>
@@ -447,10 +532,18 @@ function Home() {
                           </div>
                       </div>
                       <div className="col-md-2">
-                        <img src="pack1.png" className="img-fluid"/>
+                        <div className="flight">
+                      <div className="bannerpack">
+                                <h3>Flights  </h3>
+                             </div>
+                             </div>
+                       
                         </div>
                         <div className="col-md-4">
                             <div className="holiday">
+                            <div className="bannerpack">
+                                <h3>All Inclusive Holidays   </h3>
+                             </div>
                                 <div className=" overlay2 text-right">
                                    <button className="btn btn-primary" type="button">
                                    Search Deals
@@ -461,7 +554,7 @@ function Home() {
                     </div>
                </div>
                <div className="container">
-                 <h3 className="my-3">Featured Destinations</h3>
+                 <h3 className="my-5">Featured Destinations</h3>
                  <div className="row">
                    <div className="col-md-8">
                        <img src="Layer4.png" className="img-fluid w-100"/>
@@ -470,9 +563,9 @@ function Home() {
                           <p>Amazing deals on all-inclusive holidays with<br/>
                               up to £750 off per couple and<br/>
                               1000’s of free kid’s places</p>
-                              <div className="search text-right">
-                               <button className="btn btn-primary" type="button">Search  </button>
-                                </div>
+                              
+                               <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                               
                          </div>
                      </div>
                      <div className="col-md-4">
@@ -481,9 +574,8 @@ function Home() {
                       <h3>Italy & the lakes</h3>
                       <p>Culture, beauty, beaches & sights<br/>
                           From Italy with love...</p>
-                          <div className="search text-right">
-                               <button className="btn btn-primary" type="button">Search  </button>
-                                </div>
+                          <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                               
                          </div>
                        </div>
                        </div>
@@ -495,9 +587,8 @@ function Home() {
                      <div className="over">
                       <h3>Carribean</h3>
                       <p>Shimmering reefs, spicy salsa, reggae,<br/> pirate hideouts to sugar sand beaches</p>
-                      <div className="search text-right">
-                               <button className="btn btn-primary" type="button">Search  </button>
-                                </div>
+                      <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                               
                          </div>
                      </div>
                       
@@ -506,10 +597,9 @@ function Home() {
                        <div className="over1">
                           <h3>Holidays to the Balearic Islands</h3>
                           <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
-& historic old towns make<br/> these Islands the perfect getaway</p>
-                              <div className="search text-right">
-                               <button className="btn btn-primary" type="button">Search  </button>
-                                </div>
+                            & historic old towns make<br/> these Islands the perfect getaway</p>
+                            <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                               
                          </div>
                      </div>
                  
@@ -519,20 +609,21 @@ function Home() {
                   <div className="summer">
                     <div className="container">
                     <div className="row">
-                       <div className="col-md-6">
+                      <div className="col-md-1"></div>
+                       <div className="col-md-5">
                            <div className="summer-text">
-                             <h3>Book now for Summer 2022</h3>
-                             <p>With our safe booking policy, it’s now even more secure to book your 2022 holidays.
+                             <h3 className="mb-5">Book now for Summer 2022</h3>
+                             <p className="mb-5">With our safe booking policy, it’s now even more secure to book your 2022 holidays.
                                   <br/><br/>
                                   Search now and secure your next holiday with low deposits starting from £30 per person.</p>
-                                  <button className="btn btn-primary btn-lg" type="button">Search Holidays</button>                             </div>
+                                  <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; > </button>                             </div>
                          </div>
                       </div>
                     </div>
                   </div>
                   <div className="container">
                     <h3 className="my-3">Popular Destinations</h3>
-                    <div className="row text-center">
+                    <div className="row text-darkblue">
                        <div className="col-md-3">
                          <p>Ibiza<br/>
                             Majorca<br/>
@@ -621,6 +712,9 @@ function Home() {
                                     <hr/>
                                     <h3>020-200-2000</h3>
                                     <p>Outside the UK</p>
+                                    <div className="float-right">
+                                     <img src="chat.png" width="50px" height="50px"/>
+                                      </div> 
                                     <a href="#">Chat with us online</a>
                             </div>
                             <div className="col-md-4 px-5">

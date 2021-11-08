@@ -6,7 +6,31 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.bottom-arrow {
+  width: 0px;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid #ffffff;
+  margin-top: -21px;
+  margin-left: 9px;
+}
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #022650 !important;
+}
+a.dropdown-item.active::after {
+  content: '\2713';
+  position: absolute;
+  right: 11px;
+}
+li.list-group-item {
+  color: #022650;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

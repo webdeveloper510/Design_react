@@ -16,9 +16,9 @@ function Footer() {
                            <br/>
                             For the latest foreign travel advice visit <a href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
                             <br/>
-                            Follow our travel update<br/>
+                            Follow our <a href=""> travel update</a><br/>
                             
-                            Visit the Covid-19 Hub to see how we provide guidance and protection<br/>
+                            Visit the  <a href=""> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
                             </p>
                        </div>
                    </div>
@@ -45,7 +45,7 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '19px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456</p>
+                    <p className="mt-3" style={{fontSize: '19px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  src="footer.png"width="30px" height="30px"/></p>
                 </div>
                 <div className="col-md-4">
                     <img src="secondlogo.png" height="50px" className="img-fluid"/>

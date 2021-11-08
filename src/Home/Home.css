@@ -11,6 +11,39 @@
 .btn-group {
     width: 100%;
 }
+p.celc::after {content: '\00B0';}
+
+p.celc {
+    font-size: 45px;
+}
+.overlay i.fa.fa-star {
+    font-size: 9px;
+    color: #6d75eb;
+}
+.overlay h5 {
+    margin: 0px !important;
+}
+.overlay p span {
+    margin-right: 18px;
+}
+
+.overlay p {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.weather {
+    background: #183561b5;
+    padding: 10px;
+}
+
+i.fa.fa-cloud-sun.fa-flip-horizontal {
+    font-size: 51px;
+    text-align: center;
+}
+
+p.weather-time {
+    font-size: 32px;
+}
 .offers {
     background: #183561bf;
     padding: 20px;
@@ -22,8 +55,6 @@
 }
 .overlay {
     background: #ffffffd9;
-    padding: 11px;
-    
 }
 .col-md-4.my-3.d-flex {
     justify-content: center;
@@ -51,6 +82,88 @@ i.fa.fa-check-circle{
     padding: 34px;
     padding-bottom: 102px;
 }
+.text-darkblue p {
+    color: #13345c;
+    font-size: 19px;
+}
+.Holidays1 h4{
+    color: #13345c;
+}
+
+.over p {
+    color: #01254f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.over1 button.btn.btn-primary.float-right {
+    margin-top: -39px;
+}
+.row {
+    --bs-gutter-x: 0.5rem;
+}
+.summer-text p {
+    font-size: 20px;
+    color: #01254f;
+}
+.weather.float-right {
+    padding: 12px;
+    background: #183561b5;
+}
+.overlay1 p {
+    font-size: 17px;
+    color: #012650;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.over h3 {
+    text-transform: uppercase;
+    font-size: 23px;
+}
+.over1 p {
+    color: #01254f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.float-right {
+    float: right;
+}
+
+.over1 h3 {
+    text-transform: uppercase;
+    font-size: 23px;
+}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: absolute;
+    top: -15px;
+}
+.flush{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: absolute;
+    top: -15px;
+}
+.suggection {
+    position: absolute;
+    margin-top: 13px;
+    display: none;
+    z-index: 99;
+}
+.first-list{
+    border-top: 1px solid #d7d7d7;
+        border-bottom: 1px solid #d7d7d7;
+        margin-top: 10px;
+}
 .summer {
     background-image: url(../banner1.png);
     background-position: center bottom;
@@ -58,9 +171,18 @@ i.fa.fa-check-circle{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.holiday {
-    background-image: url(../pack2.png);
+.flight {
+    background-image: url(../pack1.png);
     height: 248px;
+    position: relative;
+    padding-top: 48%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.holiday {
+    background-image: url(../pack.png);
+    height: 248px;
+    position: relative;
     padding-top: 48%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,11 +191,18 @@ i.fa.fa-check-circle{
     display: inline;
     padding: 14px;
 }
+.bannerpack {position: absolute;background: #01254f;color: white;top: 26px;padding: 4px 24px 0px 24px;right: 0;}
+
+.bannerpack h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
 .family {
-    background-image: url(../pack.png);
+    background-image: url(../pack2.png);
     height: 248px;
     padding-top: 27%;
     background-repeat: no-repeat;
+    position: relative;
     background-size: cover;
 }
 .hotals {
@@ -87,6 +216,7 @@ i.fa.fa-check-circle{
     color: black;
     padding: 20px;
     width: 80%;
+    margin-top: 14px;
     position: absolute;
     display: none;
 }
@@ -114,14 +244,44 @@ i.fa.fa-plane {
 }
 span.youro {
     color: #6a6aeb;
-    font-size: 21px;
+    font-size: 17px;
+    vertical-align: super;
+}
+.tabs .dropdown-toggle::after {
+
+    content: unset !important;
+}
+span.sum {
+    border: 1px solid white;
+    padding: 4px 10px;
+    cursor: pointer;
 }
 
-.overlay p {
-    font-size: 12px;
+span.value {
+    background: white;
+    padding: 5px 10px;
+    color: black;
+
+}
+.flighttabs .bottom-arrow {
+
+    border-bottom: 13px solid #022650;
+  
+}
+.flighttabs ul.dropdown-menu.show {
+    background: #022650;
+}
+span.add {
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 4px 10px;
 }
 .content {
     background: #183561bf;
+}
+button.btn.btn-secondary.dropdown-toggle {
+    background: #022650;
+    border: 1px solid #022650;
 }
 span.text-yellow {
     color: orange;
@@ -180,4 +340,23 @@ span.text-yellow {
 
 .rating:hover>input:checked~label:before {
     opacity: 0.4
+}
+
+@media only screen and (max-width: 768px) {
+    .over { 
+        margin-top: -45%;
+    }
+    .over1 {
+      
+        margin-top: -41%;
+  
+        margin-right: 16px;
+    }
+    .family {
+        padding-top: 37%;
+    }
+    ul#myTab {
+        margin-top: 70px ;
+        width: 100%;
+    }
 }

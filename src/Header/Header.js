@@ -26,8 +26,11 @@ function header() {
                         Login
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item" href="#">Login</a></li>
-                        <li><a className="dropdown-item" href="#"> Sigin </a></li>
+                        <div className="bottom-arrow"></div>
+                        <li><a className="dropdown-item" href="#">Login to your account</a></li>
+                        <li><a className="dropdown-item" href="#"> Create an account </a></li>
+                        <li><a className="dropdown-item active" href="#"> View/edit a booking </a></li>
+                        <li><a className="dropdown-item" href="#"> Advance passenger info (API) </a></li>
                        
                     </ul>
                     </li>
