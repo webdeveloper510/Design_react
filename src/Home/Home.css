@@ -341,6 +341,7 @@ span.text-yellow {
 .rating:hover>input:checked~label:before {
     opacity: 0.4
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 768px) {
     .over { 
@@ -359,4 +360,34 @@ span.text-yellow {
         margin-top: 70px ;
         width: 100%;
     }
+=======
+@media only screen and (max-width: 768px) {
+    div#navbarSupportedContent ul li a {
+        color: black !important;
+    }
+    
+    div#navbarSupportedContent {
+        background: white;
+        padding: 10px;
+    }
+.holiday {
+  
+    padding-top: 71%;
+   
+}
+.family {
+    background-position: right;
+}
+.col-md-2.col-4 img {
+    height: 100%;
+}
+.over {
+    background: #ffffffc4;
+    margin-top: -49%;
+}
+.over1 {
+    background: #ffffffc4;
+    margin-top: -43%;
+}
+>>>>>>> 2144adb4dbecb38226406e15f437c1387da93000
 }
