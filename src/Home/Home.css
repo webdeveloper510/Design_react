@@ -159,9 +159,13 @@ i.fa.fa-check-circle{
     display: none;
     z-index: 99;
 }
-.lists li:hover {
+.lists1:hover {
     border-bottom: 2px solid yellow;
     padding-bottom: 3px;
+}
+li.lists1::after {
+    content: "v";
+    padding-left: 7px;
 }
 li.list-group-item.first {
     border-top: 1px solid rgba(0,0,0,.125);
@@ -169,9 +173,8 @@ li.list-group-item.first {
 li.list-group-item.last {
     border-bottom: 1px solid rgba(0,0,0,.125) !important;
 }
-.Holidays1 li:hover{
-    border-bottom:1px solid rgba(0,0,0,.125);;
-    padding-bottom: 14px;
+li.lists1 {
+    font-size: 20px;
 }
 .suggection1 {
     position: absolute;

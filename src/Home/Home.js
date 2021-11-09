@@ -12,7 +12,7 @@ function Home() {
                           <div className="col-md-9">
                           <div className="lists">
                       <ul> 
-                        <li className="holiday-data "> Holidays v  <div className="Holidays1">
+                        <li className="holiday-data lists1"> Holidays  <div className="Holidays1">
                           <div className="arrow-up"></div>
                            <div className="row">
                              <div className="col-md-4">
@@ -50,10 +50,10 @@ function Home() {
                                   </ul>
                                   </div>
                          </div></li>
-                        <li>flights v</li>
-                        <li>Hostals v</li>
-                        <li>Deals v</li>
-                        <li>Extras v</li>
+                        <li className="lists1">Flights</li>
+                        <li className="lists1">Hostels </li>
+                        <li className="lists1">Deals </li>
+                        <li className="lists1">Extras</li>
                       </ul>
                        </div>
                             </div>
