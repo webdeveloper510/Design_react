@@ -16,37 +16,39 @@ function Home() {
                           <div className="arrow-up"></div>
                            <div className="row">
                              <div className="col-md-4">
-                               <h4>Featured Holidays</h4>
-                               <img src="menu.png" className="img-fluid" height="124px"/>
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="menu.png"  height="158px" width="100%"/>
                                <ul class="list-group list-group-flush first-list">
                                   <li class="list-group-item"> Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </li>
                                   </ul>
                                </div>
                                <div className="col-md-4">
-                               <h4>Holidays </h4>
+                               <h4 className="mb-4">Holidays </h4>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">All-inclusive Holidays &nbsp;&nbsp; > </li>
+                                  <li class="list-group-item first">All-inclusive Holidays &nbsp;&nbsp; > </li>
                                   <li class="list-group-item">Beach Holidays &nbsp;&nbsp; ></li>
                                   <li class="list-group-item">Family Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item"> Adult Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item last"> Adult Holidays &nbsp;&nbsp; ></li>
                                  
                                 </ul>
                                  </div>
                                  <div className="col-md-4">
-                                 <h3 style={{opacity:0}}>Holidays </h3>
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">Balaerics Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item first">Balaerics Holidays &nbsp;&nbsp; ></li>
                                   <li class="list-group-item">Canaries Holidays &nbsp;&nbsp; ></li>
                                   <li class="list-group-item">Spain Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item"> USA Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item last"> USA Holidays &nbsp;&nbsp; ></li>
                                   
                                 </ul>
                                  </div>
                              </div>
-                             <hr/>
+                            
                              <div className="text-right">
-                               <button className="btn btn-light" type="button">ALL HOLIDAYS &nbsp;&nbsp; ></button>
-                               </div>
+                             <ul class="list-group list-group-flush ">
+                                  <li class="list-group-item"> ALL HOLIDAYS  &nbsp;&nbsp; > </li>
+                                  </ul>
+                                  </div>
                          </div></li>
                         <li>flights v</li>
                         <li>Hostals v</li>
@@ -246,15 +248,18 @@ function Home() {
                                   
                                    <div className="row mt-3">
                                        <div className="col-md-3">
-                                         <div class="input-group mb-3">
-                                           
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>2 Adult ,1 Room</option>
-                                                <option value="1">2 Adult 2 Children ,2 Room</option>
-                                                <option value="2">2 Adult 1 Children ,1 Room</option>
-                                               
-                                            </select>
-                                         </div>
+                                       <div class="input-group mb-3">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
+                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                  <div className="bottom-arrow"></div>
+                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
+                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                 
+                                                
+                                              </ul>
+                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
+                                      </div>
                                        </div>
                                       
                                        <div className="col-md-3">
@@ -328,15 +333,18 @@ function Home() {
                                   
                                    <div className="row mt-3">
                                        <div className="col-md-3">
-                                         <div class="input-group mb-3">
-                                           
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>1 Adult</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                         </div>
+                                       <div class="input-group mb-3">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
+                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                  <div className="bottom-arrow"></div>
+                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
+                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
+                                                 
+                                                
+                                              </ul>
+                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
+                                      </div>
                                        </div>
                                       
                                        <div className="col-md-6 d-flex">
