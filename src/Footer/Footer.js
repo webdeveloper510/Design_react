@@ -2,21 +2,23 @@ import React from 'react'
 import "./Footer.css"
 function Footer() {
     return (
-        <div className="container">
+        <div className="container px-5">
+        
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p>User Agreement | Privacy | Cookies | AdChoices</p>
+                   <p className="user">User Agreement | Privacy | Cookies | AdChoices</p>
                    <div className="row">
-                       <div className="col-md-2 ">
+                       <div className="col-md-3 ">
                            <img src="footerlogo.png" height="128px"className="img-fluid"/>
                        </div>
-                       <div className="col-md-10">
-                           <p> <b>Stay Safe whilst you travel </b><br/>
-                           <br/>
+                       <div className="col-md-9 mt-3">
+                           <h5> <b>Stay Safe whilst you travel </b> </h5>
+                           <p> 
+                          
                             For the latest foreign travel advice visit <a href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
                             <br/>
-                            Follow our <a href=""> travel update</a><br/>
+                            Follow our <a href=""> travel update</a><br/><br/>
                             
                             Visit the  <a href=""> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
                             </p>
@@ -24,7 +26,7 @@ function Footer() {
                    </div>
                 </div>
               
-                <div className="col-md-4">
+                <div className="col-md-3">
                     <h4 className="my-3">Follow Us</h4>
                     <div className="d-flex">
                         <img src="facebook.png" className="img-fluid"/>
@@ -45,9 +47,9 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '19px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  src="footer.png"width="30px" height="30px"/></p>
+                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  src="footer.png"width="30px" height="30px"/></p>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 text-right">
                     <img src="secondlogo.png" height="50px" className="img-fluid"/>
                 </div>
             </div>

@@ -1,9 +1,9 @@
-.tabs .nav-link {
-    color: #495057;
+.tabs .nav-link.active {
+    color: #183561 !important;
     background-color: #fff !important;
     border-color: #dee2e6 #dee2e6 #fff !important;
 }
-.tabs .nav-link.active {
+.tabs .nav-link {
     color: white !important;
     background-color: #183561 !important;
     border-color: #183561 #183561 #183561 !important;
@@ -48,7 +48,13 @@ p.weather-time {
     background: #183561bf;
     padding: 20px;
     height: 164px;
+    position: relative;
     margin: 10px 0px;
+}
+.deals {
+    position: absolute;
+    right: 6px;
+    bottom: 10px;
 }
 .text-right {
     text-align: right;
@@ -71,11 +77,35 @@ i.fa.fa-check-circle{
   
     background: #ffffff85;
     padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+.col-md-8.overhead {
+    position: relative;
+}
+button.btn.form-control {
+    border-radius: 0px !important;
+    margin: 0px;
+    width: 100% !important;
+}
+.Filters {
+    background: #022650;
+    padding: 10px;
+    position: absolute;
+    margin-top: 47px;
+    z-index: 99;
+}
+.col-md-4.overhead {
+    position: relative;
 }
 .overlay2.text-right {
     
     background: #ffffff85;
-    padding: 10px;
+    padding: 25px 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
 }
 .summer-text {
     background: #ffffffd6;
@@ -230,20 +260,36 @@ li.lists1 {
 }
 .hotals {
     background-image: url("../home.png");
-    padding-top: 66px;
+    padding-top: 100px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.row.red {
+    border-top: 1px solid;
+    margin: 0px;
 }
 .Holidays1 {
     background: white;
     color: black;
     padding: 20px;
-    width: 80%;
+    border-radius: 8px;
+    width: 73%;
     margin-top: 14px;
     position: absolute;
     display: none;
 }
-
+li.lists1 {
+    font-size: 20px;
+    font-weight: 500 !important;
+    padding-left: 8px !important;
+}
+.lists ul {
+    padding: 0px;
+    margin: 0px !important;
+}
+ul.m-lg-auto.mb-2.navbar-nav {
+    margin-right: 72px !important;
+}
 li.holiday-data:hover .Holidays1 {
     display: block;
     z-index: 9;
@@ -276,13 +322,16 @@ span.youro {
 }
 span.sum {
     border: 1px solid white;
-    padding: 4px 10px;
+    padding:  4px;
     cursor: pointer;
 }
-
+.input-group.mb-3 button.btn.btn-secondary {
+    background: #022650;
+    border-color: #022650;
+}
 span.value {
     background: white;
-    padding: 5px 10px;
+    padding: 5px;
     color: black;
 
 }
@@ -297,7 +346,7 @@ span.value {
 span.add {
     cursor: pointer;
     border: 1px solid white;
-    padding: 4px 10px;
+    padding:4px;
 }
 .content {
     background: #183561bf;
@@ -312,17 +361,17 @@ span.text-yellow {
 
 .over {
     background: #ffffffc4;
-    margin-top: -13%;
     position: absolute;
-    margin-left: 16px;
     padding: 13px;
+    left: 21px;
+    bottom: 30px;
 }
 .over1 {
     background: #ffffffc4;
-    margin-top: -15%;
     position: absolute;
-    margin-left: 16px;
     padding: 13px;
+    left: 21px;
+    bottom: 30px;
 }
 .last-section p {
     color: #033672;
@@ -332,7 +381,9 @@ span.text-yellow {
     flex-direction: row-reverse;
     justify-content: center
 }
-
+.col-md-3.px-5 p {
+    font-size: 22px;
+}
 .rating>input {
     display: none
 }
@@ -366,15 +417,7 @@ span.text-yellow {
 }
 
 @media only screen and (max-width: 768px) {
-    .over { 
-        margin-top: -45%;
-    }
-    .over1 {
-      
-        margin-top: -41%;
-  
-        margin-right: 16px;
-    }
+   
     .family {
         padding-top: 37%;
     }

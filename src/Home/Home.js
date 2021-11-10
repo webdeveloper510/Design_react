@@ -1,6 +1,52 @@
 import React from 'react';
 import "./Home.css"
+import { useState } from 'react';
 function Home() {
+  const [counter, setCounter] = useState(1);
+  const incrementCounter = () => setCounter(counter + 1);
+  let decrementCounter = () => setCounter(counter - 1);
+  if(counter<=1) {
+    decrementCounter = () => setCounter(1);
+  }
+  const [counter1, setCounter1] = useState(1);
+  const incrementCounter1 = () => setCounter1(counter1 + 1);
+  let decrementCounter1 = () => setCounter1(counter1 - 1);
+  if(counter1<=1) {
+    decrementCounter1 = () => setCounter1(1);
+  }
+  const [counter2, setCounter2] = useState(1);
+  const incrementCounter2 = () => setCounter2(counter2 + 1);
+  let decrementCounter2 = () => setCounter2(counter2 - 1);
+  if(counter2<=1) {
+    decrementCounter2 = () => setCounter(1);
+  }
+  function toggleNumbers(){
+    console.log('here')
+    var x = document.getElementById("filterss");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function toggleNumbers1(){
+    console.log('here')
+    var x = document.getElementById("filterss1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function toggleNumbers2(){
+    console.log('here')
+    var x = document.getElementById("filterss2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
     return (
     <section>
         <div className="banner pt-5">
@@ -17,7 +63,7 @@ function Home() {
                            <div className="row">
                              <div className="col-md-4">
                                <h4 className="mb-4">Featured Holidays</h4>
-                               <img src="menu.png"  height="158px" width="100%"/>
+                               <img src="menu.png"  height="158px" width="80%"/>
                                <ul class="list-group list-group-flush first-list">
                                   <li class="list-group-item"> Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </li>
                                   </ul>
@@ -162,15 +208,39 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-4">
                                        <div class="input-group mb-3">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <div className="bottom-arrow"></div>
-                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
-                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                 
-                                                
-                                              </ul>
+                                         <div className="Filters" id="filterss" style={{display:'none'}}>
+                                         <div className="bottom-arrow"></div>
+                                         <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Adult</p>
+                                                    <small style={{fontSize:"10px"}}>(12+)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0"> Children</p>
+                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Infants</p>
+                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                            
+                                           </div>
+                                        <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="filter.png"/></button>
+                                       
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
                                       </div>
                                        </div>
@@ -249,15 +319,39 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <div className="bottom-arrow"></div>
-                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
-                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                 
-                                                
-                                              </ul>
+                                       <div className="Filters" id="filterss1" style={{display:'none'}}>
+                                         <div className="bottom-arrow"></div>
+                                         <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Adult</p>
+                                                    <small style={{fontSize:"10px"}}>(12+)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0"> Children</p>
+                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Infants</p>
+                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                            
+                                           </div>
+                                        <button class="btn btn-secondary " onClick={toggleNumbers1} type="button" ><img src="filter.png"/></button>
+                                       
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
                                       </div>
                                        </div>
@@ -334,15 +428,39 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="filter.png"/></button>
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                  <div className="bottom-arrow"></div>
-                                                  <li className="dropdown-item active" >Adult(12+) <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div> </li>
-                                                  <li className="dropdown-item active"> Children(2-11)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                  <li className="dropdown-item active"> Infants(0-23 Mths)  <div className="d-inline-block float-right"><span className="sum"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><span className="value"> 3</span><span className="add"><i class="fa fa-plus-circle"></i></span></div>  </li>
-                                                 
-                                                
-                                              </ul>
+                                       <div className="Filters" id="filterss2" style={{display:'none'}}>
+                                         <div className="bottom-arrow"></div>
+                                         <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Adult</p>
+                                                    <small style={{fontSize:"10px"}}>(12+)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0"> Children</p>
+                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                           <div className="row">
+                                               <div className="col-4">
+                                                    <p className="m-0">Infants</p>
+                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
+                                                 </div>
+                                                 <div className="col-8">
+                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
+                                                   </div>
+                                           </div>
+                                            
+                                           </div>
+                                        <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="filter.png"/></button>
+                                       
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
                                       </div>
                                        </div>
@@ -368,7 +486,7 @@ function Home() {
                                                 <div className="offers">
                                                    <h4>Super savings</h4>
                                                    <p>Save up to <span className="text-yellow">£750 per person </span> on selected holidays to Greece, Spain Portugal & Italy</p>
-                                                   <div className="text-right">
+                                                   <div className="deals">
                                                         <button className="btn btn-warning" type="button">See Deals</button>
                                                         </div>
                                                     </div>
@@ -376,8 +494,8 @@ function Home() {
                                                  <div className="col-md-4">
                                                 <div className="offers">
                                                     <h4>Covid Hub</h4>
-                                                    <p>See destinations,entry requirements & testing packs</p>
-                                                    <div className="text-right">
+                                                    <p>See <span className="text-yellow">destinations,entry requirements</span> & <span className="text-yellow">testing packs</span></p>
+                                                    <div className="deals">
                                                         <button className="btn btn-warning" type="button">View Hub</button>
                                                         </div>
                                                     </div>
@@ -443,11 +561,11 @@ function Home() {
                                             </div>
                                             </div>    
                                  </div>
-                                 <div className="row">
-                                    <div className="col-md-6 col-6">
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
                                       <button className="btn form-control ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6 col-6">
+                                        <div className="col-md-6 col-6 "  style={{padding:'0px'}}>
                                         <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -472,11 +590,11 @@ function Home() {
                                             </div>
                                             </div>    
                                  </div>
-                                 <div className="row">
-                                    <div className="col-md-6 col-6">
-                                      <button className="btn form-control">ADD TO WISHLIST</button>
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                      <button className="btn form-control red">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6 col-6">
+                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
                                         <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -501,11 +619,11 @@ function Home() {
                                             </div>
                                             </div>    
                                  </div>
-                                 <div className="row">
-                                    <div className="col-md-6 col-6">
-                                      <button className="btn form-control">ADD TO WISHLIST</button>
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                      <button className="btn form-control ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6 col-6">
+                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
                                         <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
                                         </div>
                                      </div>
@@ -563,7 +681,7 @@ function Home() {
                <div className="container">
                  <h3 className="my-5">Featured Destinations</h3>
                  <div className="row">
-                   <div className="col-md-8">
+                   <div className="col-md-8 overhead">
                        <img src="Layer4.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to Greece & cyprus</h3>
@@ -575,7 +693,7 @@ function Home() {
                                
                          </div>
                      </div>
-                     <div className="col-md-4">
+                     <div className="col-md-4 overhead">
                      <img src="Layer3.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Italy & the lakes</h3>
@@ -589,7 +707,7 @@ function Home() {
                   
                    <div className="row my-4">
                   
-                     <div className="col-md-4">
+                     <div className="col-md-4 overhead">
                      <img src="Layer1.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Carribean</h3>
@@ -599,7 +717,7 @@ function Home() {
                          </div>
                      </div>
                       
-                       <div className="col-md-8">
+                       <div className="col-md-8 overhead">
                        <img src="Layer2.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to the Balearic Islands</h3>
@@ -629,9 +747,9 @@ function Home() {
                     </div>
                   </div>
                   <div className="container">
-                    <h3 className="my-3">Popular Destinations</h3>
+                    <h3 className="my-3 px-4">Popular Destinations</h3>
                     <div className="row text-darkblue">
-                       <div className="col-md-3">
+                       <div className="col-md-3 px-5">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -642,7 +760,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 px-5">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -653,7 +771,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 px-5">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -664,7 +782,7 @@ function Home() {
                             Zante
                             </p>
                          </div>
-                         <div className="col-md-3">
+                         <div className="col-md-3 px-5">
                          <p>Ibiza<br/>
                             Majorca<br/>
                             Crete<br/>
@@ -677,7 +795,7 @@ function Home() {
                          </div>
                       </div>
                   </div>
-
+                     <hr/>
                   <div className="container">
                     <div className="row last-section">
                         <div className="col-md-4 px-5">
@@ -740,6 +858,8 @@ function Home() {
                               </div>
                       </div>
                   </div>
+                  
+        <hr/>
 
         </section>
     )
