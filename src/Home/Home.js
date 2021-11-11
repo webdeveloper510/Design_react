@@ -63,28 +63,28 @@ function Home() {
                            <div className="row">
                              <div className="col-md-4">
                                <h4 className="mb-4">Featured Holidays</h4>
-                               <img src="menu.png" className="mt-2" height="158px" width="80%"/>
+                               <img src="menu.png" className="mt-2 mb-2" height="158px" width="80%"/>
                                <ul class="list-group list-group-flush first-list">
-                                  <li class="list-group-item"> Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </li>
+                                  <li class="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </a></li>
                                   </ul>
                                </div>
                                <div className="col-md-4">
                                <h4 className="mb-4">Holidays </h4>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item first">All-inclusive Holidays &nbsp;&nbsp; > </li>
-                                  <li class="list-group-item">Beach Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item">Family Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item last"> Adult Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item first"><a href="#">All-inclusive Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item"><a href="#">Beach Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item"><a href="#">Family Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item last"><a href="#"> Adult Holidays &nbsp;&nbsp; > </a></li>
                                  
                                 </ul>
                                  </div>
                                  <div className="col-md-4">
                                  <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item first">Balaerics Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item">Canaries Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item">Spain Holidays &nbsp;&nbsp; ></li>
-                                  <li class="list-group-item last"> USA Holidays &nbsp;&nbsp; ></li>
+                                  <li class="list-group-item first"><a href="#">Balaerics Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item"><a href="#">Canaries Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item"><a href="#">Spain Holidays &nbsp;&nbsp; > </a></li>
+                                  <li class="list-group-item last"><a href="#"> USA Holidays &nbsp;&nbsp; > </a></li>
                                   
                                 </ul>
                                  </div>
@@ -92,7 +92,7 @@ function Home() {
                             
                              <div className="text-right">
                              <ul class="list-group list-group-flush ">
-                                  <li class="list-group-item"> ALL HOLIDAYS  &nbsp;&nbsp; > </li>
+                                  <li class="list-group-item"><a href="#"> ALL HOLIDAYS  &nbsp;&nbsp; > </a></li>
                                   </ul>
                                   </div>
                          </div></li>
@@ -208,7 +208,7 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-4">
                                        <div class="input-group mb-3">
-                                         <div className="Filters" id="filterss" style={{display:'none'}}>
+                                         {/* <div className="Filters" id="filterss" style={{display:'none'}}>
                                          <div className="bottom-arrow"></div>
                                          <div className="row">
                                                <div className="col-4">
@@ -238,7 +238,7 @@ function Home() {
                                                    </div>
                                            </div>
                                             
-                                           </div>
+                                           </div> */}
                                         <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="filter.png"/></button>
                                        
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
@@ -255,6 +255,80 @@ function Home() {
                                                  <p className="text-white text-center"> <i class="fa fa-check-circle" style={{fontSize: '20px'}}></i>ATOL PROTECTED</p>
                                                </div>
                                            </div>
+                                           <div class="filterss" tabindex="-1" id="filterss" style={{display:'none'}}>
+                                                  <div class="">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title text-dark">Holidays</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers}></button>
+                                                      </div>
+                                                      <div class="modal-body text-dark">
+                                                        <div className="row">
+                                                            <div className="col-md-4">
+                                                              <label>Number of rooms</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>I don't mind</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+                                                              </div>
+                                                              <div className="col-md-2">
+                                                              <label>Adults</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+
+                                                                </div>
+                                                                <div className="col-md-2">
+                                                                <label>Children (0-17)</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+
+                                                                </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers}>Clear All</button>
+                                                        <button type="button" class="btn btn-primary">Done</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
                                            </form>
                                            </div>
                                          
@@ -319,7 +393,7 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
-                                       <div className="Filters" id="filterss1" style={{display:'none'}}>
+                                       {/* <div className="Filters" id="filterss1" style={{display:'none'}}>
                                          <div className="bottom-arrow"></div>
                                          <div className="row">
                                                <div className="col-4">
@@ -349,7 +423,7 @@ function Home() {
                                                    </div>
                                            </div>
                                             
-                                           </div>
+                                           </div> */}
                                         <button class="btn btn-secondary " onClick={toggleNumbers1} type="button" ><img src="filter.png"/></button>
                                        
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
@@ -381,6 +455,66 @@ function Home() {
                                                  <p className="text-white text-center"> <i class="fa fa-check-circle" style={{fontSize: '20px'}}></i>PRICE MATCH GUARANTEE</p>
                                                </div>
                                            </div>
+                                           <div class="filterss1" tabindex="-1" id="filterss1" style={{display:'none'}}>
+                                                  <div class="">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title text-dark">Rooms & Guests</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers1}></button>
+                                                      </div>
+                                                      <div class="modal-body text-dark">
+                                                        <div className="row">
+                                                           
+                                                              <div className="col-md-2">
+                                                              <label>Adults</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+
+                                                                </div>
+                                                                <div className="col-md-4">
+                                                                <label>Children (0-17)</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+
+                                                                </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers1}>Clear All</button>
+                                                        <button type="button" class="btn btn-primary">Done</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
                                            </form>
                                            </div>
                                  </div>
@@ -428,7 +562,7 @@ function Home() {
                                    <div className="row mt-3">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
-                                       <div className="Filters" id="filterss2" style={{display:'none'}}>
+                                       {/* <div className="Filters" id="filterss2" style={{display:'none'}}>
                                          <div className="bottom-arrow"></div>
                                          <div className="row">
                                                <div className="col-4">
@@ -458,7 +592,7 @@ function Home() {
                                                    </div>
                                            </div>
                                             
-                                           </div>
+                                           </div> */}
                                         <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="filter.png"/></button>
                                        
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
@@ -475,6 +609,81 @@ function Home() {
                                                  <p className="text-white text-center"><i class="fa fa-check-circle"  style={{fontSize: '20px'}}></i>PRICE MATCH GUARANTEE</p>
                                                </div>
                                            </div>
+                                           <div class="filterss2" tabindex="-1" id="filterss2" style={{display:'none'}}>
+                                                  <div class="">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title text-dark">Hotals</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers2}></button>
+                                                      </div>
+                                                      <div class="modal-body text-dark">
+                                                        <div className="row">
+                                                            <div className="col-md-4">
+                                                              <label>Number of rooms</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>I don't mind</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+                                                              </div>
+                                                              <div className="col-md-2">
+                                                              <label>Adults</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+
+                                                                </div>
+                                                                <div className="col-md-4">
+                                                                <label>Children (0-17)</label>
+                                                                <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+
+                                                                </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers2}>Clear All</button>
+                                                        <button type="button" class="btn btn-primary">Done</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                         
                                            </form>
                                            </div>
                                  </div>

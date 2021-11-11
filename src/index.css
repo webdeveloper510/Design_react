@@ -35,9 +35,9 @@ div#myTabContent {
 }
 nav.navbar.navbar-expand-lg.navbar-light {
   position: absolute;
-  width: 91%;
+  width: 89%;
   top: 0;
-  max-width: 1200px !important;
+  max-width: 1383px!important;
   height: 100px;
 }
 .tabs li.nav-item {

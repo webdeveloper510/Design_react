@@ -5,8 +5,9 @@
 }
 .tabs .nav-link {
     color: white !important;
-    background-color: #183561 !important;
-    border-color: #183561 #183561 #183561 !important;
+    background-color: #2b4f7c !important;
+    border-color: #2b4f7b #2b4f7b #2c4f7c !important;
+    border-radius: 0px !important;
 }
 .btn-group {
     width: 100%;
@@ -318,11 +319,15 @@ span.youro {
 }
 li.list-group-item a {
     text-decoration: none !important;
-    font-size: 20px !important;
+    font-size: 19px !important;
     color: #13345c !important;
 }
 p.user a {
     color: #01254f;
+}
+ul.navbar-nav.mb-2.m-lg-auto ul.dropdown-menu.show {
+    right: 0;
+    left: unset !important;
 }
 
 
@@ -350,7 +355,7 @@ span.value {
 .flighttabs .bottom-arrow {
 
     border-bottom: 13px solid #022650;
-  
+  position:unset !important;
 }
 .flighttabs ul.dropdown-menu.show {
     background: #022650;
