@@ -112,9 +112,8 @@ button.btn.form-control {
     padding: 34px;
     padding-bottom: 102px;
 }
-.text-darkblue p {
+.text-darkblue p a{
     color: #13345c;
-    font-size: 19px;
 }
 .Holidays1 h4{
     color: #13345c;
@@ -319,6 +318,22 @@ span.youro {
 .tabs .dropdown-toggle::after {
 
     content: unset !important;
+}
+li.list-group-item a {
+    text-decoration: none !important;
+    font-size: 20px !important;
+    color: #13345c !important;
+}
+p.user a {
+    color: #01254f;
+}
+
+
+.col-md-4.overhead img {
+    height: 100%;
+}
+.Contacting {
+    background: #fafeff;
 }
 span.sum {
     border: 1px solid white;

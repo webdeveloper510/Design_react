@@ -7,7 +7,7 @@ function Footer() {
             <div className="row">
                 <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p className="user">User Agreement | Privacy | Cookies | AdChoices</p>
+                   <p className="user"><a href="#">User Agreement </a>| <a href="#">Privacy </a>|<a href="#"> Cookies </a> | <a href="#">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
                            <img src="footerlogo.png" height="128px"className="img-fluid"/>

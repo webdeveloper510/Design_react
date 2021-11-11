@@ -750,52 +750,53 @@ function Home() {
                     <h3 className="my-3 px-4">Popular Destinations</h3>
                     <div className="row text-darkblue">
                        <div className="col-md-3 px-5">
-                         <p>Ibiza<br/>
-                            Majorca<br/>
-                            Crete<br/>
-                            Cyprus<br/>
-                            Portugal<br/>
-                            Turkey<br/>
-                            Greece<br/>
-                            Zante
+                         <p><a href="">Ibiza </a><br/>
+                         <a href="#"> Majorca</a><br/>
+                         <a href="#">Crete</a><br/>
+                         <a href="#"> Cyprus</a><br/>
+                         <a href="#"> Portugal</a><br/>
+                         <a href="#"> Turkey</a><br/>
+                         <a href="#"> Greece</a><br/>
+                         <a href="#"> Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p>Ibiza<br/>
-                            Majorca<br/>
-                            Crete<br/>
-                            Cyprus<br/>
-                            Portugal<br/>
-                            Turkey<br/>
-                            Greece<br/>
-                            Zante
+                         <p><a href="">Ibiza</a><br/>
+                         <a href="#"> Majorca</a><br/>
+                         <a href="#"> Crete</a><br/>
+                         <a href="#">Cyprus</a><br/>
+                         <a href="#">Portugal</a><br/>
+                         <a href="#"> Turkey</a><br/>
+                         <a href="#">Greece</a><br/>
+                         <a href="#"> Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p>Ibiza<br/>
-                            Majorca<br/>
-                            Crete<br/>
-                            Cyprus<br/>
-                            Portugal<br/>
-                            Turkey<br/>
-                            Greece<br/>
-                            Zante
+                         <p><a href="">Ibiza</a><br/>
+                         <a href="#"> Majorca</a><br/>
+                         <a href="#"> Crete</a><br/>
+                         <a href="#"> Cyprus</a><br/>
+                         <a href="#">  Portugal</a><br/>
+                         <a href="#"> Turkey</a><br/>
+                         <a href="#"> Greece</a><br/>
+                         <a href="#">  Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p>Ibiza<br/>
-                            Majorca<br/>
-                            Crete<br/>
-                            Cyprus<br/>
-                            Portugal<br/>
-                            Turkey<br/>
-                            Greece<br/>
-                            Zante
+                         <p><a href="">Ibiza</a><br/>
+                         <a href="#">Majorca</a><br/>
+                         <a href="#">Crete</a><br/>
+                         <a href="#">Cyprus</a><br/>
+                         <a href="#">Portugal</a><br/>
+                         <a href="#">Turkey</a><br/>
+                         <a href="#">Greece</a><br/>
+                         <a href="#">Zante</a>
                             </p>
                          </div>
                       </div>
                   </div>
                      <hr/>
+                     <div className="Contacting">
                   <div className="container">
                     <div className="row last-section">
                         <div className="col-md-4 px-5">
@@ -849,17 +850,18 @@ function Home() {
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                               </form>
                               <ul class="list-group my-4">
-                                <li class="list-group-item">Airline Baggage Fees</li>
-                                <li class="list-group-item">Online Flight Check-in</li>
-                                <li class="list-group-item">Covid 19 Travel Advisories</li>
-                                <li class="list-group-item">Cancellation Policy</li>
-                                <li class="list-group-item">Airport Security</li>
+                                <li class="list-group-item"> <a href="#">Airline Baggage Fees</a></li>
+                                <li class="list-group-item"><a href="#">Online Flight Check-in</a></li>
+                                <li class="list-group-item"><a href="#">Covid 19 Travel Advisories</a></li>
+                                <li class="list-group-item"><a href="#">Cancellation Policy</a></li>
+                                <li class="list-group-item"><a href="#">Airport Security</a></li>
                               </ul>
                               </div>
                       </div>
                   </div>
+                  </div>
                   
-        <hr/>
+     
 
         </section>
     )
