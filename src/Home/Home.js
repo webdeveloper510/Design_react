@@ -798,7 +798,7 @@ function Home() {
                      <hr/>
                      <div className="Contacting">
                   <div className="container">
-                    <div className="row last-section">
+                    <div className="row last-section py-4">
                         <div className="col-md-4 px-5">
                          <h4 className="my-3">Contacting us by Email</h4>
                          <p><b>Send us an email with any non-
