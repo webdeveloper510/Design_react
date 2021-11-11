@@ -366,7 +366,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
     position: absolute;
     z-index: 99;
     margin-top: -66px;
-    width: 80%;
+    width: 1115px;
     display: none;
 }
 
