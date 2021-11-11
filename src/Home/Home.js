@@ -195,6 +195,7 @@ function Home() {
                                         <div class="form-group">
                                             <label >Departure Date</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
+                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
@@ -216,7 +217,7 @@ function Home() {
                                       </div>
                                    </div>
                                   
-                                   <div className="row mt-3">
+                                   <div className="row ">
                                        <div className="col-md-4">
                                        <div class="input-group mb-3">
                                          {/* <div className="Filters" id="filterss" style={{display:'none'}}>
@@ -392,12 +393,14 @@ function Home() {
                                         <div class="form-group">
                                             <label >Check-in</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
+                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Check-out</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
+                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
                                       <div className="col-md-2 text-center">
@@ -408,7 +411,7 @@ function Home() {
                                       </div>
                                    </div>
                                   
-                                   <div className="row mt-3">
+                                   <div className="row ">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
                                        {/* <div className="Filters" id="filterss1" style={{display:'none'}}>
@@ -561,12 +564,14 @@ function Home() {
                                         <div class="form-group">
                                             <label >Leaving On</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
+                                            <i class="fa fa-calendar"onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Returning On</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
+                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
                                       <div className="col-md-2 text-center">
@@ -577,7 +582,7 @@ function Home() {
                                       </div>
                                    </div>
                                   
-                                   <div className="row mt-3">
+                                   <div className="row">
                                        <div className="col-md-3">
                                        <div class="input-group mb-3">
                                        {/* <div className="Filters" id="filterss2" style={{display:'none'}}>
@@ -720,6 +725,21 @@ function Home() {
                                                             <div className="col-md-8">
                                                             <Calendar />
                                                               </div>
+                                                              <div className="col-md-4 dayss">
+                                                                <h4>How flexible</h4>
+                                                                <div class="mb-3 form-check">
+                                                                      <input type="radio" class="form-check-input" name="day" />
+                                                                      <label class="form-check-label" for="exampleCheck1">Not Flexible</label>
+                                                                    </div>
+                                                                    <div class="mb-3 form-check">
+                                                                      <input type="radio" class="form-check-input" name="day"/>
+                                                                      <label class="form-check-label" for="exampleCheck1">+/- 3 Days</label>
+                                                                    </div>
+                                                                    <div class="mb-3 form-check">
+                                                                      <input type="radio" class="form-check-input"name="day"/>
+                                                                      <label class="form-check-label" for="exampleCheck1">+/- 7 Days  </label>
+                                                                    </div>
+                                                                </div>
                                                          </div>
                                                       </div>
                                                      
