@@ -2,6 +2,7 @@
     color: #183561 !important;
     background-color: #fff !important;
     border-color: #dee2e6 #dee2e6 #fff !important;
+    border-bottom: 0px !important;
 }
 .tabs .nav-link {
     color: white !important;
@@ -351,6 +352,29 @@ span.value {
     padding: 5px;
     color: black;
 
+}
+button.react-calendar__tile.react-calendar__month-view__days__day {
+    border: 1px solid;
+  
+}
+
+.react-calendar {
+    border: 0px !important;
+    width: 100% !important;
+}
+.filterss {
+    position: absolute;
+    z-index: 99;
+    margin-top: -66px;
+    width: 80%;
+    display: none;
+}
+
+.filterss1 {
+    position: absolute;
+    width: 80%;
+    margin-top: -12px;
+    z-index: 5;
 }
 a:hover {
    text-decoration: underline !important;

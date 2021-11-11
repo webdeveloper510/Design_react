@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Home.css"
 import { useState } from 'react';
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
 function Home() {
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
@@ -23,6 +25,15 @@ function Home() {
   function toggleNumbers(){
     console.log('here')
     var x = document.getElementById("filterss");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function open(){
+    console.log('here')
+    var x = document.getElementById("dates");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -183,7 +194,7 @@ function Home() {
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Departure Date</label>
-                                            <input type="date" class="form-control"/>
+                                            <input type="date" class="form-control" readOnly onClick={open}/>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
@@ -255,7 +266,7 @@ function Home() {
                                                  <p className="text-white text-center"> <i class="fa fa-check-circle" style={{fontSize: '20px'}}></i>ATOL PROTECTED</p>
                                                </div>
                                            </div>
-                                           <div class="filterss" tabindex="-1" id="filterss" style={{display:'none'}}>
+                                           <div class="filterss1" tabindex="-1" id="filterss" style={{display:'none'}}>
                                                   <div class="">
                                                     <div class="modal-content">
                                                       <div class="modal-header">
@@ -329,6 +340,13 @@ function Home() {
                                                     </div>
                                                   </div>
                                                 </div>
+                                                 
+
+                                               
+
+
+
+
                                            </form>
                                            </div>
                                          
@@ -373,13 +391,13 @@ function Home() {
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Check-in</label>
-                                            <input type="date" class="form-control"/>
+                                            <input type="date" class="form-control" readOnly onClick={open}/>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Check-out</label>
-                                            <input type="date" class="form-control"/>
+                                            <input type="date" class="form-control" readOnly onClick={open}/>
                                         </div>
                                       </div>
                                       <div className="col-md-2 text-center">
@@ -542,13 +560,13 @@ function Home() {
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Leaving On</label>
-                                            <input type="date" class="form-control"/>
+                                            <input type="date" class="form-control" readOnly onClick={open}/>
                                         </div>
                                       </div>
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Returning On</label>
-                                            <input type="date" class="form-control"/>
+                                            <input type="date" class="form-control" readOnly onClick={open}/>
                                         </div>
                                       </div>
                                       <div className="col-md-2 text-center">
@@ -609,7 +627,7 @@ function Home() {
                                                  <p className="text-white text-center"><i class="fa fa-check-circle"  style={{fontSize: '20px'}}></i>PRICE MATCH GUARANTEE</p>
                                                </div>
                                            </div>
-                                           <div class="filterss2" tabindex="-1" id="filterss2" style={{display:'none'}}>
+                                           <div class="filterss1" tabindex="-1" id="filterss2" style={{display:'none'}}>
                                                   <div class="">
                                                     <div class="modal-content">
                                                       <div class="modal-header">
@@ -690,6 +708,24 @@ function Home() {
                                
          
                        </div>
+                       <div class="filterss" tabindex="-1" id="dates" >
+                                                  <div class="">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title text-dark">Date</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"onClick={open} ></button>
+                                                      </div>
+                                                      <div class="modal-body text-dark">
+                                                       <div className="row">
+                                                            <div className="col-md-8">
+                                                            <Calendar />
+                                                              </div>
+                                                         </div>
+                                                      </div>
+                                                     
+                                                    </div>
+                                                  </div>
+                                                </div>
                        <div className="row">
                                              <div className="col-md-4">
                                                 <div className="offers">
