@@ -353,7 +353,7 @@ span.value {
 
 }
 a:hover {
-    border-bottom: 2px solid yellow;
+   text-decoration: underline !important;
     padding-bottom: 3px;
 }
 .flighttabs .bottom-arrow {
