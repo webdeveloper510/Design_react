@@ -63,7 +63,7 @@ function Home() {
                            <div className="row">
                              <div className="col-md-4">
                                <h4 className="mb-4">Featured Holidays</h4>
-                               <img src="menu.png"  height="158px" width="80%"/>
+                               <img src="menu.png" className="mt-2" height="158px" width="80%"/>
                                <ul class="list-group list-group-flush first-list">
                                   <li class="list-group-item"> Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </li>
                                   </ul>
