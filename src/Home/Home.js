@@ -705,7 +705,7 @@ function Home() {
                        </div>
                        </div>
                   
-                   <div className="row my-4">
+                   <div className="row my-2">
                   
                      <div className="col-md-4 overhead">
                      <img src="Layer1.png" className="img-fluid w-100"/>
@@ -795,7 +795,7 @@ function Home() {
                          </div>
                       </div>
                   </div>
-                     <hr/>
+                     
                      <div className="Contacting">
                   <div className="container">
                     <div className="row last-section py-4">

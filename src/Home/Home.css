@@ -79,7 +79,7 @@ i.fa.fa-check-circle{
     padding: 10px;
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 0px;
 }
 .col-md-8.overhead {
     position: relative;
@@ -102,10 +102,10 @@ button.btn.form-control {
 .overlay2.text-right {
     
     background: #ffffff85;
-    padding: 25px 10px;
+    padding: 23px 10px;
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 0px;
 }
 .summer-text {
     background: #ffffffd6;
@@ -192,10 +192,7 @@ button.btn.form-control {
     border-bottom: 2px solid yellow;
     padding-bottom: 3px;
 }
-li.lists1::after {
-    content: "v";
-    padding-left: 7px;
-}
+
 li.list-group-item.first {
     border-top: 1px solid rgba(0,0,0,.125);
 }
