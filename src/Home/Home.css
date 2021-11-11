@@ -352,6 +352,10 @@ span.value {
     color: black;
 
 }
+a:hover {
+    border-bottom: 2px solid yellow;
+    padding-bottom: 3px;
+}
 .flighttabs .bottom-arrow {
 
     border-bottom: 13px solid #022650;
