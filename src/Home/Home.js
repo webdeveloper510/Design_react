@@ -80,7 +80,7 @@ function Home() {
                                   </ul>
                                </div>
                                <div className="col-md-4">
-                               <h4 className="mb-4">Holidays </h4>
+                               <h4 className="mb-4 holi">Holidays </h4>
                                <ul class="list-group list-group-flush">
                                   <li class="list-group-item first"><a href="#">All-inclusive Holidays &nbsp;&nbsp; > </a></li>
                                   <li class="list-group-item"><a href="#">Beach Holidays &nbsp;&nbsp; > </a></li>

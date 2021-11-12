@@ -483,6 +483,14 @@ a.text-yellow:hover {
         position: absolute;
         width: 86%;
     }
+    h4.mb-4.holi {
+        margin-top: 19px ;
+    }
+    .Holidays1 {
+
+        width: 96%;
+        z-index: 99;
+    }
     div#navbarSupportedContent ul li a.dropdown-item.active {
         color: white !important;
     }
