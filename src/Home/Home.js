@@ -333,6 +333,63 @@ function Home() {
 
                                                                 </div>
                                                           </div>
+                                                          <div className="row">
+                                                               <div className="col-md-4"></div>
+                                                               <div className="col-md-4 mt-3">
+                                                                 <p>Child ages</p>
+                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
+                                                                 <div className="row">
+                                                                      <div className="col-md-4">
+                                                                      <label>Child 1</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                        <div className="col-md-4">
+                                                                        <label>Child 2</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
                                                       </div>
                                                       <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers}>Clear All</button>
@@ -528,6 +585,63 @@ function Home() {
 
                                                                 </div>
                                                           </div>
+                                                          <div className="row">
+                                                               <div className="col-md-2"></div>
+                                                               <div className="col-md-4 mt-3">
+                                                                 <p>Child ages</p>
+                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
+                                                                 <div className="row">
+                                                                      <div className="col-md-4">
+                                                                      <label>Child 1</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                        <div className="col-md-4">
+                                                                        <label>Child 2</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
                                                       </div>
                                                       <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers1}>Clear All</button>
@@ -672,7 +786,7 @@ function Home() {
                                                                 </select>
 
                                                                 </div>
-                                                                <div className="col-md-4">
+                                                                <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
                                                                 <select class="form-select" id="inputGroupSelect01">
                                                                   <option selected>Choose...</option>
@@ -698,6 +812,63 @@ function Home() {
 
                                                                 </div>
                                                           </div>
+                                                          <div className="row">
+                                                               <div className="col-md-4"></div>
+                                                               <div className="col-md-4 mt-3">
+                                                                 <p>Child ages</p>
+                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
+                                                                 <div className="row">
+                                                                      <div className="col-md-4">
+                                                                      <label>Child 1</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                        <div className="col-md-4">
+                                                                        <label>Child 2</label>
+                                                                      <select class="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
                                                       </div>
                                                       <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers2}>Clear All</button>

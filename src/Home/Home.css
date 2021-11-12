@@ -479,7 +479,35 @@ a.text-yellow:hover {
 }
 
 @media only screen and (max-width: 768px) {
-   
+    .filterss1 {
+        position: absolute;
+        width: 86%;
+    }
+    .filterss {
+        position: absolute;
+        z-index: 99;
+        margin-top: -116px;
+        width: 91%;
+    }
+    .hotals {
+        margin-top: 15px;
+    }
+    .hotals {margin-top: 15px;}
+
+
+.flight {
+    margin: 15px 0px;
+}
+
+.col-md-8.overhead {
+    margin-top: 15px;
+}
+
+.over1 {
+    bottom: 15px;
+}
+
+.col-md-4.overhead {margin-top: 15px;}
     .family {
         padding-top: 37%;
     }
