@@ -51,12 +51,13 @@ p.weather-time {
     padding: 20px;
     height: 164px;
     position: relative;
+    margin-bottom: 30px !important;
     margin: 10px 0px;
 }
 .deals {
     position: absolute;
-    right: 6px;
-    bottom: 10px;
+    right: 14px;
+    bottom: 20px;
 }
 .text-right {
     text-align: right;
@@ -378,7 +379,9 @@ i.fa.fa-calendar {
     right: -85%;
     top: -31px;
 }
-
+.lists {
+    margin-bottom: 24px;
+}
 li.list-group-item a:hover {
     text-decoration: underline !important;
 }

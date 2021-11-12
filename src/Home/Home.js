@@ -115,7 +115,7 @@ function Home() {
                        </div>
                             </div>
                             <div className="col-md-3">
-                            <div className="weather">
+                            {/* <div className="weather">
                               <div className="row">
                                   <div className="col-8">
                                   <h4>Paphos,CYP</h4>
@@ -134,7 +134,7 @@ function Home() {
                                         </div>
                                   </div>
                                     
-                                    </div>
+                                    </div> */}
                               </div>
                           </div>
                        <div className="tabs">
