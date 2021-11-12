@@ -750,7 +750,7 @@ function Home() {
                                              <div className="col-md-4">
                                                 <div className="offers">
                                                    <h4>Super savings</h4>
-                                                   <p>Save up to <span className="text-yellow">£750 per person </span> on selected holidays to Greece, Spain Portugal & Italy</p>
+                                                   <p>Save up to <a href="#" className="text-yellow">£750 per person </a> on selected holidays to Greece, Spain Portugal & Italy</p>
                                                    <div className="deals">
                                                         <button className="btn btn-warning" type="button">See Deals</button>
                                                         </div>
@@ -759,7 +759,7 @@ function Home() {
                                                  <div className="col-md-4">
                                                 <div className="offers">
                                                     <h4>Covid Hub</h4>
-                                                    <p>See <span className="text-yellow">destinations,entry requirements</span> & <span className="text-yellow">testing packs</span></p>
+                                                    <p>See <a href="#" className="text-yellow">destinations,entry requirements</a> & <a href="#" className="text-yellow">testing packs</a></p>
                                                     <div className="deals">
                                                         <button className="btn btn-warning" type="button">View Hub</button>
                                                         </div>

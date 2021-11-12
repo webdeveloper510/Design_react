@@ -51,7 +51,7 @@ p.weather-time {
     padding: 20px;
     height: 164px;
     position: relative;
-    margin-bottom: 30px !important;
+    margin-bottom: 18px !important;
     margin: 10px 0px;
 }
 .deals {
@@ -415,10 +415,12 @@ button.btn.btn-secondary.dropdown-toggle {
     background: #022650;
     border: 1px solid #022650;
 }
-span.text-yellow {
+.text-yellow {
     color: orange;
 }
-
+a.text-yellow:hover {
+    color: orange;
+}
 .over {
     background: #ffffffc4;
     position: absolute;
