@@ -483,6 +483,13 @@ a.text-yellow:hover {
         position: absolute;
         width: 86%;
     }
+    div#navbarSupportedContent ul li a.dropdown-item.active {
+        color: white !important;
+    }
+    button.navbar-toggler {
+        background: white !important;
+        border: 1px solid white !important;
+    }
     .filterss {
         position: absolute;
         z-index: 99;
