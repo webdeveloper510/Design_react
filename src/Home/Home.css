@@ -391,6 +391,9 @@ li.list-group-item a:hover {
     margin-top: -12px;
     z-index: 5;
 }
+.container.narrow {
+    padding: 0px 92px;
+}
 a:hover {
    text-decoration: underline !important;
     padding-bottom: 3px;
