@@ -61,7 +61,7 @@ function Home() {
     return (
     <section>
         <div className="banner pt-5">
-           <div className="container">
+           <div className="container narrow">
                <div className="row">
                    <div className="col"></div>
                    <div className="col-md-12">

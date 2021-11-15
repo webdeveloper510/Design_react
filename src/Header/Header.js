@@ -3,7 +3,7 @@ import React from 'react'
 
 function header() {
     return (
-        <div className="container">
+        <div className="container narrow">
             <nav className="navbar navbar-expand-lg navbar-light ">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#"><img src="Logo.png" className="p-1" width="250px" height="80px"/></a>
