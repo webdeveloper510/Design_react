@@ -58,6 +58,24 @@ function Home() {
     x.style.display = "none";
   }
   }
+  function toggleNumbers3(){
+    console.log('here')
+    var x = document.getElementById("filterss2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function toggleNumbers4(){
+    console.log('here')
+    var x = document.getElementById("filterss2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
     return (
     <section>
         <div className="banner pt-5">
@@ -65,88 +83,14 @@ function Home() {
                <div className="row">
                    <div className="col"></div>
                    <div className="col-md-12">
-                        <div className="row mt-5 pt-5">
-                          <div className="col-md-9">
-                          <div className="lists">
-                      <ul> 
-                        <li className="holiday-data lists1"> Holidays  <div className="Holidays1">
-                          <div className="arrow-up"></div>
-                           <div className="row">
-                             <div className="col-md-4">
-                               <h4 className="mb-4">Featured Holidays</h4>
-                               <img src="menu.png" className="mt-2 mb-2" height="158px" width="80%"/>
-                               <ul class="list-group list-group-flush first-list">
-                                  <li class="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </a></li>
-                                  </ul>
-                               </div>
-                               <div className="col-md-4">
-                               <h4 className="mb-4 holi">Holidays </h4>
-                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item first"><a href="#">All-inclusive Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item"><a href="#">Beach Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item"><a href="#">Family Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item last"><a href="#"> Adult Holidays &nbsp;&nbsp; > </a></li>
-                                 
-                                </ul>
-                                 </div>
-                                 <div className="col-md-4">
-                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
-                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item first"><a href="#">Balaerics Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item"><a href="#">Canaries Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item"><a href="#">Spain Holidays &nbsp;&nbsp; > </a></li>
-                                  <li class="list-group-item last"><a href="#"> USA Holidays &nbsp;&nbsp; > </a></li>
-                                  
-                                </ul>
-                                 </div>
-                             </div>
-                            
-                             <div className="text-right">
-                             <ul class="list-group list-group-flush ">
-                                  <li class="list-group-item"><a href="#"> ALL HOLIDAYS  &nbsp;&nbsp; > </a></li>
-                                  </ul>
-                                  </div>
-                         </div></li>
-                        <li className="lists1">Flights</li>
-                        <li className="lists1">Hostels </li>
-                        <li className="lists1">Deals </li>
-                        <li className="lists1">Extras</li>
-                      </ul>
-                       </div>
-                            </div>
-                            <div className="col-md-3">
-                            {/* <div className="weather">
-                              <div className="row">
-                                  <div className="col-8">
-                                  <h4>Paphos,CYP</h4>
-                              <small style={{fontSize:"12px" }}>9 Aug, Mon - Sunny/Cloudy</small>
-                                    </div>
-                                    <div className="col-4">
-                                      <p className="weather-time">12:43</p>
-                                      </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-6">
-                                       <p className="celc">+25</p>
-                                      </div>
-                                      <div className="col-6 text-center">
-                                      <i class='fa fa-cloud-sun fa-flip-horizontal'></i>
-                                        </div>
-                                  </div>
-                                    
-                                    </div> */}
-                              </div>
-                          </div>
-                       <div className="tabs">
+                       
+                       <div className="tabs mt-5">
                         
                       
                       
                        <ul class="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Package Holidays</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Gallery" type="button" role="tab" aria-controls="profile" aria-selected="false">Flights</button>
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Flight + Hotel</button>
                             </li>
                             <li class="nav-item" role="presentation">
                             <button class="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
@@ -158,36 +102,45 @@ function Home() {
                              <div className="flighttabs">
                                  <form>
                                <div className="row">
-                                    <div className="col-md-3">
+                                    <div className="col-md-2">
                                         <div class="form-group">
-                                            <label >Find Holidays in</label>
+                                            <label >Destination(s) or Hotel Name</label>
+                                            <div class="input-group mb-3">
+
                                             <input type="text" class="form-control" />
+                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                          </div>
+                                         
                                         </div>
-                                        <div className="suggection ">
+                                        <div className="suggection " id="Destination">
                                         <div className="flush"></div>
-                                          <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">An item</li>
-                                            <li class="list-group-item">A second item</li>
-                                            <li class="list-group-item">A third item</li>
-                                            <li class="list-group-item">A fourth item</li>
-                                            <li class="list-group-item">And a fifth one</li>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"> <input type="checkbox" class="form-check-input"/> An item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A second item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> A third item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A fourth item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>And a fifth one</li>
                                           </ul>
                                         </div>
                                       </div>
                                     
-                                      <div className="col-md-3">
+                                      <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Departure Airport</label>
+                                            <div class="input-group mb-3">
                                             <input type="text" class="form-control" />
+                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-plane"></i></button>
+                                            </div>
                                         </div>
-                                        <div className="suggection1 ">
+                  
+                                        <div className="suggection1 " id="Airport">
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">An item</li>
-                                            <li class="list-group-item">A second item</li>
-                                            <li class="list-group-item">A third item</li>
-                                            <li class="list-group-item">A fourth item</li>
-                                            <li class="list-group-item">And a fifth one</li>
+                                            <li class="list-group-item"> <input type="checkbox" class="form-check-input"/> An item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A second item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> A third item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A fourth item</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>And a fifth one</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -200,7 +153,7 @@ function Home() {
                                       </div>
                                       <div className="col-md-2">
                                         <div class="form-group">
-                                            <label >Nights</label>
+                                            <label >Duration</label>
                                             <select class="form-select" id="inputGroupSelect01">
                                                 <option selected>7 Nights</option>
                                                 <option value="1">2 days 2 Nights</option>
@@ -209,64 +162,31 @@ function Home() {
                                             </select>
                                         </div>
                                       </div>
+                                    
+                                       <div className="col-md-2">
+                                       <div class="form-group">
+                                        
+                                           <label>Rooms & Guests</label>
+                                           <div class="input-group mb-3">
+
+                                        <input type="text" class="form-control" />
+                                        <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="filter.png"/></button>
+                                     
+                                        </div>
+                                       
+                                         </div>
+                                       </div>
+                                      
+                                       
                                       <div className="col-md-2 text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-warning" type="button">Find</button>
+                                            <button className="btn btn-primary" type="button">Search  &nbsp;&nbsp; ></button>
                                         </div>
                                       </div>
                                    </div>
                                   
-                                   <div className="row ">
-                                       <div className="col-md-4">
-                                       <div class="input-group mb-3">
-                                         {/* <div className="Filters" id="filterss" style={{display:'none'}}>
-                                         <div className="bottom-arrow"></div>
-                                         <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Adult</p>
-                                                    <small style={{fontSize:"10px"}}>(12+)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0"> Children</p>
-                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Infants</p>
-                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                            
-                                           </div> */}
-                                        <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="filter.png"/></button>
-                                       
-                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
-                                      </div>
-                                       </div>
-                                      
-                                       <div className="col-md-2">
-                                         
-                                           </div>
-                                           <div className="col-md-3">
-                                          
-                                           </div>
-                                           <div className="col-md-3">
-                                                 <p className="text-white text-center"> <i class="fa fa-check-circle" style={{fontSize: '20px'}}></i>ATOL PROTECTED</p>
-                                               </div>
-                                           </div>
+                                  
                                            <div class="filterss1" tabindex="-1" id="filterss" style={{display:'none'}}>
                                                   <div class="">
                                                     <div class="modal-content">
@@ -410,7 +330,7 @@ function Home() {
                                          
                                 </div>
                                  {/*------------------ Flights section---------------------- */}
-                            <div class="tab-pane fade " id="Gallery" role="tabpanel" aria-labelledby="profile-tab">
+                            {/* <div class="tab-pane fade " id="Gallery" role="tabpanel" aria-labelledby="profile-tab">
                             <div className="flighttabs">
                                  <form>
                                <div className="row">
@@ -501,7 +421,7 @@ function Home() {
                                                    </div>
                                            </div>
                                             
-                                           </div> */}
+                                           </div> 
                                         <button class="btn btn-secondary " onClick={toggleNumbers1} type="button" ><img src="filter.png"/></button>
                                        
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
@@ -652,16 +572,19 @@ function Home() {
                                                 </div>
                                            </form>
                                            </div>
-                                 </div>
+                                 </div> */}
                                  {/*------------------ hotals section---------------------- */}
                                  <div class="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
                                  <div className="flighttabs">
                                  <form>
                                <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-md-4">
                                         <div class="form-group">
-                                            <label >Find accommodation in</label>
+                                            <label >Destination(s) or Hotel Name</label>
+                                            <div class="input-group mb-3">
                                             <input type="text" class="form-control" />
+                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                          </div>
                                             <div className="suggection ">
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
@@ -674,78 +597,42 @@ function Home() {
                                         </div>
                                         </div>
                                       </div>
-                                      <div className="col-md-2">
+                                     
+                                       
+                                      
+                                   
+                                           
+                                         
+                                      {/* <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Leaving On</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
                                             <i class="fa fa-calendar"onClick={open} aria-hidden="true"></i>
                                         </div>
-                                      </div>
-                                      <div className="col-md-2">
+                                      </div> */}
+                                      <div className="col-md-3">
                                         <div class="form-group">
-                                            <label >Returning On</label>
+                                            <label >Check-in / Check-out</label>
                                             <input type="date" class="form-control" readOnly onClick={open}/>
                                             <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
+                                      <div className="col-md-3">
+                                       <label >Rooms & Guests</label>
+                                       <div class="input-group mb-3">
+                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
+                                        <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="filter.png"/></button>
+                                      </div>
+                                       </div>
                                       <div className="col-md-2 text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-warning" type="button">Find</button>
+                                            <button className="btn btn-primary" type="button">Search &nbsp;&nbsp; > </button>
                                         </div>
                                       </div>
                                    </div>
                                   
-                                   <div className="row">
-                                       <div className="col-md-3">
-                                       <div class="input-group mb-3">
-                                       {/* <div className="Filters" id="filterss2" style={{display:'none'}}>
-                                         <div className="bottom-arrow"></div>
-                                         <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Adult</p>
-                                                    <small style={{fontSize:"10px"}}>(12+)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0"> Children</p>
-                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Infants</p>
-                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                            
-                                           </div> */}
-                                        <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="filter.png"/></button>
-                                       
-                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
-                                      </div>
-                                       </div>
-                                      
-                                       <div className="col-md-6 d-flex">
-                                       <p className="m-2">Hotel Rating</p> <div class="rating"> <input type="radio" name="rating" value="5" id="5"/><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"/><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"/><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"/><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"/><label for="1">☆</label> </div>
-
-                                          
-                                           
-                                           </div>
-                                           <div className="col-md-3">
-                                                 <p className="text-white text-center"><i class="fa fa-check-circle"  style={{fontSize: '20px'}}></i>PRICE MATCH GUARANTEE</p>
-                                               </div>
-                                           </div>
+                                
                                            <div class="filterss1" tabindex="-1" id="filterss2" style={{display:'none'}}>
                                                   <div class="">
                                                     <div class="modal-content">
@@ -917,52 +804,54 @@ function Home() {
                                                     </div>
                                                   </div>
                                                 </div>
-                       <div className="row">
-                                             <div className="col-md-4">
-                                                <div className="offers">
-                                                   <h4>Super savings</h4>
-                                                   <p>Save up to <a href="#" className="text-yellow">£750 per person </a> on selected holidays to Greece, Spain Portugal & Italy</p>
-                                                   <div className="deals">
-                                                        <button className="btn btn-warning" type="button">See Deals</button>
-                                                        </div>
-                                                    </div>
-                                                 </div> 
-                                                 <div className="col-md-4">
-                                                <div className="offers">
-                                                    <h4>Covid Hub</h4>
-                                                    <p>See <a href="#" className="text-yellow">destinations,entry requirements</a> & <a href="#" className="text-yellow">testing packs</a></p>
-                                                    <div className="deals">
-                                                        <button className="btn btn-warning" type="button">View Hub</button>
-                                                        </div>
-                                                    </div>
-                                                 </div> 
-                                                 <div className="col-md-4">
-                                                <div className="offers">
-                                                     <h4>ATOL Protection</h4>
-                                                     <div className="text-right">
-                                                        <img style={{ marginTop: '-24px'}} src="Layer.png"width="50px" height="50px"/>
-                                                     </div>
-                                                     <p>ATOL protection for your peace of mind</p>
-                                                    </div>
-                                                 </div> 
-                                               </div>
+                      
                    </div>
                    </div>
                 
         </div>
         </div>
+       
+          
+        </div>
+        <div className="Hello">
+           <div className="container">
+           <div className="row">
+             <div className="col-md-6"></div>
+             <div className="col-md-1"></div>
+                       <div className="col-md-4">
+                           <div className="summer-text">
+                           <img src="smile.png"/>
+                             <h3 className="mb-3">Hello Holidays</h3>
+                            
+                             
+                               
+                             <p className="mb-3"><span className="redcolor">Save up to £750 per person </span> on 
+                                  selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
+                                  <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
+                                  <br/><br/>
+                                  Great deals, with a price match 
+                                  promise &<span className="redcolor"> deposits from £30 </span>, say 
+                                  hello to holidays that make you smile.</p>
+                                  <div className="text-right">
+                                  <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; > </button>                             </div>
+                         </div>
+                         </div>
+                         <div className="col-md-1"></div>
+                      </div>
+             </div>
+          </div>
         <div className="content text-center">
             <div className="container">
                    <div className="row">
                  <div className="col-md-4 my-3">
-                      <p><i class="fa fa-star"></i> Trustpilot</p>
+                      <p><i class="fa fa-star" style={{color: '#46b946'}}></i> Trustpilot</p>
                       <div className="stars">
                       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                         </div>
                      </div>
                      <div className="col-md-4 my-3 d-flex">
-                     <i class="fa fa-lightbulb-o"></i>
-                     <p style={{textAlign:"left"}}> Package Holiday <br/>Experts</p>
+                     <img src="footer.png" width="50px" height="50px" className="mr-3"/>
+                     <p style={{textAlign:"left",marginLeft: '10px'}}> ATOL  <br/>Protected</p>
                   </div>
                   <div className="col-md-4 my-3 d-flex">
                   <i class="fa fa-check-circle"></i>
@@ -971,8 +860,6 @@ function Home() {
                </div>
                </div>
            </div>
-          
-        </div>
            
                {/* second Section */}
                <div className="container ">

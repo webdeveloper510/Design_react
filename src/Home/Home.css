@@ -1,14 +1,21 @@
 .tabs .nav-link.active {
-    color: #183561 !important;
+    color: black !important;
     background-color: #fff !important;
     border-color: #dee2e6 #dee2e6 #fff !important;
     border-bottom: 0px !important;
 }
 .tabs .nav-link {
-    color: white !important;
-    background-color: #2b4f7c !important;
-    border-color: #2b4f7b #2b4f7b #2c4f7c !important;
+    color: black !important;
+    background-color: #e7f5fd !important;
+    border-color: #e7f5fd #e7f5fd #e7f5fd !important;
     border-radius: 0px !important;
+}
+label {
+    font-size: 13px;
+}
+.input-group.mb-3 i {
+    color: white !important;
+    padding: 0px !important;
 }
 .btn-group {
     width: 100%;
@@ -111,9 +118,23 @@ button.btn.form-control {
     bottom: 0px;
 }
 .summer-text {
-    background: #ffffffd6;
+    background: #ffffffa8;
     padding: 34px;
-    padding-bottom: 102px;
+    position: relative;
+    margin: 30px 0px;
+}
+.summer-text img {
+    position: absolute;
+    right: 37px;
+    top: 42px;
+    height: 30px;
+}
+button.btn.btn-danger.btn-lg {
+    background: #fd2301;
+    border-color: #fd2301;
+}
+span.redcolor {
+    color: #fd2301;
 }
 .text-darkblue p a{
     color: #13345c;
@@ -189,6 +210,7 @@ button.btn.form-control {
     position: absolute;
     margin-top: 13px;
     display: none;
+    width: 300px;
     z-index: 99;
 }
 .lists1:hover {
@@ -209,6 +231,7 @@ li.lists1 {
     position: absolute;
     margin-top: 13px;
     display: none;
+    width: 300px;
     z-index: 99;
 }
 .first-list{
@@ -300,7 +323,9 @@ li.holiday-data:hover .Holidays1 {
 .stars i {
     background: #46b946;
     padding: 3px;
+    color:white;
 }
+
 button.btn.btn-primary {
     font-size: 15px;
     background: #01254f !important;
@@ -409,7 +434,7 @@ span.add {
     padding:4px;
 }
 .content {
-    background: #183561bf;
+    background: white;
 }
 button.btn.btn-secondary.dropdown-toggle {
     background: #022650;

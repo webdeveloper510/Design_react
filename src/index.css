@@ -12,26 +12,29 @@ code {
     monospace;
 }
 a.nav-link {
-  color: white !important;
+  color: #022650 !important;
 }
 .banner {
-   
-    color: white;
-    background-position: center;
-    background-image: url(./home.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+   background-color: white;
+    color: black;
+  
    
 }
 
+.Hello {
+  background-position: center ;
+  background-image: url(./home-alternate.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 div#myTabContent {
-  background: #183561bf;
+  background: #e7f5fd;
   padding: 21px;
 
 }
 .nav-tabs {
-  border-bottom: 1px solid #335681 !important;
+  border-bottom: 1px solid #e7f5fd !important;
 }
 nav.navbar.navbar-expand-lg.navbar-light {
   position: absolute;
