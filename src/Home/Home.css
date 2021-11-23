@@ -10,6 +10,40 @@
     border-color: #e7f5fd #e7f5fd #e7f5fd !important;
     border-radius: 0px !important;
 }
+.modal-dialog {
+    max-width: 1200px !important;
+}
+div#navbarSupportedContent {
+    z-index: 9;
+}
+ul#pills-tab {
+    border-right: 1px solid #e7e5e5;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #e7f5fd;
+}
+.mega-menu img.img-fluid {
+    width: 27px;
+    height: 33px;
+    margin-right: 10px;
+    padding: 5px;
+    margin-left: -11px;
+}
+.mega-menu.mt-5 ul li.nav-item a:hover {
+    text-decoration: none !important;
+}
+.mega-menu.mt-5 ul li.nav-item a {
+    text-decoration: none;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 0px;
+    border-bottom: 1px solid #e7dbdb;
+}
+.mega-menu.mt-5 ul li {
+    width: 100%;
+}
 label {
     font-size: 13px;
 }
@@ -205,10 +239,21 @@ span.redcolor {
     border-bottom: 15px solid white;
     position: absolute;
     top: -15px;
+    left: 45%;
+}
+.flush1 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: absolute;
+    top: -15px;
+    right: 0%;
 }
 .suggection {
     position: absolute;
-    margin-top: 13px;
+    margin-top: 0px;
     display: none;
     width: 300px;
     z-index: 99;
@@ -227,9 +272,16 @@ li.list-group-item.last {
 li.lists1 {
     font-size: 20px;
 }
+.suggection3 {
+    position: absolute;
+    margin-top: 0px;
+    display: none;
+    width: 300px;
+    z-index: 99;
+}
 .suggection1 {
     position: absolute;
-    margin-top: 13px;
+    margin-top: 0px;
     display: none;
     width: 300px;
     z-index: 99;
@@ -391,7 +443,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
 .filterss {
     position: absolute;
     z-index: 99;
-    margin-top: -110px;
+    margin-top: -30px;
     width: 1115px;
     display: none;
 }

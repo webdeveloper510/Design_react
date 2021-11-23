@@ -60,7 +60,7 @@ function Home() {
   }
   function toggleNumbers3(){
     console.log('here')
-    var x = document.getElementById("filterss2");
+    var x = document.getElementById("Destination");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -69,7 +69,16 @@ function Home() {
   }
   function toggleNumbers4(){
     console.log('here')
-    var x = document.getElementById("filterss2");
+    var x = document.getElementById("flight");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function toggleNumbers5(){
+    console.log('here')
+    var x = document.getElementById("Airport");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -83,7 +92,10 @@ function Home() {
                <div className="row">
                    <div className="col"></div>
                    <div className="col-md-12">
-                       
+    
+
+
+                      
                        <div className="tabs mt-5">
                         
                       
@@ -108,18 +120,19 @@ function Home() {
                                             <div class="input-group mb-3">
 
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers3}  type="button"><i class="fa fa-map-marker"> </i></button>
                                           </div>
                                          
                                         </div>
                                         <div className="suggection " id="Destination">
                                         <div className="flush"></div>
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"> <input type="checkbox" class="form-check-input"/> An item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A second item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> A third item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A fourth item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>And a fifth one</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Destination</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Mediterranean</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Canary Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Greek Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Balearic Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Africa</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -129,18 +142,19 @@ function Home() {
                                             <label >Departure Airport</label>
                                             <div class="input-group mb-3">
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-plane"></i></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers5}  type="button"><i class="fa fa-plane"></i></button>
                                             </div>
                                         </div>
                   
                                         <div className="suggection1 " id="Airport">
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"> <input type="checkbox" class="form-check-input"/> An item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A second item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> A third item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>A fourth item</li>
-                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/>And a fifth one</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any London Airport</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Midlands Airport</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any North East Airport</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any North West Airport</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Scotland Airport</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any South West Airport</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -583,16 +597,17 @@ function Home() {
                                             <label >Destination(s) or Hotel Name</label>
                                             <div class="input-group mb-3">
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><i class="fa fa-map-marker"> </i></button>
                                           </div>
-                                            <div className="suggection ">
-                                        <div className="flush"></div>
-                                          <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">An item</li>
-                                            <li class="list-group-item">A second item</li>
-                                            <li class="list-group-item">A third item</li>
-                                            <li class="list-group-item">A fourth item</li>
-                                            <li class="list-group-item">And a fifth one</li>
+                                            <div className="suggection3 " id="flight">
+                                        <div className="flush1"></div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Destination</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Mediterranean</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Canary Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Greek Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Balearic Islands</li>
+                                            <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Africa</li>
                                           </ul>
                                         </div>
                                         </div>
@@ -862,100 +877,7 @@ function Home() {
            </div>
            
                {/* second Section */}
-               <div className="container ">
-                   <h3 className="my-3">Package Holiday Deals</h3>
-                   <div className="row">
-                       <div className="col-md-4">
-                          <div className="hotals">
-                           
-                         
-                          <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p> <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
-                                        </div>
-                                        <div className="col-md-4 col-4 text-right">
-                                            <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-4">
-                                          
-                                              <p>   <i class="fa fa-plane"></i> Delta</p>
-                                            </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control ">ADD TO WISHLIST</button>
-                                        </div>
-                                        <div className="col-md-6 col-6 "  style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
-                                        </div>
-                                     </div>
-                                     </div>
-                                
-                              </div>
-                           </div>
-                           <div className="col-md-4">
-                           <div className="hotals">
-                           <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
-                                        </div>
-                                        <div className="col-md-4 col-4 text-right">
-                                            <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-4">
-                                            
-                                              <p> <i class="fa fa-plane"></i> Delta</p>
-                                            </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control red">ADD TO WISHLIST</button>
-                                        </div>
-                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
-                                        </div>
-                                     </div>
-                              
-                                 </div>
-                              </div>
-                        </div>
-                        <div className="col-md-4">
-                        <div className="hotals">
-                             <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
-                                        </div>
-                                        <div className="col-md-4 col-4 text-right">
-                                            <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-4">
-                                           
-                                              <p>  <i class="fa fa-plane"></i>Delta</p>
-                                            </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control ">ADD TO WISHLIST</button>
-                                        </div>
-                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
-                                        </div>
-                                     </div>
-                              
-                                 </div>
-                              </div>
-                        </div>
-                       </div>
-               </div>
+              
                <div className="container">
                  <h3  className="my-5">I am looking for...?</h3>
                   <div className="row">
@@ -1053,6 +975,100 @@ function Home() {
                  
                    </div>
                    </div>
+                   <div className="container my-4 ">
+                   <h3 className="my-3">Package Holiday Deals</h3>
+                   <div className="row">
+                       <div className="col-md-4">
+                          <div className="hotals">
+                           
+                         
+                          <div className="overlay">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
+                                    <h5>Miami, FL</h5>
+                                    <p>25 Mar ... 02 Apr</p>
+                                    <p> <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                        </div>
+                                        <div className="col-md-4 col-4 text-right">
+                                            <h3><span className="youro">£</span> 329</h3>
+                                            <div className="text-right mt-4">
+                                          
+                                              <p>   <i class="fa fa-plane"></i> Delta</p>
+                                            </div>
+                                            </div>    
+                                 </div>
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                      <button className="btn form-control ">ADD TO WISHLIST</button>
+                                        </div>
+                                        <div className="col-md-6 col-6 "  style={{padding:'0px'}}>
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
+                                        </div>
+                                     </div>
+                                     </div>
+                                
+                              </div>
+                           </div>
+                           <div className="col-md-4">
+                           <div className="hotals">
+                           <div className="overlay">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
+                                    <h5>Miami, FL</h5>
+                                    <p>25 Mar ... 02 Apr</p>
+                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                        </div>
+                                        <div className="col-md-4 col-4 text-right">
+                                            <h3><span className="youro">£</span> 329</h3>
+                                            <div className="text-right mt-4">
+                                            
+                                              <p> <i class="fa fa-plane"></i> Delta</p>
+                                            </div>
+                                            </div>    
+                                 </div>
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                      <button className="btn form-control red">ADD TO WISHLIST</button>
+                                        </div>
+                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
+                                        </div>
+                                     </div>
+                              
+                                 </div>
+                              </div>
+                        </div>
+                        <div className="col-md-4">
+                        <div className="hotals">
+                             <div className="overlay">
+                                 <div className="row p-2">
+                                    <div className="col-md-8 col-8">
+                                    <h5>Miami, FL</h5>
+                                    <p>25 Mar ... 02 Apr</p>
+                                    <p><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                        </div>
+                                        <div className="col-md-4 col-4 text-right">
+                                            <h3><span className="youro">£</span> 329</h3>
+                                            <div className="text-right mt-4">
+                                           
+                                              <p>  <i class="fa fa-plane"></i>Delta</p>
+                                            </div>
+                                            </div>    
+                                 </div>
+                                 <div className="row red">
+                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                      <button className="btn form-control ">ADD TO WISHLIST</button>
+                                        </div>
+                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
+                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
+                                        </div>
+                                     </div>
+                              
+                                 </div>
+                              </div>
+                        </div>
+                       </div>
+               </div>
                   
                   <div className="summer">
                     <div className="container">
