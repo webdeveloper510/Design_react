@@ -48,7 +48,7 @@ label {
     font-size: 13px;
 }
 .input-group.mb-3 i {
-    color: white !important;
+    color: #01254f !important;
     padding: 0px !important;
 }
 .btn-group {
@@ -239,7 +239,7 @@ span.redcolor {
     border-bottom: 15px solid white;
     position: absolute;
     top: -15px;
-    left: 45%;
+    right: 10%;
 }
 .flush1 {
     width: 0;
@@ -421,9 +421,17 @@ span.sum {
     padding:  4px;
     cursor: pointer;
 }
+input.form-control {
+    height: 44px;
+}
+
+select#inputGroupSelect01 {
+    height: 44px;
+}
 .input-group.mb-3 button.btn.btn-secondary {
-    background: #022650;
-    border-color: #022650;
+    background: #ffffff;
+    border-color: #d9d9d9;
+    color: black !important;
 }
 span.value {
     background: white;

@@ -122,7 +122,7 @@ function Home() {
                                             <div class="input-group mb-3">
 
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers3}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img src="desti.png"/></button>
                                           </div>
                                          
                                         </div>
@@ -186,7 +186,7 @@ function Home() {
                                            <div class="input-group mb-3">
 
                                         <input type="text" class="form-control" />
-                                        <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="filter.png"/></button>
+                                        <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="rome.png"/></button>
                                      
                                         </div>
                                        
@@ -197,7 +197,7 @@ function Home() {
                                       <div className="col text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" type="button">Search </button>
+                                            <button className="btn btn-primary" style={{height:"44px"}} type="button">Search </button>
                                         </div>
                                       </div>
                                    </div>
@@ -357,7 +357,7 @@ function Home() {
                                             <label >Destination(s) or Hotel Name</label>
                                             <div class="input-group mb-3">
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><i class="fa fa-map-marker"> </i></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img src="desti.png"/></button>
                                           </div>
                                             <div className="suggection3 " id="flight">
                                         <div className="flush1"></div>
@@ -384,13 +384,13 @@ function Home() {
                                        <label >Rooms & Guests</label>
                                        <div class="input-group mb-3">
                                         <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
-                                        <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="filter.png"/></button>
+                                        <button class="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="rome.png"/></button>
                                       </div>
                                        </div>
                                       <div className="col-md-2 text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" type="button">Search &nbsp;&nbsp; > </button>
+                                            <button className="btn btn-primary" style={{height:'44px'}}type="button">Search &nbsp;&nbsp; > </button>
                                         </div>
                                       </div>
                                    </div>
