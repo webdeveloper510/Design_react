@@ -197,7 +197,7 @@ function Home() {
                                       <div className="col text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:"44px"}} type="button">Search </button>
+                                            <button className="btn btn-primary" style={{height:"50px"}} type="button">Search </button>
                                         </div>
                                       </div>
                                    </div>
@@ -390,7 +390,7 @@ function Home() {
                                       <div className="col-md-2 text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:'44px'}}type="button">Search &nbsp;&nbsp; > </button>
+                                            <button className="btn btn-primary" style={{height:'50px'}}type="button">Search &nbsp;&nbsp; > </button>
                                         </div>
                                       </div>
                                    </div>

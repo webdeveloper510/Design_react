@@ -422,11 +422,11 @@ span.sum {
     cursor: pointer;
 }
 input.form-control {
-    height: 44px;
+    height: 50px;
 }
 
 select#inputGroupSelect01 {
-    height: 44px;
+    height: 50px;
 }
 .input-group.mb-3 button.btn.btn-secondary {
     background: #ffffff;
@@ -462,8 +462,8 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
 i.fa.fa-calendar {
     color: black;
     position: relative;
-    right: -85%;
-    top: -31px;
+    right: -90%;
+    top: -38px;
 }
 .lists {
     margin-bottom: 24px;
