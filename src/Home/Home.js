@@ -32,7 +32,7 @@ function Home() {
   }
   }
   function open(){
-    console.log('here')
+    console.log('here1')
     var x = document.getElementById("dates");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -88,17 +88,15 @@ function Home() {
     return (
     <section>
         <div className="banner pt-5">
-           <div className="container narrow">
-               <div className="row">
-                   <div className="col"></div>
-                   <div className="col-md-12">
+           <div className=" narrow">
+              
     
 
 
                       
                        <div className="tabs mt-5">
                         
-                      
+                      <div className="container">
                       
                        <ul class="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -108,13 +106,17 @@ function Home() {
                             <button class="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
                             </li>
                         </ul>
+                        </div>
+                        
                         <div class="tab-content" id="myTabContent">
+                          
                            {/*------------------ Package Holidays section---------------------- */}
                             <div class="tab-pane fade show active" id="Profile" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="container">
                              <div className="flighttabs">
                                  <form>
                                <div className="row">
-                                    <div className="col-md-2">
+                                    <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Destination(s) or Hotel Name</label>
                                             <div class="input-group mb-3">
@@ -137,7 +139,7 @@ function Home() {
                                         </div>
                                       </div>
                                     
-                                      <div className="col-md-2">
+                                      <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Departure Airport</label>
                                             <div class="input-group mb-3">
@@ -165,7 +167,7 @@ function Home() {
                                             <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
                                         </div>
                                       </div>
-                                      <div className="col-md-2">
+                                      <div className="col-md-1">
                                         <div class="form-group">
                                             <label >Duration</label>
                                             <select class="form-select" id="inputGroupSelect01">
@@ -192,10 +194,10 @@ function Home() {
                                        </div>
                                       
                                        
-                                      <div className="col-md-2 text-center">
+                                      <div className="col text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" type="button">Search  &nbsp;&nbsp; ></button>
+                                            <button className="btn btn-primary" type="button">Search </button>
                                         </div>
                                       </div>
                                    </div>
@@ -342,253 +344,11 @@ function Home() {
                                            </form>
                                            </div>
                                          
-                                </div>
-                                 {/*------------------ Flights section---------------------- */}
-                            {/* <div class="tab-pane fade " id="Gallery" role="tabpanel" aria-labelledby="profile-tab">
-                            <div className="flighttabs">
-                                 <form>
-                               <div className="row">
-                                    <div className="col-md-3">
-                                        <div class="form-group">
-                                            <label >Find Holidays in</label>
-                                            <input type="text" class="form-control" placeholder="From"/>
-                                        </div>
-                                        <div className="suggection ">
-                                        <div className="flush"></div>
-                                          <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">An item</li>
-                                            <li class="list-group-item">A second item</li>
-                                            <li class="list-group-item">A third item</li>
-                                            <li class="list-group-item">A fourth item</li>
-                                            <li class="list-group-item">And a fifth one</li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3">
-                                        <div class="form-group">
-                                            <label >Departure Airport</label>
-                                            <input type="text" class="form-control" placeholder="To"/>
-                                        </div>
-                                        <div className="suggection1 ">
-                                        <div className="flush"></div>
-                                          <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">An item</li>
-                                            <li class="list-group-item">A second item</li>
-                                            <li class="list-group-item">A third item</li>
-                                            <li class="list-group-item">A fourth item</li>
-                                            <li class="list-group-item">And a fifth one</li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                      <div className="col-md-2">
-                                        <div class="form-group">
-                                            <label >Check-in</label>
-                                            <input type="date" class="form-control" readOnly onClick={open}/>
-                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                      <div className="col-md-2">
-                                        <div class="form-group">
-                                            <label >Check-out</label>
-                                            <input type="date" class="form-control" readOnly onClick={open}/>
-                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                      <div className="col-md-2 text-center">
-                                        <div class="form-group">
-                                            <label ></label><br/>
-                                            <button className="btn btn-warning" type="button">Find</button>
-                                        </div>
-                                      </div>
-                                   </div>
-                                  
-                                   <div className="row ">
-                                       <div className="col-md-3">
-                                       <div class="input-group mb-3">
-                                       {/* <div className="Filters" id="filterss1" style={{display:'none'}}>
-                                         <div className="bottom-arrow"></div>
-                                         <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Adult</p>
-                                                    <small style={{fontSize:"10px"}}>(12+)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0"> Children</p>
-                                                    <small style={{fontSize:"10px"}}>(2-11)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter1} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter1}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter1} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                           <div className="row">
-                                               <div className="col-4">
-                                                    <p className="m-0">Infants</p>
-                                                    <small style={{fontSize:"10px"}}>(0-23 Mths)</small>
-                                                 </div>
-                                                 <div className="col-8">
-                                                 <div className="d-flex justify-content-end"><span className="sum"><button className="btn btn-sm btn-primary"onClick={decrementCounter2} type="button"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></span><span className="value">{counter2}</span><span className="add"><button className="btn btn-sm btn-primary" onClick={incrementCounter2} type="button"><i class="fa fa-plus-circle"></i></button></span></div>
-                                                   </div>
-                                           </div>
-                                            
-                                           </div> 
-                                        <button class="btn btn-secondary " onClick={toggleNumbers1} type="button" ><img src="filter.png"/></button>
-                                       
-                                        <input type="text" class="form-control" aria-label="Text input with dropdown button"/>
-                                      </div>
-                                       </div>
-                                      
-                                       <div className="col-md-3">
-                                          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
-                                                    <label class="btn btn-outline-secondary">Return</label>
-
-                                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-                                                    <label class="btn btn-outline-secondary">One Way</label>
-                                            </div>
-                                           </div>
-                                           <div className="col-md-3">
-                                           <div class="btn-group" role="group" >
-                                                    <input type="radio" class="btn-check" name="radio" id="btnradio11" autocomplete="off" checked />
-                                                    <label class="btn btn-outline-secondary">Economy</label>
-
-                                                    <input type="radio" class="btn-check" name="radio" id="btnradio12" autocomplete="off" />
-                                                    <label class="btn btn-outline-secondary" >Business</label>
-
-                                                    <input type="radio" class="btn-check" name="radio" id="btnradio13" autocomplete="off" />
-                                                    <label class="btn btn-outline-secondary" >First</label>
-                                            </div>
-                                           </div>
-                                           <div className="col-md-3">
-                                                 <p className="text-white text-center"> <i class="fa fa-check-circle" style={{fontSize: '20px'}}></i>PRICE MATCH GUARANTEE</p>
-                                               </div>
-                                           </div>
-                                           <div class="filterss1" tabindex="-1" id="filterss1" style={{display:'none'}}>
-                                                  <div class="">
-                                                    <div class="modal-content">
-                                                      <div class="modal-header">
-                                                        <h5 class="modal-title text-dark">Rooms & Guests</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers1}></button>
-                                                      </div>
-                                                      <div class="modal-body text-dark">
-                                                        <div className="row">
-                                                           
-                                                              <div className="col-md-2">
-                                                              <label>Adults</label>
-                                                                <select class="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                </select>
-
-                                                                </div>
-                                                                <div className="col-md-4">
-                                                                <label>Children (0-17)</label>
-                                                                <select class="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                  <option value="10">10</option>
-                                                                  <option value="11">11</option>
-                                                                  <option value="12">12</option>
-                                                                  <option value="13">13</option>
-                                                                  <option value="14">14</option>
-                                                                  <option value="15">15</option>
-                                                                  <option value="16">16</option>
-                                                                  <option value="17">17</option>
-                                                                 
-                                                                </select>
-
-                                                                </div>
-                                                          </div>
-                                                          <div className="row">
-                                                               <div className="col-md-2"></div>
-                                                               <div className="col-md-4 mt-3">
-                                                                 <p>Child ages</p>
-                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
-                                                                 <div className="row">
-                                                                      <div className="col-md-4">
-                                                                      <label>Child 1</label>
-                                                                      <select class="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                  <option value="10">10</option>
-                                                                  <option value="11">11</option>
-                                                                  <option value="12">12</option>
-                                                                  <option value="13">13</option>
-                                                                  <option value="14">14</option>
-                                                                  <option value="15">15</option>
-                                                                  <option value="16">16</option>
-                                                                  <option value="17">17</option>
-                                                                 
-                                                                </select>
-                                                                        </div>
-                                                                        <div className="col-md-4">
-                                                                        <label>Child 2</label>
-                                                                      <select class="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                  <option value="10">10</option>
-                                                                  <option value="11">11</option>
-                                                                  <option value="12">12</option>
-                                                                  <option value="13">13</option>
-                                                                  <option value="14">14</option>
-                                                                  <option value="15">15</option>
-                                                                  <option value="16">16</option>
-                                                                  <option value="17">17</option>
-                                                                 
-                                                                </select>
-                                                                        </div>
-                                                                   </div>
-                                                               </div>
-                                                            </div>
-                                                      </div>
-                                                      <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers1}>Clear All</button>
-                                                        <button type="button" class="btn btn-primary">Done</button>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                           </form>
-                                           </div>
-                                 </div> */}
+                                </div></div>
+              
                                  {/*------------------ hotals section---------------------- */}
                                  <div class="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
+                                  <div className="container">
                                  <div className="flighttabs">
                                  <form>
                                <div className="row">
@@ -613,18 +373,6 @@ function Home() {
                                         </div>
                                       </div>
                                      
-                                       
-                                      
-                                   
-                                           
-                                         
-                                      {/* <div className="col-md-2">
-                                        <div class="form-group">
-                                            <label >Leaving On</label>
-                                            <input type="date" class="form-control" readOnly onClick={open}/>
-                                            <i class="fa fa-calendar"onClick={open} aria-hidden="true"></i>
-                                        </div>
-                                      </div> */}
                                       <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Check-in / Check-out</label>
@@ -784,8 +532,8 @@ function Home() {
                                            </div>
                                  </div>
                                
-         
-                       </div>
+         </div>
+                     
                        <div class="filterss" tabindex="-1" id="dates" >
                                                   <div class="">
                                                     <div class="modal-content">
@@ -822,11 +570,9 @@ function Home() {
                       
                    </div>
                    </div>
+                  
                 
-        </div>
-        </div>
-       
-          
+        
         </div>
         <div className="Hello">
            <div className="container">
@@ -854,6 +600,7 @@ function Home() {
                          <div className="col-md-1"></div>
                       </div>
              </div>
+          </div>
           </div>
         <div className="content text-center">
             <div className="container">

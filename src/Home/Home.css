@@ -443,8 +443,9 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
 .filterss {
     position: absolute;
     z-index: 99;
-    margin-top: -30px;
+    margin-top: -19px;
     width: 1115px;
+    left:8%;
     display: none;
 }
 .dayss{
