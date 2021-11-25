@@ -1,7 +1,7 @@
 .tabs .nav-link.active {
-    color: black !important;
-    background-color: #fff !important;
-    border-color: #dee2e6 #dee2e6 #fff !important;
+    color: white !important;
+    background-color: #01254f !important;
+    border-color: #01254f #01254f #fff !important;
     border-bottom: 0px !important;
 }
 .tabs .nav-link {
