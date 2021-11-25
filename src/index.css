@@ -26,6 +26,7 @@ a.nav-link {
   background-image: url(./home-alternate.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 670px;
 }
 
 div#myTabContent {
