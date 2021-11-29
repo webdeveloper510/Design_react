@@ -361,9 +361,10 @@ function Home() {
                                     <div className="col-md-4">
                                         <div class="form-group">
                                             <label >Destination(s) or Hotel Name</label>
-                                            <div class="input-group mb-3">
+                                             <div class="input-group mb-3">
+
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img src="desti.png"/></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img src="desti.png"/><p>list</p></button>
                                           </div>
                                             <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
