@@ -297,14 +297,15 @@ li.lists1 {
     position: absolute;
     margin-top: 0px;
     display: none;
-    width: 300px;
+    width: 263px;
     z-index: 99;
 }
 .suggection1 {
     position: absolute;
     margin-top: 0px;
     display: none;
-    width: 300px;
+    width: 251px;
+    margin-left: -56px;
     z-index: 99;
 }
 .first-list{
