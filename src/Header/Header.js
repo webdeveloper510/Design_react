@@ -81,7 +81,7 @@ function header() {
 
                                </div>
                                <div className="col-md-10">
-                               <div className="tab-content" id="pills-tabContent">
+                               <div className="tab-content mt-4" id="pills-tabContent">
                                   <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" aria-labelledby="pills-Holidays-tab">
                                   <div className="row">
                              <div className="col-md-4">
