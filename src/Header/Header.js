@@ -57,7 +57,7 @@ function header() {
                         </div>
                     <div className="mega-menu ">
                          <div className="row">
-                             <div className="col-md-2">
+                             <div className="col-md-3">
                              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li className="nav-item" role="presentation">
                                   <a href="#" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img src="holi.png" className="img-fluid"/>Holidays  &nbsp;&nbsp; ></a>
@@ -72,7 +72,7 @@ function header() {
                                     <a href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img src="about.png" className="img-fluid"/> About Us  &nbsp;&nbsp; ></a>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <a href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img src="holiday.png" className="img-fluid"/> Holiday Extras  &nbsp; ></a>
+                                    <a href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img src="holiday.png" className="img-fluid"/> Holiday Extras  &nbsp;&nbsp; ></a>
                                 </li>
                                 <li className="nav-item" role="presentation">
                                     <a href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img src="Social.png" className="img-fluid"/> Social  &nbsp;&nbsp; ></a>
@@ -80,7 +80,7 @@ function header() {
                               </ul>
 
                                </div>
-                               <div className="col-md-10">
+                               <div className="col-md-9">
                                <div className="tab-content mt-2 p-3" id="pills-tabContent">
                                   <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" aria-labelledby="pills-Holidays-tab">
                                   <div className="row">

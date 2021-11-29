@@ -497,6 +497,9 @@ a:hover {
    text-decoration: underline !important;
    
 }
+ul.list-group.list-group-flush.first-list a {
+    font-size: 18px !important;
+}
 .flighttabs .bottom-arrow {
 
     border-bottom: 13px solid #022650;
