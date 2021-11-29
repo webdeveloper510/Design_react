@@ -119,11 +119,208 @@ function header() {
                                   </ul>
                                   </div>
                                   </div>
-                                  <div className="tab-pane fade" id="pills-Destinations" role="tabpanel" aria-labelledby="pills-Destinations-tab">...</div>
-                                  <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" aria-labelledby="pills-Hotels-tab">...</div>
-                                  <div className="tab-pane fade" id="pills-About" role="tabpanel" aria-labelledby="pills-About-tab">...</div>
-                                  <div className="tab-pane fade" id="pills-Extras" role="tabpanel" aria-labelledby="pills-Extras-tab">...</div>
-                                  <div className="tab-pane fade" id="pills-Social" role="tabpanel" aria-labelledby="pills-Social-tab">...</div>
+                                  <div className="tab-pane fade" id="pills-Destinations" role="tabpanel" aria-labelledby="pills-Destinations-tab">
+
+                                  <div className="row">
+                             <div className="col-md-4">
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
+                               <ul className="list-group list-group-flush first-list">
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h4 className="mb-4 holi">Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                            
+                             <div className="text-right">
+                             <ul className="list-group list-group-flush ">
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
+                                  </ul>
+                                  </div>
+
+
+                                  </div>
+                                  <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" aria-labelledby="pills-Hotels-tab">
+
+                                  <div className="row">
+                             <div className="col-md-4">
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
+                               <ul className="list-group list-group-flush first-list">
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h4 className="mb-4 holi">Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                            
+                             <div className="text-right">
+                             <ul className="list-group list-group-flush ">
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
+                                  </ul>
+                                  </div>
+
+
+                                  </div>
+                                  <div className="tab-pane fade" id="pills-About" role="tabpanel" aria-labelledby="pills-About-tab">
+
+                                  <div className="row">
+                             <div className="col-md-4">
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
+                               <ul className="list-group list-group-flush first-list">
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h4 className="mb-4 holi">Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                            
+                             <div className="text-right">
+                             <ul className="list-group list-group-flush ">
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
+                                  </ul>
+                                  </div>
+
+
+                                  </div>
+                                  <div className="tab-pane fade" id="pills-Extras" role="tabpanel" aria-labelledby="pills-Extras-tab">
+
+
+                                  <div className="row">
+                             <div className="col-md-4">
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
+                               <ul className="list-group list-group-flush first-list">
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h4 className="mb-4 holi">Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                            
+                             <div className="text-right">
+                             <ul className="list-group list-group-flush ">
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
+                                  </ul>
+                                  </div>
+
+
+
+                                  </div>
+                                  <div className="tab-pane fade" id="pills-Social" role="tabpanel" aria-labelledby="pills-Social-tab">
+
+                                  <div className="row">
+                             <div className="col-md-4">
+                               <h4 className="mb-4">Featured Holidays</h4>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
+                               <ul className="list-group list-group-flush first-list">
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
+                                  </ul>
+                               </div>
+                               <div className="col-md-4">
+                               <h4 className="mb-4 holi">Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
+                                 
+                                </ul>
+                                 </div>
+                                 <div className="col-md-4">
+                                 <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
+                               <ul className="list-group list-group-flush">
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
+                                  
+                                </ul>
+                                 </div>
+                             </div>
+                            
+                             <div className="text-right">
+                             <ul className="list-group list-group-flush ">
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
+                                  </ul>
+                                  </div>
+
+                                  
+                                  </div>
                                 </div>
                                  </div>
                            </div>

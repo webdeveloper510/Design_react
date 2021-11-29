@@ -29,7 +29,12 @@ ul#pills-tab {
     color: #fff;
     background-color: #e7f5fd;
 }
+a#pills-About-tab img {padding: 6px 10px;}
 
+i.fa.fa-bars {
+    font-size: 25px;
+    padding-left: 26px;
+}
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
     color: rgba(0,0,0,.9);
     outline: none !important;
