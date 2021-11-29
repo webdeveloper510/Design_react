@@ -139,7 +139,7 @@ function Home() {
                                         </div>
                                       </div>
                                     
-                                      <div className="col-md-3">
+                                      <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Departure Airport</label>
                                             <div class="input-group mb-3">
@@ -173,7 +173,7 @@ function Home() {
                                           
                                         </div>
                                       </div>
-                                      <div className="col-md-1">
+                                      <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Duration</label>
                                             <select class="form-select" id="inputGroupSelect01">
@@ -358,7 +358,7 @@ function Home() {
                                  <div className="flighttabs">
                                  <form>
                                <div className="row">
-                                    <div className="col-md-4">
+                                    <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Destination(s) or Hotel Name</label>
                                              <div class="input-group mb-3">
