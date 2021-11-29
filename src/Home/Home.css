@@ -293,6 +293,9 @@ li.list-group-item.last {
 li.lists1 {
     font-size: 20px;
 }
+button.btn.btn-primary.form-control {
+    border-radius: 4px !important;
+}
 .suggection3 {
     position: absolute;
     margin-top: 0px;

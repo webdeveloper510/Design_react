@@ -215,7 +215,7 @@ function Home() {
                                       <div className="col text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:"60px"}} type="button">Search </button>
+                                            <button className="btn btn-primary form-control" style={{height:"60px"}} type="button">Search </button>
                                         </div>
                                       </div>
                                    </div>
