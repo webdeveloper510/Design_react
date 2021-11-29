@@ -29,6 +29,11 @@ ul#pills-tab {
     color: #fff;
     background-color: #e7f5fd;
 }
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: rgba(0,0,0,.9);
+    outline: none !important;
+    padding: 0px !important;
+}
 .mega-menu img.img-fluid {
     width: 27px;
     height: 33px;
@@ -36,10 +41,10 @@ ul#pills-tab {
     padding: 5px;
     margin-left: -11px;
 }
-.mega-menu.mt-5 ul li.nav-item a:hover {
+.mega-menu ul li.nav-item a:hover {
     text-decoration: none !important;
 }
-.mega-menu.mt-5 ul li.nav-item a {
+.mega-menu ul li.nav-item a {
     text-decoration: none;
     width: 100%;
     font-weight: 600;
@@ -47,8 +52,9 @@ ul#pills-tab {
     border-radius: 0px;
     border-bottom: 1px solid #e7dbdb;
 }
-.mega-menu.mt-5 ul li {
+.mega-menu ul li {
     width: 100%;
+    font-weight: 600;
 }
 label {
     font-size: 13px;

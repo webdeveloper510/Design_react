@@ -48,14 +48,14 @@ function header() {
                      <a className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
                   </div>
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
+                <div className="modal-dialog" style={{marginTop:'6.75rem'}}>
                     <div className="modal-content">
                    
                     <div className="modal-body">
                         <div className="float-right">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                    <div className="mega-menu mt-5">
+                    <div className="mega-menu ">
                          <div className="row">
                              <div className="col-md-2">
                              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -86,7 +86,7 @@ function header() {
                                   <div className="row">
                              <div className="col-md-4">
                                <h4 className="mb-4">Featured Holidays</h4>
-                               <img src="menu.png" className="mt-2 mb-2" height="158px" width="80%"/>
+                               <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
                                <ul className="list-group list-group-flush first-list">
                                   <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </a></li>
                                   </ul>

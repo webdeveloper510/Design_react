@@ -176,10 +176,22 @@ function Home() {
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Duration</label>
+                                            
                                             <select class="form-select" id="inputGroupSelect01">
                                                 <option selected>7 Nights</option>
-                                                <option value="1">2 days 2 Nights</option>
-                                                <option value="2">3 Days 2 Nights</option>
+                                                <option value="1">1 Night</option>
+                                                <option value="2"> 2 Nights</option>
+                                                <option value="3">3 Nights</option>
+                                                <option value="4"> 4 Nights</option>
+                                                <option value="5"> 5 Nights</option>
+                                                <option value="6"> 6 Nights</option>
+                                                <option value="8"> 8 Nights</option>
+                                                <option value="9"> 9 Nights</option>
+                                                <option value="10"> 10 Nights</option>
+                                                <option value="11">11 Nights</option>
+                                                <option value="12"> 12 Nights</option>
+                                                <option value="13">13 Nights</option>
+                                                <option value="14"> 14 Nights</option>
                                                 
                                             </select>
                                         </div>
