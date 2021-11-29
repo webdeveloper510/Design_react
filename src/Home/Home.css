@@ -29,6 +29,9 @@ ul#pills-tab {
     color: #fff;
     background-color: #e7f5fd;
 }
+ul.list-group.list-group-flush.first-list a {
+    font-size: 18px !important;
+}
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
     color: rgba(0,0,0,.9);
     outline: none !important;
