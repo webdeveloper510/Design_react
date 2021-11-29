@@ -51,7 +51,7 @@ function header() {
                 <div className="modal-dialog" style={{marginTop:'6.75rem'}}>
                     <div className="modal-content">
                    
-                    <div className="modal-body">
+                    <div className="modal-body" style={{paddingLeft:'0px'}}>
                         <div className="float-right">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -72,7 +72,7 @@ function header() {
                                     <a href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img src="about.png" className="img-fluid"/> About Us  &nbsp;&nbsp; ></a>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <a href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img src="holiday.png" className="img-fluid"/> Holiday Extras  &nbsp;&nbsp; ></a>
+                                    <a href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img src="holiday.png" className="img-fluid"/> Holiday Extras  &nbsp; ></a>
                                 </li>
                                 <li className="nav-item" role="presentation">
                                     <a href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img src="Social.png" className="img-fluid"/> Social  &nbsp;&nbsp; ></a>
@@ -88,26 +88,26 @@ function header() {
                                <h4 className="mb-4">Featured Holidays</h4>
                                <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%"/>
                                <ul className="list-group list-group-flush first-list">
-                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  &nbsp;&nbsp; > </a></li>
+                                  <li className="list-group-item"> <a href="#">Holidays to Greecs & Cyprus  </a></li>
                                   </ul>
                                </div>
                                <div className="col-md-4">
                                <h4 className="mb-4 holi">Holidays </h4>
                                <ul className="list-group list-group-flush">
-                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item"><a href="#">Beach Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item"><a href="#">Family Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item last"><a href="#"> Adult Holidays &nbsp;&nbsp; > </a></li>
+                                  <li className="list-group-item first"><a href="#">All-inclusive Holidays </a></li>
+                                  <li className="list-group-item"><a href="#">Beach Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Family Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> Adult Holidays </a></li>
                                  
                                 </ul>
                                  </div>
                                  <div className="col-md-4">
                                  <h4 className="mb-4" style={{opacity:0}}>Holidays </h4>
                                <ul className="list-group list-group-flush">
-                                  <li className="list-group-item first"><a href="#">Balaerics Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item"><a href="#">Canaries Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item"><a href="#">Spain Holidays &nbsp;&nbsp; > </a></li>
-                                  <li className="list-group-item last"><a href="#"> USA Holidays &nbsp;&nbsp; > </a></li>
+                                  <li className="list-group-item first"><a href="#">Balaerics Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Canaries Holidays  </a></li>
+                                  <li className="list-group-item"><a href="#">Spain Holidays </a></li>
+                                  <li className="list-group-item last"><a href="#"> USA Holidays  </a></li>
                                   
                                 </ul>
                                  </div>
@@ -115,7 +115,7 @@ function header() {
                             
                              <div className="text-right">
                              <ul className="list-group list-group-flush ">
-                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS  &nbsp;&nbsp; > </a></li>
+                                  <li className="list-group-item"><a href="#"> ALL HOLIDAYS   </a></li>
                                   </ul>
                                   </div>
                                   </div>
