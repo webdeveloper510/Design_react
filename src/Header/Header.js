@@ -7,7 +7,7 @@ function header() {
             <nav className="navbar navbar-expand-lg navbar-light ">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#"><img src="home-alternate.png" style={{    marginTop: '-27px',marginLeft: '-20px'}} width="301px" height="45px"/></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,10 +40,13 @@ function header() {
                     </li> */}
                    
                 </ul>
-              
+  
                 </div>
             </div>
             </nav>
+            <div className="mobile">
+                     <a className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
+                  </div>
             <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">

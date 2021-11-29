@@ -572,14 +572,26 @@ a.text-yellow:hover {
 .rating:hover>input:checked~label:before {
     opacity: 0.4;
 }
+.mobile {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
     .filterss1 {
         position: absolute;
         width: 86%;
     }
+    .mobile {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-size: 29px;
+    }
     h4.mb-4.holi {
         margin-top: 19px ;
+    }
+    .mobile {
+        display: block;
     }
     .Holidays1 {
 
