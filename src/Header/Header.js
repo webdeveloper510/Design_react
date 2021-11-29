@@ -51,13 +51,13 @@ function header() {
                 <div className="modal-dialog" style={{marginTop:'6.75rem'}}>
                     <div className="modal-content">
                    
-                    <div className="modal-body" style={{paddingLeft:'0px'}}>
-                        <div className="float-right">
+                    <div className="modal-body" style={{paddingLeft:'0px',paddingTop:'0px'}}>
+                        <div className="float-right pt-2">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                     <div className="mega-menu ">
                          <div className="row">
-                             <div className="col-md-3">
+                             <div className="col-md-3"  style={{paddingLeft:'0px',paddingTop:'0px'}}>
                              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li className="nav-item" role="presentation">
                                   <a href="#" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img src="holi.png" className="img-fluid"/>Holidays  &nbsp;&nbsp; ></a>
