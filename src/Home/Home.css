@@ -6,13 +6,19 @@
 }
 .tabs .nav-link {
     color: black !important;
-    background-color: #e7f5fd !important;
-    border-color: #e7f5fd #e7f5fd #e7f5fd !important;
+    background-color: #fff !important;
+    border-color: #fff #fff #fff !important;
     border-radius: 0px !important;
 }
 .modal-dialog {
     max-width: 1200px !important;
 }
+button.btn.btn-secondary p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+button.btn.btn-secondary {padding: 0px 13px;}
 div#navbarSupportedContent {
     z-index: 9;
 }
@@ -176,7 +182,10 @@ span.redcolor {
 .Holidays1 h4{
     color: #13345c;
 }
-
+ .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
 .over p {
     color: #01254f;
     font-size: 16px;
@@ -422,11 +431,11 @@ span.sum {
     cursor: pointer;
 }
 input.form-control {
-    height: 50px;
+    height: 60px;
 }
 
 select#inputGroupSelect01 {
-    height: 50px;
+    height: 60px;
 }
 .input-group.mb-3 button.btn.btn-secondary {
     background: #ffffff;
@@ -513,7 +522,7 @@ a.text-yellow:hover {
     padding: 13px;
     left: 21px;
     bottom: 30px;
-}
+}     
 .over1 {
     background: #ffffffc4;
     position: absolute;

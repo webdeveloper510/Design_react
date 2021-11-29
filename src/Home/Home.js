@@ -122,11 +122,11 @@ function Home() {
                                             <div class="input-group mb-3">
 
                                             <input type="text" class="form-control" />
-                                            <button class="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img src="desti.png"/></button>
+                                            <button class="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img src="desti.png"/><p>list</p></button>
                                           </div>
                                          
                                         </div>
-                                        <div className="suggection " id="Destination">
+                                        <div className="suggection " id="Destination"   style={{display:'none'}}>
                                         <div className="flush"></div>
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Destination</li>
@@ -148,7 +148,7 @@ function Home() {
                                             </div>
                                         </div>
                   
-                                        <div className="suggection1 " id="Airport">
+                                        <div className="suggection1 " id="Airport"  style={{display:'none'}}>
                                         <div className="flush"></div>
                                           <ul class="list-group list-group-flush">
                                             <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any London Airport</li>
@@ -163,8 +163,14 @@ function Home() {
                                       <div className="col-md-2">
                                         <div class="form-group">
                                             <label >Departure Date</label>
+                                            <div class="input-group mb-3">
+
                                             <input type="date" class="form-control" readOnly onClick={open}/>
-                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
+                                            <button class="btn btn-secondary "  onClick={open}  type="button">  <img  src="Calendar.png"/></button>
+
+                                            </div>
+                                            
+                                          
                                         </div>
                                       </div>
                                       <div className="col-md-1">
@@ -197,7 +203,7 @@ function Home() {
                                       <div className="col text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:"50px"}} type="button">Search </button>
+                                            <button className="btn btn-primary" style={{height:"60px"}} type="button">Search </button>
                                         </div>
                                       </div>
                                    </div>
@@ -359,7 +365,7 @@ function Home() {
                                             <input type="text" class="form-control" />
                                             <button class="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img src="desti.png"/></button>
                                           </div>
-                                            <div className="suggection3 " id="flight">
+                                            <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">  <input type="checkbox" class="form-check-input"/> Any Destination</li>
@@ -376,8 +382,11 @@ function Home() {
                                       <div className="col-md-3">
                                         <div class="form-group">
                                             <label >Check-in / Check-out</label>
+                                            <div class="input-group mb-3">
                                             <input type="date" class="form-control" readOnly onClick={open}/>
-                                            <i class="fa fa-calendar" onClick={open} aria-hidden="true"></i>
+                                            <button class="btn btn-secondary "  onClick={open}  type="button">  <img  src="Calendar.png"/></button>
+                                            </div>
+                                        
                                         </div>
                                       </div>
                                       <div className="col-md-3">
@@ -390,7 +399,7 @@ function Home() {
                                       <div className="col-md-2 text-center">
                                         <div class="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:'50px'}}type="button">Search &nbsp;&nbsp; > </button>
+                                            <button className="btn btn-primary" style={{height:'60px'}}type="button">Search &nbsp;&nbsp; > </button>
                                         </div>
                                       </div>
                                    </div>
@@ -534,7 +543,7 @@ function Home() {
                                
          </div>
                      
-                       <div class="filterss" tabindex="-1" id="dates" >
+                       <div class="filterss" tabindex="-1" id="dates"  style={{display:'none'}} >
                                                   <div class="">
                                                     <div class="modal-content">
                                                       <div class="modal-header">
