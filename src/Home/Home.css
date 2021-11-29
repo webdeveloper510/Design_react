@@ -599,6 +599,17 @@ a.text-yellow:hover {
     .filterss1 {
         position: absolute;
         width: 86%;
+        margin-top: -24%;
+    }
+    .suggection1{
+        margin-left: 0px;
+        width: 91%;
+    }
+    .suggection3{
+        width: 84%;
+    }
+    .suggection{
+        width: 91%;
     }
     .mobile {
         position: absolute;
@@ -627,7 +638,7 @@ a.text-yellow:hover {
     .filterss {
         position: absolute;
         z-index: 99;
-        margin-top: -116px;
+        margin-top: -46%;
         width: 91%;
     }
     .hotals {
