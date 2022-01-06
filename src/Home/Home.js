@@ -203,6 +203,7 @@ function Home() {
                                            <label>Rooms & Guests</label>
                                            <div class="input-group mb-3">
 
+
                                         <input type="text" class="form-control" />
                                         <button class="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="rome.png"/></button>
                                      
@@ -596,7 +597,7 @@ function Home() {
                 
         
         </div>
-        <div className="Hello">
+        <div className="Hello" style={{  backgroundImage:' url(./home-alternate.png)'}}>
            <div className="container">
            <div className="row">
              <div className="col-md-6"></div>
