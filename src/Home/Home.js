@@ -597,7 +597,7 @@ function Home() {
                 
         
         </div>
-        <div className="Hello" style={{  backgroundImage:' url(./home-alternate.png)'}}>
+        <div className="Hello">
            <div className="container">
            <div className="row">
              <div className="col-md-6"></div>
