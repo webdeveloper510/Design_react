@@ -1,0 +1,177 @@
+.books {
+  border: 1px solid #ebc817;
+  background: #ebc817;
+  padding: 11px 28px;
+}
+
+.books p {
+  margin: 0;
+}
+
+.Adults {
+  width: 80%;
+}
+
+.arrow {
+  margin: auto;
+}
+.holidays {
+  background-image: url(../backgroundholi.png);
+  background-repeat: no-repeat;
+}
+
+.tripadvisor h5 {
+  color: #1b3a69;
+}
+
+.holidays div#myTabContent {
+  background: transparent;
+}
+
+.coral {
+    background: white;
+    padding: 12px;
+    color: #1b3a69;
+    margin-bottom: 10px;
+}
+
+.secure {
+  background: white;
+  margin: 18px 0px;
+  text-align: center;
+  position: relative;
+  padding: 7px;
+  color: #1b3a69;
+  border-radius: 23px;
+}
+.secure .flush {
+  left: 59%;
+}
+.tripadvisor {
+  border: 0.5px solid #1b3a69;
+  padding: 13px;
+}
+.secure p {
+  margin: 0px;
+}
+
+.emailme {
+  background: #1b3a69;
+  padding: 15px;
+  color: white;
+}
+
+.confidence h3 {
+  background: #1b3a69;
+  color: white;
+  padding: 18px;
+  font-size: 22px;
+}
+
+.confidence {
+  background: white;
+  border: 0.5px solid #1b3a69;
+  margin: 10px 0px;
+}
+
+.confidence p {
+  color: #1b3a69;
+  margin: 10px 0px;
+}
+
+.secure .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-bottom: 3px solid #1b3a69 !important;
+    border: none;
+}
+.secure .nav-link {
+    color: black !important;
+}
+.secure .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border:none;
+    color: black !important;
+}
+.Resort h5 {
+    font-size: 16px;
+}
+
+.Resort p {
+    font-size: 14px;
+}
+.looked {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 23px;
+    left: 23px;
+    background: white;
+}
+.booked {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 92px;
+    left: 23px;
+    background: white;
+}
+
+.looked .col-3 {
+    background: #1b3a69;
+    text-align: center;
+    padding: 15px;
+}
+
+.looked .col-9 {
+    padding: 8px 13px;
+}
+
+.looked p {
+    margin: 0;
+}
+
+.booked .col-3 {
+    background: #1b3a69;
+    text-align: center;
+    padding: 15px;
+}
+
+.booked .col-9 {
+    padding: 8px 13px;
+}
+
+.booked p {
+    margin: 0;
+}
+
+.wishlist1 {
+    background: #d5e7f3;
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    padding: 10px;
+    color: #1b3a69;
+    top: 20px;
+    border: 2px solid #d5e7f3;
+    border-radius: 39px;
+}
+
+.wishlist1 p {
+    margin: 0px;
+}
+.protected p {
+    font-size: 12px;
+}
+
+.protected .row {
+    background: #e7f5fd;
+    padding: 10px;
+}
+
+.protected img {margin: 15px;}
+
+.saving {
+    background: #00ffff;
+    padding: 14px 40px;
+    color: #1b3a69;
+}
