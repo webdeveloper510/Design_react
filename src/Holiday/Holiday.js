@@ -52,42 +52,42 @@ function Holiday() {
                                 <div className='row'>
                                     <div className='col-md-6'>
                                         <div className='Resort'>
-                                        <h5>Coral Beach Hotel and Resort <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </h5>
-                                        <p>(Coral Bay, Paphos Cyprus)</p>
-                                    </div>
+                                            <h5>Coral Beach Hotel and Resort <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </h5>
+                                            <p>(Coral Bay, Paphos Cyprus)</p>
+                                        </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className='Resort'>
-                                        <h5><img src="plane.png" className='img-fluid'/>London Gatwick to Paphos</h5>
-                                        <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#"> 14 nights </a>)</p>
-                                    </div>
+                                            <h5><img src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
+                                            <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#"> 14 nights </a>)</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className='position-relative'>
-                            <div className='looked'>
-                                <div className='row'>
-                                    <div className='col-3'>
-                                        <img src="eye.png" className='img-fluid'/>
-                                    </div>
-                                    <div className='col-9'>
-                                        <p><b>62 </b> others have <b>LOOKED </b> at this hotel in the last hour</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='booked'>
-                                <div className='row'>
-                                    <div className='col-3'>
-                                        <img src="bookplan.png" className='img-fluid'/>
-                                    </div>
-                                    <div className='col-9'>
-                                        <p><b>40+</b> others have <b>BOOKED </b>  this hotel in the last 7 days</p>
+                                <div className='looked'>
+                                    <div className='row'>
+                                        <div className='col-3'>
+                                            <img src="eye.png" className='img-fluid' />
+                                        </div>
+                                        <div className='col-9'>
+                                            <p><b>62 </b> others have <b>LOOKED </b> at this hotel in the last hour</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='wishlist1'>
-                                <p>Add to wishlist  <i class="fa fa-heart-o"></i></p>
-                            </div>
+                                <div className='booked'>
+                                    <div className='row'>
+                                        <div className='col-3'>
+                                            <img src="bookplan.png" className='img-fluid' />
+                                        </div>
+                                        <div className='col-9'>
+                                            <p><b>40+</b> others have <b>BOOKED </b>  this hotel in the last 7 days</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='wishlist1'>
+                                    <p>Add to wishlist  <i class="fa fa-heart-o"></i></p>
+                                </div>
                             </div>
                             <SimpleImageSlider
                                 width={'100%'}
@@ -98,7 +98,7 @@ function Holiday() {
                                 showNavs={true}
                             />
                             <div className='float-right'>
-                                <img src="holiday_listing.png" className='img-fluid'/>
+                                <img src="holiday_listing.png" className='img-fluid' />
                             </div>
                             <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
@@ -114,7 +114,7 @@ function Holiday() {
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className='mt-3'>
-                                    <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -140,8 +140,8 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div className='mt-3'>
-                                <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
+                                    <div className='mt-3'>
+                                        <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -167,7 +167,7 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <div className='mt-3'>
+                                    <div className='mt-3'>
                                         <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
@@ -243,7 +243,7 @@ function Holiday() {
                                 <div className='protected'>
                                     <div className='row'>
                                         <div className='col-2'>
-                                            <img className='img-fluid' src="pro.png"/>
+                                            <img className='img-fluid' src="pro.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Our packages are financially protected</h5>
@@ -252,7 +252,7 @@ function Holiday() {
                                     </div>
                                     <div className='row mt-3'>
                                         <div className='col-2'>
-                                            <img className='img-fluid' src="i.png"/>
+                                            <img className='img-fluid' src="i.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Please remember to check the latest travel advice</h5>
@@ -264,21 +264,21 @@ function Holiday() {
                                     <div className='row'>
                                         <div className='col-md-5'>
                                             <div className='saving'>
-                                            <h4>Total Savings</h4>
-                                            <p>This deal <b> saves you £486 </b> on the overall package</p>
+                                                <h4>Total Savings</h4>
+                                                <p>This deal <b> saves you £486 </b> on the overall package</p>
                                             </div>
                                         </div>
                                         <div className='col-md-7'>
-                                        <div className='books d-flex'>
-                                <div className='Adults'>
-                                    <p className='p-0 m-0'><b>Book Holiday </b></p>
-                                    <h1>£1,786</h1>
-                                    <p>2 Adults</p>
-                                </div>
-                                <div className='arrow'>
-                                    <img src="arrow.png" className='img-fluid' />
-                                </div>
-                            </div>
+                                            <div className='books d-flex'>
+                                                <div className='Adults'>
+                                                    <p className='p-0 m-0'><b>Book Holiday </b></p>
+                                                    <h1>£1,786</h1>
+                                                    <p>2 Adults</p>
+                                                </div>
+                                                <div className='arrow'>
+                                                    <img src="arrow.png" className='img-fluid' />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +287,7 @@ function Holiday() {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className='col-md-4'>
                             <div className='books d-flex'>
                                 <div className='Adults'>
@@ -350,7 +350,7 @@ function Holiday() {
                                 <p>Based on 2748 reviews</p>
                                 <hr />
                                 <div className='float-right'>
-                                   <img src="dots.png" className='img-fluid'/>
+                                    <img src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -361,7 +361,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                <img src="1dot.png" className='img-fluid'/>
+                                    <img src="1dot.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -372,7 +372,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                <img src="dots.png" className='img-fluid'/>
+                                    <img src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -383,7 +383,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                <img src="dots.png" className='img-fluid'/>
+                                    <img src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
