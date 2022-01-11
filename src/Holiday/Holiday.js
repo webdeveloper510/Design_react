@@ -206,18 +206,95 @@ function Holiday() {
                                     <h3>Your Flights are included!</h3>
                                     <p>This is our best deal out of 8 different options.</p>
                                 </div>
-                            </div>
-
-                            <div className='my-4'>
-                                <div className='included'>
-                                    <h3>Your Flights are included!</h3>
-                                    <p>This is our best deal out of 8 different options.</p>
+                                <div className='card'>
+                                    <div className='card-body'>
+                                        <div className='row'>
+                                            <div className='col-md-3'>
+                                                <div className='d-flex'>
+                                                <img src="planel.png" width="27px" height="22px"/>
+                                                        <h5>London Gatwick to Paphos (EZY 8935)</h5>
+                                                </div>
+                                            </div>
+                                            <div className='col-md-3 text-center'>
+                                                <div className=' d-flex'>
+                                                <img src="dark-plane.png"width="30px"   height=' 26px'/>
+                                                <p>easyJet <br/>Economy</p>
+                                                </div>
+                                            </div>
+                                            <div className='col'>
+                                                <p>8 Jul Fri</p>
+                                            </div>
+                                            <div className='col'>
+                                                <p><b>15:20 - 21:55 </b> <br/>LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
+                                            </div>
+                                            <div className='col text-center'>
+                                                <p><b>Direct</b> <br/> 4h 35min</p>
+                                            </div>
+                                            <div className='col text-center'>
+                                                <img src="bag.png" className='img-fluid'/>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <div className='row'>
+                                            <div className='col-md-3'>
+                                                <div className='d-flex'>
+                                                <img src="planer.png"width="27px" height="22px"/>
+                                                        <h5>London Gatwick to Paphos (EZY 8935)</h5>
+                                                </div>
+                                            </div>
+                                            <div className='col-md-3 text-center'>
+                                                <div className=' d-flex'>
+                                                <img src="darkplaneright.png"width="30px"   height=' 26px'/>
+                                                <p>easyJet <br/>Economy</p>
+                                                </div>
+                                            </div>
+                                            <div className='col'>
+                                                <p>8 Jul Fri</p>
+                                            </div>
+                                            <div className='col'>
+                                                <p><b>15:20 - 21:55 </b> <br/>LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
+                                            </div>
+                                            <div className='col text-center'>
+                                                <p><b>Direct</b> <br/> 4h 35min</p>
+                                            </div>
+                                            <div className='col text-center'>
+                                                <img src="bag.png" className='img-fluid'/>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <div className='row'>
+                                            <div className='col-md-6 text-center'>
+                                                <p><b>View flight details </b></p>
+                                            </div>
+                                            <div className='col-md-6 text-center'>
+                                                <p><b>Change flight</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+
                             <div className='my-4'>
                                 <div className='included'>
-                                    <p>Add Hold Baggage</p>
+                                    <h5>Add Hold Baggage</h5>
+                                </div>
+                                <div className="card">
+                                    <div className="card-body">
+                                        <div className='row'>
+                                            <div className='col-md-9'>
+                                                <h5>£37 per hold bag each way. Hold bag weight limit is 15kg.</h5>
+                                                <p>Your booking includes hand luggage with no weight limit, max size 45x36x20cm per person.</p>
+                                            </div>
+                                            <div className='col-md-3'>
+                                                <div className='d-flex mt-4'>
+                                                    <button className='btn btn-outline-primary mx-2 rounded-circle' type="button">- </button>
+                                                    <input type='number' className="form-control" />
+                                                    <button className='btn btn-outline-primary mx-2 rounded-circle' type="button"> + </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -227,12 +304,147 @@ function Holiday() {
                                     <h3>Your Board is included!</h3>
                                     <p>More board options are available below</p>
                                 </div>
+                                <div className='card'>
+                                    <div className='card-body'>
+                                        <div className='row Double active'>
+                                            <div className='col-md-5 mt-2'>
+                                                <h5>Bed & Breakfast</h5>
+                                                <p>Double or twin mountain view</p>
+                                            </div>
+                                            <div className='col-md-5 text-center'>
+                                                <h2>£952</h2>
+                                                <p>holiday price per person</p>
+                                            </div>
+                                            <div className='col-md-2 text-right'>
+                                                <input type='radio' name='pack' className="pack" checked />
+                                            </div>
+                                        </div>
+                                        <div className='row Double'>
+                                            <div className='col-md-5 mt-2'>
+                                                <h5>Bed & Breakfast</h5>
+                                                <p>Double or twin mountain view</p>
+                                            </div>
+                                            <div className='col-md-5 text-center'>
+                                                <h2>£952</h2>
+                                                <p>holiday price per person</p>
+                                            </div>
+                                            <div className='col-md-2 text-right'>
+                                                <input type='radio' name='pack' className="pack" />
+                                            </div>
+                                        </div>
+                                        <div className='row Double'>
+                                            <div className='col-md-5 mt-2'>
+                                                <h5>Bed & Breakfast</h5>
+                                                <p>Double or twin mountain view</p>
+                                            </div>
+                                            <div className='col-md-5 text-center'>
+                                                <h2>£952</h2>
+                                                <p>holiday price per person</p>
+                                            </div>
+                                            <div className='col-md-2 text-right'>
+                                                <input type='radio' name='pack' className="pack" />
+                                            </div>
+                                        </div>
+                                        <div className='row Double'>
+                                            <div className='col-md-5 mt-2'>
+                                                <h5>Bed & Breakfast</h5>
+                                                <p>Double or twin mountain view</p>
+                                            </div>
+                                            <div className='col-md-5 text-center'>
+                                                <h2>£952</h2>
+                                                <p>holiday price per person</p>
+                                            </div>
+                                            <div className='col-md-2 text-right'>
+                                                <input type='radio' name='pack' className="pack" />
+                                            </div>
+                                        </div>
+                                        <div className='row mt-3'>
+                                            <div className='col-md-6 mt-2'>
+                                                <div className='d-flex person'>
+                                                    <p>
+                                                        Price per person</p>
+                                                    <div class="form-check form-switch mx-3">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                                    </div>
+                                                    <p>Total price</p>
+                                                </div>
+                                            </div>
+                                            <div className='col-md-6 text-right'>
+                                                <button className="btn btn-primary" type="button">All Options</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className='my-4'>
                                 <div className='included'>
                                     <h3>Your Travel Party</h3>
                                     <p>Age on date of return</p>
+                                </div>
+                                <div className='card'>
+                                    <div className='card-body'>
+                                        <div className='row'>
+                                            <div className='col'>
+                                                <label>Adults</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>2</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <img src='adults.png' className='img-fluid' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='col'>
+                                                <label>Children <small>(2-15 yrs)</small></label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <img src='child.png' className='img-fluid' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='col'>
+                                                <label>Infants <small>(0-23mths)</small></label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <img src='infants.png' className='img-fluid' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='col'>
+                                                <label>Room(s)</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                    <div class="input-group-append">
+                                                        <img src='Room.png' className='img-fluid' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='col-md-3 mt-4'>
+                                                <button className='btn btn-primary' type='button'>Update Passengers</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
