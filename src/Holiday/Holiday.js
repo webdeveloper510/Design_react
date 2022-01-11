@@ -287,6 +287,7 @@ function Holiday() {
                                 </div>
                             </div>
                         </div>
+                        
                         <div className='col-md-4'>
                             <div className='books d-flex'>
                                 <div className='Adults'>
