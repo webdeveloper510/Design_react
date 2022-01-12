@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
+import React from 'react';
+import { useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
-import 'react-calendar/dist/Calendar.css';
+//import 'react-calendar/dist/Calendar.css';
+import '@mobiscroll/react/dist/css/mobiscroll.min.css';
+import { Datepicker, Page, getJson, setOptions } from '@mobiscroll/react';
 import './Holiday.css';
 const images = [
     { url: "Layer1.png" },
@@ -11,8 +13,152 @@ const images = [
     { url: "Layer4.png" },
     { url: "Layer123.png" },
 ];
+
 function Holiday() {
     const [value, onChange] = useState(new Date());
+
+    // const min = '2022-01-11T00:00';
+    // const max = '2022-07-11T00:00';
+    // const [singleLabels, setSingleLabels] = React.useState([]);
+    // const [singleInvalid, setSingleInvalid] = React.useState([]);
+
+    // const onPageLoadingSingle = React.useCallback((event, inst) => {
+    //     getPrices(event.firstDay, (bookings) => {
+    //         setSingleLabels(bookings.labels);
+    //         setSingleInvalid(bookings.invalid);
+
+    //     });
+    // }, []);
+
+    // const getPrices = (d, callback) => {
+    //     var invalid = [],
+    //         labels = [];
+
+    //     mobiscroll.util.http.getJson(MS.trialUrl + 'getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+    //         for (var i = 0; i < bookings.length; ++i) {
+    //             var booking = bookings[i],
+    //                 d = new Date(booking.d);
+
+    //             if (booking.price > 0) {
+    //                 labels.push({
+    //                     start: d,
+    //                     title: '$' + booking.price,
+    //                     textColor: '#e1528f'
+    //                 });
+    //             } else {
+    //                 invalid.push(d);
+    //             }
+    //         }
+    //         callback({ labels: labels, invalid: invalid });
+    //     }, 'jsonp');
+    // }
+
+
+    const [multiple, setMultiple] = React.useState([
+        '2022-01-11T00:00',
+        '2022-01-16T00:00',
+        '2022-01-17T00:00'
+    ]);
+    const min = '2022-01-12T00:00';
+    const max = '2022-07-12T00:00';
+    const [singleLabels, setSingleLabels] = React.useState([]);
+    const [singleInvalid, setSingleInvalid] = React.useState([]);
+    const [datetimeLabels, setDatetimeLabels] = React.useState([]);
+    const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
+    const [multipleLabels, setMultipleLabels] = React.useState([]);
+    const [multipleInvalid, setMultipleInvalid] = React.useState([]);
+
+    const onPageLoadingSingle = React.useCallback((event, inst) => {
+        getPrices(event.firstDay, (bookings) => {
+            setSingleLabels(bookings.labels);
+            setSingleInvalid(bookings.invalid);
+
+        });
+    }, []);
+
+    const onPageLoadingDatetime = React.useCallback((event, inst) => {
+        getDatetimes(event.firstDay, (bookings) => {
+            setDatetimeLabels(bookings.labels);
+            setDatetimeInvalid(bookings.invalid);
+        });
+    }, []);
+
+    const onPageLoadingMultiple = React.useCallback((event, inst) => {
+        getBookings(event.firstDay, (bookings) => {
+            setMultipleLabels(bookings.labels);
+            setMultipleInvalid(bookings.invalid);
+        });
+    }, []);
+
+    const getPrices = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const d = new Date(booking.d);
+
+                if (booking.price > 0) {
+                    labels.push({
+                        start: d,
+                        title: '$' + booking.price,
+                        textColor: '#e1528f'
+                    });
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
+    }
+
+    const getDatetimes = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://trial.mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const bDate = new Date(booking.d);
+
+                if (booking.nr > 0) {
+                    labels.push({
+                        start: bDate,
+                        title: booking.nr + ' SPOTS',
+                        textColor: '#e1528f'
+                    });
+                    invalid = [...invalid, ...booking.invalid];
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
+    }
+
+    const getBookings = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://trial.mobiscroll.com/getbookings/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const d = new Date(booking.d);
+
+                if (booking.nr > 0) {
+                    labels.push({
+                        start: d,
+                        title: booking.nr + ' SPOTS',
+                        textColor: '#e1528f'
+                    });
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
+    }
 
     return (
         <section>
@@ -52,7 +198,7 @@ function Holiday() {
                                 <div className='row'>
                                     <div className='col-md-6'>
                                         <div className='Resort'>
-                                            <h5>Coral Beach Hotel and Resort <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </h5>
+                                            <h5>Coral Beach Hotel and Resort <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </h5>
                                             <p>(Coral Bay, Paphos Cyprus)</p>
                                         </div>
                                     </div>
@@ -86,7 +232,7 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div className='wishlist1'>
-                                    <p>Add to wishlist  <i class="fa fa-heart-o"></i></p>
+                                    <p>Add to wishlist  <i className="fa fa-heart-o"></i></p>
                                 </div>
                             </div>
                             <SimpleImageSlider
@@ -100,21 +246,21 @@ function Holiday() {
                             <div className='float-right'>
                                 <img src="holiday_listing.png" className='img-fluid' />
                             </div>
-                            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
+                            <ul className="nav nav-tabs mt-4" id="myTab" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
+                                <li className="nav-item" role="presentation">
+                                    <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
                                 </li>
                             </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="tab-content" id="myTabContent">
+                                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -139,9 +285,9 @@ function Holiday() {
                                         Read less
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -166,9 +312,9 @@ function Holiday() {
                                         Read less
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -197,10 +343,75 @@ function Holiday() {
                             <div className='my-3'>
                                 <h3>Alternative Dates</h3>
                             </div>
-                            <Calendar
-                                onChange={onChange}
-                                value={value}
-                            />
+                            {/* <Datepicker 
+                                controls={['calendar']} 
+                                min={min}
+                                max={max}
+                                labels={singleLabels}
+                                invalid={singleInvalid}
+                                onPageLoading={onPageLoadingSingle}
+                            /> */}
+                            <div className='card'>
+                                <div className='card-body'>
+                                    <div className='hea'>
+                                        <div className='row'>
+                                            <div className='col-md-6'>
+                                                <h5>Outbound: <small>8 Jul 2022</small></h5>
+                                            </div>
+                                            <div className='col-md-6'>
+                                                <h5>Return:<small> 22 Jul 2022 </small></h5>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="flight-option">
+                                        <h5>Flight options: <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                            <label class="form-check-label" >Any</label>
+                                        </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                                <label class="form-check-label" >Direct</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                                                <label class="form-check-label" >Indirect </label>
+                                            </div></h5>
+                                    </div>
+                                    <Datepicker
+                                        display="inline"
+                                        controls={['calendar']}
+                                        min={min}
+                                        max={max}
+                                        labels={singleLabels}
+                                        invalid={singleInvalid}
+                                        calendarType="month"
+                                        pages={1}
+                                      
+                                        onPageLoading={onPageLoadingSingle}
+                                    />
+                                    <div className='row'>
+                                        <div className='col-md-8'>
+                                            <button class="btn btn-primary btn-sm mx-1" type="button">Current Date</button>
+                                            <button class="btn btn-success btn-sm mx-1" type="button">Cheapest Date</button>
+                                            <button class="btn btn-warning btn-sm mx-1" type="button">New Selection</button>
+                                            <button class="btn btn-secondary btn-sm mx-1" type="button">No Availability</button>
+                                        </div>
+                                        <div className='col-md-4'>
+                                        <div className='d-flex person'>
+                                                    <p>
+                                                        Price per person</p>
+                                                    <div className="form-check form-switch mx-3">
+                                                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                                    </div>
+                                                    <p>Total price</p>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div className='my-4'>
                                 <div className='included'>
                                     <h3>Your Flights are included!</h3>
@@ -211,57 +422,57 @@ function Holiday() {
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                <img src="planel.png" width="27px" height="22px"/>
-                                                        <h5>London Gatwick to Paphos (EZY 8935)</h5>
+                                                    <img src="planel.png" width="27px" height="22px" />
+                                                    <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                <img src="dark-plane.png"width="30px"   height=' 26px'/>
-                                                <p>easyJet <br/>Economy</p>
+                                                    <img src="dark-plane.png" width="30px" height=' 26px' />
+                                                    <p>easyJet <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col'>
                                                 <p>8 Jul Fri</p>
                                             </div>
                                             <div className='col'>
-                                                <p><b>15:20 - 21:55 </b> <br/>LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
+                                                <p><b>15:20 - 21:55 </b> <br />LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
                                             </div>
                                             <div className='col text-center'>
-                                                <p><b>Direct</b> <br/> 4h 35min</p>
+                                                <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
                                             <div className='col text-center'>
-                                                <img src="bag.png" className='img-fluid'/>
+                                                <img src="bag.png" className='img-fluid' />
                                             </div>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                <img src="planer.png"width="27px" height="22px"/>
-                                                        <h5>London Gatwick to Paphos (EZY 8935)</h5>
+                                                    <img src="planer.png" width="27px" height="22px" />
+                                                    <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                <img src="darkplaneright.png"width="30px"   height=' 26px'/>
-                                                <p>easyJet <br/>Economy</p>
+                                                    <img src="darkplaneright.png" width="30px" height=' 26px' />
+                                                    <p>easyJet <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col'>
                                                 <p>8 Jul Fri</p>
                                             </div>
                                             <div className='col'>
-                                                <p><b>15:20 - 21:55 </b> <br/>LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
+                                                <p><b>15:20 - 21:55 </b> <br />LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
                                             </div>
                                             <div className='col text-center'>
-                                                <p><b>Direct</b> <br/> 4h 35min</p>
+                                                <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
                                             <div className='col text-center'>
-                                                <img src="bag.png" className='img-fluid'/>
+                                                <img src="bag.png" className='img-fluid' />
                                             </div>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='row'>
                                             <div className='col-md-6 text-center'>
                                                 <p><b>View flight details </b></p>
@@ -363,8 +574,8 @@ function Holiday() {
                                                 <div className='d-flex person'>
                                                     <p>
                                                         Price per person</p>
-                                                    <div class="form-check form-switch mx-3">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                                    <div className="form-check form-switch mx-3">
+                                                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                                                     </div>
                                                     <p>Total price</p>
                                                 </div>
@@ -387,55 +598,55 @@ function Holiday() {
                                         <div className='row'>
                                             <div className='col'>
                                                 <label>Adults</label>
-                                                <div class="input-group">
-                                                    <select class="form-select" id="inputGroupSelect01">
+                                                <div className="input-group">
+                                                    <select className="form-select" id="inputGroupSelect01">
                                                         <option selected>2</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
                                                     </select>
-                                                    <div class="input-group-append">
+                                                    <div className="input-group-append">
                                                         <img src='adults.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col'>
                                                 <label>Children <small>(2-15 yrs)</small></label>
-                                                <div class="input-group">
-                                                    <select class="form-select" id="inputGroupSelect01">
+                                                <div className="input-group">
+                                                    <select className="form-select" id="inputGroupSelect01">
                                                         <option selected>0</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
                                                     </select>
-                                                    <div class="input-group-append">
+                                                    <div className="input-group-append">
                                                         <img src='child.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col'>
                                                 <label>Infants <small>(0-23mths)</small></label>
-                                                <div class="input-group">
-                                                    <select class="form-select" id="inputGroupSelect01">
+                                                <div className="input-group">
+                                                    <select className="form-select" id="inputGroupSelect01">
                                                         <option selected>0</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
                                                     </select>
-                                                    <div class="input-group-append">
+                                                    <div className="input-group-append">
                                                         <img src='infants.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col'>
                                                 <label>Room(s)</label>
-                                                <div class="input-group">
-                                                    <select class="form-select" id="inputGroupSelect01">
+                                                <div className="input-group">
+                                                    <select className="form-select" id="inputGroupSelect01">
                                                         <option selected value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
                                                     </select>
-                                                    <div class="input-group-append">
+                                                    <div className="input-group-append">
                                                         <img src='Room.png' className='img-fluid' />
                                                     </div>
                                                 </div>
@@ -518,17 +729,17 @@ function Holiday() {
                             <div className='emailme'>
                                 <h3>Email me this holiday deal</h3>
                                 <p>I want to subscribe to holiday deals by email</p>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                                    <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                    <label className="form-check-label" htmlFor="inlineCheckbox1">Yes</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                                    <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                    <label className="form-check-label" htmlFor="inlineCheckbox2">No</label>
                                 </div>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="email" placeholder="Enter email address" />
-                                    <button class="btn btn-warning" type="submit">Send</button>
+                                <form className="d-flex">
+                                    <input className="form-control me-2" type="email" placeholder="Enter email address" />
+                                    <button className="btn btn-warning" type="submit">Send</button>
                                 </form>
                                 <div className='text-right'>
                                     <small>Read our <a href="#"> Privacy Policy </a></small>

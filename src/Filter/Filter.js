@@ -37,59 +37,59 @@ function Filter() {
                             <div className='d-flex person'>
                                 <p>
                                     Price per person</p>
-                                <div class="form-check form-switch mx-3">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                <div className="form-check form-switch mx-3">
+                                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                                 </div>
                                 <p>Total price</p>
                             </div>
                             <div className="filter my-3">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div className="accordion" id="accordionExample">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingOne">
+                                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 Board
                                             </button>
                                         </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         All inclusive
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Full board
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Half board
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Bed & breakfast
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Self catering
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Room only
                                                         <span className='number'>(11)</span>
                                                     </label>
@@ -97,124 +97,124 @@ function Filter() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingTwo">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                 Star rating
                                             </button>
                                         </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                        <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star-o"></i>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star-o"></i>
+                                                        <i className="fa fa-star-o"></i>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingThree">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 <img src="trip.png" className='img-fluid' />
                                             </button>
                                         </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled31" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled32" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled33" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled34" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled35" id="flexRadioDisabled" checked disabled />
+                                        <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled31" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled32" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled33" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled34" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled35" id="flexRadioDisabled" checked disabled />
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled21" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled22" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled23" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled24" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled25" id="flexRadioDisabled" disabled />
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled21" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled22" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled23" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled24" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled25" id="flexRadioDisabled" disabled />
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled11" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled12" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled13" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled14" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled15" id="flexRadioDisabled" disabled />
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled11" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled12" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled13" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled14" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled15" id="flexRadioDisabled" disabled />
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled01" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled02" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled03" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled04" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled05" id="flexRadioDisabled" disabled />
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled01" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled02" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled03" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled04" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled05" id="flexRadioDisabled" disabled />
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled1" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled2" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled3" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled4" id="flexRadioDisabled" disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled5" id="flexRadioDisabled" disabled />
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled1" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled2" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled3" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled4" id="flexRadioDisabled" disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled5" id="flexRadioDisabled" disabled />
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
@@ -222,137 +222,137 @@ function Filter() {
                                         </div>
                                     </div>
 
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
                                                 Budget per person
                                             </button>
                                         </h2>
-                                        <div id="collapsefour" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapsefour" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         No maximum
 
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         £250
 
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         £750
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         £1000
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         £2000
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingTwo">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseTwo">
                                                 Holiday type
                                             </button>
                                         </h2>
-                                        <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapsefive" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Beach
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Couples
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Family
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Honeymoon
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Luxury
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Spa & relaxation
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseThree">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingThree">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseThree">
                                                 Facilities
                                             </button>
                                         </h2>
-                                        <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapsesix" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Adult only areas
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Beauty saloon/treatments
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Bike hire
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Bike hire
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Bike hire
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Bike hire
                                                     </label>
                                                 </div>
@@ -361,94 +361,94 @@ function Filter() {
                                         </div>
                                     </div>
 
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
                                                 Pool
                                             </button>
                                         </h2>
-                                        <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapseseven" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Indoor pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Infinity pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Kids pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Outdoor pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Pool bar
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Swimming pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Water slides
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" aria-controls="collapseOne">
+                                    <div className="accordion-item">
+                                        <h2 className="accordion-header" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" aria-controls="collapseOne">
                                                 Kids
                                             </button>
                                         </h2>
-                                        <div id="collapseeight" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <div id="collapseeight" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Kids cub
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Kids pool
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Playground
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Theme parks
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         Water slide
                                                     </label>
                                                 </div>
@@ -463,10 +463,10 @@ function Filter() {
                         <div className="col-md-9 px-3">
                             <div className="float-right" style={{ width: 250 }}>
 
-                                <div class="mb-3 row">
-                                    <label for="inputPassword" class="col-sm-3 col-form-label"> Sort By</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-select" aria-label="Default select example">
+                                <div className="mb-3 row">
+                                    <label htmlhtmlFor="inputPassword" className="col-sm-3 col-form-label"> Sort By</label>
+                                    <div className="col-sm-9">
+                                        <select className="form-select" aria-label="Default select example">
                                             <option selected>Most popular </option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -502,22 +502,22 @@ function Filter() {
                                             <p>Aphrodite hills, Paphos Area, Cyprus  <a href="#"> VIEW IN MAP </a></p>
                                             <div className='d-flex mt-3'>
                                                 <div className='d-flex'>
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star-o"></i>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
+                                                <div className="form-check">
                                                     <img src="owl.png" className='img-fluid' />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadio1" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadio2" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadio4" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadio5" id="flexRadioDisabled" disabled />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadio1" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadio2" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadio3" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadio4" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadio5" id="flexRadioDisabled" disabled />
                                                         <span className='Review'>276 Review</span>
                                                     </label>
                                                 </div>
@@ -532,7 +532,7 @@ function Filter() {
                                     <div className='col-md-2 text-center'>
                                         <div className='price-detail'>
                                             <div className='wishlist'>
-                                                <i class="fa fa-heart-o"></i>
+                                                <i className="fa fa-heart-o"></i>
                                             </div>
                                             <div className=' text-right'>
                                                 <p>Includes £267 pp discount</p>
@@ -556,7 +556,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6'>
                             <div className='card'>
-                                <img src="image.png" class="card-img-top" alt="..." />
+                                <img src="image.png" className="card-img-top" alt="..." />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -564,22 +564,22 @@ function Filter() {
                                             <p>Aphrodite hills, Paphos Area, Cyprus  <a href="">VIEW IN MAP </a></p>
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star-o"></i>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
+                                                <div className="form-check">
                                                     <img src="owl.png" className='img-fluid' />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled101" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled102" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled103" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled104" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled105" id="flexRadioDisabled" disabled />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled101" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled102" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled103" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled104" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled105" id="flexRadioDisabled" disabled />
                                                         <span className='Review'>276 Review</span>
                                                     </label>
                                                 </div>
@@ -595,7 +595,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6 '>
                             <div className='card'>
-                                <img src="image.png" class="card-img-top" alt="..." />
+                                <img src="image.png" className="card-img-top" alt="..." />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -603,22 +603,22 @@ function Filter() {
                                             <p>Aphrodite hills, Paphos Area, Cyprus <a href="">VIEW IN MAP </a></p>
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star-o"></i>
                                                     </label>
                                                 </div>
-                                                <div class="form-check">
+                                                <div className="form-check">
                                                     <img src="owl.png" className='img-fluid' />
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled001" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled002" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled003" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled004" id="flexRadioDisabled" checked disabled />
-                                                        <input class="form-check-input" type="radio" name="flexRadioDisabled005" id="flexRadioDisabled" disabled />
+                                                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled001" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled002" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled003" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled004" id="flexRadioDisabled" checked disabled />
+                                                        <input className="form-check-input" type="radio" name="flexRadioDisabled005" id="flexRadioDisabled" disabled />
                                                         <span className='Review'>276 Review</span>
                                                     </label>
                                                 </div>

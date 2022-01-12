@@ -249,3 +249,98 @@ input.pack {
 .card .col-md-3.text-center p {
   padding-top: 13px;
 }
+
+.mbsc-popup-body.mbsc-popup-body-anchored.mbsc-windows.mbsc-popup-body-round {
+  width: 600px;
+}
+
+.mbsc-datepicker-inline {
+  height:439px !important;
+}
+.mbsc-windows.mbsc-calendar-label-inner {
+  text-align: right;
+}
+.mbsc-calendar-cell-inner.mbsc-calendar-day-inner.mbsc-windows{
+  text-align: left;
+}
+.mbsc-calendar-label-text.mbsc-windows {
+  font-size: 13px;
+}
+
+.mbsc-windows.mbsc-calendar-cell:hover .mbsc-calendar-label-text.mbsc-windows{
+  color: white !important;
+}
+.mbsc-calendar-cell.mbsc-disabled {
+  background: #f3f3f3;
+  color: #1b3a69 !important;
+}
+.mbsc-windows.mbsc-calendar-cell:hover {
+  background: #1b3a69;
+  color: white !important;
+  border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.mbsc-calendar-cell.mbsc-calendar-day.mbsc-windows.mbsc-ltr.mbsc-calendar-day-labels.mbsc-selected{
+  background: #1b3a69;
+  color: white !important;
+  border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.mbsc-selected .mbsc-calendar-label-text.mbsc-windows {
+  font-size: 13px;
+  color: white !important;
+}
+
+.mbsc-selected .mbsc-windows.mbsc-calendar-today, .mbsc-windows.mbsc-calendar-week-nr {
+  color: #ffffff;
+}
+.mbsc-windows.mbsc-calendar-today, .mbsc-windows.mbsc-calendar-week-nr {
+  color: #1b3a69;
+}
+.mbsc-windows.mbsc-range-day .mbsc-calendar-cell-inner, .mbsc-windows.mbsc-selected .mbsc-calendar-cell-inner {
+  text-align: left;
+}
+.mbsc-windows.mbsc-calendar-cell {
+  border-color: #e3dcdc;
+}
+
+.mbsc-calendar-label-text.mbsc-windows {
+    font-size: 13px;
+}
+.mbsc-calendar-cell-text.mbsc-calendar-day-text.mbsc-windows {
+  color: #1d3963 !important;
+  font-weight: 700;
+}
+.mbsc-selected .mbsc-calendar-cell-text.mbsc-calendar-day-text.mbsc-windows {
+  color: #fff !important;
+  font-weight: 700;
+}
+.mbsc-hover .mbsc-calendar-cell-text.mbsc-calendar-day-text.mbsc-windows {
+  color: #fff !important;
+  font-weight: 700;
+}
+button.btn.btn-success.btn-sm.mx-1 {
+    background: #eb008b;
+    border-color: #eb008b;
+}
+
+button.btn.btn-warning.btn-sm.mx-1 {
+    background: #00adef;
+    border-color: #00adef;
+    color: white;
+}
+
+button.btn.btn-secondary.btn-sm.mx-1 {
+    padding: 4px 10px;
+    background: #f3f3f3;
+    color: black;
+    border-color: #f3f3f3;
+}
+.mbsc-calendar-label-text.mbsc-windows {
+  color: #1d3963 !important;
+  font-weight: 700;
+}
+.holidays .card {
+  box-shadow: -1px 1px 19px 0px #01af871f;
+  border: none;
+}

@@ -36,9 +36,9 @@ function Footer() {
                     </div>
                     <div className="mt-3">
                         <h4>Subscribe to our newsletter</h4>
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email" />
-                            <button class="btn btn-primary" type="button" >SUBMIT</button>
+                        <div className="input-group mb-3">
+                            <input type="email" className="form-control" placeholder="Email" />
+                            <button className="btn btn-primary" type="button" >SUBMIT</button>
                             </div>
                         <small>No spam, serious!</small>
                     </div>
