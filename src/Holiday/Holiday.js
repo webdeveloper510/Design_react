@@ -4,6 +4,9 @@ import SimpleImageSlider from "react-simple-image-slider";
 //import 'react-calendar/dist/Calendar.css';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import { Datepicker, Page, getJson, setOptions } from '@mobiscroll/react';
+
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
 const images = [
     { url: "Layer1.png" },
@@ -13,6 +16,32 @@ const images = [
     { url: "Layer4.png" },
     { url: "Layer123.png" },
 ];
+const images1 = [
+    {
+      original: 'Layer1.png',
+      thumbnail: 'Layer1.png',
+    },
+    {
+      original: 'image.png',
+      thumbnail: 'image.png',
+    },
+    {
+      original: 'Layer2.png',
+      thumbnail: 'Layer2.png',
+    },
+    {
+        original: 'Layer3.png',
+        thumbnail: 'Layer3.png',
+      },
+      {
+        original: 'Layer4.png',
+        thumbnail: 'Layer4.png',
+      },
+      {
+        original: 'Layer123.png',
+        thumbnail: 'Layer123.png',
+      },
+  ];
 
 function Holiday() {
     const [value, onChange] = useState(new Date());
@@ -190,7 +219,7 @@ function Holiday() {
             <div className='holidays'>
                 <div className='container'>
                     <div className='back py-2'>
-                        <button className='btn btn-warning' type="button"> back to search </button>
+                        <button className='btn btn-warning' type="button"> &#x2B05; back to search </button>
                     </div>
                     <div className='row'>
                         <div className='col-md-8'>
@@ -232,17 +261,10 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div className='wishlist1'>
-                                    <p>Add to wishlist  <i className="fa fa-heart-o"></i></p>
+                                <a href='#' style={{ color: '#1b3a69'}}>Add to wishlist  <i className="fa fa-heart-o"></i></a>
                                 </div>
                             </div>
-                            <SimpleImageSlider
-                                width={'100%'}
-                                style={{ position: 'relative' }}
-                                height={504}
-                                images={images}
-                                showBullets={true}
-                                showNavs={true}
-                            />
+                            <ImageGallery items={images1} />
                             <div className='float-right'>
                                 <img src="holiday_listing.png" className='img-fluid' />
                             </div>
@@ -429,7 +451,7 @@ function Holiday() {
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
                                                     <img src="dark-plane.png" width="30px" height=' 26px' />
-                                                    <p>easyJet <br />Economy</p>
+                                                    <p><img src="easy.png" className='img-fluid m-0'/> <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col'>
@@ -456,7 +478,7 @@ function Holiday() {
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
                                                     <img src="darkplaneright.png" width="30px" height=' 26px' />
-                                                    <p>easyJet <br />Economy</p>
+                                                    <p><img src="easy.png" className='img-fluid m-0'/> <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col'>
@@ -475,10 +497,10 @@ function Holiday() {
                                         <hr />
                                         <div className='row'>
                                             <div className='col-md-6 text-center'>
-                                                <p><b>View flight details </b></p>
+                                                <a href="#" style={{ color: '#1b3a69'}}><b>View flight details </b></a>
                                             </div>
                                             <div className='col-md-6 text-center'>
-                                                <p><b>Change flight</b></p>
+                                                <a href='#' style={{ color: '#1b3a69'}}><b>Change flight</b></a>
                                             </div>
                                         </div>
                                     </div>

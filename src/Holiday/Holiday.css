@@ -28,10 +28,16 @@
   background: transparent;
 }
 
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+  height: 33px;
+  width: 60px;
+}
+
 .coral {
     background: white;
     padding: 12px;
     color: #1b3a69;
+    width: 102%;
     margin-bottom: 10px;
 }
 
@@ -82,7 +88,6 @@
 .secure .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #fff;
-    border-bottom: 3px solid #1b3a69 !important;
     border: none;
 }
 .secure .nav-link {
@@ -280,6 +285,18 @@ input.pack {
   border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+.mbsc-windows.mbsc-calendar-cell {
+  border-color: #e3dcdc;
+  border-width: 1px;
+}
+
+.card .input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 81%;
+}
 .mbsc-calendar-cell.mbsc-calendar-day.mbsc-windows.mbsc-ltr.mbsc-calendar-day-labels.mbsc-selected{
   background: #1b3a69;
   color: white !important;
@@ -328,6 +345,9 @@ button.btn.btn-warning.btn-sm.mx-1 {
     background: #00adef;
     border-color: #00adef;
     color: white;
+}
+.bars a {
+  text-decoration: underline;
 }
 
 button.btn.btn-secondary.btn-sm.mx-1 {
