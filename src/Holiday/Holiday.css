@@ -20,6 +20,38 @@
   background-repeat: no-repeat;
 }
 
+button.image-gallery-thumbnail img {
+  height: 50px !important;
+  width: 100px;
+}
+img.image-gallery-image {
+  object-fit: cover !important;
+  width: 100%;
+}
+
+.Resort.plan {
+  float: right;
+}
+
+.image-gallery-index {
+  bottom: 0;
+  top: 88%;
+  left: 48%;
+  right: 42%;
+  background: #ffffffbd;
+  color: black;
+  border-radius: 19px;
+}
+
+i.fa.fa-angle-left {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+button.image-gallery-icon.image-gallery-play-button {
+  display: none;
+}
+
 .tripadvisor h5 {
   color: #1b3a69;
 }
@@ -37,7 +69,6 @@
     background: white;
     padding: 12px;
     color: #1b3a69;
-    width: 102%;
     margin-bottom: 10px;
 }
 
@@ -54,7 +85,7 @@
   left: 59%;
 }
 .tripadvisor {
-  border: 0.5px dashed #1b3a69;
+  border: 0.5px solid #1b3a69;
   padding: 13px;
 }
 .secure p {

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Footer.css"
 function Footer() {
     return (
-        <div className="container px-5">
+        <div className="container">
         
             <div className="row">
                 <div className="col-md-9">

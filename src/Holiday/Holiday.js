@@ -8,80 +8,35 @@ import { Datepicker, Page, getJson, setOptions } from '@mobiscroll/react';
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
-const images = [
-    { url: "Layer1.png" },
-    { url: "image.png" },
-    { url: "Layer2.png" },
-    { url: "Layer3.png" },
-    { url: "Layer4.png" },
-    { url: "Layer123.png" },
-];
 const images1 = [
     {
-      original: 'Layer1.png',
-      thumbnail: 'Layer1.png',
-    },
-    {
-      original: 'image.png',
-      thumbnail: 'image.png',
+      original: 'Layer4.png',
+      thumbnail: 'Layer4.png',
     },
     {
       original: 'Layer2.png',
       thumbnail: 'Layer2.png',
     },
     {
-        original: 'Layer3.png',
-        thumbnail: 'Layer3.png',
+      original: 'Layer4.png',
+      thumbnail: 'Layer4.png',
+    },
+    {
+        original: 'Layer2.png',
+        thumbnail: 'Layer2.png',
       },
       {
         original: 'Layer4.png',
         thumbnail: 'Layer4.png',
       },
       {
-        original: 'Layer123.png',
-        thumbnail: 'Layer123.png',
+        original: 'Layer2.png',
+        thumbnail: 'Layer2.png',
       },
   ];
 
 function Holiday() {
     const [value, onChange] = useState(new Date());
-
-    // const min = '2022-01-11T00:00';
-    // const max = '2022-07-11T00:00';
-    // const [singleLabels, setSingleLabels] = React.useState([]);
-    // const [singleInvalid, setSingleInvalid] = React.useState([]);
-
-    // const onPageLoadingSingle = React.useCallback((event, inst) => {
-    //     getPrices(event.firstDay, (bookings) => {
-    //         setSingleLabels(bookings.labels);
-    //         setSingleInvalid(bookings.invalid);
-
-    //     });
-    // }, []);
-
-    // const getPrices = (d, callback) => {
-    //     var invalid = [],
-    //         labels = [];
-
-    //     mobiscroll.util.http.getJson(MS.trialUrl + 'getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-    //         for (var i = 0; i < bookings.length; ++i) {
-    //             var booking = bookings[i],
-    //                 d = new Date(booking.d);
-
-    //             if (booking.price > 0) {
-    //                 labels.push({
-    //                     start: d,
-    //                     title: '$' + booking.price,
-    //                     textColor: '#e1528f'
-    //                 });
-    //             } else {
-    //                 invalid.push(d);
-    //             }
-    //         }
-    //         callback({ labels: labels, invalid: invalid });
-    //     }, 'jsonp');
-    // }
-
 
     const [multiple, setMultiple] = React.useState([
         '2022-01-11T00:00',
@@ -96,6 +51,7 @@ function Holiday() {
     const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
     const [multipleLabels, setMultipleLabels] = React.useState([]);
     const [multipleInvalid, setMultipleInvalid] = React.useState([]);
+    const [activeSection, setActiveSection] = React.useState('home');
 
     const onPageLoadingSingle = React.useCallback((event, inst) => {
         getPrices(event.firstDay, (bookings) => {
@@ -166,6 +122,17 @@ function Holiday() {
         }, 'jsonp');
     }
 
+    const toggleSection = (section)=>{
+        if(activeSection==section){
+            setActiveSection('')
+        }
+        else{
+        setActiveSection(section)
+        }
+       
+      
+    }
+
     const getBookings = (d, callback) => {
         let invalid = [];
         let labels = [];
@@ -210,7 +177,7 @@ function Holiday() {
                             <a href="">2 Guests </a>
                         </div>
                         <div className="col-2">
-                            <button className="btn btn-primary form-control" type="button">EDIT SEARCH</button>
+                            <button className="btn btn-primary form-control" type="button"><a href="/filter" style={{color:'white',textDecoration:'none'}}>EDIT SEARCH </a></button>
                         </div>
                     </div>
 
@@ -219,7 +186,7 @@ function Holiday() {
             <div className='holidays'>
                 <div className='container'>
                     <div className='back py-2'>
-                        <button className='btn btn-warning' type="button"> &#x2B05; back to search </button>
+                        <button className='btn btn-warning' type="button"> <i class="fa fa-angle-left"></i> back to search </button>
                     </div>
                     <div className='row'>
                         <div className='col-md-8'>
@@ -232,7 +199,7 @@ function Holiday() {
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
-                                        <div className='Resort'>
+                                        <div className='Resort plan'>
                                             <h5><img src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
                                             <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#"> 14 nights </a>)</p>
                                         </div>
@@ -264,25 +231,25 @@ function Holiday() {
                                 <a href='#' style={{ color: '#1b3a69'}}>Add to wishlist  <i className="fa fa-heart-o"></i></a>
                                 </div>
                             </div>
-                            <ImageGallery items={images1} />
+                            <ImageGallery items={images1} showIndex />
                             <div className='float-right'>
                                 <img src="holiday_listing.png" className='img-fluid' />
                             </div>
                             <ul className="nav nav-tabs mt-4" id="myTab" role="tablist">
-                                <li className="nav-item" role="presentation">
-                                    <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
+                                <li className="nav-item" onClick={()=>{ toggleSection('home') }} role="presentation">
+                                    <button className={ 'nav-link ' + (activeSection === 'home' ? "active" : "")} className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
                                 </li>
-                                <li className="nav-item" role="presentation">
-                                    <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
+                                <li className="nav-item" onClick={()=>{ toggleSection('profile') } } role="presentation">
+                                    <button className={ 'nav-link ' + (activeSection === 'profile' ? "active" : "")} id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
                                 </li>
-                                <li className="nav-item" role="presentation">
-                                    <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
+                                <li className="nav-item" onClick={()=>{ toggleSection('contact') }} role="presentation">
+                                    <button className={ 'nav-link ' + (activeSection === 'contact' ? "active" : "")} id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
                                 </li>
                             </ul>
                             <div className="tab-content" id="myTabContent">
-                                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div className={ 'tab-pane fade ' + (activeSection === 'home' ? "show active" : "")}  id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -307,9 +274,9 @@ function Holiday() {
                                         Read less
                                     </div>
                                 </div>
-                                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div className={ 'tab-pane fade ' + (activeSection === 'profile' ? "show active" : "")} id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -334,7 +301,7 @@ function Holiday() {
                                         Read less
                                     </div>
                                 </div>
-                                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div className={ 'tab-pane fade ' + (activeSection === 'contact' ? "show active" : "")} id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                     <div className='mt-3'>
                                         <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
