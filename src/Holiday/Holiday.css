@@ -34,10 +34,10 @@ img.image-gallery-image {
 }
 
 .image-gallery-index {
-  bottom: 0;
-  top: 90%;
-  left: 48%;
-  right: 42%;
+  bottom: 2px;
+  top: 89%;
+  left: 44%;
+  right: 44%;
   background: #ffffffbd;
   color: black;
   border-radius: 19px;
