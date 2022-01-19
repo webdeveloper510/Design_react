@@ -1108,9 +1108,9 @@ function Holiday() {
                                             </div>
                                             <div className='col-md-3'>
                                                 <div className='d-flex mt-4'>
-                                                    <button className='btn btn-outline-primary mx-2 rounded-circle' type="button">- </button>
+                                                     <img src="sum.png" className='img-fluid sum'/> 
                                                     <input type='number' className="form-control" />
-                                                    <button className='btn btn-outline-primary mx-2 rounded-circle' type="button"> + </button>
+                                                   <img src="add.png" className='img-fluid sum'/> 
                                                 </div>
                                             </div>
                                         </div>

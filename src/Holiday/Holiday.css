@@ -214,23 +214,17 @@ button.image-gallery-icon.image-gallery-play-button {
 .card input.form-control {
   height: auto;
 }
-button.btn.btn-outline-primary.mx-2.rounded-circle {
-  font-size: 22px;
-    padding-bottom: 20px;
-    margin: 0px;
-    height: 25px;
-    padding-left: 9px;
-    font-weight: 800;
-    width: 34px;
-    line-height: 9px;
-    margin-top: 4px;
-}
+
 .card h5 {
   font-size: 16px;
   color: #1b3a69;
   margin-top: 11px;
 }
 
+img.img-fluid.sum {
+  margin: 6px;
+  cursor: pointer;
+}
 .card p {
   font-size: 13px;
   margin: 0px;
