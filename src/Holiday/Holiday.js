@@ -15,7 +15,7 @@ const images1 = [
         thumbnail: 'Layer4.png',
     },
     {
-        original: 'Layer2.png',
+        original: 'Layer4.png',
         thumbnail: 'Layer2.png',
     },
     {
@@ -23,7 +23,7 @@ const images1 = [
         thumbnail: 'Layer4.png',
     },
     {
-        original: 'Layer2.png',
+        original: 'Layer4.png',
         thumbnail: 'Layer2.png',
     },
     {
@@ -31,7 +31,7 @@ const images1 = [
         thumbnail: 'Layer4.png',
     },
     {
-        original: 'Layer2.png',
+        original: 'Layer4.png',
         thumbnail: 'Layer2.png',
     },
     {
@@ -39,7 +39,7 @@ const images1 = [
         thumbnail: 'Layer4.png',
     },
     {
-        original: 'Layer2.png',
+        original: 'Layer4.png',
         thumbnail: 'Layer2.png',
     },
     {
@@ -47,7 +47,7 @@ const images1 = [
         thumbnail: 'Layer4.png',
     },
     {
-        original: 'Layer2.png',
+        original: 'Layer4.png',
         thumbnail: 'Layer2.png',
     },
 ];
@@ -781,22 +781,22 @@ function Holiday() {
             <div className="bars" id="bars">
                 <div className="container">
                     <div className="row">
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <a href="">London Gatwick</a>
                         </div>
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <a href="">Paphos Area</a>
                         </div>
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <a href=''> 08 Jul +/- 3 days</a>
                         </div>
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <a href=''>14 Nights</a>
                         </div>
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <a href="">2 Guests </a>
                         </div>
-                        <div className="col-2">
+                        <div className="col-md-2 col-4">
                             <button className="btn btn-primary form-control" onClick={openfilter} type="button">EDIT SEARCH </button>
                         </div>
                     </div>
@@ -855,6 +855,7 @@ function Holiday() {
                             <div className='float-right'>
                                 <img src="holiday_listing.png" className='img-fluid' />
                             </div>
+                            <div className="tabsss">
                             <p className="mt-3">
                                 <a className='coll' data-bs-toggle="collapse" href="#collapseExample" role="button" onClick={() => showParticularTab('collapseExample')} aria-expanded="false" aria-controls="collapseExample">
                                     ABOUT
@@ -866,7 +867,8 @@ function Holiday() {
                                     LOCATION
                                 </a>
                             </p>
-                            <div className="collapse show" id="collapseExample">
+                            </div>
+                            <div className="collapse show collap" id="collapseExample">
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
@@ -898,7 +900,7 @@ function Holiday() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse" id="collapseExample1">
+                            <div className="collapse collap" id="collapseExample1">
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
@@ -930,7 +932,7 @@ function Holiday() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="collapse" id="collapseExample2">
+                            <div className="collapse collap" id="collapseExample2">
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official3 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
@@ -1157,7 +1159,7 @@ function Holiday() {
                                                 </div>
                                             </div>
                                             <div className='col mt-3'>
-                                                <p>8 Jul Fri</p>
+                                                <p>8 Jul <br/> Friday</p>
                                             </div>
                                             <div className='col mt-3'>
                                                 <p><b>15:20 - 21:55 </b> <br />LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>
@@ -1184,7 +1186,7 @@ function Holiday() {
                                                 </div>
                                             </div>
                                             <div className='col mt-3'>
-                                                <p>8 Jul Fri</p>
+                                                <p>8 Jul <br/> Friday</p>
                                             </div>
                                             <div className='col mt-3'>
                                                 <p><b>15:20 - 21:55 </b> <br />LGW   	&nbsp;	&nbsp;	&nbsp;    PFO</p>

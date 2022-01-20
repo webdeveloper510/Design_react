@@ -35,12 +35,15 @@ img.image-gallery-image {
 
 .image-gallery-index {
   bottom: 2px;
-  top: 89%;
-  left: 43.5%;
-  right: 43.5%;
-  background: #ffffffbd;
-  color: black;
-  border-radius: 19px;
+    top: unset;
+    left: 45%;
+    right: unset;
+    background: #ffffffbd;
+    color: black;
+    border-radius: 19px;
+}
+.nav-link {
+  border: none !important;
 }
 a.coll {
   padding: 13px;
@@ -51,11 +54,14 @@ a.coll.collapsed {
   color: black;
   font-size: 16px;
 }
-
-.collapse  .card{
+.tabsss {
+  background: white;
+  padding: 10px 0px;
+}
+.collap  .card{
   width: 100%;
 }
-.collapse  .card p {
+.collap  .card p {
   font-size: 18px;
   margin-bottom: 1rem;
 }
@@ -404,4 +410,13 @@ button.btn.btn-secondary.btn-sm.mx-1 {
 .holidays .card {
   box-shadow: -1px 1px 19px 0px #01af871f;
   border: none;
+}
+
+@media only screen and (max-width: 600px) {
+nav.navbar.navbar-expand-lg.navbar-light {
+  position: unset;
+}
+div#bars .col-md-2 {
+  padding: 10px 0px;
+}
 }
