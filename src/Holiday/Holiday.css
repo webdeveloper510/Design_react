@@ -36,13 +36,29 @@ img.image-gallery-image {
 .image-gallery-index {
   bottom: 2px;
   top: 89%;
-  left: 44%;
-  right: 44%;
+  left: 43.5%;
+  right: 43.5%;
   background: #ffffffbd;
   color: black;
   border-radius: 19px;
 }
+a.coll {
+  padding: 13px;
+  font-size: 16px;
+}
+a.coll.collapsed {
+  padding: 13px;
+  color: black;
+  font-size: 16px;
+}
 
+.collapse  .card{
+  width: 100%;
+}
+.collapse  .card p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
 i.fa.fa-angle-left {
   font-size: 18px;
   margin-right: 10px;

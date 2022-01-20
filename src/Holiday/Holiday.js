@@ -51,7 +51,6 @@ const images1 = [
         thumbnail: 'Layer2.png',
     },
 ];
-
 function Holiday() {
     const [value, onChange] = useState(new Date());
 
@@ -230,6 +229,16 @@ function Holiday() {
             x.style.display = "none";
         }
     }
+
+    function showParticularTab(tab) {
+        let tabs = document.getElementsByClassName('collapse');
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("show");
+        }
+
+
+        console.log('here')
+    }
     function toggleNumbers4() {
         var x = document.getElementById("flight");
         if (x.style.display === "none") {
@@ -270,7 +279,7 @@ function Holiday() {
     }
     return (
         <section>
-            <div className="tabs" id="tabs" style={{display: 'none',marginTop:'8%'}}>
+            <div className="tabs" id="tabs" style={{ display: 'none', marginTop: '8%' }}>
 
                 <div className="container">
 
@@ -797,7 +806,7 @@ function Holiday() {
             <div className='holidays'>
                 <div className='container'>
                     <div className='back py-2'>
-                        <button className='btn btn-warning' type="button"> <i class="fa fa-angle-left"></i> back to search </button>
+                        <button className='btn btn-warning' type="button"> <i className="fa fa-angle-left"></i> back to search </button>
                     </div>
                     <div className='row'>
                         <div className='col-md-8'>
@@ -846,19 +855,19 @@ function Holiday() {
                             <div className='float-right'>
                                 <img src="holiday_listing.png" className='img-fluid' />
                             </div>
-                            <ul className="nav nav-tabs mt-4" id="myTab" role="tablist">
-                                <li className="nav-item" onClick={() => { toggleSection('home') }} role="presentation">
-                                    <button className={'nav-link ' + (activeSection === 'home' ? "active" : "")} className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
-                                </li>
-                                <li className="nav-item" onClick={() => { toggleSection('profile') }} role="presentation">
-                                    <button className={'nav-link ' + (activeSection === 'profile' ? "active" : "")} id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
-                                </li>
-                                <li className="nav-item" onClick={() => { toggleSection('contact') }} role="presentation">
-                                    <button className={'nav-link ' + (activeSection === 'contact' ? "active" : "")} id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
-                                </li>
-                            </ul>
-                            <div className="tab-content" id="myTabContent">
-                                <div className={'tab-pane fade ' + (activeSection === 'home' ? "show active" : "")} id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <p className="mt-3">
+                                <a className='coll' data-bs-toggle="collapse" href="#collapseExample" role="button" onClick={() => showParticularTab('collapseExample')} aria-expanded="false" aria-controls="collapseExample">
+                                    ABOUT
+                                </a>
+                                <a className='coll' data-bs-toggle="collapse" href="#collapseExample1" role="button" onClick={() => showParticularTab('collapseExample1')} aria-expanded="false" aria-controls="collapseExample">
+                                    FACILITIES
+                                </a>
+                                <a className='coll' data-bs-toggle="collapse" href="#collapseExample2" role="button" onClick={() => showParticularTab('collapseExample2')} aria-expanded="false" aria-controls="collapseExample">
+                                    LOCATION
+                                </a>
+                            </p>
+                            <div className="collapse show" id="collapseExample">
+                                <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
@@ -870,25 +879,27 @@ function Holiday() {
 
                                         <p> <b>Distance from Airport</b></p>
                                         <p>  The Coral Beach is 28km from Paphos International Airport.</p>
-                                        
+
                                         <p> <b>Rooms </b></p>
                                         <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
                                         </p>
-                                        <a href="#" onClick={room} id="hide">Show More</a>
-                                        <div id="show" style={{display:'none'}}>
-                                        <p> <b>Food & Drink </b></p>
-                                        <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
-                                        </p>
-                                        <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
-                                        </p>
-                                        <p> <b> Sports & Entertainment</b></p>
-                                        <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
-                                        </p>
-                                        <a href="#" onClick={room}>Show less</a>
+                                        <p style={{ cursor: 'pointer',color:'blue' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p style={{ cursor: 'pointer',color:'blue' }} onClick={room}>Show less</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className={'tab-pane fade ' + (activeSection === 'profile' ? "show active" : "")} id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            </div>
+                            <div className="collapse" id="collapseExample1">
+                                <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
@@ -904,21 +915,125 @@ function Holiday() {
                                         <p> <b>Rooms </b></p>
                                         <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
                                         </p>
-                                        <a href="#" onClick={room} id="hide">Show More</a>
-                                        <div id="show" style={{display:'none'}}>
-                                        <p> <b>Food & Drink </b></p>
-                                        <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
-                                        </p>
-                                        <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
-                                        </p>
-                                        <p> <b> Sports & Entertainment</b></p>
-                                        <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
-                                        </p>
-                                        <a href="#" onClick={room}>Show less</a>
+                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p style={{ cursor: 'pointer' }} onClick={room}>Show less</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className={'tab-pane fade ' + (activeSection === 'contact' ? "show active" : "")} id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            </div>
+                            <div className="collapse" id="collapseExample2">
+                                <div className="card card-body">
+                                    <div className='mt-3'>
+                                        <p>Official3 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+
+                                        <b>Overview</b>
+                                        <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
+                                        </p>
+                                        <p> <b> How far is the nearest beach? </b></p>
+                                        <p>The Coral Beach is 50m from the beach.</p>
+
+                                        <p> <b>Distance from Airport</b></p>
+                                        <p>  The Coral Beach is 28km from Paphos International Airport.</p>
+
+                                        <p> <b>Rooms </b></p>
+                                        <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
+                                        </p>
+                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p style={{ cursor: 'pointer' }} onClick={room}>Show less</p>
+                                        </div>
+                                    </div> </div>
+                            </div>
+                            {/* <ul className="nav nav-tabs mt-4" id="myTab" role="tablist">
+                                <li className="nav-item" onClick={() => { toggleSection('home') }} role="presentation">
+                                    <button className={'nav-link ' + (activeSection === 'home' ? "active" : "")} className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ABOUT</button>
+                                </li>
+                                <li className="nav-item" onClick={() => { toggleSection('profile') }} role="presentation">
+                                    <button className={'nav-link ' + (activeSection === 'profile' ? "active" : "")} id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">FACILITIES</button>
+                                </li>
+                                <li className="nav-item" onClick={() => { toggleSection('contact') }} role="presentation">
+                                    <button className={'nav-link ' + (activeSection === 'contact' ? "active" : "")} id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">LOCATION</button>
+                                </li>
+                            </ul>
+                            <div className="tab-content" id="myTabContent">
+                                <div className={'tab-pane  ' + (activeSection === 'home' ? "show active" : "")} id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div className='mt-3'>
+                                        <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+
+                                        <b>Overview</b>
+                                        <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
+                                        </p>
+                                        <p> <b> How far is the nearest beach? </b></p>
+                                        <p>The Coral Beach is 50m from the beach.</p>
+
+                                        <p> <b>Distance from Airport</b></p>
+                                        <p>  The Coral Beach is 28km from Paphos International Airport.</p>
+
+                                        <p> <b>Rooms </b></p>
+                                        <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
+                                        </p>
+                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p style={{ cursor: 'pointer' }} onClick={room}>Show less</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={'tab-pane  ' + (activeSection === 'profile' ? "show active" : "")} id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div className='mt-3'>
+                                        <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+
+                                        <b>Overview</b>
+                                        <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
+                                        </p>
+                                        <p> <b> How far is the nearest beach? </b></p>
+                                        <p>The Coral Beach is 50m from the beach.</p>
+
+                                        <p> <b>Distance from Airport</b></p>
+                                        <p>  The Coral Beach is 28km from Paphos International Airport.</p>
+
+                                        <p> <b>Rooms </b></p>
+                                        <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
+                                        </p>
+                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p style={{ cursor: 'pointer' }} >Show less</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={'tab-pane  ' + (activeSection === 'contact' ? "show active" : "")} id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                     <div className='mt-3'>
                                         <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
 
@@ -934,21 +1049,21 @@ function Holiday() {
                                         <p> <b>Rooms </b></p>
                                         <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
                                         </p>
-                                        <a href="#" onClick={room} id="hide">Show More</a>
-                                        <div id="show" style={{display:'none'}}>
-                                        <p> <b>Food & Drink </b></p>
-                                        <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
-                                        </p>
-                                        <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
-                                        </p>
-                                        <p> <b> Sports & Entertainment</b></p>
-                                        <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
-                                        </p>
-                                        <a href="#" onClick={room}>Show less</a>
+                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
+                                        <div id="show" style={{ display: 'none' }}>
+                                            <p> <b>Food & Drink </b></p>
+                                            <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
+                                            </p>
+                                            <p>Armonia Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required. Calypso Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Limani Taverna* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings Pizza & Pasta Restaurant* Cuisine: Italian Dress code: Casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open occasionally (summer only) Molos* Cuisine: Greek and Cypriot Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Open alternative evenings (summer only) Romazzino* Cuisine: Mediterranean Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings La Rotisserie* Cuisine: International Dress code: Smart casual Opening Hours: 19:00 – 22:00 Reservations: Reservations required. *Diners must be aged 13 or over *Open alternative evenings Dionyssos Bar Opening Hours: 11:00 – 23:00 Odyssey Bar & Nightclub Opening Hours: 21:30 – 01:00 Poseidon Pool Bar Opening Hours: 09:00 – 19:00
+                                            </p>
+                                            <p> <b> Sports & Entertainment</b></p>
+                                            <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
+                                            </p>
+                                            <p onClick={room}>Show less</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className='my-3'>
                                 <h3>Alternative Dates</h3>
                             </div>
@@ -974,17 +1089,17 @@ function Holiday() {
 
                                     </div>
                                     <div className="flight-option">
-                                        <h5>Flight options: <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                                            <label class="form-check-label" >Any</label>
+                                        <h5>Flight options: <div className="form-check form-check-inline">
+                                            <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                            <label className="form-check-label" >Any</label>
                                         </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                                                <label class="form-check-label" >Direct</label>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                                <label className="form-check-label" >Direct</label>
                                             </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
-                                                <label class="form-check-label" >Indirect </label>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                                                <label className="form-check-label" >Indirect </label>
                                             </div></h5>
                                     </div>
                                     <Datepicker
@@ -1001,10 +1116,10 @@ function Holiday() {
                                     />
                                     <div className='row'>
                                         <div className='col-md-8'>
-                                            <button class="btn btn-primary btn-sm mx-1" type="button">Current Date</button>
-                                            <button class="btn btn-success btn-sm mx-1" type="button">Cheapest Date</button>
-                                            <button class="btn btn-warning btn-sm mx-1" type="button">New Selection</button>
-                                            <button class="btn btn-secondary btn-sm mx-1" type="button">No Availability</button>
+                                            <button className="btn btn-primary btn-sm mx-1" type="button">Current Date</button>
+                                            <button className="btn btn-success btn-sm mx-1" type="button">Cheapest Date</button>
+                                            <button className="btn btn-warning btn-sm mx-1" type="button">New Selection</button>
+                                            <button className="btn btn-secondary btn-sm mx-1" type="button">No Availability</button>
                                         </div>
                                         <div className='col-md-4'>
                                             <div className='d-flex person'>
@@ -1041,7 +1156,7 @@ function Holiday() {
                                                     <p><img src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
-                                            <div className='col mt-4'>
+                                            <div className='col mt-3'>
                                                 <p>8 Jul Fri</p>
                                             </div>
                                             <div className='col mt-3'>
@@ -1068,7 +1183,7 @@ function Holiday() {
                                                     <p><img src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
-                                            <div className='col mt-4'>
+                                            <div className='col mt-3'>
                                                 <p>8 Jul Fri</p>
                                             </div>
                                             <div className='col mt-3'>
@@ -1108,9 +1223,9 @@ function Holiday() {
                                             </div>
                                             <div className='col-md-3'>
                                                 <div className='d-flex mt-4'>
-                                                     <img src="sum.png" className='img-fluid sum'/> 
+                                                    <img src="sum.png" className='img-fluid sum' />
                                                     <input type='number' className="form-control" />
-                                                   <img src="add.png" className='img-fluid sum'/> 
+                                                    <img src="add.png" className='img-fluid sum' />
                                                 </div>
                                             </div>
                                         </div>
