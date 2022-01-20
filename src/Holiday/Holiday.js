@@ -266,6 +266,28 @@ function Holiday() {
             y.style.display = "block";
         }
     }
+    function room1() {
+        var x = document.getElementById("show1");
+        var y = document.getElementById("hide1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block";
+        }
+    }
+    function room2() {
+        var x = document.getElementById("show2");
+        var y = document.getElementById("hide2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block";
+        }
+    }
     function openfilter() {
         var x = document.getElementById("tabs");
         var y = document.getElementById("bars");
@@ -917,8 +939,8 @@ function Holiday() {
                                         <p> <b>Rooms </b></p>
                                         <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
                                         </p>
-                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
-                                        <div id="show" style={{ display: 'none' }}>
+                                        <p style={{ cursor: 'pointer',color:'blue' }} onClick={room1} id="hide1">Show More</p>
+                                        <div id="show1" style={{ display: 'none' }}>
                                             <p> <b>Food & Drink </b></p>
                                             <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
                                             </p>
@@ -927,7 +949,7 @@ function Holiday() {
                                             <p> <b> Sports & Entertainment</b></p>
                                             <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
                                             </p>
-                                            <p style={{ cursor: 'pointer' }} onClick={room}>Show less</p>
+                                            <p style={{ cursor: 'pointer',color:'blue' }} onClick={room1}>Show less</p>
                                         </div>
                                     </div>
                                 </div>
@@ -949,8 +971,8 @@ function Holiday() {
                                         <p> <b>Rooms </b></p>
                                         <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
                                         </p>
-                                        <p style={{ cursor: 'pointer' }} onClick={room} id="hide">Show More</p>
-                                        <div id="show" style={{ display: 'none' }}>
+                                        <p style={{ cursor: 'pointer',color:'blue' }} onClick={room2} id="hide2">Show More</p>
+                                        <div id="show2" style={{ display: 'none' }}>
                                             <p> <b>Food & Drink </b></p>
                                             <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
                                             </p>
@@ -959,7 +981,7 @@ function Holiday() {
                                             <p> <b> Sports & Entertainment</b></p>
                                             <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
                                             </p>
-                                            <p style={{ cursor: 'pointer' }} onClick={room}>Show less</p>
+                                            <p style={{ cursor: 'pointer',color:'blue' }} onClick={room2}>Show less</p>
                                         </div>
                                     </div> </div>
                             </div>
