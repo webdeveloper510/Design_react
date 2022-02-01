@@ -50,7 +50,7 @@ function Footer() {
                     <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  src="footer.png"width="30px" height="30px"/></p>
                 </div>
                 <div className="col-md-4 text-right">
-                    <img src="secondlogo.png" height="50px" className="img-fluid"/>
+                    <img src="home-alternate.png" height="50px" className="img-fluid"/>
                 </div>
             </div>
             <hr/>
