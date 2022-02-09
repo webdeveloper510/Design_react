@@ -859,47 +859,47 @@ function Home() {
                     <h3 className="my-3 px-4">Popular Destinations</h3>
                     <div className="row text-darkblue">
                        <div className="col-md-3 px-5">
-                         <p><a href="">Ibiza </a><br/>
-                         <a href="#"> Majorca</a><br/>
-                         <a href="#">Crete</a><br/>
-                         <a href="#"> Cyprus</a><br/>
-                         <a href="#"> Portugal</a><br/>
-                         <a href="#"> Turkey</a><br/>
-                         <a href="#"> Greece</a><br/>
-                         <a href="#"> Zante</a>
+                         <p><a rel="noreferrer"href="">Ibiza </a><br/>
+                         <a rel="noreferrer"href="#"> Majorca</a><br/>
+                         <a rel="noreferrer"href="#">Crete</a><br/>
+                         <a rel="noreferrer"href="#"> Cyprus</a><br/>
+                         <a rel="noreferrer"href="#"> Portugal</a><br/>
+                         <a rel="noreferrer"href="#"> Turkey</a><br/>
+                         <a rel="noreferrer"href="#"> Greece</a><br/>
+                         <a rel="noreferrer"href="#"> Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p><a href="">Ibiza</a><br/>
-                         <a href="#"> Majorca</a><br/>
-                         <a href="#"> Crete</a><br/>
-                         <a href="#">Cyprus</a><br/>
-                         <a href="#">Portugal</a><br/>
-                         <a href="#"> Turkey</a><br/>
-                         <a href="#">Greece</a><br/>
-                         <a href="#"> Zante</a>
+                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
+                         <a rel="noreferrer"href="#"> Majorca</a><br/>
+                         <a rel="noreferrer"href="#"> Crete</a><br/>
+                         <a rel="noreferrer"href="#">Cyprus</a><br/>
+                         <a rel="noreferrer"href="#">Portugal</a><br/>
+                         <a rel="noreferrer"href="#"> Turkey</a><br/>
+                         <a rel="noreferrer"href="#">Greece</a><br/>
+                         <a rel="noreferrer"href="#"> Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p><a href="">Ibiza</a><br/>
-                         <a href="#"> Majorca</a><br/>
-                         <a href="#"> Crete</a><br/>
-                         <a href="#"> Cyprus</a><br/>
-                         <a href="#">  Portugal</a><br/>
-                         <a href="#"> Turkey</a><br/>
-                         <a href="#"> Greece</a><br/>
-                         <a href="#">  Zante</a>
+                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
+                         <a rel="noreferrer"href="#"> Majorca</a><br/>
+                         <a rel="noreferrer"href="#"> Crete</a><br/>
+                         <a rel="noreferrer"href="#"> Cyprus</a><br/>
+                         <a rel="noreferrer"href="#">  Portugal</a><br/>
+                         <a rel="noreferrer"href="#"> Turkey</a><br/>
+                         <a rel="noreferrer"href="#"> Greece</a><br/>
+                         <a rel="noreferrer"href="#">  Zante</a>
                             </p>
                          </div>
                          <div className="col-md-3 px-5">
-                         <p><a href="">Ibiza</a><br/>
-                         <a href="#">Majorca</a><br/>
-                         <a href="#">Crete</a><br/>
-                         <a href="#">Cyprus</a><br/>
-                         <a href="#">Portugal</a><br/>
-                         <a href="#">Turkey</a><br/>
-                         <a href="#">Greece</a><br/>
-                         <a href="#">Zante</a>
+                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
+                         <a rel="noreferrer"href="#">Majorca</a><br/>
+                         <a rel="noreferrer"href="#">Crete</a><br/>
+                         <a rel="noreferrer"href="#">Cyprus</a><br/>
+                         <a rel="noreferrer"href="#">Portugal</a><br/>
+                         <a rel="noreferrer"href="#">Turkey</a><br/>
+                         <a rel="noreferrer"href="#">Greece</a><br/>
+                         <a rel="noreferrer"href="#">Zante</a>
                             </p>
                          </div>
                       </div>
@@ -950,7 +950,7 @@ function Home() {
                                     <div className="float-right">
                                      <img src="chat.png" width="50px" height="50px"/>
                                       </div> 
-                                    <a href="#">Chat with us online</a>
+                                    <a rel="noreferrer"href="#">Chat with us online</a>
                             </div>
                             <div className="col-md-4 px-5">
                               <h4 className="text-center my-3">Ask a Question?</h4>
@@ -959,11 +959,11 @@ function Home() {
                                 <button className="btn btn-outline-success" type="submit">Search</button>
                               </form>
                               <ul className="list-group my-4">
-                                <li className="list-group-item"> <a href="#">Airline Baggage Fees</a></li>
-                                <li className="list-group-item"><a href="#">Online Flight Check-in</a></li>
-                                <li className="list-group-item"><a href="#">Covid 19 Travel Advisories</a></li>
-                                <li className="list-group-item"><a href="#">Cancellation Policy</a></li>
-                                <li className="list-group-item"><a href="#">Airport Security</a></li>
+                                <li className="list-group-item"> <a rel="noreferrer"href="#">Airline Baggage Fees</a></li>
+                                <li className="list-group-item"><a rel="noreferrer"href="#">Online Flight Check-in</a></li>
+                                <li className="list-group-item"><a rel="noreferrer"href="#">Covid 19 Travel Advisories</a></li>
+                                <li className="list-group-item"><a rel="noreferrer"href="#">Cancellation Policy</a></li>
+                                <li className="list-group-item"><a rel="noreferrer"href="#">Airport Security</a></li>
                               </ul>
                               </div>
                       </div>

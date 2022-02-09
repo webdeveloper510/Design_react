@@ -1,0 +1,204 @@
+import React from 'react';
+import StepHeader from './StepHeader';
+function Step4() {
+  return <div >
+    <StepHeader />
+    <section className='holidays'>
+      <div className='container'>
+        <div className='row py-2'>
+          <div className='col-md-3 '>
+            <div className='clock p-1'>
+            <img src="clock.png" width="80px" className=' m-0' />
+            <div className='deal'>
+              <h3>29:59</h3>
+              <p><b>Left to book this deal! </b></p>
+            </div>
+            </div>
+          </div>
+          <div className='col-md-9 process'>
+            <img src="step4.png" className='img-fluid' />
+          </div>
+        </div>
+        <div className='row '>
+          <div className='col-md-8 '>
+            <div className="lead">
+              <h5>Lead Passenger Contact Details <img src="img.png" className='img-fluid mx-2' /></h5>
+            </div>
+            <div className='passenger'>
+              <p>We can only discuss this booking with the lead or authorised passengers</p>
+              <div className='number'>
+                <form>
+                  <div class="mb-3 col-md-7">
+                    <label>Phone Number*</label>
+                    <input className='form-control' type="text" placeholder=" enter number" />
+                  </div>
+                  <div class="mb-3 col-md-7">
+                    <label>Last Name*</label>
+                    <input className='form-control' type="text" placeholder=" enter name" />
+                  </div>
+                  <div class="form-check col-md-7">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                    <label class="form-check-label" for="invalidCheck">
+                      I would like to receive offers from Suntours
+                    </label>
+                  </div>
+                  <div className='col-md-7 text-right'>
+                    <a href="#">Privacy Policy</a>
+                  </div>
+                  <div className='bill'>
+                    <h2>Billing Address</h2>
+                  </div>
+                  <div className='row'>
+                    <div className='col-6'>
+                      <div class="mb-3">
+                        <label>Postcode*</label>
+                        <input className='form-control' type="text" placeholder=" enter postcode" />
+                        <a href="#">I’m in Ireland</a>
+                      </div>
+                    </div>
+                    <div className='col-6'>
+                      <div style={{marginTop:'1.9rem'}}>
+                        <label></label>
+                        <button className='btn btn-primary' type='button'> Find Address </button> <br />
+                        <a href="#">or enter manually</a>
+                      </div>
+                    </div>
+                    <div className='col-6'>
+                      <div class="mb-3">
+                        <label>Billing Address*</label>
+                        <input className='form-control' type="text" placeholder=" search abover or enter manually" />
+                      </div>
+                    </div>
+                    <div className='col-6'>
+                      <div class="mb-3">
+                        <label>Town / City*</label>
+                        <input className='form-control' type="text" placeholder=" search above or enter manually" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className='row'>
+              <div className='col-4'>
+              <div className='clock1 p-1'>
+                <img src="clock.png" width="80px" className=' m-0' />
+                <div className='deal1'>
+                  <h4 className='blue'>29:59</h4>
+                  <p className='blue'><b>Left to book this deal! </b></p>
+                </div>
+              </div>
+            </div>
+            <div className='col-8 text-center Continue'>
+                <h3>Continue to checkout <img src="Shape.png" className='img-fluid'/></h3>
+            </div>
+          </div>
+          </div>
+
+          <div className='col-md-4'>
+            <div className='bannerhotal'>
+              <img src="hotel.png" className='img-fluid' />
+              <div className='title'>
+                <h3 className='blue'>Queens Bay Hotel
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                </h3>
+                <h5 className='blue'>Paphos</h5>
+                <p className='blue'>Tue 05 Jul 2022, 14 nights, 1x Double or Twin Room <br/>
+                    with Inland View, Bed & Breakfast<br/>
+                    <br/>
+                    Supplied through Five rocks Beach ltd Queens Bay Hotel</p>
+                    <hr/>
+                    <img src="easyjet.png" className='img-fluid'/>
+                    <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
+                    <div className='row'>
+                      <div className='col'>
+                        <p>London Gatwick <br/>
+                          <span className='flighttime'>15:45</span>
+                        </p>
+                      </div>
+                      <div className='col-2 '>
+                        <img src="rightflight.png" className='img-fluid p-2'/>
+                      </div>
+                      <div className='col'>
+                        <p>London Gatwick <br/>
+                          <span className='flighttime'>15:45 (4 hr 35m)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <hr/>
+                    <img src="easyjet.png" className='img-fluid'/>
+                    <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
+                    <div className='row'>
+                      <div className='col'>
+                        <p>London Gatwick <br/>
+                          <span className='flighttime'>23:10</span>
+                        </p>
+                      </div>
+                      <div className='col-2'>
+                        <img src="flights1.png" className='img-fluid p-2'/>
+                      </div>
+                      <div className='col'>
+                        <p>London Gatwick <br/>
+                          <span className='flighttime'>02:00 (+1 Day) (4 hr 35m)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div className='row'>
+                      <div className='col'>
+                        <h5>ATOL Protection</h5>
+                      </div>
+                      <div className='col text-right'>
+                        <h5>£5.00</h5>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div className='row'>
+                      <div className='col-2 arrors mt-1'>
+                        <h5>VIP</h5>
+                      </div>
+                      <div className='col mt-3 text-center'>
+                        <h5 className='blue'>FREE Aiport lounge</h5>
+                      </div>
+                      <div className='col-3 mt-3'>
+                        <h5>Included</h5>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div className='row'>
+                      <div className='col-2 arrors mt-1'>
+                        <img src="rightarrow.png" className='img-fluid'/>
+                      </div>
+                      <div className='col mt-3 text-center'>
+                        <h5 className='blue'>FREE Aiport lounge</h5>
+                      </div>
+                      <div className='col-3 mt-3'>
+                        <h5>Included</h5>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div className='row'>
+                      <div className='col-6'>
+                        <h5 className='blue'>Total Price</h5>
+                        <h5 style={{color:'#ff6200'}}>Ref: 2678987655</h5>
+                      </div>
+                      <div className='col-6 text-right mt-3'>
+                        <h2 className='blue'>£1,270.97</h2>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr/>
+
+  </div>;
+}
+
+export default Step4;

@@ -7,19 +7,19 @@ function Filter() {
                 <div className="container">
                     <div className="row">
                         <div className="col-2">
-                            <a href="">London Gatwick</a>
+                            <a rel="noreferrer"href="">London Gatwick</a>
                         </div>
                         <div className="col-2">
-                            <a href="">Paphos Area</a>
+                            <a rel="noreferrer"href="">Paphos Area</a>
                         </div>
                         <div className="col-2">
-                            <a href=''> 08 Jul +/- 3 days</a>
+                            <a rel="noreferrer"href=''> 08 Jul +/- 3 days</a>
                         </div>
                         <div className="col-2">
-                            <a href=''>14 Nights</a>
+                            <a rel="noreferrer"href=''>14 Nights</a>
                         </div>
                         <div className="col-2">
-                            <a href="">2 Guests </a>
+                            <a rel="noreferrer"href="">2 Guests </a>
                         </div>
                         <div className="col-2">
                             <button className="btn btn-primary form-control" type="button">EDIT SEARCH</button>
@@ -484,7 +484,7 @@ function Filter() {
                                     </div>
                                     <div className="col-md-10">
                                         <h6 className='m-0 mt-2'>Book with confidence</h6>
-                                        <p>ATOL Protected, flexible holidays with price match guarantee.<span> <a href="#">Learn more </a> </span></p>
+                                        <p>ATOL Protected, flexible holidays with price match guarantee.<span> <a rel="noreferrer"href="#">Learn more </a> </span></p>
                                     </div>
                                 </div>
                             </div>
@@ -499,7 +499,7 @@ function Filter() {
                                     <div className='col-md-6'>
                                         <div className='hotal-detail'>
                                             <h4>Iberostar Beach Resort & Spa</h4>
-                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a href="#"> VIEW IN MAP </a></p>
+                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a rel="noreferrer"href="#"> VIEW IN MAP </a></p>
                                             <div className='d-flex mt-3'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
@@ -525,7 +525,7 @@ function Filter() {
                                             <p><img src="call.png" className='img-fluid' /> Tue 05 Jul 2022 - 14 nights</p>
                                             <p><img src="bed.png" className='img-fluid' /> Deluxe Double Room with Garden or Pool View with Balcony</p>
                                             <small>Only 5 rooms left</small>
-                                            <p><img src="plane.png" className='img-fluid' /> London Gatwick - Direct <a href="#">  View flight details </a></p>
+                                            <p><img src="plane.png" className='img-fluid' /> London Gatwick - Direct <a rel="noreferrer"href="#">  View flight details </a></p>
                                             <p><img src="sun.png" className='img-fluid' /> Honeymoon offer</p>
                                         </div>
                                     </div>
@@ -561,7 +561,7 @@ function Filter() {
                                     <div className='row'>
                                         <div className='col-md-9'>
                                             <h4>Iberostar Beach Resort & Spa</h4>
-                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a href="">VIEW IN MAP </a></p>
+                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a rel="noreferrer"href="">VIEW IN MAP </a></p>
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
@@ -600,7 +600,7 @@ function Filter() {
                                     <div className='row'>
                                         <div className='col-md-9'>
                                             <h4>Iberostar Beach Resort & Spa</h4>
-                                            <p>Aphrodite hills, Paphos Area, Cyprus <a href="">VIEW IN MAP </a></p>
+                                            <p>Aphrodite hills, Paphos Area, Cyprus <a rel="noreferrer"href="">VIEW IN MAP </a></p>
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">

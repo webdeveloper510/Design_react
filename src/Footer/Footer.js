@@ -7,7 +7,7 @@ function Footer() {
             <div className="row">
                 <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p className="user"><a href="#">User Agreement </a>| <a href="#">Privacy </a>|<a href="#"> Cookies </a> | <a href="#">AdChoices </a></p>
+                   <p className="user"><a rel="noreferrer"href="#" rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href="#" rel="noreferrer">Privacy </a>|<a rel="noreferrer"href="#" rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href="#" rel="noreferrer">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
                            <img src="footerlogo.png" height="128px"className="img-fluid"/>
@@ -16,11 +16,11 @@ function Footer() {
                            <h5> <b>Stay Safe whilst you travel </b> </h5>
                            <p> 
                           
-                            For the latest foreign travel advice visit <a href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
+                            For the latest foreign travel advice visit <a rel="noreferrer"href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
                             <br/>
-                            Follow our <a href=""> travel update</a><br/><br/>
+                            Follow our <a rel="noreferrer"href="" rel="noreferrer"> travel update</a><br/><br/>
                             
-                            Visit the  <a href=""> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
+                            Visit the  <a rel="noreferrer"href="" rel="noreferrer"> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
                             </p>
                        </div>
                    </div>

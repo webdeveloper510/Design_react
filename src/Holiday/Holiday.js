@@ -804,19 +804,19 @@ function Holiday() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-2 col-4">
-                            <a href="">London Gatwick</a>
+                            <a href="" rel="noreferrer">London Gatwick</a>
                         </div>
                         <div className="col-md-2 col-4">
-                            <a href="">Paphos Area</a>
+                            <a href="" rel="noreferrer">Paphos Area</a>
                         </div>
                         <div className="col-md-2 col-4">
-                            <a href=''> 08 Jul +/- 3 days</a>
+                            <a href='' rel="noreferrer"> 08 Jul +/- 3 days</a>
                         </div>
                         <div className="col-md-2 col-4">
-                            <a href=''>14 Nights</a>
+                            <a href='' rel="noreferrer">14 Nights</a>
                         </div>
                         <div className="col-md-2 col-4">
-                            <a href="">2 Guests </a>
+                            <a href="" rel="noreferrer">2 Guests </a>
                         </div>
                         <div className="col-md-2 col-4">
                             <button className="btn btn-primary form-control" onClick={openfilter} type="button">EDIT SEARCH </button>
@@ -843,7 +843,7 @@ function Holiday() {
                                     <div className='col-md-6'>
                                         <div className='Resort text-right'>
                                             <h5><img src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
-                                            <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#"> 14 nights </a>)</p>
+                                            <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#" rel="noreferrer"> 14 nights </a>)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -870,7 +870,7 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div className='wishlist1'>
-                                    <a href='#' style={{ color: '#1b3a69' }}>Add to wishlist  <i className="fa fa-heart-o"></i></a>
+                                    <a href='#' rel="noreferrer" style={{ color: '#1b3a69' }}>Add to wishlist  <i className="fa fa-heart-o"></i></a>
                                 </div>
                             </div>
                             <ImageGallery items={images1} showIndex />
@@ -885,7 +885,7 @@ function Holiday() {
                                 <a className='coll' data-bs-toggle="collapse" href="#collapseExample1" role="button" onClick={() => showParticularTab('collapseExample1')} aria-expanded="false" aria-controls="collapseExample">
                                     FACILITIES
                                 </a>
-                                <a className='coll' data-bs-toggle="collapse" href="#collapseExample2" role="button" onClick={() => showParticularTab('collapseExample2')} aria-expanded="false" aria-controls="collapseExample">
+                                <a  className='coll' data-bs-toggle="collapse" href="#collapseExample2" role="button" onClick={() => showParticularTab('collapseExample2')} aria-expanded="false" aria-controls="collapseExample">
                                     LOCATION
                                 </a>
                             </p>
@@ -1223,10 +1223,10 @@ function Holiday() {
                                         <hr />
                                         <div className='row'>
                                             <div className='col-md-6 text-center'>
-                                                <a href="#" style={{ color: '#1b3a69' }}><b>View flight details </b></a>
+                                                <a href="#" rel="noreferrer" style={{ color: '#1b3a69' }}><b>View flight details </b></a>
                                             </div>
                                             <div className='col-md-6 text-center'>
-                                                <a href='#' style={{ color: '#1b3a69' }}><b>Change flight</b></a>
+                                                <a href='#' rel="noreferrer" style={{ color: '#1b3a69' }}><b>Change flight</b></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1490,7 +1490,7 @@ function Holiday() {
                                     <button className="btn btn-warning" type="submit">Send</button>
                                 </form>
                                 <div className='text-right'>
-                                    <small>Read our <a href="#"> Privacy Policy </a></small>
+                                    <small>Read our <a href="#" rel="noreferrer"> Privacy Policy </a></small>
                                 </div>
                             </div>
                             <div className='confidence'>
@@ -1527,7 +1527,7 @@ function Holiday() {
                                 <p>17 December 2021</p>
                                 <p>Thank You very much for Amazing Stay: Location Superb (right on the beach!) Ambience Great (All Details add to the experience )  Building + Room Spacious. Clean, Comfortable, especially Balcony Facing ...</p>
                                 <div className='text-right'>
-                                    <a href='#'>Read More </a>
+                                    <a href='#' rel="noreferrer">Read More </a>
                                 </div>
 
                                 <hr />
@@ -1538,7 +1538,7 @@ function Holiday() {
                                 <p>17 December 2021</p>
                                 <p>Thank You very much for Amazing Stay: Location Superb (right on the beach!) Ambience Great (All Details add to the experience )  Building + Room Spacious. Clean, Comfortable, especially Balcony Facing ...</p>
                                 <div className='text-right'>
-                                    <a href='#'>Read More </a>
+                                    <a href='#' rel="noreferrer">Read More </a>
                                 </div>
 
                                 <hr />
@@ -1549,7 +1549,7 @@ function Holiday() {
                                 <p>17 December 2021</p>
                                 <p>Thank You very much for Amazing Stay: Location Superb (right on the beach!) Ambience Great (All Details add to the experience )  Building + Room Spacious. Clean, Comfortable, especially Balcony Facing ...</p>
                                 <div className='text-right'>
-                                    <a href='#'>Read More </a>
+                                    <a href='#' rel="noreferrer">Read More </a>
                                 </div>
 
                                 <hr />
@@ -1560,7 +1560,7 @@ function Holiday() {
                                 <p>17 December 2021</p>
                                 <p>Thank You very much for Amazing Stay: Location Superb (right on the beach!) Ambience Great (All Details add to the experience )  Building + Room Spacious. Clean, Comfortable, especially Balcony Facing ...</p>
                                 <div className='text-right'>
-                                    <a href='#'>Read More </a>
+                                    <a href='#' rel="noreferrer">Read More </a>
                                 </div>
                             </div>
                         </div>

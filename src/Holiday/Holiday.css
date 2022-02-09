@@ -420,3 +420,157 @@ div#bars .col-md-2 {
   padding: 10px 0px;
 }
 }
+
+
+/* --------------------- Step css------------------------- */
+
+.clock {
+  display: flex;
+  background: #ebc717;
+}
+
+.process {
+  background: white;
+  padding-top: 21px;
+}
+
+.deal1 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.Continue img {
+  padding-left: 48px;
+}
+
+.Continue {
+  background: #ebc718;
+  padding: 24px;
+}
+
+.clock1 {
+  display: flex;
+  background: #ebc717;
+}
+
+.deal1 p {
+  font-size: 13px;
+}
+.lead {
+  background: #1b3a69;
+  padding: 8px 10px;
+  color: white;
+}
+
+.passenger {
+  background: white;
+  padding: 6px;
+}
+
+.number label {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.number a {
+  text-decoration: underline;
+}
+
+.number input.form-control {
+  height: 38px;
+}
+
+.title {
+  background: white;
+  padding: 11px;
+  border: 0.5px solid #99939352;
+}
+
+.title i.fa.fa-star {
+  font-size: 24px;
+  color: #faca21;
+}
+
+.arrors{
+    background: #ebc817;
+    padding: 12px 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.deal {
+  padding: 8px 5px 0px;
+}
+
+span.flighttime {
+  font-size: 12px;
+}
+.blue {
+  color:#1b3a69;
+}
+
+.pay {
+  background: white;
+  padding: 13px;
+}
+
+.dot {
+  background: #1b3a69;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  margin: 12px auto;
+}
+
+table.w-100.breakdown tbody tr {
+  border-bottom: 0.5px solid #d7b4b4;
+  height: 36px;
+}
+
+table.w-100.breakdown tbody tr td {
+  text-align: right;
+  padding-right: 22px;
+}
+
+th.amountright {
+  text-align: right;
+  padding-right: 22px;
+}
+
+.abouts {
+  background: #f0fafe;
+  padding: 10px;
+}
+
+.travelling img {
+  padding: 0px 17px 34px;
+}
+
+.travelling {
+  display: flex;
+}
+
+.travelling h6 {
+  margin-bottom: 0;
+}
+
+.safe {
+  background: white;
+  padding: 11px;
+}
+.monthly {
+  border-right: 2px solid #c3c1c161;
+}
+
+.discuss input.form-control {
+  height: auto;
+}
+
+.discuss .form-check .form-check-input {
+  float: none;
+  margin-right: 10px;
+}
+
+.discuss label {
+  font-size: 15px;
+}
