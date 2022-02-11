@@ -9,6 +9,9 @@ import 'react-calendar/dist/Calendar.css';
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
 const images1 = [
     {
         original: 'Layer4.png',
@@ -300,6 +303,8 @@ function Holiday() {
         }
     }
     return (
+        <>
+        <Header/>
         <section>
             <div className="tabs" id="tabs" style={{ display: 'none', marginTop: '8%' }}>
 
@@ -329,7 +334,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers3} type="button"><img src="desti.png" /><p>list</p></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers3} type="button"><img  alt='' src="desti.png" /><p>list</p></button>
                                                 </div>
 
                                             </div>
@@ -373,7 +378,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="date" className="form-control" readOnly onClick={open} />
-                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img src="Calendar.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img  alt='' src="Calendar.png" /></button>
 
                                                 </div>
 
@@ -412,7 +417,7 @@ function Holiday() {
 
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers} type="button"><img src="rome.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers} type="button"><img  alt='' src="rome.png" /></button>
 
                                                 </div>
 
@@ -584,7 +589,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers4} type="button"><img src="desti.png" /><p>list</p></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers4} type="button"><img  alt='' src="desti.png" /><p>list</p></button>
                                                 </div>
                                                 <div className="suggection3 " id="flight" style={{ display: 'none' }}>
                                                     <div className="flush1"></div>
@@ -605,7 +610,7 @@ function Holiday() {
                                                 <label >Check-in / Check-out</label>
                                                 <div className="input-group mb-3">
                                                     <input type="date" className="form-control" readOnly onClick={open} />
-                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img src="Calendar.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img  alt='' src="Calendar.png" /></button>
                                                 </div>
 
                                             </div>
@@ -614,7 +619,7 @@ function Holiday() {
                                             <label >Rooms & Guests</label>
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" aria-label="Text input with dropdown button" />
-                                                <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="rome.png" /></button>
+                                                <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='' src="rome.png" /></button>
                                             </div>
                                         </div>
                                         <div className="col-md-2 text-center">
@@ -842,7 +847,7 @@ function Holiday() {
                                     </div>
                                     <div className='col-md-6'>
                                         <div className='Resort text-right'>
-                                            <h5><img src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
+                                            <h5><img  alt='' src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
                                             <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#" rel="noreferrer"> 14 nights </a>)</p>
                                         </div>
                                     </div>
@@ -852,7 +857,7 @@ function Holiday() {
                                 <div className='looked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img src="eye.png" className='img-fluid' />
+                                            <img  alt='' src="eye.png" className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>62 </b> others have <b>LOOKED </b> at this hotel in the last hour</p>
@@ -862,7 +867,7 @@ function Holiday() {
                                 <div className='booked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img src="bookplan.png" className='img-fluid' />
+                                            <img  alt='' src="bookplan.png" className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>40+</b> others have <b>BOOKED </b>  this hotel in the last 7 days</p>
@@ -875,7 +880,7 @@ function Holiday() {
                             </div>
                             <ImageGallery items={images1} showIndex />
                             <div className='float-right'>
-                                <img src="holiday_listing.png" className='img-fluid' />
+                                <img  alt='' src="holiday_listing.png" className='img-fluid' />
                             </div>
                             <div className="tabsss">
                             <p className="mt-3">
@@ -1170,14 +1175,14 @@ function Holiday() {
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                    <img src="planel.png" width="27px" height="22px" />
+                                                    <img  alt='' src="planel.png" width="27px" height="22px" />
                                                     <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                    <img src="dark-plane.png" width="30px" height=' 26px' />
-                                                    <p><img src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
+                                                    <img  alt='' src="dark-plane.png" width="30px" height=' 26px' />
+                                                    <p><img  alt='' src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col mt-3'>
@@ -1190,21 +1195,21 @@ function Holiday() {
                                                 <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
                                             <div className='col text-center mt-3'>
-                                                <img src="bag.png" className='img-fluid' />
+                                                <img  alt='' src="bag.png" className='img-fluid' />
                                             </div>
                                         </div>
                                         <hr />
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                    <img src="planer.png" width="27px" height="22px" />
+                                                    <img  alt='' src="planer.png" width="27px" height="22px" />
                                                     <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                    <img src="darkplaneright.png" width="30px" height=' 26px' />
-                                                    <p><img src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
+                                                    <img  alt='' src="darkplaneright.png" width="30px" height=' 26px' />
+                                                    <p><img  alt='' src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col mt-3'>
@@ -1217,7 +1222,7 @@ function Holiday() {
                                                 <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
                                             <div className='col text-center mt-3'>
-                                                <img src="bag.png" className='img-fluid' />
+                                                <img  alt='' src="bag.png" className='img-fluid' />
                                             </div>
                                         </div>
                                         <hr />
@@ -1247,9 +1252,9 @@ function Holiday() {
                                             </div>
                                             <div className='col-md-3'>
                                                 <div className='d-flex mt-4'>
-                                                    <img src="sum.png" className='img-fluid sum' />
+                                                    <img  alt='' src="sum.png" className='img-fluid sum' />
                                                     <input type='number' className="form-control" />
-                                                    <img src="add.png" className='img-fluid sum' />
+                                                    <img  alt='' src="add.png" className='img-fluid sum' />
                                                 </div>
                                             </div>
                                         </div>
@@ -1354,7 +1359,7 @@ function Holiday() {
                                                         <option value="3">3</option>
                                                     </select>
                                                     <div className="input-group-append">
-                                                        <img src='adults.png' className='img-fluid' />
+                                                        <img  alt='' src='adults.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1368,7 +1373,7 @@ function Holiday() {
                                                         <option value="3">3</option>
                                                     </select>
                                                     <div className="input-group-append">
-                                                        <img src='child.png' className='img-fluid' />
+                                                        <img  alt='' src='child.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1382,7 +1387,7 @@ function Holiday() {
                                                         <option value="3">3</option>
                                                     </select>
                                                     <div className="input-group-append">
-                                                        <img src='infants.png' className='img-fluid' />
+                                                        <img  alt='' src='infants.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1395,7 +1400,7 @@ function Holiday() {
                                                         <option value="3">3</option>
                                                     </select>
                                                     <div className="input-group-append">
-                                                        <img src='Room.png' className='img-fluid' />
+                                                        <img  alt='' src='Room.png' className='img-fluid' />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1414,7 +1419,7 @@ function Holiday() {
                                 <div className='protected'>
                                     <div className='row'>
                                         <div className='col-2'>
-                                            <img className='img-fluid' src="pro.png" />
+                                            <img  alt='' className='img-fluid' src="pro.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Our packages are financially protected</h5>
@@ -1423,7 +1428,7 @@ function Holiday() {
                                     </div>
                                     <div className='row mt-3'>
                                         <div className='col-2'>
-                                            <img className='img-fluid' src="i.png" />
+                                            <img  alt='' className='img-fluid' src="i.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Please remember to check the latest travel advice</h5>
@@ -1447,7 +1452,7 @@ function Holiday() {
                                                     <p>2 Adults</p>
                                                 </div>
                                                 <div className='arrow'>
-                                                    <img src="arrow.png" className='img-fluid' />
+                                                    <img  alt='' src="arrow.png" className='img-fluid' />
                                                 </div>
                                             </div>
                                         </div>
@@ -1467,7 +1472,7 @@ function Holiday() {
                                     <p>2 Adults</p>
                                 </div>
                                 <div className='arrow'>
-                                    <img src="arrow.png" className='img-fluid' />
+                                    <img  alt='' src="arrow.png" className='img-fluid' />
                                 </div>
                             </div>
                             <div className="secure">
@@ -1497,19 +1502,19 @@ function Holiday() {
                                 <h3>Book with confidence</h3>
                                 <div className='row'>
                                     <div className='col-3 text-center my-3'>
-                                        <img src='footer.png' className='img-fluid' />
+                                        <img  alt='' src='footer.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>ATOL Protected</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img src='pay.png' className='img-fluid' />
+                                        <img  alt='' src='pay.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Pay Monthly</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img src='check.png' className='img-fluid' />
+                                        <img  alt='' src='check.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Price Match Guarantee</p>
@@ -1517,11 +1522,11 @@ function Holiday() {
                                 </div>
                             </div>
                             <div className='tripadvisor'>
-                                <img src="tripad.png" className='img-fluid' />
+                                <img  alt='' src="tripad.png" className='img-fluid' />
                                 <p>Based on 2748 reviews</p>
                                 <hr />
                                 <div className='float-right'>
-                                    <img src="dots.png" className='img-fluid' />
+                                    <img  alt='' src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -1532,7 +1537,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                    <img src="1dot.png" className='img-fluid' />
+                                    <img  alt='' src="1dot.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -1543,7 +1548,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                    <img src="dots.png" className='img-fluid' />
+                                    <img  alt='' src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -1554,7 +1559,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                    <img src="dots.png" className='img-fluid' />
+                                    <img  alt='' src="dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -1568,6 +1573,8 @@ function Holiday() {
                 </div>
             </div>
         </section>
+        <Footer/>
+        </>
     )
 }
 

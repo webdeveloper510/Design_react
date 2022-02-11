@@ -10,7 +10,7 @@ function Footer() {
                    <p className="user"><a rel="noreferrer"href="#" rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href="#" rel="noreferrer">Privacy </a>|<a rel="noreferrer"href="#" rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href="#" rel="noreferrer">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
-                           <img src="footerlogo.png" height="128px"className="img-fluid"/>
+                           <img  alt='' src="footerlogo.png" height="128px"className="img-fluid"/>
                        </div>
                        <div className="col-md-9 mt-3">
                            <h5> <b>Stay Safe whilst you travel </b> </h5>
@@ -29,10 +29,10 @@ function Footer() {
                 <div className="col-md-3">
                     <h4 className="my-3">Follow Us</h4>
                     <div className="d-flex">
-                        <img src="facebook.png" className="img-fluid"/>
-                        <img src="insta.png" className="img-fluid"/>
-                        <img src="twiter.png" className="img-fluid"/>
-                        <img src="youtube.png" className="img-fluid"/>
+                        <img  alt='' src="facebook.png" className="img-fluid"/>
+                        <img  alt='' src="insta.png" className="img-fluid"/>
+                        <img  alt='' src="twiter.png" className="img-fluid"/>
+                        <img  alt='' src="youtube.png" className="img-fluid"/>
                     </div>
                     <div className="mt-3">
                         <h4>Subscribe to our newsletter</h4>
@@ -47,10 +47,10 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  src="footer.png"width="30px" height="30px"/></p>
+                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src="footer.png"width="30px" height="30px"/></p>
                 </div>
                 <div className="col-md-4 text-right">
-                    <img src="home-alternate.png" height="50px" className="img-fluid"/>
+                    <img  alt='' src="home-alternate.png" height="50px" className="img-fluid"/>
                 </div>
             </div>
             <hr/>

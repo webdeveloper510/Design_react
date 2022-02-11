@@ -5,7 +5,7 @@ function header() {
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
-          <a rel="noreferrer"className="navbar-brand"><img src="home-alternate.png" style={{ marginTop: '-27px', marginLeft: '-20px' }} width="301px" height="45px" /></a>
+          <a rel="noreferrer"className="navbar-brand"><img  alt='' src="home-alternate.png" style={{ marginTop: '-27px', marginLeft: '-20px' }} width="301px" height="45px" /></a>
           <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -43,22 +43,22 @@ function header() {
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img src="holi.png" className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img  alt='' src="holi.png" className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab" aria-controls="pills-Destinations" aria-selected="false"> <img src="desti.png" className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab" aria-controls="pills-Destinations" aria-selected="false"> <img  alt='' src="desti.png" className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab" aria-controls="pills-Hotels" aria-selected="false"> <img src="hotels.png" className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab" aria-controls="pills-Hotels" aria-selected="false"> <img  alt='' src="hotels.png" className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img src="about.png" className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img  alt='' src="about.png" className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img src="holiday.png" className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img  alt='' src="holiday.png" className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img src="Social.png" className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img  alt='' src="Social.png" className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
                       </li>
                     </ul>
                   </div>
@@ -68,7 +68,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -103,7 +103,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -137,7 +137,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -171,7 +171,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -205,7 +205,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -240,7 +240,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>

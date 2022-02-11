@@ -1,7 +1,12 @@
 import React from 'react'
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
 
 function Filter() {
     return (
+        <>
+        <Header/>
         <section>
             <div className="bars">
                 <div className="container">
@@ -158,7 +163,7 @@ function Filter() {
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingThree">
                                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <img src="trip.png" className='img-fluid' />
+                                                <img  alt='' src="trip.png" className='img-fluid' />
                                             </button>
                                         </h2>
                                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -480,7 +485,7 @@ function Filter() {
                             <div className="confident">
                                 <div className="row w-100">
                                     <div className="col-md-1 pt-2 px-3">
-                                        <img src=" Layer01.png" className="img-fluid" />
+                                        <img  alt='' src=" Layer01.png" className="img-fluid" />
                                     </div>
                                     <div className="col-md-10">
                                         <h6 className='m-0 mt-2'>Book with confidence</h6>
@@ -494,7 +499,7 @@ function Filter() {
                                         <div className='Beach'>
                                             <p>Beach hotel</p>
                                         </div>
-                                        <img src="image.png" width="100%" height="100%" />
+                                        <img  alt='' src="image.png" width="100%" height="100%" />
                                     </div>
                                     <div className='col-md-6'>
                                         <div className='hotal-detail'>
@@ -511,7 +516,7 @@ function Filter() {
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadio1" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadio2" id="flexRadioDisabled" checked disabled />
@@ -522,11 +527,11 @@ function Filter() {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <p><img src="call.png" className='img-fluid' /> Tue 05 Jul 2022 - 14 nights</p>
-                                            <p><img src="bed.png" className='img-fluid' /> Deluxe Double Room with Garden or Pool View with Balcony</p>
+                                            <p><img  alt='' src="call.png" className='img-fluid' /> Tue 05 Jul 2022 - 14 nights</p>
+                                            <p><img  alt='' src="bed.png" className='img-fluid' /> Deluxe Double Room with Garden or Pool View with Balcony</p>
                                             <small>Only 5 rooms left</small>
-                                            <p><img src="plane.png" className='img-fluid' /> London Gatwick - Direct <a rel="noreferrer"href="#">  View flight details </a></p>
-                                            <p><img src="sun.png" className='img-fluid' /> Honeymoon offer</p>
+                                            <p><img  alt='' src="plane.png" className='img-fluid' /> London Gatwick - Direct <a rel="noreferrer"href="#">  View flight details </a></p>
+                                            <p><img  alt='' src="sun.png" className='img-fluid' /> Honeymoon offer</p>
                                         </div>
                                     </div>
                                     <div className='col-md-2 text-center'>
@@ -556,7 +561,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6'>
                             <div className='card'>
-                                <img src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -573,7 +578,7 @@ function Filter() {
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled101" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled102" id="flexRadioDisabled" checked disabled />
@@ -595,7 +600,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6 '>
                             <div className='card'>
-                                <img src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -612,7 +617,7 @@ function Filter() {
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled001" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled002" id="flexRadioDisabled" checked disabled />
@@ -637,7 +642,8 @@ function Filter() {
             </div>
             <hr />
         </section>
-
+        <Footer/>
+        </>
     )
 }
 

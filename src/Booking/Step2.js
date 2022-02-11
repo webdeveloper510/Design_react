@@ -8,7 +8,7 @@ function Step2() {
         <div className='row py-2'>
           <div className='col-md-3 '>
             <div className='clock p-1'>
-              <img src="clock.png" width="80px" className=' m-0' />
+              <img  alt='' src="clock.png" width="80px" className=' m-0' />
               <div className='deal'>
                 <h3>29:59</h3>
                 <p><b>Left to book this deal! </b></p>
@@ -16,188 +16,194 @@ function Step2() {
             </div>
           </div>
           <div className='col-md-9 process'>
-            <img src="step2.png" className='img-fluid' />
+            <img  alt='' src="step2.png" className='img-fluid' />
           </div>
         </div>
         <div className='row '>
           <div className='col-md-8 '>
+
             <div className="lead">
               <h5>Lead passenger (must be 18+)</h5>
             </div>
-           <div className='discuss mt-4'>
-             <form>
-             <div class="row">
-                <div class="col-2">
-                  <label>Title*</label>
-                  <select class="form-select mb-3" aria-label=".form-select-lg example">
-                      <option selected> </option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col-4">
-                  <label>First Name*</label>
-                  <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
-                </div>
-                <div class="col-4">
-                  <label>Last Name*</label>
-                  <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
-                </div>
-                <div class="col-2">
-                  <label>Age*</label>
-                   <select class="form-select  mb-3" aria-label=".form-select-lg example">
-                    <option selected> </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                   </select>
-                </div>
+            <div className='step2body'>
+              <div className='discuss pt-4 px-4'>
+                <form>
+                  <div class="row">
+                    <div class="col-2">
+                      <label>Title*</label>
+                      <select class="form-select mb-3" aria-label=".form-select-lg example">
+                        <option selected> </option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label>First Name*</label>
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
+                    </div>
+                    <div class="col-4">
+                      <label>Last Name*</label>
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
+                    </div>
+                    <div class="col-2">
+                      <label>Age*</label>
+                      <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                        <option selected> </option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 form-check text-right">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                    <label class="form-check-label blue fw-bold" for="exampleCheck1">Apply surname to all passengers</label>
+                  </div>
+                </form>
               </div>
-              <div class="mb-3 form-check text-right">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                <label class="form-check-label" for="exampleCheck1">Apply surname to all passengers</label>
+              <div className='surname'>
+                <h5>Passenger 2</h5>
               </div>
-             </form>
-           </div>
-           <div className='surname'>
-             <h5>Passenger 2</h5>
-           </div>
-           <div className='discuss'>
-           <form>
-             <div class="row">
-                <div class="col-2">
-                  <label>Title*</label>
-                  <select class="form-select mb-3" aria-label=".form-select-lg example">
-                      <option selected> </option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col-4">
-                  <label>First Name*</label>
-                  <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
-                </div>
-                <div class="col-4">
-                  <label>Last Name*</label>
-                  <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
-                </div>
-                <div class="col-2">
-                  <label>Age*</label>
-                   <select class="form-select  mb-3" aria-label=".form-select-lg example">
-                    <option selected> </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                   </select>
-                </div>
+              <div className='discuss px-4 pt-4'>
+                <form>
+                  <div class="row">
+                    <div class="col-2">
+                      <label>Title*</label>
+                      <select class="form-select mb-3" aria-label=".form-select-lg example">
+                        <option selected> </option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label>First Name*</label>
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
+                    </div>
+                    <div class="col-4">
+                      <label>Last Name*</label>
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
+                    </div>
+                    <div class="col-2">
+                      <label>Age*</label>
+                      <select class="form-select  mb-3" aria-label=".form-select-lg example">
+                        <option selected> </option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 form-check ">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                    <label class="form-check-label blue fw-bold" for="exampleCheck1">Authorise this passenger to discuss the booking with Suntours</label>
+                  </div>
+                </form>
               </div>
-              <div class="mb-3 form-check ">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                <label class="form-check-label" for="exampleCheck1">Authorise this passenger to discuss the booking with Suntours</label>
+              <div className='surname'>
+                <h5>Disabled access <img  alt='' src="Char.png" className='img-fluid mx-2' /></h5>
               </div>
-             </form>
-           </div>
-           <div className='surname'>
-             <h5>Disabled access <img src="Char.png" className='img-fluid mx-2' /></h5>
-           </div>
-           <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                <label class="form-check-label" for="exampleCheck1">Tick this box if someone in your party requires support with disabled access on your flight, transfer or hotel</label>
-              </div>
-              <div class="col-md-6">
-                  <label>Name of passenger who requires support</label>
-                   <select class="form-select  mb-3" aria-label=".form-select-lg example">
+
+              <div className='discuss px-4 pt-4'>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                  <label class="form-check-label blue fw-bold" style={{ fontSize: 13 }} for="exampleCheck1">Tick this box if someone in your party requires support with disabled access on your flight, transfer or hotel</label>
+                </div>
+                <div class="col-md-6">
+                  <label className='blue fw-700'>Name of passenger who requires support</label>
+                  <select class="form-select  mb-3" aria-label=".form-select-lg example">
                     <option selected> Please select passenger </option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
-                   </select>
+                  </select>
                 </div>
-                <p>Someone in the party requires wheelchair assistance within the airport/one of our party is unable to walk long distances</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
+                <p className='blue fw-700'>Someone in the party requires wheelchair assistance within the airport/one of our party is unable to walk long distances</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
+                </div>
 
 
-                  <p>Will you bring your own wheelchair?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
+                <p className='blue fw-700'>Will you bring your own wheelchair?</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
+                </div>
 
-                  <p>Can you walk up and down stairs unaided?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
+                <p className='blue fw-700'>Can you walk up and down stairs unaided?</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
+                </div>
 
-                  <p>Are you able to climb a minimum of three steps for your transfer? (if a transfer is selected)</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
-                  <div className=''>
-                    <p>Please read the hotel description to ensure it is suitable for your needs</p>
-                  </div>
-                  <hr/>
-                  <p>Do you require a specially adapted hotel room?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
+                <p className='blue fw-700'>Are you able to climb a minimum of three steps for your transfer? (if a transfer is selected)</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
+                </div>
+                <div className=''>
+                  <p className='blue fw-700'>Please read the hotel description to ensure it is suitable for your needs</p>
+                </div>
+                <hr />
+                <p className='blue fw-700'>Do you require a specially adapted hotel room?</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
+                </div>
 
-                  <p>Does anyone else in your party require support with disabled access on your flight, transfer or hotel?</p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                    <label class="form-check-label" for="inlineRadio1">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                    <label class="form-check-label" for="inlineRadio2">No</label>
-                  </div>
-
-                  <div className='row mt-5'>
-              <div className='col-4'>
-                <div className='clock1 p-1'>
-                  <img src="clock.png" width="80px" className=' m-0' />
-                  <div className='deal1'>
-                    <h4 className='blue'>29:59</h4>
-                    <p className='blue'><b>Left to book this deal! </b></p>
-                  </div>
+                <p className='blue fw-700'>Does anyone else in your party require support with disabled access on your flight, transfer or hotel?</p>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline mb-3">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                  <label class="form-check-label blue fw-bold" for="inlineRadio2">No</label>
                 </div>
               </div>
-              <div className='col-8 text-center Continue'>
-                <h3>Continue to checkout <img src="Shape.png" className='img-fluid' /></h3>
+
+              <div className='row mt-5'>
+                <div className='col-4'>
+                  <div className='clock1 p-1'>
+                    <img  alt='' src="clock.png" width="60px" height="60px" className=' mt-2' />
+                    <div className='deal1'>
+                      <h3 className='blue m-0'> <b> 29:59 </b></h3>
+                      <p className='blue'><b>Left to book this deal! </b></p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-8 text-center Continue'>
+                  <h3 className='blue'>Continue to checkout <img  alt='' src="Shape.png" className='img-fluid' /></h3>
+                </div>
               </div>
             </div>
           </div>
 
           <div className='col-md-4'>
             <div className='bannerhotal'>
-              <img src="hotel.png" className='img-fluid' />
+              <img  alt='' src="hotel.png" className='img-fluid' />
               <div className='title'>
                 <h3 className='blue'>Queens Bay Hotel
                   <i className="fa fa-star"></i>
@@ -212,7 +218,7 @@ function Step2() {
                   <br />
                   Supplied through Five rocks Beach ltd Queens Bay Hotel</p>
                 <hr />
-                <img src="easyjet.png" className='img-fluid' />
+                <img  alt='' src="easyjet.png" className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -221,7 +227,7 @@ function Step2() {
                     </p>
                   </div>
                   <div className='col-2 '>
-                    <img src="rightflight.png" className='img-fluid p-2' />
+                    <img  alt='' src="rightflight.png" className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -230,7 +236,7 @@ function Step2() {
                   </div>
                 </div>
                 <hr />
-                <img src="easyjet.png" className='img-fluid' />
+                <img  alt='' src="easyjet.png" className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -239,7 +245,7 @@ function Step2() {
                     </p>
                   </div>
                   <div className='col-2'>
-                    <img src="flights1.png" className='img-fluid p-2' />
+                    <img  alt='' src="flights1.png" className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -265,19 +271,19 @@ function Step2() {
                     <h5 className='blue'>FREE Aiport lounge</h5>
                   </div>
                   <div className='col-3 mt-3'>
-                    <h5>Included</h5>
+                    <h5 className='pink'>Included</h5>
                   </div>
                 </div>
                 <hr />
                 <div className='row'>
                   <div className='col-2 arrors mt-1'>
-                    <img src="rightarrow.png" className='img-fluid' />
+                    <img  alt='' src="rightarrow.png" className='img-fluid' />
                   </div>
                   <div className='col mt-3 text-center'>
                     <h5 className='blue'>FREE Aiport lounge</h5>
                   </div>
                   <div className='col-3 mt-3'>
-                    <h5>Included</h5>
+                    <h5 className='pink'>Included</h5>
                   </div>
                 </div>
                 <hr />
@@ -295,7 +301,7 @@ function Step2() {
           </div>
         </div>
       </div>
-     
+
     </section>
     <hr />
 

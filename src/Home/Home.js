@@ -3,6 +3,9 @@ import "./Home.css"
 import { useState } from 'react';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
 function Home() {
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
@@ -86,6 +89,8 @@ function Home() {
   }
   }
     return (
+      <>
+       <Header/>
     <section>
         <div className="banner pt-5">
            <div className=" narrow">
@@ -122,7 +127,7 @@ function Home() {
                                             <div className="input-group mb-3">
 
                                             <input type="text" className="form-control" />
-                                            <button className="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img src="desti.png"/><p>list</p></button>
+                                            <button className="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img  alt='' src="desti.png"/><p>list</p></button>
                                           </div>
                                          
                                         </div>
@@ -166,7 +171,7 @@ function Home() {
                                             <div className="input-group mb-3">
 
                                             <input type="date" className="form-control" readOnly onClick={open}/>
-                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  src="Calendar.png"/></button>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  alt=''  src="Calendar.png"/></button>
 
                                             </div>
                                             
@@ -205,7 +210,7 @@ function Home() {
 
 
                                         <input type="text" className="form-control" />
-                                        <button className="btn btn-secondary " onClick={toggleNumbers}  type="button"><img src="rome.png"/></button>
+                                        <button className="btn btn-secondary " onClick={toggleNumbers}  type="button"><img  alt='' src="rome.png"/></button>
                                      
                                         </div>
                                        
@@ -377,7 +382,7 @@ function Home() {
                                              <div className="input-group mb-3">
 
                                             <input type="text" className="form-control" />
-                                            <button className="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img src="desti.png"/><p>list</p></button>
+                                            <button className="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img  alt='' src="desti.png"/><p>list</p></button>
                                           </div>
                                             <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
@@ -398,7 +403,7 @@ function Home() {
                                             <label >Check-in / Check-out</label>
                                             <div className="input-group mb-3">
                                             <input type="date" className="form-control" readOnly onClick={open}/>
-                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  src="Calendar.png"/></button>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  alt=''  src="Calendar.png"/></button>
                                             </div>
                                         
                                         </div>
@@ -407,7 +412,7 @@ function Home() {
                                        <label >Rooms & Guests</label>
                                        <div className="input-group mb-3">
                                         <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
-                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img src="rome.png"/></button>
+                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='' src="rome.png"/></button>
                                       </div>
                                        </div>
                                       <div className="col-md-2 text-center">
@@ -604,7 +609,7 @@ function Home() {
              <div className="col-md-1"></div>
                        <div className="col-md-4">
                            <div className="summer-text">
-                           <img src="smile.png"/>
+                           <img  alt='' src="smile.png"/>
                              <h3 className="mb-3">Hello Holidays</h3>
                             
                              
@@ -635,7 +640,7 @@ function Home() {
                         </div>
                      </div>
                      <div className="col-md-4 my-3 d-flex">
-                     <img src="footer.png" width="50px" height="50px" className="mr-3"/>
+                     <img  alt='' src="footer.png" width="50px" height="50px" className="mr-3"/>
                      <p style={{textAlign:"left",marginLeft: '10px'}}> ATOL  <br/>Protected</p>
                   </div>
                   <div className="col-md-4 my-3 d-flex">
@@ -697,7 +702,7 @@ function Home() {
                  <h3 className="my-5">Featured Destinations</h3>
                  <div className="row">
                    <div className="col-md-8 overhead">
-                       <img src="Layer4.png" className="img-fluid w-100"/>
+                       <img  alt='' src="Layer4.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to Greece & cyprus</h3>
                           <p>Amazing deals on all-inclusive holidays with<br/>
@@ -709,7 +714,7 @@ function Home() {
                          </div>
                      </div>
                      <div className="col-md-4 overhead">
-                     <img src="Layer3.png" className="img-fluid w-100"/>
+                     <img  alt='' src="Layer3.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Italy & the lakes</h3>
                       <p>Culture, beauty, beaches & sights<br/>
@@ -723,7 +728,7 @@ function Home() {
                    <div className="row my-2">
                   
                      <div className="col-md-4 overhead">
-                     <img src="Layer1.png" className="img-fluid w-100"/>
+                     <img  alt='' src="Layer1.png" className="img-fluid w-100"/>
                      <div className="over">
                       <h3>Carribean</h3>
                       <p>Shimmering reefs, spicy salsa, reggae,<br/> pirate hideouts to sugar sand beaches</p>
@@ -733,7 +738,7 @@ function Home() {
                      </div>
                       
                        <div className="col-md-8 overhead">
-                       <img src="Layer2.png" className="img-fluid w-100"/>
+                       <img  alt='' src="Layer2.png" className="img-fluid w-100"/>
                        <div className="over1">
                           <h3>Holidays to the Balearic Islands</h3>
                           <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
@@ -948,7 +953,7 @@ function Home() {
                                     <h3>020-200-2000</h3>
                                     <p>Outside the UK</p>
                                     <div className="float-right">
-                                     <img src="chat.png" width="50px" height="50px"/>
+                                     <img  alt='' src="chat.png" width="50px" height="50px"/>
                                       </div> 
                                     <a rel="noreferrer"href="#">Chat with us online</a>
                             </div>
@@ -973,6 +978,8 @@ function Home() {
      
 
         </section>
+        <Footer/>
+        </>
     )
 }
 

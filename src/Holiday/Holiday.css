@@ -445,7 +445,7 @@ div#bars .col-md-2 {
 
 .Continue {
   background: #ebc718;
-  padding: 24px;
+  padding: 22px;
 }
 
 .clock1 {
@@ -464,7 +464,7 @@ div#bars .col-md-2 {
 
 .passenger {
   background: white;
-  padding: 6px;
+  padding-top: 14px;
 }
 
 .number label {
@@ -508,6 +508,13 @@ span.flighttime {
 .blue {
   color:#1b3a69;
 }
+.pink {
+  color:#f73aed;
+}
+.final label {
+  font-size: 16px;
+  color: #1b3a69;
+}
 
 .pay {
   background: white;
@@ -529,6 +536,7 @@ table.w-100.breakdown tbody tr {
 
 table.w-100.breakdown tbody tr td {
   text-align: right;
+  color:#1b3a69;
   padding-right: 22px;
 }
 
@@ -573,4 +581,138 @@ th.amountright {
 
 .discuss label {
   font-size: 15px;
+}
+.payments {
+  display: flex;
+  padding: 4px;
+  border: 1px solid;
+}
+
+.payments p {
+  font-size: 11px;
+}
+
+.payments h5 {
+  font-size: 18px;
+  margin: 0px;
+  padding-top: 9px;
+}
+
+.payments img {
+  height: 57px;
+}
+.payments {
+  display: flex;
+  padding: 4px;
+  border: 1px solid;
+}
+
+.payments p {
+  font-size: 11px;
+}
+
+.payments h5 {
+  font-size: 18px;
+  margin: 0px;
+  padding-top: 9px;
+}
+
+.payments img {
+  height: 57px;
+}
+
+.freec {
+  background: #f5fbff;
+  margin: 10px 0px;
+  padding: 12px;
+}
+
+.freec p {
+  font-size: 14px;
+}
+
+.service {
+  padding-left: 12px;
+}
+.service.active {
+  background: #f5fbff;
+}
+.gray {
+  color: #666666;
+}
+.green {
+  color: #32871a;
+}
+.Secure {
+  background: #ebc817;
+  color: #1b3a69;
+  padding: 12px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.Secure img {
+  height: 30px;
+  margin-left: 31px;
+  margin-top: 10px;
+}
+
+.Secure p {
+  margin-bottom: 0;
+  float: right;
+}
+
+.Secure h3 {
+  margin-bottom: 0;
+}
+.pl-14 {
+ padding-left: 14px;
+}
+
+.surname {
+  background: #f0fafe;
+  padding: 7px 12px;
+}
+.step2body {
+  background: white;
+}
+
+.fw-700{
+  font-weight: 600;
+}
+
+.bill {
+  background: #f0fafe;
+  padding: 10px;
+  margin-top: 11px;
+}
+
+img.img-fluid.cards {
+  position: absolute;
+  right: 14px;
+  top: 44px;
+}
+
+img.img-fluid.cards1 {
+  position: absolute;
+  right: 17px;
+  top: 38px;
+}
+
+.cardlock {
+  padding: 10px;
+  background: #ebc718;
+  margin-top: 25px;
+}
+
+.final {
+  background: white;
+  padding-top: 11px;
+}
+
+.table>:not(:first-child) {
+  border-top: 0px solid currentColor;
+}
+.final a {
+  text-decoration: underline;
 }
