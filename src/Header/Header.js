@@ -5,7 +5,7 @@ function header() {
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
-          <a rel="noreferrer"className="navbar-brand"><img  alt='' src="home-alternate.png" style={{ marginTop: '-27px', marginLeft: '-20px' }} width="301px" height="45px" /></a>
+          <a rel="noreferrer"className="navbar-brand"><img  alt='' src="suntours_logo.svg" style={{ marginTop: '-27px', marginLeft: '-55px' }} width="301px" height="45px" /></a>
           <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

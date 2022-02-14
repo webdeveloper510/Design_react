@@ -17,6 +17,7 @@
         "react-router-dom": "^6.2.1",
         "react-scripts": "4.0.3",
         "react-simple-image-slider": "^2.3.0",
+        "react-slick": "^0.28.1",
         "web-vitals": "^1.0.1"
     },
     "scripts": {
