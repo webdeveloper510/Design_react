@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { faStar, faStarHalf } from '@fortawesome/pro-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/pro-regular-svg-icons';
 
 
 function Filter() {
@@ -113,47 +116,55 @@ function Filter() {
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                        <i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i><i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
                                                         <span className='number'>(11)</span>
                                                     </label>
                                                 </div>
@@ -508,15 +519,15 @@ function Filter() {
                                             <div className='d-flex mt-3'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStarHalf}/>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img  alt='' src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid m-0' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadio1" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadio2" id="flexRadioDisabled" checked disabled />
@@ -537,7 +548,7 @@ function Filter() {
                                     <div className='col-md-2 text-center'>
                                         <div className='price-detail'>
                                             <div className='wishlist'>
-                                                <i className="fa fa-heart-o"></i>
+                                            <FontAwesomeIcon icon={faHeart}/>
                                             </div>
                                             <div className=' text-right'>
                                                 <p>Includes £267 pp discount</p>
@@ -570,15 +581,15 @@ function Filter() {
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStarHalf}/>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img  alt='' src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid m-0' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled101" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled102" id="flexRadioDisabled" checked disabled />
@@ -609,15 +620,15 @@ function Filter() {
                                             <div className='d-flex'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star"></i>
-                                                        <i className="fa fa-star-o"></i>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStar}/>
+                                                    <FontAwesomeIcon icon={faStarHalf}/>
                                                     </label>
                                                 </div>
                                                 <div className="form-check">
-                                                    <img  alt='' src="owl.png" className='img-fluid' />
+                                                    <img  alt='' src="owl.png" className='img-fluid m-0' />
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled001" id="flexRadioDisabled" checked disabled />
                                                         <input className="form-check-input" type="radio" name="flexRadioDisabled002" id="flexRadioDisabled" checked disabled />

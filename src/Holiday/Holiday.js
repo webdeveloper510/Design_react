@@ -11,7 +11,11 @@ import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faAngleRight, faUser } from '@fortawesome/pro-solid-svg-icons';
+import { faStar  } from '@fortawesome/pro-solid-svg-icons';
+import { faPlaneDeparture as solidfaPlaneDeparture } from '@fortawesome/pro-solid-svg-icons';
+import { faPlaneDeparture, faSuitcaseRolling, faHeart } from '@fortawesome/pro-regular-svg-icons';
 const images1 = [
     {
         original: 'Layer4.png',
@@ -625,7 +629,7 @@ function Holiday() {
                                         <div className="col-md-2 text-center">
                                             <div className="form-group">
                                                 <label ></label><br />
-                                                <button className="btn btn-primary" style={{ height: '60px' }} type="button">Search &nbsp;&nbsp; > </button>
+                                                <button className="btn btn-primary" style={{ height: '60px' }} type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -841,13 +845,17 @@ function Holiday() {
                                 <div className='row'>
                                     <div className='col-md-6'>
                                         <div className='Resort'>
-                                            <h5>Coral Beach Hotel and Resort <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </h5>
+                                            <h5>Coral Beach Hotel and Resort <FontAwesomeIcon icon={faStar}/>
+                                                        <FontAwesomeIcon icon={faStar}/>
+                                                        <FontAwesomeIcon icon={faStar}/>
+                                                        <FontAwesomeIcon icon={faStar}/>
+                                                        <FontAwesomeIcon icon={faStar}/> </h5>
                                             <p>(Coral Bay, Paphos Cyprus)</p>
                                         </div>
                                     </div>
                                     <div className='col-md-6'>
                                         <div className='Resort text-right'>
-                                            <h5><img  alt='' src="plane.png" className='img-fluid' />London Gatwick to Paphos</h5>
+                                            <h5><FontAwesomeIcon icon={faPlaneDeparture} />  London Gatwick to Paphos</h5>
                                             <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#" rel="noreferrer"> 14 nights </a>)</p>
                                         </div>
                                     </div>
@@ -875,7 +883,7 @@ function Holiday() {
                                     </div>
                                 </div>
                                 <div className='wishlist1'>
-                                    <a href='#' rel="noreferrer" style={{ color: '#1b3a69' }}>Add to wishlist  <i className="fa fa-heart-o"></i></a>
+                                    <a href='#' rel="noreferrer" style={{ color: '#1b3a69' }}>Add to wishlist  <FontAwesomeIcon icon={faHeart} /></a>
                                 </div>
                             </div>
                             <ImageGallery items={images1} showIndex />
@@ -898,7 +906,11 @@ function Holiday() {
                             <div className="collapse show collap" id="collapseExample">
                                 <div className="card card-body">
                                     <div className='mt-3'>
-                                        <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official1 hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -930,7 +942,11 @@ function Holiday() {
                             <div className="collapse collap" id="collapseExample1">
                                 <div className="card card-body">
                                     <div className='mt-3'>
-                                        <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official2 hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -962,7 +978,11 @@ function Holiday() {
                             <div className="collapse collap" id="collapseExample2">
                                 <div className="card card-body">
                                     <div className='mt-3'>
-                                        <p>Official3 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official3 hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -1004,7 +1024,11 @@ function Holiday() {
                             <div className="tab-content" id="myTabContent">
                                 <div className={'tab-pane  ' + (activeSection === 'home' ? "show active" : "")} id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className='mt-3'>
-                                        <p>Official1 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official1 hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -1034,7 +1058,11 @@ function Holiday() {
                                 </div>
                                 <div className={'tab-pane  ' + (activeSection === 'profile' ? "show active" : "")} id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <div className='mt-3'>
-                                        <p>Official2 hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official2 hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -1064,7 +1092,11 @@ function Holiday() {
                                 </div>
                                 <div className={'tab-pane  ' + (activeSection === 'contact' ? "show active" : "")} id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                     <div className='mt-3'>
-                                        <p>Official hotel rating: <i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </p>
+                                        <p>Official hotel rating: <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -1175,13 +1207,13 @@ function Holiday() {
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                    <img  alt='' src="planel.png" width="27px" height="22px" />
+                                                    <FontAwesomeIcon icon={faPlaneDeparture} />
                                                     <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                    <img  alt='' src="dark-plane.png" width="30px" height=' 26px' />
+                                                <FontAwesomeIcon icon={solidfaPlaneDeparture} />
                                                     <p><img  alt='' src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
@@ -1194,21 +1226,21 @@ function Holiday() {
                                             <div className='col text-center mt-3'>
                                                 <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
-                                            <div className='col text-center mt-3'>
-                                                <img  alt='' src="bag.png" className='img-fluid' />
+                                            <div className='col text-center'>
+                                              <FontAwesomeIcon icon={faSuitcaseRolling }/>
                                             </div>
                                         </div>
                                         <hr />
                                         <div className='row'>
                                             <div className='col-md-3'>
                                                 <div className='d-flex'>
-                                                    <img  alt='' src="planer.png" width="27px" height="22px" />
+                                                <FontAwesomeIcon className="planeright" icon={faPlaneDeparture} />
                                                     <h5>London Gatwick to Paphos (EZY 8935)</h5>
                                                 </div>
                                             </div>
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
-                                                    <img  alt='' src="darkplaneright.png" width="30px" height=' 26px' />
+                                                <FontAwesomeIcon className='planeright' icon={solidfaPlaneDeparture} />
                                                     <p><img  alt='' src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
@@ -1221,8 +1253,8 @@ function Holiday() {
                                             <div className='col text-center mt-3'>
                                                 <p><b>Direct</b> <br /> 4h 35min</p>
                                             </div>
-                                            <div className='col text-center mt-3'>
-                                                <img  alt='' src="bag.png" className='img-fluid' />
+                                            <div className='col text-center'>
+                                              <FontAwesomeIcon icon={faSuitcaseRolling }/>
                                             </div>
                                         </div>
                                         <hr />

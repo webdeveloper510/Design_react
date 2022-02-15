@@ -5,6 +5,10 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
+import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 
 function Home() {
   const [counter, setCounter] = useState(1);
@@ -93,12 +97,7 @@ function Home() {
        <Header/>
     <section>
         <div className="banner pt-5">
-           <div className=" narrow">
-              
-    
-
-
-                      
+           <div className=" narrow">        
                        <div className="tabs mt-5">
                         
                       <div className="container">
@@ -127,7 +126,7 @@ function Home() {
                                             <div className="input-group mb-3">
 
                                             <input type="text" className="form-control" />
-                                            <button className="btn btn-secondary " onClick={toggleNumbers3}  type="button"><img  alt='' src="desti.png"/><p>list</p></button>
+                                            <button className="btn btn-secondary " onClick={toggleNumbers3}  type="button"> <FontAwesomeIcon icon={faLocationDot } /> <p>list</p></button>
                                           </div>
                                          
                                         </div>
@@ -149,7 +148,7 @@ function Home() {
                                             <label >Departure Airport</label>
                                             <div className="input-group mb-3">
                                             <input type="text" className="form-control" />
-                                            <button className="btn btn-secondary " onClick={toggleNumbers5}  type="button"><i className="fa fa-plane"></i></button>
+                                            <button className="btn btn-secondary " onClick={toggleNumbers5}  type="button">  <FontAwesomeIcon icon={faPlane} /></button>
                                             </div>
                                         </div>
                   
@@ -171,7 +170,7 @@ function Home() {
                                             <div className="input-group mb-3">
 
                                             <input type="date" className="form-control" readOnly onClick={open}/>
-                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  alt=''  src="Calendar.png"/></button>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button"> <FontAwesomeIcon icon={faCalendarDays} /></button>
 
                                             </div>
                                             
@@ -210,7 +209,7 @@ function Home() {
 
 
                                         <input type="text" className="form-control" />
-                                        <button className="btn btn-secondary " onClick={toggleNumbers}  type="button"><img  alt='' src="rome.png"/></button>
+                                        <button className="btn btn-secondary " onClick={toggleNumbers}  type="button"><FontAwesomeIcon icon={faUser}/> </button>
                                      
                                         </div>
                                        
@@ -382,7 +381,7 @@ function Home() {
                                              <div className="input-group mb-3">
 
                                             <input type="text" className="form-control" />
-                                            <button className="btn btn-secondary " onClick={toggleNumbers4}  type="button"><img  alt='' src="desti.png"/><p>list</p></button>
+                                            <button className="btn btn-secondary " onClick={toggleNumbers4}  type="button"><FontAwesomeIcon icon={faLocationDot} /><p>list</p></button>
                                           </div>
                                             <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
@@ -403,7 +402,7 @@ function Home() {
                                             <label >Check-in / Check-out</label>
                                             <div className="input-group mb-3">
                                             <input type="date" className="form-control" readOnly onClick={open}/>
-                                            <button className="btn btn-secondary "  onClick={open}  type="button">  <img  alt=''  src="Calendar.png"/></button>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button"> <FontAwesomeIcon icon={faCalendarDays} /></button>
                                             </div>
                                         
                                         </div>
@@ -418,7 +417,7 @@ function Home() {
                                       <div className="col-md-2 text-center">
                                         <div className="form-group">
                                             <label ></label><br/>
-                                            <button className="btn btn-primary" style={{height:'60px'}}type="button">Search &nbsp;&nbsp; > </button>
+                                            <button className="btn btn-primary" style={{height:'60px'}}type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                         </div>
                                       </div>
                                    </div>
@@ -622,7 +621,7 @@ function Home() {
                                   promise &<span className="redcolor"> deposits from £30 </span>, say 
                                   hello to holidays that make you smile.</p>
                                   <div className="text-right">
-                                  <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; > </button>                             </div>
+                                  <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
                          </div>
                          </div>
                          <div className="col-md-1"></div>
@@ -634,13 +633,13 @@ function Home() {
             <div className="container">
                    <div className="row">
                  <div className="col-md-4 my-3">
-                      <p><i className="fa fa-star" style={{color: '#46b946'}}></i> Trustpilot</p>
+                      <p><FontAwesomeIcon icon={faStar} style={{color: '#46b946'}}/> Trustpilot</p>
                       <div className="stars">
-                      <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i>
+                      <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/>
                         </div>
                      </div>
                      <div className="col-md-4 my-3 d-flex">
-                     <img  alt='' src="footer.png" width="50px" height="50px" className="mr-3"/>
+                     <img  alt='' src="footer.png" width="50px" height="50px" className="mr-3 m-0"/>
                      <p style={{textAlign:"left",marginLeft: '10px'}}> ATOL  <br/>Protected</p>
                   </div>
                   <div className="col-md-4 my-3 d-flex">
@@ -709,7 +708,7 @@ function Home() {
                               up to £750 off per couple and<br/>
                               1000’s of free kid’s places</p>
                               
-                               <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                               <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                
                          </div>
                      </div>
@@ -719,7 +718,7 @@ function Home() {
                       <h3>Italy & the lakes</h3>
                       <p>Culture, beauty, beaches & sights<br/>
                           From Italy with love...</p>
-                          <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                          <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                
                          </div>
                        </div>
@@ -732,7 +731,7 @@ function Home() {
                      <div className="over">
                       <h3>Carribean</h3>
                       <p>Shimmering reefs, spicy salsa, reggae,<br/> pirate hideouts to sugar sand beaches</p>
-                      <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                      <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                
                          </div>
                      </div>
@@ -743,7 +742,7 @@ function Home() {
                           <h3>Holidays to the Balearic Islands</h3>
                           <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
                             & historic old towns make<br/> these Islands the perfect getaway</p>
-                            <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                            <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                
                          </div>
                      </div>
@@ -762,13 +761,13 @@ function Home() {
                                     <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p> <span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p> <span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-4">
                                           
-                                              <p>   <i className="fa fa-plane"></i> Delta</p>
+                                              <p>   <FontAwesomeIcon icon={faPlane} /> Delta</p>
                                             </div>
                                             </div>    
                                  </div>
@@ -791,13 +790,13 @@ function Home() {
                                     <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p><span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p><span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-4">
                                             
-                                              <p> <i className="fa fa-plane"></i> Delta</p>
+                                              <p> <FontAwesomeIcon icon={faPlane} /> Delta</p>
                                             </div>
                                             </div>    
                                  </div>
@@ -820,13 +819,13 @@ function Home() {
                                     <div className="col-md-8 col-8">
                                     <h5>Miami, FL</h5>
                                     <p>25 Mar ... 02 Apr</p>
-                                    <p><span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                    <p><span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-4">
                                            
-                                              <p>  <i className="fa fa-plane"></i>Delta</p>
+                                              <p>  <FontAwesomeIcon icon={faPlane} /> Delta</p>
                                             </div>
                                             </div>    
                                  </div>
@@ -855,7 +854,7 @@ function Home() {
                              <p className="mb-5">With our safe booking policy, it’s now even more secure to book your 2022 holidays.
                                   <br/><br/>
                                   Search now and secure your next holiday with low deposits starting from £30 per person.</p>
-                                  <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; > </button>                             </div>
+                                  <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
                          </div>
                       </div>
                     </div>

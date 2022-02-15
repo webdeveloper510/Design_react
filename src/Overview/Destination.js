@@ -6,7 +6,10 @@ import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Slider from "react-slick";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
+import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 function Destination() {
     const [counter, setCounter] = useState(1);
     const incrementCounter = () => setCounter(counter + 1);
@@ -131,503 +134,469 @@ function Destination() {
             <Header />
             <section className='darkblue'>
                 <div className="banner pt-5 darkblue">
-                    <div className=" narrow">
-                        <div className="tabs mt-5">
-
-                            <div className="container">
-
-                                <ul className="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
-                                    <li className="nav-item" role="presentation">
-                                        <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Flight + Hotel</button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="tab-content" id="myTabContent">
-
-                                {/*------------------ Package Holidays section---------------------- */}
-                                <div className="tab-pane fade show active" id="Profile" role="tabpanel" aria-labelledby="home-tab">
-                                    <div className="container">
-                                        <div className="flighttabs">
-                                            <form>
-                                                <div className="row">
-                                                    <div className="col-md-3">
-                                                        <div className="form-group">
-                                                            <label >Destination(s) or Hotel Name</label>
-                                                            <div className="input-group mb-3">
-
-                                                                <input type="text" className="form-control" />
-                                                                <button className="btn btn-secondary " onClick={toggleNumbers3} type="button"><img alt='' src="desti.png" /><p>list</p></button>
-                                                            </div>
-
-                                                        </div>
-                                                        <div className="suggection " id="Destination" style={{ display: 'none' }}>
-                                                            <div className="flush"></div>
-                                                            <ul className="list-group list-group-flush">
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any Destination</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Mediterranean</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Canary Islands</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Greek Islands</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Balearic Islands</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Africa</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="col-md-2">
-                                                        <div className="form-group">
-                                                            <label >Departure Airport</label>
-                                                            <div className="input-group mb-3">
-                                                                <input type="text" className="form-control" />
-                                                                <button className="btn btn-secondary " onClick={toggleNumbers5} type="button"><i className="fa fa-plane"></i></button>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="suggection1 " id="Airport" style={{ display: 'none' }}>
-                                                            <div className="flush"></div>
-                                                            <ul className="list-group list-group-flush">
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any London Airport</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any Midlands Airport</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any North East Airport</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any North West Airport</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any Scotland Airport</li>
-                                                                <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any South West Airport</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-2">
-                                                        <div className="form-group">
-                                                            <label >Departure Date</label>
-                                                            <div className="input-group mb-3">
-
-                                                                <input type="date" className="form-control" readOnly onClick={open} />
-                                                                <button className="btn btn-secondary " onClick={open} type="button">  <img alt='' src="Calendar.png" /></button>
-
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-2">
-                                                        <div className="form-group">
-                                                            <label >Duration</label>
-
-                                                            <select className="form-select" id="inputGroupSelect01">
-                                                                <option selected>7 Nights</option>
-                                                                <option value="1">1 Night</option>
-                                                                <option value="2"> 2 Nights</option>
-                                                                <option value="3">3 Nights</option>
-                                                                <option value="4"> 4 Nights</option>
-                                                                <option value="5"> 5 Nights</option>
-                                                                <option value="6"> 6 Nights</option>
-                                                                <option value="8"> 8 Nights</option>
-                                                                <option value="9"> 9 Nights</option>
-                                                                <option value="10"> 10 Nights</option>
-                                                                <option value="11">11 Nights</option>
-                                                                <option value="12"> 12 Nights</option>
-                                                                <option value="13">13 Nights</option>
-                                                                <option value="14"> 14 Nights</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="col-md-2">
-                                                        <div className="form-group">
-
-                                                            <label>Rooms & Guests</label>
-                                                            <div className="input-group mb-3">
-
-
-                                                                <input type="text" className="form-control" />
-                                                                <button className="btn btn-secondary " onClick={toggleNumbers} type="button"><img alt='' src="rome.png" /></button>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div className="col text-center">
-                                                        <div className="form-group">
-                                                            <label ></label><br />
-                                                            <button className="btn btn-primary form-control" style={{ height: "60px" }} type="button">Search </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div className="filterss1" tabIndex="-1" id="filterss" style={{ display: 'none' }}>
-                                                    <div className="">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <h5 className="modal-title text-dark">Holidays</h5>
-                                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers}></button>
-                                                            </div>
-                                                            <div className="modal-body text-dark">
-                                                                <div className="row">
-                                                                    <div className="col-md-4">
-                                                                        <label>Number of rooms</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>I don't mind</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <label>Adults</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>Choose...</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                        </select>
-
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <label>Children (0-17)</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>Choose...</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                            <option value="10">10</option>
-                                                                            <option value="11">11</option>
-                                                                            <option value="12">12</option>
-                                                                            <option value="13">13</option>
-                                                                            <option value="14">14</option>
-                                                                            <option value="15">15</option>
-                                                                            <option value="16">16</option>
-                                                                            <option value="17">17</option>
-
-                                                                        </select>
-
-                                                                    </div>
-                                                                </div>
-                                                                <div className="row">
-                                                                    <div className="col-md-4"></div>
-                                                                    <div className="col-md-4 mt-3">
-                                                                        <p>Child ages</p>
-                                                                        <p>Please enter the ages of the children travelling (0 -17) on return date </p>
-                                                                        <div className="row">
-                                                                            <div className="col-md-4">
-                                                                                <label>Child 1</label>
-                                                                                <select className="form-select" id="inputGroupSelect01">
-                                                                                    <option selected>Choose...</option>
-                                                                                    <option value="1">1</option>
-                                                                                    <option value="2">2</option>
-                                                                                    <option value="3">3</option>
-                                                                                    <option value="4">4</option>
-                                                                                    <option value="5">5</option>
-                                                                                    <option value="6">6</option>
-                                                                                    <option value="7">7</option>
-                                                                                    <option value="8">8</option>
-                                                                                    <option value="9">9</option>
-                                                                                    <option value="10">10</option>
-                                                                                    <option value="11">11</option>
-                                                                                    <option value="12">12</option>
-                                                                                    <option value="13">13</option>
-                                                                                    <option value="14">14</option>
-                                                                                    <option value="15">15</option>
-                                                                                    <option value="16">16</option>
-                                                                                    <option value="17">17</option>
-
-                                                                                </select>
-                                                                            </div>
-                                                                            <div className="col-md-4">
-                                                                                <label>Child 2</label>
-                                                                                <select className="form-select" id="inputGroupSelect01">
-                                                                                    <option selected>Choose...</option>
-                                                                                    <option value="1">1</option>
-                                                                                    <option value="2">2</option>
-                                                                                    <option value="3">3</option>
-                                                                                    <option value="4">4</option>
-                                                                                    <option value="5">5</option>
-                                                                                    <option value="6">6</option>
-                                                                                    <option value="7">7</option>
-                                                                                    <option value="8">8</option>
-                                                                                    <option value="9">9</option>
-                                                                                    <option value="10">10</option>
-                                                                                    <option value="11">11</option>
-                                                                                    <option value="12">12</option>
-                                                                                    <option value="13">13</option>
-                                                                                    <option value="14">14</option>
-                                                                                    <option value="15">15</option>
-                                                                                    <option value="16">16</option>
-                                                                                    <option value="17">17</option>
-
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="modal-footer">
-                                                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers}>Clear All</button>
-                                                                <button type="button" className="btn btn-primary">Done</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div></div>
-
-                                {/*------------------ hotals section---------------------- */}
-                                <div className="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
-                                    <div className="container">
-                                        <div className="flighttabs">
-                                            <form>
-                                                <div className="row">
-                                                    <div className="col-md-3">
-                                                        <div className="form-group">
-                                                            <label >Destination(s) or Hotel Name</label>
-                                                            <div className="input-group mb-3">
-
-                                                                <input type="text" className="form-control" />
-                                                                <button className="btn btn-secondary " onClick={toggleNumbers4} type="button"><img alt='' src="desti.png" /><p>list</p></button>
-                                                            </div>
-                                                            <div className="suggection3 " id="flight" style={{ display: 'none' }}>
-                                                                <div className="flush1"></div>
-                                                                <ul className="list-group list-group-flush">
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Any Destination</li>
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Mediterranean</li>
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Canary Islands</li>
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Greek Islands</li>
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Balearic Islands</li>
-                                                                    <li className="list-group-item">  <input type="checkbox" className="form-check-input" /> Africa</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="col-md-3">
-                                                        <div className="form-group">
-                                                            <label >Check-in / Check-out</label>
-                                                            <div className="input-group mb-3">
-                                                                <input type="date" className="form-control" readOnly onClick={open} />
-                                                                <button className="btn btn-secondary " onClick={open} type="button">  <img alt='' src="Calendar.png" /></button>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-3">
-                                                        <label >Rooms & Guests</label>
-                                                        <div className="input-group mb-3">
-                                                            <input type="text" className="form-control" aria-label="Text input with dropdown button" />
-                                                            <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img alt='' src="rome.png" /></button>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-2 text-center">
-                                                        <div className="form-group">
-                                                            <label ></label><br />
-                                                            <button className="btn btn-primary" style={{ height: '60px' }} type="button">Search &nbsp;&nbsp; > </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div className="filterss1" tabIndex="-1" id="filterss2" style={{ display: 'none' }}>
-                                                    <div className="">
-                                                        <div className="modal-content">
-                                                            <div className="modal-header">
-                                                                <h5 className="modal-title text-dark">Hotals</h5>
-                                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers2}></button>
-                                                            </div>
-                                                            <div className="modal-body text-dark">
-                                                                <div className="row">
-                                                                    <div className="col-md-4">
-                                                                        <label>Number of rooms</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>I don't mind</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <label>Adults</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>Choose...</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                        </select>
-
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <label>Children (0-17)</label>
-                                                                        <select className="form-select" id="inputGroupSelect01">
-                                                                            <option selected>Choose...</option>
-                                                                            <option value="1">1</option>
-                                                                            <option value="2">2</option>
-                                                                            <option value="3">3</option>
-                                                                            <option value="4">4</option>
-                                                                            <option value="5">5</option>
-                                                                            <option value="6">6</option>
-                                                                            <option value="7">7</option>
-                                                                            <option value="8">8</option>
-                                                                            <option value="9">9</option>
-                                                                            <option value="10">10</option>
-                                                                            <option value="11">11</option>
-                                                                            <option value="12">12</option>
-                                                                            <option value="13">13</option>
-                                                                            <option value="14">14</option>
-                                                                            <option value="15">15</option>
-                                                                            <option value="16">16</option>
-                                                                            <option value="17">17</option>
-
-                                                                        </select>
-
-                                                                    </div>
-                                                                </div>
-                                                                <div className="row">
-                                                                    <div className="col-md-4"></div>
-                                                                    <div className="col-md-4 mt-3">
-                                                                        <p>Child ages</p>
-                                                                        <p>Please enter the ages of the children travelling (0 -17) on return date </p>
-                                                                        <div className="row">
-                                                                            <div className="col-md-4">
-                                                                                <label>Child 1</label>
-                                                                                <select className="form-select" id="inputGroupSelect01">
-                                                                                    <option selected>Choose...</option>
-                                                                                    <option value="1">1</option>
-                                                                                    <option value="2">2</option>
-                                                                                    <option value="3">3</option>
-                                                                                    <option value="4">4</option>
-                                                                                    <option value="5">5</option>
-                                                                                    <option value="6">6</option>
-                                                                                    <option value="7">7</option>
-                                                                                    <option value="8">8</option>
-                                                                                    <option value="9">9</option>
-                                                                                    <option value="10">10</option>
-                                                                                    <option value="11">11</option>
-                                                                                    <option value="12">12</option>
-                                                                                    <option value="13">13</option>
-                                                                                    <option value="14">14</option>
-                                                                                    <option value="15">15</option>
-                                                                                    <option value="16">16</option>
-                                                                                    <option value="17">17</option>
-
-                                                                                </select>
-                                                                            </div>
-                                                                            <div className="col-md-4">
-                                                                                <label>Child 2</label>
-                                                                                <select className="form-select" id="inputGroupSelect01">
-                                                                                    <option selected>Choose...</option>
-                                                                                    <option value="1">1</option>
-                                                                                    <option value="2">2</option>
-                                                                                    <option value="3">3</option>
-                                                                                    <option value="4">4</option>
-                                                                                    <option value="5">5</option>
-                                                                                    <option value="6">6</option>
-                                                                                    <option value="7">7</option>
-                                                                                    <option value="8">8</option>
-                                                                                    <option value="9">9</option>
-                                                                                    <option value="10">10</option>
-                                                                                    <option value="11">11</option>
-                                                                                    <option value="12">12</option>
-                                                                                    <option value="13">13</option>
-                                                                                    <option value="14">14</option>
-                                                                                    <option value="15">15</option>
-                                                                                    <option value="16">16</option>
-                                                                                    <option value="17">17</option>
-
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="modal-footer">
-                                                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers2}>Clear All</button>
-                                                                <button type="button" className="btn btn-primary">Done</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div className="filterss" tabIndex="-1" id="dates" style={{ display: 'none' }} >
-                                    <div className="">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h5 className="modal-title text-dark">Date</h5>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={open} ></button>
-                                            </div>
-                                            <div className="modal-body text-dark">
-                                                <div className="row">
-                                                    <div className="col-md-8">
-                                                        <Calendar />
-                                                    </div>
-                                                    <div className="col-md-4 dayss">
-                                                        <h4>How flexible</h4>
-                                                        <div className="mb-3 form-check">
-                                                            <input type="radio" className="form-check-input" name="day" />
-                                                            <label className="form-check-label" htmlFor="exampleCheck1">Not Flexible</label>
-                                                        </div>
-                                                        <div className="mb-3 form-check">
-                                                            <input type="radio" className="form-check-input" name="day" />
-                                                            <label className="form-check-label" htmlFor="exampleCheck1">+/- 3 Days</label>
-                                                        </div>
-                                                        <div className="mb-3 form-check">
-                                                            <input type="radio" className="form-check-input" name="day" />
-                                                            <label className="form-check-label" htmlFor="exampleCheck1">+/- 7 Days  </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                   <div className=" narrow">        
+                       <div className="tabs mt-5">
+                        
+                      <div className="container">
+                      
+                       <ul className="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
+                            <li className="nav-item" role="presentation">
+                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Flight + Hotel</button>
+                            </li>
+                            <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
+                            </li>
+                        </ul>
                         </div>
+                        
+                        <div className="tab-content" id="myTabContent">
+                          
+                           {/*------------------ Package Holidays section---------------------- */}
+                            <div className="tab-pane fade show active" id="Profile" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="container">
+                             <div className="flighttabs">
+                                 <form>
+                               <div className="row">
+                                    <div className="col-md-3">
+                                        <div className="form-group">
+                                            <label >Destination(s) or Hotel Name</label>
+                                            <div className="input-group mb-3">
+
+                                            <input type="text" className="form-control" />
+                                            <button className="btn btn-secondary " onClick={toggleNumbers3}  type="button"> <FontAwesomeIcon icon={faLocationDot } /> <p>list</p></button>
+                                          </div>
+                                         
+                                        </div>
+                                        <div className="suggection " id="Destination"   style={{display:'none'}}>
+                                        <div className="flush"></div>
+                                        <ul className="list-group list-group-flush">
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Destination</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Mediterranean</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Canary Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Greek Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Balearic Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Africa</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    
+                                      <div className="col-md-2">
+                                        <div className="form-group">
+                                            <label >Departure Airport</label>
+                                            <div className="input-group mb-3">
+                                            <input type="text" className="form-control" />
+                                            <button className="btn btn-secondary " onClick={toggleNumbers5}  type="button">  <FontAwesomeIcon icon={faPlane} /></button>
+                                            </div>
+                                        </div>
+                  
+                                        <div className="suggection1 " id="Airport"  style={{display:'none'}}>
+                                        <div className="flush"></div>
+                                          <ul className="list-group list-group-flush">
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any London Airport</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Midlands Airport</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any North East Airport</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any North West Airport</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Scotland Airport</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any South West Airport</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                      <div className="col-md-2">
+                                        <div className="form-group">
+                                            <label >Departure Date</label>
+                                            <div className="input-group mb-3">
+
+                                            <input type="date" className="form-control" readOnly onClick={open}/>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button"> <FontAwesomeIcon icon={faCalendarDays} /></button>
+
+                                            </div>
+                                            
+                                          
+                                        </div>
+                                      </div>
+                                      <div className="col-md-2">
+                                        <div className="form-group">
+                                            <label >Duration</label>
+                                            
+                                            <select className="form-select" id="inputGroupSelect01">
+                                                <option selected>7 Nights</option>
+                                                <option value="1">1 Night</option>
+                                                <option value="2"> 2 Nights</option>
+                                                <option value="3">3 Nights</option>
+                                                <option value="4"> 4 Nights</option>
+                                                <option value="5"> 5 Nights</option>
+                                                <option value="6"> 6 Nights</option>
+                                                <option value="8"> 8 Nights</option>
+                                                <option value="9"> 9 Nights</option>
+                                                <option value="10"> 10 Nights</option>
+                                                <option value="11">11 Nights</option>
+                                                <option value="12"> 12 Nights</option>
+                                                <option value="13">13 Nights</option>
+                                                <option value="14"> 14 Nights</option>
+                                                
+                                            </select>
+                                        </div>
+                                      </div>
+                                    
+                                       <div className="col-md-2">
+                                       <div className="form-group">
+                                        
+                                           <label>Rooms & Guests</label>
+                                           <div className="input-group mb-3">
+
+
+                                        <input type="text" className="form-control" />
+                                        <button className="btn btn-secondary " onClick={toggleNumbers}  type="button"><FontAwesomeIcon icon={faUser}/> </button>
+                                     
+                                        </div>
+                                       
+                                         </div>
+                                       </div>
+                                      
+                                       
+                                      <div className="col text-center">
+                                        <div className="form-group">
+                                            <label ></label><br/>
+                                            <button className="btn btn-primary form-control" style={{height:"60px"}} type="button">Search </button>
+                                        </div>
+                                      </div>
+                                   </div>
+                                  
+                                  
+                                           <div className="filterss1" tabIndex="-1" id="filterss" style={{display:'none'}}>
+                                                  <div className="">
+                                                    <div className="modal-content">
+                                                      <div className="modal-header">
+                                                        <h5 className="modal-title text-dark">Holidays</h5>
+                                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers}></button>
+                                                      </div>
+                                                      <div className="modal-body text-dark">
+                                                        <div className="row">
+                                                            <div className="col-md-4">
+                                                              <label>Number of rooms</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>I don't mind</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+                                                              </div>
+                                                              <div className="col-md-2">
+                                                              <label>Adults</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+
+                                                                </div>
+                                                                <div className="col-md-2">
+                                                                <label>Children (0-17)</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+
+                                                                </div>
+                                                          </div>
+                                                          <div className="row">
+                                                               <div className="col-md-4"></div>
+                                                               <div className="col-md-4 mt-3">
+                                                                 <p>Child ages</p>
+                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
+                                                                 <div className="row">
+                                                                      <div className="col-md-4">
+                                                                      <label>Child 1</label>
+                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                        <div className="col-md-4">
+                                                                        <label>Child 2</label>
+                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
+                                                      </div>
+                                                      <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers}>Clear All</button>
+                                                        <button type="button" className="btn btn-primary">Done</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                 
+
+                                               
 
 
 
-                    </div>
+
+                                           </form>
+                                           </div>
+                                         
+                                </div></div>
+              
+                                 {/*------------------ hotals section---------------------- */}
+                                 <div className="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
+                                  <div className="container">
+                                 <div className="flighttabs">
+                                 <form>
+                               <div className="row">
+                                    <div className="col-md-3">
+                                        <div className="form-group">
+                                            <label >Destination(s) or Hotel Name</label>
+                                             <div className="input-group mb-3">
+
+                                            <input type="text" className="form-control" />
+                                            <button className="btn btn-secondary " onClick={toggleNumbers4}  type="button"><FontAwesomeIcon icon={faLocationDot} /><p>list</p></button>
+                                          </div>
+                                            <div className="suggection3 " id="flight"  style={{display:'none'}}>
+                                        <div className="flush1"></div>
+                                        <ul className="list-group list-group-flush">
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Destination</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Mediterranean</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Canary Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Greek Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Balearic Islands</li>
+                                            <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Africa</li>
+                                          </ul>
+                                        </div>
+                                        </div>
+                                      </div>
+                                     
+                                      <div className="col-md-3">
+                                        <div className="form-group">
+                                            <label >Check-in / Check-out</label>
+                                            <div className="input-group mb-3">
+                                            <input type="date" className="form-control" readOnly onClick={open}/>
+                                            <button className="btn btn-secondary "  onClick={open}  type="button"> <FontAwesomeIcon icon={faCalendarDays} /></button>
+                                            </div>
+                                        
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3">
+                                       <label >Rooms & Guests</label>
+                                       <div className="input-group mb-3">
+                                        <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
+                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='' src="rome.png"/></button>
+                                      </div>
+                                       </div>
+                                      <div className="col-md-2 text-center">
+                                        <div className="form-group">
+                                            <label ></label><br/>
+                                            <button className="btn btn-primary" style={{height:'60px'}}type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
+                                        </div>
+                                      </div>
+                                   </div>
+                                  
+                                
+                                           <div className="filterss1" tabIndex="-1" id="filterss2" style={{display:'none'}}>
+                                                  <div className="">
+                                                    <div className="modal-content">
+                                                      <div className="modal-header">
+                                                        <h5 className="modal-title text-dark">Hotals</h5>
+                                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers2}></button>
+                                                      </div>
+                                                      <div className="modal-body text-dark">
+                                                        <div className="row">
+                                                            <div className="col-md-4">
+                                                              <label>Number of rooms</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>I don't mind</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+                                                              </div>
+                                                              <div className="col-md-2">
+                                                              <label>Adults</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                </select>
+
+                                                                </div>
+                                                                <div className="col-md-2">
+                                                                <label>Children (0-17)</label>
+                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+
+                                                                </div>
+                                                          </div>
+                                                          <div className="row">
+                                                               <div className="col-md-4"></div>
+                                                               <div className="col-md-4 mt-3">
+                                                                 <p>Child ages</p>
+                                                                 <p>Please enter the ages of the children travelling (0 -17) on return date </p>
+                                                                 <div className="row">
+                                                                      <div className="col-md-4">
+                                                                      <label>Child 1</label>
+                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                        <div className="col-md-4">
+                                                                        <label>Child 2</label>
+                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                  <option selected>Choose...</option>
+                                                                  <option value="1">1</option>
+                                                                  <option value="2">2</option>
+                                                                  <option value="3">3</option>
+                                                                  <option value="4">4</option>
+                                                                  <option value="5">5</option>
+                                                                  <option value="6">6</option>
+                                                                  <option value="7">7</option>
+                                                                  <option value="8">8</option>
+                                                                  <option value="9">9</option>
+                                                                  <option value="10">10</option>
+                                                                  <option value="11">11</option>
+                                                                  <option value="12">12</option>
+                                                                  <option value="13">13</option>
+                                                                  <option value="14">14</option>
+                                                                  <option value="15">15</option>
+                                                                  <option value="16">16</option>
+                                                                  <option value="17">17</option>
+                                                                 
+                                                                </select>
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
+                                                      </div>
+                                                      <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={toggleNumbers2}>Clear All</button>
+                                                        <button type="button" className="btn btn-primary">Done</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                         
+                                           </form>
+                                           </div>
+                                 </div>
+                               
+         </div> </div> </div> </div>
                     <div className="He">
                         <img src='cyprus.png' className='img-fluid' alt='cyprus' />
                     </div>
@@ -653,7 +622,11 @@ function Destination() {
                                         <div className="col-md-8 col-8">
                                             <h5>Paphos, CYP</h5>
                                             <p>25 Mar ... 02 Apr</p>
-                                            <p> <span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
+                                            <p> <span><FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
@@ -682,7 +655,11 @@ function Destination() {
                                         <div className="col-md-8 col-8">
                                             <h5>Ayia Napa, CYP</h5>
                                             <p>25 Mar ... 02 Apr</p>
-                                            <p><span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
+                                            <p><span><FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
@@ -711,7 +688,11 @@ function Destination() {
                                         <div className="col-md-8 col-8">
                                             <h5>Limassol, CYP</h5>
                                             <p>25 Mar ... 02 Apr</p>
-                                            <p><span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
+                                            <p><span><FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
@@ -867,7 +848,7 @@ function Destination() {
                                      outstanding resorts and some of the best<br/>
                                       historic sights on the Island </p>
 
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
                             </div>
                         </div>
@@ -878,7 +859,7 @@ function Destination() {
                                 <p>Lively or relaxed resorts with <br/>
                                      stunning beaches and long hot <br/>
                                       summers</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
                             </div>
                         </div>
@@ -891,7 +872,7 @@ function Destination() {
                             <div className="Layer">
                                 <h3>Limassol</h3>
                                 <p>Shimmering reefs, spicy salsa,<br/> reggae, pirate hideouts to sugar <br/> sand beaches</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
                             </div>
                         </div>
@@ -902,7 +883,7 @@ function Destination() {
                                 <h3>Nissi Beach</h3>
                                 <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
                                   & historic old towns make these Islands the<br/> perfect getaway</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; > </button>
+                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
                             </div>
                         </div>
@@ -965,8 +946,6 @@ function Destination() {
 
                      </div>
             </div>
-
-
 
             </section>
             <Footer />

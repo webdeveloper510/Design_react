@@ -1,5 +1,7 @@
 import React from 'react';
 import StepHeader from './StepHeader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar,  } from '@fortawesome/pro-solid-svg-icons';
 function Step3() {
   return <div >
     <StepHeader />
@@ -111,13 +113,13 @@ function Step3() {
             <div className='bannerhotal'>
               <img  alt='' src="hotel.png" className='img-fluid' />
               <div className='title'>
-                <h3 className='blue'>Queens Bay Hotel
-                  <i className="fa fa-star"></i>
-                  <i className="fa fa-star"></i>
-                  <i className="fa fa-star"></i>
-                  <i className="fa fa-star"></i>
-                  <i className="fa fa-star"></i>
-                </h3>
+                <h4 className='blue'>Queens Bay Hotel
+                <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                </h4>
                 <h5 className='blue'>Paphos</h5>
                 <p className='blue'>Tue 05 Jul 2022, 14 nights, 1x Double or Twin Room <br />
                   with Inland View, Bed & Breakfast<br />

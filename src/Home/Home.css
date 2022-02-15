@@ -928,3 +928,24 @@ span.Review {
 .slick-slide div {
     margin: 0px 4px;
 }
+
+
+/* Icons css */
+
+.overlay span svg {
+    color: #6d75eb;
+    font-size: 9px;
+}
+
+.stars svg {
+    background: #46b946;
+    padding: 3px;
+    color: white;
+}
+.planeright {
+    transform: scaleX(-1);
+}
+.holidays .card svg {
+    margin-top: 23px;
+    margin-right: 11px;
+}
