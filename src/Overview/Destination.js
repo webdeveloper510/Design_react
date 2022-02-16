@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
+import ImageSliderComponent from '../router/slider';
 function Destination() {
     const [counter, setCounter] = useState(1);
     const incrementCounter = () => setCounter(counter + 1);
@@ -598,7 +599,7 @@ function Destination() {
                                
          </div> </div> </div> </div>
                     <div className="He">
-                        <img src='cyprus.png' className='img-fluid' alt='cyprus' />
+                    <ImageSliderComponent />
                     </div>
                 </div>
                 <div className='container'>

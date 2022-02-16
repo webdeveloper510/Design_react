@@ -949,3 +949,26 @@ span.Review {
     margin-top: 23px;
     margin-right: 11px;
 }
+
+.He .image-gallery-thumbnails-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: #01c0e57a;
+}
+.He button.image-gallery-icon.image-gallery-play-button {
+    display: block;
+}
+.He .image-gallery-left-nav {
+    left: 18%;
+    top: unset;
+    bottom: 0%;
+    padding: 0px;
+}
+.He .image-gallery-right-nav {
+    right: 18%;
+    top: unset;
+    bottom: 0%;
+    padding: 0px;
+}
