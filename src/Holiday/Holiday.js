@@ -2,8 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 //import 'react-calendar/dist/Calendar.css';
-import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-import { Datepicker, Page, getJson, setOptions } from '@mobiscroll/react';
+import '@mobiscroll/react/dist/css/mobiscroll.react.min.css';
+import { Datepicker, getJson,  } from '@mobiscroll/react';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import "react-image-gallery/styles/css/image-gallery.css";
