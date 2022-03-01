@@ -98,16 +98,16 @@ function Final() {
 
                 <div className='row'>
                   <div className='col-6'>
-                    <p><a href="#">Supplier booking conditions</a> <br />
-                      <a href="#">Package travel rights</a><br />
-                      <a href="#">Free airport lounge terms</a><br />
-                      <a href="#">Free airport fast track terms</a><br />
-                      <a href="#">Terms of business </a></p>
+                    <p><a href>Supplier booking conditions</a> <br />
+                      <a href>Package travel rights</a><br />
+                      <a href>Free airport lounge terms</a><br />
+                      <a href>Free airport fast track terms</a><br />
+                      <a href>Terms of business </a></p>
                   </div>
                   <div className='col-6'>
-                    <a href="#">Insurance policy wording</a> <br />
-                    <a href="#">Insurance terms of business</a> <br />
-                    <a href="#">Insurance product information document</a>
+                    <a href>Insurance policy wording</a> <br />
+                    <a href>Insurance terms of business</a> <br />
+                    <a href>Insurance product information document</a>
                   </div>
                 </div>
               
@@ -247,7 +247,7 @@ function Final() {
                   part of the booking. On the Beach administration fees
                   will apply and cancellation fees may apply to the flight
                   element of your booking, please see
-                  <a href="#" rel="noreferrer"> Terms & Conditions </a> for more information.</p>
+                  <a href rel="noreferrer"> Terms & Conditions </a> for more information.</p>
               </div>
             </div>
           </div>

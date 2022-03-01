@@ -47,7 +47,7 @@ function Step4() {
                     </label>
                   </div>
                   <div className='col-md-7 text-right'>
-                    <a href="#" className='blue fw-700'>Privacy Policy</a>
+                    <a href className='blue fw-700'>Privacy Policy</a>
                   </div>
                 </div>
                 <div className='bill'>
@@ -59,14 +59,14 @@ function Step4() {
                       <div class="mb-3">
                         <label>Postcode*</label>
                         <input className='form-control mb-3' type="text" placeholder=" enter postcode" />
-                        <a href="#" >I’m in Ireland</a>
+                        <a href >I’m in Ireland</a>
                       </div>
                     </div>
                     <div className='col-6'>
                       <div style={{ marginTop: '1.9rem' }}>
                         <label></label>
                         <button className='btn btn-primary mb-3' type='button'> Find Address </button> <br />
-                        <a href="#" >or enter manually</a>
+                        <a href >or enter manually</a>
                       </div>
                     </div>
                     <div className='col-6'>

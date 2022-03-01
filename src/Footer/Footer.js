@@ -7,7 +7,7 @@ function Footer() {
             <div className="row">
                 <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p className="user"><a rel="noreferrer"href="#" rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href="#" rel="noreferrer">Privacy </a>|<a rel="noreferrer"href="#" rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href="#" rel="noreferrer">AdChoices </a></p>
+                   <p className="user"><a rel="noreferrer"href rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href rel="noreferrer">Privacy </a>|<a rel="noreferrer"href rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href rel="noreferrer">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
                            <img  alt='' src="footerlogo.png" height="128px"className="img-fluid"/>

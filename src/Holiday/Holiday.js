@@ -11,6 +11,7 @@ import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faAngleRight, faUser } from '@fortawesome/pro-solid-svg-icons';
 import { faStar  } from '@fortawesome/pro-solid-svg-icons';
@@ -856,7 +857,7 @@ function Holiday() {
                                     <div className='col-md-6'>
                                         <div className='Resort text-right'>
                                             <h5><FontAwesomeIcon icon={faPlaneDeparture} />  London Gatwick to Paphos</h5>
-                                            <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href="#" rel="noreferrer"> 14 nights </a>)</p>
+                                            <p> &nbsp;  &nbsp;  &nbsp;  &nbsp; 2 Adults - Saturday 2 July 2022 (<a href rel="noreferrer"> 14 nights </a>)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1260,7 +1261,7 @@ function Holiday() {
                                         <hr />
                                         <div className='row'>
                                             <div className='col-md-6 text-center'>
-                                                <a href="#" rel="noreferrer" style={{ color: '#1b3a69' }}><b>View flight details </b></a>
+                                                <a href rel="noreferrer" style={{ color: '#1b3a69' }}><b>View flight details </b></a>
                                             </div>
                                             <div className='col-md-6 text-center'>
                                                 <a href='#' rel="noreferrer" style={{ color: '#1b3a69' }}><b>Change flight</b></a>
@@ -1527,7 +1528,7 @@ function Holiday() {
                                     <button className="btn btn-warning" type="submit">Send</button>
                                 </form>
                                 <div className='text-right'>
-                                    <small>Read our <a href="#" rel="noreferrer"> Privacy Policy </a></small>
+                                    <small>Read our <a href rel="noreferrer"> Privacy Policy </a></small>
                                 </div>
                             </div>
                             <div className='confidence'>

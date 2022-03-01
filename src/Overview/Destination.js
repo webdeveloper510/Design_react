@@ -1,35 +1,17 @@
 import React from 'react';
 import "../Home/Home.css"
-import { useState } from 'react';
-import Calendar from 'react-calendar'
+//import { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
-import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
-import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
+
 import ImageSliderComponent from '../router/slider';
+import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
+import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 function Destination() {
-    const [counter, setCounter] = useState(1);
-    const incrementCounter = () => setCounter(counter + 1);
-    let decrementCounter = () => setCounter(counter - 1);
-    if (counter <= 1) {
-        decrementCounter = () => setCounter(1);
-    }
-    const [counter1, setCounter1] = useState(1);
-    const incrementCounter1 = () => setCounter1(counter1 + 1);
-    let decrementCounter1 = () => setCounter1(counter1 - 1);
-    if (counter1 <= 1) {
-        decrementCounter1 = () => setCounter1(1);
-    }
-    const [counter2, setCounter2] = useState(1);
-    const incrementCounter2 = () => setCounter2(counter2 + 1);
-    let decrementCounter2 = () => setCounter2(counter2 - 1);
-    if (counter2 <= 1) {
-        decrementCounter2 = () => setCounter(1);
-    }
     function toggleNumbers() {
         console.log('here')
         var x = document.getElementById("filterss");
@@ -48,15 +30,15 @@ function Destination() {
             x.style.display = "none";
         }
     }
-    function toggleNumbers1() {
-        console.log('here')
-        var x = document.getElementById("filterss1");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+    // function toggleNumbers1() {
+    //     console.log('here')
+    //     var x = document.getElementById("filterss1");
+    //     if (x.style.display === "none") {
+    //         x.style.display = "block";
+    //     } else {
+    //         x.style.display = "none";
+    //     }
+    // }
     function toggleNumbers2() {
         console.log('here')
         var x = document.getElementById("filterss2");
@@ -449,7 +431,7 @@ function Destination() {
                                        <label >Rooms & Guests</label>
                                        <div className="input-group mb-3">
                                         <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
-                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='' src="rome.png"/></button>
+                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='rome' src="rome.png"/></button>
                                       </div>
                                        </div>
                                       <div className="col-md-2 text-center">
@@ -605,7 +587,7 @@ function Destination() {
                 <div className='container'>
                     <nav aria-label="breadcrumb " className='mt-3'>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Destinations</a></li>
+                            <li class="breadcrumb-item"><a href>Destinations</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Cyprus</li>
                         </ol>
                     </nav>
@@ -735,7 +717,7 @@ function Destination() {
                             Alternatively, the shallow waters of Fig Tree Bay are perfect for families with young children, and Aphrodite’s Beach is a great choice for swimming and sightseeing.</p>
                         </div>
                         <div className='col-md-7'>
-                            <img src='beach.png' height='100%' className='img-fluid'/>
+                            <img src='beach.png' height='100%'  alt='rome' className='img-fluid'/>
                         </div>
                     </div>
                 </div>
@@ -842,7 +824,7 @@ function Destination() {
                     <h3 className="my-5">Featured Cyprus Destinations</h3>
                     <div className="row">
                         <div className="col-md-8 overhead">
-                            <img alt='' src="paphos.png" className="img-fluid w-100 h-100" />
+                            <img  alt='rome' src="paphos.png" className="img-fluid w-100 h-100" />
                             <div className="Layer2">
                                 <h3>Paphos</h3>
                                 <p>A cosmopolitan destination with vibrant bars,<br/>
@@ -854,7 +836,7 @@ function Destination() {
                             </div>
                         </div>
                         <div className="col-md-4 overhead">
-                            <img alt='' src="Layer3.png" className="img-fluid w-100" />
+                            <img  alt='rome' src="Layer3.png" className="img-fluid w-100" />
                             <div className="Layer">
                                 <h3>Ayia Napa</h3>
                                 <p>Lively or relaxed resorts with <br/>
@@ -869,7 +851,7 @@ function Destination() {
                     <div className="row my-2">
 
                         <div className="col-md-4 overhead">
-                            <img alt='' src="Layer1.png" className="img-fluid w-100" />
+                            <img  alt='rome' src="Layer1.png" className="img-fluid w-100" />
                             <div className="Layer">
                                 <h3>Limassol</h3>
                                 <p>Shimmering reefs, spicy salsa,<br/> reggae, pirate hideouts to sugar <br/> sand beaches</p>
@@ -879,7 +861,7 @@ function Destination() {
                         </div>
 
                         <div className="col-md-8 overhead">
-                            <img alt='' src="Layer2.png" className="img-fluid w-100" />
+                            <img  alt='rome' src="Layer2.png" className="img-fluid w-100" />
                             <div className="Layer2">
                                 <h3>Nissi Beach</h3>
                                 <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
@@ -901,21 +883,21 @@ function Destination() {
                    <div className='row'>
                        <div className='col-md-4'>
                            <div className='card1 darkblue'>
-                               <img src="salad.png" className="img-fluid"/>
+                               <img src="salad.png" className="img-fluid"  alt='rome'/>
                                <h3>Greek Salad</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>
                        </div>
                        <div className='col-md-4'>
                        <div className='card1 darkblue'>
-                               <img src="grilled.png" className="img-fluid"/>
+                               <img src="grilled.png" className="img-fluid"  alt='rome'/>
                                <h3>Grilled Halloumi</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>
                        </div>
                        <div className='col-md-4'>
                        <div className='card1 darkblue'>
-                               <img src="Meze.png" className="img-fluid"/>
+                               <img src="Meze.png" className="img-fluid"  alt='rome'/>
                                <h3>Meze</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>

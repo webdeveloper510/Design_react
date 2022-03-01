@@ -377,7 +377,7 @@ function Step1() {
                 <button className="btn btn-warning" type="submit">Send</button>
               </form>
               <div className='text-right'>
-                <small>Read our <a href="#" rel="noreferrer"> Privacy Policy </a></small>
+                <small>Read our <a href rel="noreferrer"> Privacy Policy </a></small>
               </div>
             </div>
 
@@ -388,7 +388,7 @@ function Step1() {
                 part of the booking. On the Beach administration fees
                 will apply and cancellation fees may apply to the flight
                 element of your booking, please see
-                <a href="#" rel="noreferrer"> Terms & Conditions </a> for more information.</p>
+                <a href rel="noreferrer"> Terms & Conditions </a> for more information.</p>
             </div>
             <div className='payments'>
               <img  alt='' src="cardicon.png" className="img-fluid" />

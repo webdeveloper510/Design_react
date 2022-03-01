@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65d05aad.chunk.css",
+    "main.js": "/static/js/main.1e447f1c.chunk.js",
+    "main.js.map": "/static/js/main.1e447f1c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.72438c11.js",
+    "runtime-main.js.map": "/static/js/runtime-main.72438c11.js.map",
+    "static/css/2.07bdd1e7.chunk.css": "/static/css/2.07bdd1e7.chunk.css",
+    "static/js/2.88a2cd6d.chunk.js": "/static/js/2.88a2cd6d.chunk.js",
+    "static/js/2.88a2cd6d.chunk.js.map": "/static/js/2.88a2cd6d.chunk.js.map",
+    "static/js/3.471d0559.chunk.js": "/static/js/3.471d0559.chunk.js",
+    "static/js/3.471d0559.chunk.js.map": "/static/js/3.471d0559.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.07bdd1e7.chunk.css.map": "/static/css/2.07bdd1e7.chunk.css.map",
+    "static/css/main.65d05aad.chunk.css.map": "/static/css/main.65d05aad.chunk.css.map",
+    "static/js/2.88a2cd6d.chunk.js.LICENSE.txt": "/static/js/2.88a2cd6d.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/static/media/soaked.1361269f.png",
+    "static/media/Holiday.css": "/static/media/backgroundholi.6c2af5aa.png",
+    "static/media/index.css": "/static/media/home-alternate.331122e5.png",
+    "static/media/mobiscroll.react.min.css": "/static/media/icons_mobiscroll.d6664a39.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72438c11.js",
+    "static/css/2.07bdd1e7.chunk.css",
+    "static/js/2.88a2cd6d.chunk.js",
+    "static/css/main.65d05aad.chunk.css",
+    "static/js/main.1e447f1c.chunk.js"
+  ]
+}

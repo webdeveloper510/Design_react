@@ -500,7 +500,7 @@ function Filter() {
                                     </div>
                                     <div className="col-md-10">
                                         <h6 className='m-0 mt-2'>Book with confidence</h6>
-                                        <p>ATOL Protected, flexible holidays with price match guarantee.<span> <a rel="noreferrer"href="#">Learn more </a> </span></p>
+                                        <p>ATOL Protected, flexible holidays with price match guarantee.<span> <a rel="noreferrer"href>Learn more </a> </span></p>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@ function Filter() {
                                     <div className='col-md-6'>
                                         <div className='hotal-detail'>
                                             <h4>Iberostar Beach Resort & Spa</h4>
-                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a rel="noreferrer"href="#"> VIEW IN MAP </a></p>
+                                            <p>Aphrodite hills, Paphos Area, Cyprus  <a rel="noreferrer"href> VIEW IN MAP </a></p>
                                             <div className='d-flex mt-3'>
                                                 <div className='d-flex'>
                                                     <label className="form-check-label" htmlFor="flexCheckDefault">
@@ -541,7 +541,7 @@ function Filter() {
                                             <p><img  alt='' src="call.png" className='img-fluid' /> Tue 05 Jul 2022 - 14 nights</p>
                                             <p><img  alt='' src="bed.png" className='img-fluid' /> Deluxe Double Room with Garden or Pool View with Balcony</p>
                                             <small>Only 5 rooms left</small>
-                                            <p><img  alt='' src="plane.png" className='img-fluid' /> London Gatwick - Direct <a rel="noreferrer"href="#">  View flight details </a></p>
+                                            <p><img  alt='' src="plane.png" className='img-fluid' /> London Gatwick - Direct <a rel="noreferrer"href>  View flight details </a></p>
                                             <p><img  alt='' src="sun.png" className='img-fluid' /> Honeymoon offer</p>
                                         </div>
                                     </div>
