@@ -68,7 +68,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="Layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -103,7 +103,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="Layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -137,7 +137,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="Layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -171,7 +171,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="Layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -205,7 +205,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src="Layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -240,7 +240,7 @@ function header() {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img src="Layer123.png" className="mt-2 mb-2"alt='' height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href>Holidays to Greecs & Cyprus  </a></li>
                             </ul>

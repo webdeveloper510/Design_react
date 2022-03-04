@@ -845,7 +845,9 @@ span.Review {
     opacity: .75;
     color: #01254f;
 }
-
+.bannerpack h3 {
+    color: white;
+}
 .soaked {
     background-image: url(../assets/images/soaked.png);
 }
