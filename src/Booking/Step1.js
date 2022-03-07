@@ -8,7 +8,12 @@ import hotel from "../../public/hotel.png"
 import cardicon from "../../public/cardicon.png"
 import sum from "../../public/sum.png"
 import add from "../../public/add.png"
-import img from "../../public/img.png"
+import easyjet from "../../public/Easyjet.png"
+import ser from "../../public/ser.png"
+import Shape from "../../public/Shape.png"
+import rightarrow from "../../public/rightarrow.png"
+import rightflight from "../../public/rightflight.png"
+import flights1 from "../../public/flights1.png"
 function Step1() {
   return <div >
     <StepHeader />
@@ -35,8 +40,8 @@ function Step1() {
             </div>
             <div className='safe'>
               <p>Safe, secure and cost effective return transfer options to suit all budgets.</p>
-              <p> <img  alt='' src="ser.png" className='img-fluid' /> <b>Financial protection with ATOL </b> when booked as part of a flight-inclusive package holiday</p>
-              <p> <img  alt='' src="ser.png" className='img-fluid' /> <b> Free cancellation on all transfers,</b> if cancelled up to 7 days before departure</p>
+              <p> <img  alt='' src={ser} className='img-fluid' /> <b>Financial protection with ATOL </b> when booked as part of a flight-inclusive package holiday</p>
+              <p> <img  alt='' src={ser} className='img-fluid' /> <b> Free cancellation on all transfers,</b> if cancelled up to 7 days before departure</p>
 
               <div className='row py-3 service'>
                 <div className='col-7'>
@@ -131,28 +136,28 @@ function Step1() {
               Travel with confidence with instant cover for everyone on your trip.</p>
 
             <div className='travelling'>
-              <img  alt='' src="ser.png" className='img-fluid' />
+              <img  alt='' src={ser} className='img-fluid' />
               <div>
                 <h6 className='blue'>Medical teatment in European destination</h6>
                 <p>Even if the FCDO warns against all but essential travel as a result of COVID-19</p>
               </div>
             </div>
             <div className='travelling'>
-              <img  alt='' src="ser.png" className='img-fluid' />
+              <img  alt='' src={ser} className='img-fluid' />
               <div>
                 <h6 className='blue'>£10 million</h6>
                 <p>Medical & emergency repatriation expenses</p>
               </div>
             </div>
             <div className='travelling'>
-              <img  alt='' src="ser.png" className='img-fluid' />
+              <img  alt='' src={ser} className='img-fluid' />
               <div>
                 <h6 className='blue'>£1,500</h6>
                 <p>Baggage & belongings cover</p>
               </div>
             </div>
             <div className='travelling'>
-              <img  alt='' src="ser.png" className='img-fluid' />
+              <img  alt='' src={ser} className='img-fluid' />
               <div>
                 <h6 className='blue'>£2,000</h6>
                 <p>Cancellation cover</p>
@@ -167,8 +172,8 @@ function Step1() {
             </div>
             <div className='safe'>
               <p>Safe, secure and cost effective return transfer options to suit all budgets.</p>
-              <p> <img  alt='' src="ser.png" className='img-fluid' /> <b>Save up to 80% </b> when booked in advance</p>
-              <p> <img  alt='' src="ser.png" className='img-fluid' /> <b> Free cancellation </b>  on parking up to 7 days before departure</p>
+              <p> <img  alt='' src={ser} className='img-fluid' /> <b>Save up to 80% </b> when booked in advance</p>
+              <p> <img  alt='' src={ser} className='img-fluid' /> <b> Free cancellation </b>  on parking up to 7 days before departure</p>
 
               <div className='row py-3 service'>
                 <div className='col-7'>
@@ -258,7 +263,7 @@ function Step1() {
                   </div>
                 </div>
                 <div className='col-8 text-center Continue'>
-                  <h3 className='blue'>Continue to checkout <img  alt='' src="Shape.png" className='img-fluid' /></h3>
+                  <h3 className='blue'>Continue to checkout <img  alt='' src={Shape} className='img-fluid' /></h3>
                 </div>
               </div>
             </div>
@@ -281,7 +286,7 @@ function Step1() {
                   <br />
                   Supplied through Five rocks Beach ltd Queens Bay Hotel</p>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -290,7 +295,7 @@ function Step1() {
                     </p>
                   </div>
                   <div className='col-2 '>
-                    <img  alt='' src="rightflight.png" className='img-fluid p-2' />
+                    <img  alt='' src={rightflight} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -299,7 +304,7 @@ function Step1() {
                   </div>
                 </div>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -308,7 +313,7 @@ function Step1() {
                     </p>
                   </div>
                   <div className='col-2'>
-                    <img  alt='' src="flights1.png" className='img-fluid p-2' />
+                    <img  alt='' src={flights1} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -340,7 +345,7 @@ function Step1() {
                 <hr />
                 <div className='row'>
                   <div className='col-2 arrors mt-1'>
-                    <img  alt='' src="rightarrow.png" className='img-fluid' />
+                    <img  alt='' src={rightarrow} className='img-fluid' />
                   </div>
                   <div className='col mt-3 text-center'>
                     <h5 className='blue'>FREE Aiport lounge</h5>
@@ -366,7 +371,7 @@ function Step1() {
                 <h3>Continue to checkout</h3>
                 <p>Secure your holiday for just £29 pp</p>
               </div>
-              <img  alt='' src="Shape.png" className='img-fluid' />
+              <img  alt='' src={Shape} className='img-fluid' />
             </div>
             <div className='emailme mt-3'>
               <h3>Email me this holiday deal</h3>

@@ -6,7 +6,7 @@ import image from "../../public/step3.png"
 import clock from "../../public/clock.png"
 import hotel from "../../public/hotel.png"
 import Shape from "../../public/Shape.png"
-import easyjet from "../../public/easyjet.png"
+import easyjet from "../../public/Easyjet.png"
 import flights1 from "../../public/flights1.png"
 import rightflight from "../../public/rightflight.png"
 function Step3() {

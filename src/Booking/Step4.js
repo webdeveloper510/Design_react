@@ -8,7 +8,7 @@ import hotel from "../../public/hotel.png"
 import rightarrow from "../../public/rightarrow.png"
 import img from "../../public/img.png"
 import Shape from "../../public/Shape.png"
-import easyjet from "../../public/easyjet.png"
+import easyjet from "../../public/Easyjet.png"
 import flights1 from "../../public/flights1.png"
 import rightflight from "../../public/rightflight.png"
 function Step4() {

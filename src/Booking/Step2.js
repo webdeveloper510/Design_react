@@ -4,7 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import image from "../../public/step2.png"
 import clock from "../../public/clock.png"
-import hotel from "../../public/hotel.png"
+import easyjet from "../../public/Easyjet.png"
+import flights1 from "../../public/flights1.png"
+import char from "../../public/Char.png"
+import shape from "../../public/Shape.png"
+import rightflight from "../../public/rightflight.png"
+import rightarrow from "../../public/rightarrow.png"
 
 function Step2() {
   return <div >
@@ -108,7 +113,7 @@ function Step2() {
                 </form>
               </div>
               <div className='surname'>
-                <h5>Disabled access <img  alt='' src="Char.png" className='img-fluid mx-2' /></h5>
+                <h5>Disabled access <img  alt='' src={char} className='img-fluid mx-2' /></h5>
               </div>
 
               <div className='discuss px-4 pt-4'>
@@ -201,7 +206,7 @@ function Step2() {
                   </div>
                 </div>
                 <div className='col-8 text-center Continue'>
-                  <h3 className='blue'>Continue to checkout <img  alt='' src="Shape.png" className='img-fluid' /></h3>
+                  <h3 className='blue'>Continue to checkout <img  alt='' src={shape} className='img-fluid' /></h3>
                 </div>
               </div>
             </div>
@@ -224,7 +229,7 @@ function Step2() {
                   <br />
                   Supplied through Five rocks Beach ltd Queens Bay Hotel</p>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -233,7 +238,7 @@ function Step2() {
                     </p>
                   </div>
                   <div className='col-2 '>
-                    <img  alt='' src="rightflight.png" className='img-fluid p-2' />
+                    <img  alt='' src={rightflight} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -242,7 +247,7 @@ function Step2() {
                   </div>
                 </div>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -251,7 +256,7 @@ function Step2() {
                     </p>
                   </div>
                   <div className='col-2'>
-                    <img  alt='' src="flights1.png" className='img-fluid p-2' />
+                    <img  alt='' src={flights1} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -283,7 +288,7 @@ function Step2() {
                 <hr />
                 <div className='row'>
                   <div className='col-2 arrors mt-1'>
-                    <img  alt='' src="rightarrow.png" className='img-fluid' />
+                    <img  alt='' src={rightarrow} className='img-fluid' />
                   </div>
                   <div className='col mt-3 text-center'>
                     <h5 className='blue'>FREE Aiport lounge</h5>

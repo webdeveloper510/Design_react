@@ -10,7 +10,7 @@ import bluelock from "../../public/bluelock.png"
 import card from "../../public/card.png"
 import cardicon from "../../public/cardicon.png"
 import cardlock from "../../public/cardlock.png"
-import easyjet from "../../public/easyjet.png"
+import easyjet from "../../public/Easyjet.png"
 import flights1 from "../../public/flights1.png"
 import rightflight from "../../public/rightflight.png"
 function Final() {
