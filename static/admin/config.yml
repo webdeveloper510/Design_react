@@ -6,19 +6,19 @@ media_folder: "./" # Media files will be stored in the repo under static/images/
 public_folder: "./" # The src attribute for uploaded media will begin with /images/uploads
 collections:
   - name: "homepage"
-    label: "Home Page"
+    label: "HomePage"
     folder: "content/homepage"
     create: true
     slug: "{{year}}-{{slug}}"
     widget: "object"
     fields:
       - {label: "Banner", name: "banner", widget: "object", default: ""}
-        fields:[ 
+        fields:
           - {name: bannerTitle, label: Banner Title, required: true, widget: text },
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
-        ]
+      
       
      
      
