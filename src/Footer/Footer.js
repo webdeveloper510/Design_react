@@ -1,7 +1,12 @@
 import React from 'react'
 import "./Footer.css"
-import pro from "../../public/pro.png"
-import pro from "../../public/pro.png"
+import alter from "../../public/home-alternate.png"
+import pro from "../../public/footer.png"
+import facebook from "../../public/facebook.png"
+import insta from "../../public/insta.png"
+import twiter from "../../public/twiter.png"
+import youtube from "../../public/youtube.png"
+import footerlogo from "../../public/footerlogo.png"
 function Footer() {
     return (
         <div className="container">
@@ -9,10 +14,10 @@ function Footer() {
             <div className="row">
                 <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p className="user"><a rel="noreferrer"href rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href rel="noreferrer">Privacy </a>|<a rel="noreferrer"href rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href rel="noreferrer">AdChoices </a></p>
+                   <p className="user"><a rel="noreferrer"href >User Agreement </a>| <a rel="noreferrer"href>Privacy </a>|<a href rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href >AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
-                           <img  alt='' src="footerlogo.png" height="128px"className="img-fluid"/>
+                           <img  alt='' src={footerlogo} height="128px"className="img-fluid"/>
                        </div>
                        <div className="col-md-9 mt-3">
                            <h5> <b>Stay Safe whilst you travel </b> </h5>
@@ -20,9 +25,9 @@ function Footer() {
                           
                             For the latest foreign travel advice visit <a rel="noreferrer"href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
                             <br/>
-                            Follow our <a rel="noreferrer"href="" rel="noreferrer"> travel update</a><br/><br/>
+                            Follow our <a href="" rel="noreferrer"> travel update</a><br/><br/>
                             
-                            Visit the  <a rel="noreferrer"href="" rel="noreferrer"> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
+                            Visit the  <a href="" rel="noreferrer"> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
                             </p>
                        </div>
                    </div>
@@ -31,10 +36,10 @@ function Footer() {
                 <div className="col-md-3">
                     <h4 className="my-3">Follow Us</h4>
                     <div className="d-flex">
-                        <img  alt='' src="facebook.png" className="img-fluid"/>
-                        <img  alt='' src="insta.png" className="img-fluid"/>
-                        <img  alt='' src="twiter.png" className="img-fluid"/>
-                        <img  alt='' src="youtube.png" className="img-fluid"/>
+                        <img  alt='' src= {facebook } className="img-fluid"/>
+                        <img  alt='' src= {insta} className="img-fluid"/>
+                        <img  alt='' src={ twiter} className="img-fluid"/>
+                        <img  alt='' src={ youtube} className="img-fluid"/>
                     </div>
                     <div className="mt-3">
                         <h4>Subscribe to our newsletter</h4>
@@ -49,10 +54,10 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src="footer.png"width="30px" height="30px"/></p>
+                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src={pro} width="30px" height="30px"/></p>
                 </div>
                 <div className="col-md-4 text-right">
-                    <img  alt='' src="home-alternate.png" height="50px" className="img-fluid"/>
+                    <img  alt='' src={alter} height="50px" className="img-fluid"/>
                 </div>
             </div>
             <hr/>
