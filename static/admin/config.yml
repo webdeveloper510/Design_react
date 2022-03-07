@@ -17,16 +17,19 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "homePage"
-    label: "Home Page Banner"
-    folder: "content/banner"
+  - name: "homepage"
+    label: "Home Page"
+    folder: "content/homepage"
     create: true
     value: en
-    widget:"object"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{slug}}"
     fields:
-      - {label: "BannerTitle", name: "bannerTitle", widget: "string", default: "Hello Holidays"}
-      - {label: "OfferBanner", name: "offerBanner", widget: "string"}
-      - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Banner", name: "banner", widget: "object", default: ""}
+        fields: 
+          - {name: bannerTitle, label: Banner Title, required: true, widget: text },
+          - {label: "OfferBanner", name: "offerBanner", widget: "string"}
+          - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+      
+     
      
