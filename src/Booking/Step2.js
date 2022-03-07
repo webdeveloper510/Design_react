@@ -8,6 +8,7 @@ import easyjet from "../../public/Easyjet.png"
 import flights1 from "../../public/flights1.png"
 import char from "../../public/Char.png"
 import shape from "../../public/Shape.png"
+import hotel from "../../public/hotel.png"
 import rightflight from "../../public/rightflight.png"
 import rightarrow from "../../public/rightarrow.png"
 
