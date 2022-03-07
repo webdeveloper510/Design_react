@@ -24,11 +24,12 @@ collections:
     widget: "object"
     fields:
       - {label: "Banner", name: "banner", widget: "object", default: ""}
-        fields: 
+        fields:[ 
           - {name: bannerTitle, label: Banner Title, required: true, widget: text },
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
+        ]
       
      
      
