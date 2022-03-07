@@ -3,6 +3,12 @@ import StepHeader from './StepHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import image from "../../public/step1.png"
+import clock from "../../public/clock.png"
+import hotel from "../../public/hotel.png"
+import cardicon from "../../public/cardicon.png"
+import sum from "../../public/sum.png"
+import add from "../../public/add.png"
+import img from "../../public/img.png"
 function Step1() {
   return <div >
     <StepHeader />
@@ -11,7 +17,7 @@ function Step1() {
         <div className='row py-2'>
           <div className='col-md-3 '>
             <div className='clock p-1'>
-              <img  alt='' src="clock.png" width="80px" className=' m-0' />
+              <img  alt='' src={clock} width="80px" className=' m-0' />
               <div className='deal'>
                 <h3 className='blue m-0'> <b> 29:59 </b></h3>
                 <p className='blue'><b>Left to book this deal! </b></p>
@@ -25,7 +31,7 @@ function Step1() {
         <div className='row '>
           <div className='col-md-8'>
             <div className="lead">
-              <h5>Add transfers <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
+              <h5>Add transfers <img  alt='' src={img} className='img-fluid mx-2' /></h5>
             </div>
             <div className='safe'>
               <p>Safe, secure and cost effective return transfer options to suit all budgets.</p>
@@ -83,7 +89,7 @@ function Step1() {
 
             <div className='my-4'>
               <div className='lead'>
-                <h5>Add Hold Baggage <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
+                <h5>Add Hold Baggage <img  alt='' src={img} className='img-fluid mx-2' /></h5>
               </div>
               <div className="card">
                 <div className="card-body">
@@ -94,9 +100,9 @@ function Step1() {
                     </div>
                     <div className='col-md-3'>
                       <div className='d-flex mt-4'>
-                        <img  alt='' src="sum.png" className='img-fluid sum' />
+                        <img  alt='' src={sum} className='img-fluid sum' />
                         <input type='number' className="form-control" />
-                        <img  alt='' src="add.png" className='img-fluid sum' />
+                        <img  alt='' src={add} className='img-fluid sum' />
                       </div>
                     </div>
                   </div>
@@ -105,7 +111,7 @@ function Step1() {
             </div>
 
             <div className='lead'>
-              <h5>Add insurance <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
+              <h5>Add insurance <img  alt='' src={img} className='img-fluid mx-2' /></h5>
             </div>
             <div className='row mt-3'>
               <div className='col-6'>
@@ -157,7 +163,7 @@ function Step1() {
             <p className='pl-14'>Travel insurance is not compulsory but it highly recommended that you obtain a suitable travel insurance policy for your finacial protection</p>
 
             <div className="lead">
-              <h5>Add transfers <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
+              <h5>Add transfers <img  alt='' src={img} className='img-fluid mx-2' /></h5>
             </div>
             <div className='safe'>
               <p>Safe, secure and cost effective return transfer options to suit all budgets.</p>
@@ -212,7 +218,7 @@ function Step1() {
                 </div>
               </div>
               <div className='lead'>
-                <h5>How to pay <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
+                <h5>How to pay <img  alt='' src={img} className='img-fluid mx-2' /></h5>
               </div>
               <p className='my-3 blue pl-14'>See full details and make your selection in the checkout.</p>
               <div className='row mb-3'>
@@ -244,7 +250,7 @@ function Step1() {
               <div className='row'>
                 <div className='col-4'>
                   <div className='clock1 p-1'>
-                    <img  alt='' src="clock.png" width="60px" height="60px" className=' mt-2' />
+                    <img  alt='' src={clock} width="60px" height="60px" className=' mt-2' />
                     <div className='deal1'>
                       <h3 className='blue m-0'> <b> 29:59 </b></h3>
                       <p className='blue'><b>Left to book this deal! </b></p>
@@ -260,7 +266,7 @@ function Step1() {
 
           <div className='col-md-4'>
             <div className='bannerhotal'>
-              <img  alt='' src="hotel.png" className='img-fluid' />
+              <img  alt='' src={hotel} className='img-fluid' />
               <div className='title'>
                 <h4 className='blue'>Queens Bay Hotel
                 <FontAwesomeIcon icon={faStar}/>
@@ -392,7 +398,7 @@ function Step1() {
                 <a href rel="noreferrer"> Terms & Conditions </a> for more information.</p>
             </div>
             <div className='payments'>
-              <img  alt='' src="cardicon.png" className="img-fluid" />
+              <img  alt='' src={cardicon} className="img-fluid" />
               <div>
                 <h5 className='blue'>No card payment fees</h5>
                 <p>Pay in full or spread the cost until 28 days before departure</p>

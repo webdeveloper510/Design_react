@@ -2,6 +2,13 @@ import React from 'react';
 import StepHeader from './StepHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import image from "../../public/step3.png"
+import clock from "../../public/clock.png"
+import hotel from "../../public/hotel.png"
+import Shape from "../../public/Shape.png"
+import easyjet from "../../public/easyjet.png"
+import flights1 from "../../public/flights1.png"
+import rightflight from "../../public/rightflight.png"
 function Step3() {
   return <div >
     <StepHeader />
@@ -10,7 +17,7 @@ function Step3() {
         <div className='row py-2'>
           <div className='col-md-3 '>
             <div className='clock p-1'>
-              <img  alt='' src="clock.png" width="80px" className=' m-0' />
+              <img  alt='' src={clock} width="80px" className=' m-0' />
               <div className='deal'>
                 <h3>29:59</h3>
                 <p><b>Left to book this deal! </b></p>
@@ -18,7 +25,7 @@ function Step3() {
             </div>
           </div>
           <div className='col-md-9 process'>
-            <img  alt='' src="step3.png" className='img-fluid' />
+            <img  alt='' src={image} className='img-fluid' />
           </div>
         </div>
         <div className='row '>
@@ -96,7 +103,7 @@ function Step3() {
             <div className='row'>
               <div className='col-4'>
                 <div className='clock1 p-1'>
-                  <img  alt='' src="clock.png" width="60px" height="60px" className=' mt-2' />
+                  <img  alt='' src={clock} width="60px" height="60px" className=' mt-2' />
                   <div className='deal1'>
                     <h3 className='blue m-0'> <b> 29:59 </b></h3>
                     <p className='blue'><b>Left to book this deal! </b></p>
@@ -104,14 +111,14 @@ function Step3() {
                 </div>
               </div>
               <div className='col-8 text-center Continue'>
-                <h3 className='blue'>Continue to checkout <img  alt='' src="Shape.png" className='img-fluid' /></h3>
+                <h3 className='blue'>Continue to checkout <img  alt='' src={Shape} className='img-fluid' /></h3>
               </div>
             </div>
           </div>
 
           <div className='col-md-4'>
             <div className='bannerhotal'>
-              <img  alt='' src="hotel.png" className='img-fluid' />
+              <img  alt='' src={hotel} className='img-fluid' />
               <div className='title'>
                 <h4 className='blue'>Queens Bay Hotel
                 <FontAwesomeIcon icon={faStar}/>
@@ -126,7 +133,7 @@ function Step3() {
                   <br />
                   Supplied through Five rocks Beach ltd Queens Bay Hotel</p>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -135,7 +142,7 @@ function Step3() {
                     </p>
                   </div>
                   <div className='col-2 '>
-                    <img  alt='' src="rightflight.png" className='img-fluid p-2' />
+                    <img  alt='' src={rightflight} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />
@@ -144,7 +151,7 @@ function Step3() {
                   </div>
                 </div>
                 <hr />
-                <img  alt='' src="easyjet.png" className='img-fluid' />
+                <img  alt='' src={easyjet} className='img-fluid' />
                 <h5 className='blue'>Tue 05 Jul 2022 (EZY 8935)</h5>
                 <div className='row'>
                   <div className='col'>
@@ -153,7 +160,7 @@ function Step3() {
                     </p>
                   </div>
                   <div className='col-2'>
-                    <img  alt='' src="flights1.png" className='img-fluid p-2' />
+                    <img  alt='' src={flights1} className='img-fluid p-2' />
                   </div>
                   <div className='col'>
                     <p>London Gatwick <br />

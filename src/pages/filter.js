@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import trip from "../../public/trip.png"
+import image from "../../public/image.png"
 import { faStar, faStarHalf } from '@fortawesome/pro-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/pro-regular-svg-icons';
@@ -178,7 +180,7 @@ const filter = ({ data, location }) => {
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingThree">
                                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <img  alt='' src="trip.png" className='img-fluid' />
+                                                <img  alt='' src={trip} className='img-fluid' />
                                             </button>
                                         </h2>
                                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -514,7 +516,7 @@ const filter = ({ data, location }) => {
                                         <div className='Beach'>
                                             <p>Beach hotel</p>
                                         </div>
-                                        <img  alt='' src="image.png" width="100%" height="100%" />
+                                        <img  alt='' src={image} width="100%" height="100%" />
                                     </div>
                                     <div className='col-md-6'>
                                         <div className='hotal-detail'>
@@ -576,7 +578,7 @@ const filter = ({ data, location }) => {
                         </div>
                         <div className='col-md-6'>
                             <div className='card'>
-                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src={image} className="card-img-top"/>
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -615,7 +617,7 @@ const filter = ({ data, location }) => {
                         </div>
                         <div className='col-md-6 '>
                             <div className='card'>
-                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src={image} className="card-img-top" />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
