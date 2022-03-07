@@ -11,7 +11,20 @@ import ImageGallery from 'react-image-gallery';
 import './Holiday.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
+import image from "../../public/Layer4.png"
+import image1 from "../../public/Layer2.png"
+import footerimage from "../../public/footer.png"
+import footerimage1 from "../../public/pay.png"
+import footerimage2 from "../../public/check.png"
+import footerimage3 from "../../public/tripad.png"
+import dot from "../../public/1dot.png"
+import eye from "../../public/eye.png"
+import sum from "../../public/sum.png"
+import add from "../../public/add.png"
+import pro from "../../public/pro.png"
+import i from "../../public/i.png"
+import bookplan from "../../public/bookplan.png"
+import holiday from "../../public/holiday_listing.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faAngleRight, faUser } from '@fortawesome/pro-solid-svg-icons';
 import { faStar  } from '@fortawesome/pro-solid-svg-icons';
@@ -19,44 +32,44 @@ import { faPlaneDeparture as solidfaPlaneDeparture } from '@fortawesome/pro-soli
 import { faPlaneDeparture, faSuitcaseRolling, faHeart } from '@fortawesome/pro-regular-svg-icons';
 const images1 = [
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
+        original: image,
+        thumbnail: image,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
+        original: image,
+        thumbnail: image1,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
+        original: image,
+        thumbnail: image,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
+        original: image,
+        thumbnail: image1,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
+        original: image,
+        thumbnail: image1,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
+        original: image,
+        thumbnail: image1,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
+        original: image,
+        thumbnail: image,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
+        original: image,
+        thumbnail: image1,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
+        original: image,
+        thumbnail: image,
     },
     {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
+        original: image,
+        thumbnail: image1,
     },
 ];
 function Holiday() {
@@ -570,13 +583,6 @@ function Holiday() {
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
-
-
-
                                 </form>
                             </div>
 
@@ -866,7 +872,7 @@ function Holiday() {
                                 <div className='looked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img  alt='' src="eye.png" className='img-fluid' />
+                                            <img  alt='' src={eye} className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>62 </b> others have <b>LOOKED </b> at this hotel in the last hour</p>
@@ -876,7 +882,7 @@ function Holiday() {
                                 <div className='booked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img  alt='' src="bookplan.png" className='img-fluid' />
+                                            <img  alt='' src={bookplan} className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>40+</b> others have <b>BOOKED </b>  this hotel in the last 7 days</p>
@@ -889,7 +895,7 @@ function Holiday() {
                             </div>
                             <ImageGallery items={images1} showIndex />
                             <div className='float-right'>
-                                <img  alt='' src="holiday_listing.png" className='img-fluid' />
+                                <img  alt='' src={holiday} className='img-fluid' />
                             </div>
                             <div className="tabsss">
                             <p className="mt-3">
@@ -1285,9 +1291,9 @@ function Holiday() {
                                             </div>
                                             <div className='col-md-3'>
                                                 <div className='d-flex mt-4'>
-                                                    <img  alt='' src="sum.png" className='img-fluid sum' />
+                                                    <img  alt='' src={sum} className='img-fluid sum' />
                                                     <input type='number' className="form-control" />
-                                                    <img  alt='' src="add.png" className='img-fluid sum' />
+                                                    <img  alt='' src={add} className='img-fluid sum' />
                                                 </div>
                                             </div>
                                         </div>
@@ -1452,7 +1458,7 @@ function Holiday() {
                                 <div className='protected'>
                                     <div className='row'>
                                         <div className='col-2'>
-                                            <img  alt='' className='img-fluid' src="pro.png" />
+                                            <img  alt='' className='img-fluid' src={pro} />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Our packages are financially protected</h5>
@@ -1461,7 +1467,7 @@ function Holiday() {
                                     </div>
                                     <div className='row mt-3'>
                                         <div className='col-2'>
-                                            <img  alt='' className='img-fluid' src="i.png" />
+                                            <img  alt='' className='img-fluid' src={i} />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Please remember to check the latest travel advice</h5>
@@ -1535,19 +1541,19 @@ function Holiday() {
                                 <h3>Book with confidence</h3>
                                 <div className='row'>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='footer.png' className='img-fluid' />
+                                        <img  alt='' src={footerimage} className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>ATOL Protected</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='pay.png' className='img-fluid' />
+                                        <img  alt='' src={footerimage1} className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Pay Monthly</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='check.png' className='img-fluid' />
+                                        <img  alt='' src={footerimage2} className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Price Match Guarantee</p>
@@ -1555,7 +1561,7 @@ function Holiday() {
                                 </div>
                             </div>
                             <div className='tripadvisor'>
-                                <img  alt='' src="tripad.png" className='img-fluid' />
+                                <img  alt='' src={footerimage3} className='img-fluid' />
                                 <p>Based on 2748 reviews</p>
                                 <hr />
                                 <div className='float-right'>
@@ -1570,7 +1576,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                    <img  alt='' src="1dot.png" className='img-fluid' />
+                                    <img  alt='' src={dot} className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>

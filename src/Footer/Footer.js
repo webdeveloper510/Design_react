@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Footer.css"
+import pro from "../../public/pro.png"
+import pro from "../../public/pro.png"
 function Footer() {
     return (
         <div className="container">

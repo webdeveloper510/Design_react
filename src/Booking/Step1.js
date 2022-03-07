@@ -2,6 +2,7 @@ import React from 'react';
 import StepHeader from './StepHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import image from "../../public/step1.png"
 function Step1() {
   return <div >
     <StepHeader />
@@ -18,11 +19,11 @@ function Step1() {
             </div>
           </div>
           <div className='col-md-9 process'>
-            <img  alt='' src="step1.png" className='img-fluid' />
+            <img  alt='' src={image} className='img-fluid' />
           </div>
         </div>
         <div className='row '>
-          <div className='col-md-8 '>
+          <div className='col-md-8'>
             <div className="lead">
               <h5>Add transfers <img  alt='' src="img.png" className='img-fluid mx-2' /></h5>
             </div>
