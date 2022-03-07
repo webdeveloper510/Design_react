@@ -21,8 +21,8 @@ collections:
     label: "Home Page"
     folder: "content/homepage"
     create: true
-    value: en
     slug: "{{year}}-{{slug}}"
+    widget: "object"
     fields:
       - {label: "Banner", name: "banner", widget: "object", default: ""}
         fields: 
