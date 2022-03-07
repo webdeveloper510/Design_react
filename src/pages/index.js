@@ -8,7 +8,7 @@ import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
+import { faPlane, faAngleRight, faStar  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 

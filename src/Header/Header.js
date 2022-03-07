@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars  } from '@fortawesome/pro-solid-svg-icons';
 function header() {
   return (
     <div className="container narrow">
@@ -21,14 +22,14 @@ function header() {
                 <a rel="noreferrer"className="nav-link" href>Manage Booking </a>
               </li>
               <li className="nav-item">
-                <a rel="noreferrer"className="nav-link" href data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
+                <a rel="noreferrer"className="nav-link" href data-bs-toggle="modal" data-bs-target="#exampleModal"><FontAwesomeIcon icon={faBars} /> </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <div className="mobile">
-        <a rel="noreferrer"className="nav-link" href data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
+        <a rel="noreferrer"className="nav-link" href data-bs-toggle="modal" data-bs-target="#exampleModal"><FontAwesomeIcon icon={faBars} /></a>
       </div>
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog" style={{ marginTop: '6.75rem' }}>

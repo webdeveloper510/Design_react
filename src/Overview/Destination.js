@@ -6,7 +6,8 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ImageSliderComponent from '../router/slider';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';

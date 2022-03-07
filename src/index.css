@@ -46,4 +46,5 @@ nav.navbar.navbar-expand-lg.navbar-light {
 }
 .tabs li.nav-item {
   padding: 0px 10px 0px 0px;
+  margin-bottom: 0px;
 }

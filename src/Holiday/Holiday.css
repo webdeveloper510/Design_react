@@ -461,6 +461,9 @@ div#bars .col-md-2 {
   padding: 8px 10px;
   color: white;
 }
+.lead h5 {
+  color: white;
+}
 
 .passenger {
   background: white;

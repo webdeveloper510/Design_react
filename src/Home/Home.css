@@ -17,7 +17,9 @@ button.btn.btn-secondary p {
     margin: 0px;
     font-size: 15px;
 }
-
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: 100% !important;
+}
 button.btn.btn-secondary {padding: 0px 13px;}
 div#navbarSupportedContent {
     z-index: 9;
