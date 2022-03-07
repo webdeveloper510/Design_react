@@ -12,6 +12,16 @@ import ImageSliderComponent from '../router/slider';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
+import rome  from "../../public/rome.png";
+import beach  from "../../public/beach.png";
+import paphos  from "../../public/paphos.png";
+import Meze  from "../../public/Meze.png";
+import Layer1   from "../../public/Layer1.png";
+import Layer2   from "../../public/Layer2.png";
+import Layer3   from "../../public/Layer3.png";
+import salad   from "../../public/salad.png";
+import grilled   from "../../public/grilled.png";
+
 function Destination() {
     function toggleNumbers() {
         console.log('here')
@@ -432,7 +442,7 @@ function Destination() {
                                        <label >Rooms & Guests</label>
                                        <div className="input-group mb-3">
                                         <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
-                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='rome' src="rome.png"/></button>
+                                        <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='rome' src={rome}/></button>
                                       </div>
                                        </div>
                                       <div className="col-md-2 text-center">
@@ -718,7 +728,7 @@ function Destination() {
                             Alternatively, the shallow waters of Fig Tree Bay are perfect for families with young children, and Aphrodite’s Beach is a great choice for swimming and sightseeing.</p>
                         </div>
                         <div className='col-md-7'>
-                            <img src='beach.png' height='100%'  alt='rome' className='img-fluid'/>
+                            <img src={beach} height='100%'  alt='rome' className='img-fluid'/>
                         </div>
                     </div>
                 </div>
@@ -825,7 +835,7 @@ function Destination() {
                     <h3 className="my-5">Featured Cyprus Destinations</h3>
                     <div className="row">
                         <div className="col-md-8 overhead">
-                            <img  alt='rome' src="paphos.png" className="img-fluid w-100 h-100" />
+                            <img  alt='rome' src={paphos} className="img-fluid w-100 h-100" />
                             <div className="Layer2">
                                 <h3>Paphos</h3>
                                 <p>A cosmopolitan destination with vibrant bars,<br/>
@@ -837,7 +847,7 @@ function Destination() {
                             </div>
                         </div>
                         <div className="col-md-4 overhead">
-                            <img  alt='rome' src="Layer3.png" className="img-fluid w-100" />
+                            <img  alt='rome' src={Layer3} className="img-fluid w-100" />
                             <div className="Layer">
                                 <h3>Ayia Napa</h3>
                                 <p>Lively or relaxed resorts with <br/>
@@ -852,7 +862,7 @@ function Destination() {
                     <div className="row my-2">
 
                         <div className="col-md-4 overhead">
-                            <img  alt='rome' src="Layer1.png" className="img-fluid w-100" />
+                            <img  alt='rome' src={Layer1} className="img-fluid w-100" />
                             <div className="Layer">
                                 <h3>Limassol</h3>
                                 <p>Shimmering reefs, spicy salsa,<br/> reggae, pirate hideouts to sugar <br/> sand beaches</p>
@@ -862,7 +872,7 @@ function Destination() {
                         </div>
 
                         <div className="col-md-8 overhead">
-                            <img  alt='rome' src="Layer2.png" className="img-fluid w-100" />
+                            <img  alt='rome' src={Layer2} className="img-fluid w-100" />
                             <div className="Layer2">
                                 <h3>Nissi Beach</h3>
                                 <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
@@ -884,21 +894,21 @@ function Destination() {
                    <div className='row'>
                        <div className='col-md-4'>
                            <div className='card1 darkblue'>
-                               <img src="salad.png" className="img-fluid"  alt='rome'/>
+                               <img src={salad} className="img-fluid"  alt='rome'/>
                                <h3>Greek Salad</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>
                        </div>
                        <div className='col-md-4'>
                        <div className='card1 darkblue'>
-                               <img src="grilled.png" className="img-fluid"  alt='rome'/>
+                               <img src={grilled} className="img-fluid"  alt='rome'/>
                                <h3>Grilled Halloumi</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>
                        </div>
                        <div className='col-md-4'>
                        <div className='card1 darkblue'>
-                               <img src="Meze.png" className="img-fluid"  alt='rome'/>
+                               <img src={Meze} className="img-fluid"  alt='rome'/>
                                <h3>Meze</h3>
                                <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
                            </div>
