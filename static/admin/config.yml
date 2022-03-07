@@ -21,10 +21,8 @@ collections:
     label: "Home Page Banner"
     folder: "content/banner"
     create: true
-    filter:
-    field: language
     value: en
-    widget:object
+    widget:"object"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "BannerTitle", name: "bannerTitle", widget: "string", default: "Hello Holidays"}
