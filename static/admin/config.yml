@@ -8,8 +8,8 @@ collections:
   - name: "homepage"
     label: "HomePage"
     folder: "content/homepage"
-    create: true
-    slug: "{{year}}-{{slug}}"
+    create: false
+    slug: "{{year}}"
     widget: "object"
     fields:
       - label: "Banner"
