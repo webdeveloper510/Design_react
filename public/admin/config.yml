@@ -5,30 +5,18 @@ backend:
 media_folder: "./" # Media files will be stored in the repo under static/images/uploads
 public_folder: "./" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "homepage" 
+    label: "HomePage"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "homepage"
-    label: "Home Page"
-    folder: "content/homepage"
-    create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}"
     widget: "object"
     fields:
-      - {label: "Banner", name: "banner", widget: "object", default: ""}
-        fields: 
-          - {name: bannerTitle, label: Banner Title, required: true, widget: text },
+      - label: "Banner"
+        name: "banner"
+        widget: "object"
+        fields:
+          - {name: bannerTitle, label: Banner Title, required: true, widget: "text" }
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
-      
-     
-     
