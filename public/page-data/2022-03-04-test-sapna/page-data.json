@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2022-03-04-test-sapna/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Gatsby Starter Blog"}},"markdownRemark":{"id":"ca97972b-adc6-59bc-99ea-89ee0ad701ff","excerpt":"my first blog","html":"<p>my first blog</p>","frontmatter":{"title":"Test sapna","date":"March 04, 2022","description":null}},"previous":{"fields":{"slug":"/new-beginnings/"},"frontmatter":{"title":"New Beginnings"}},"next":{"fields":{"slug":"/2022-03-04-testing/"},"frontmatter":{"title":"Testing"}}},"pageContext":{"id":"ca97972b-adc6-59bc-99ea-89ee0ad701ff","previousPostId":"794f8d64-f8cf-5f5c-9884-b5cfe9362b2b","nextPostId":"11b0050f-91cf-59ff-8db2-6f3bcfdc82b5"}},
-    "staticQueryHashes": ["2841359383","3257411868"]}

@@ -11,14 +11,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
+        markdownRemark {
+          id
+          fields{
+            slug
+          }
+          excerpt(pruneLength: 160)
+          html
+          frontmatter {
+            banner{
+              bannerTitle
+              descriptionBanner
+              offerBanner
+              image
             }
           }
         }
@@ -34,27 +39,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const banner = result.data.markdownRemark
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+  if (banner) {
+   // posts.forEach((post, index) => {
+   
 
       createPage({
-        path: post.fields.slug,
+        path: banner.fields.slug,
         component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
+        result:banner.banner
+        
       })
-    })
+   // })
   }
 }
 

@@ -70,41 +70,28 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug{
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark{
       id
+      fields{
+        slug
+      }
       excerpt(pruneLength: 160)
-      html
       frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
+        banner{
+          bannerTitle
+          offerBanner
+          descriptionBanner
+          image
+        }
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
+   
+  
   }
 `

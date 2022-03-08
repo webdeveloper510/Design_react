@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/2022-03-04-hello-monday/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Gatsby Starter Blog"}},"markdownRemark":{"id":"29a5b042-d6ef-5cc1-aed5-7c10d5257731","excerpt":"Thank you","html":"<p>Thank you</p>","frontmatter":{"title":"Hello Monday","date":"March 04, 2022","description":null}},"previous":{"fields":{"slug":"/2022-03-04-hello-world-gatsby/"},"frontmatter":{"title":"Hello World gatsby"}},"next":null},"pageContext":{"id":"29a5b042-d6ef-5cc1-aed5-7c10d5257731","previousPostId":"d746b256-d952-529f-84b1-8403e174dd95","nextPostId":null}},
-    "staticQueryHashes": ["2841359383","3257411868"]}
