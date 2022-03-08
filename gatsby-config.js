@@ -23,6 +23,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/homepage`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -97,8 +104,13 @@ module.exports = {
                       slug
                     }
                     frontmatter {
-                      title
-                      date
+                      banner{
+                        bannerTitle
+                        descriptionBanner
+                        offerBanner
+                        image
+                      }
+                      
                     }
                   }
                 }

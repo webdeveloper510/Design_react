@@ -18,8 +18,9 @@ import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const banner = data.markdownRemark
-
+  const banner = data.markdownRemark.frontmatter
+console.log(banner)
+ 
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
   let decrementCounter = () => setCounter(counter - 1);
@@ -610,7 +611,7 @@ const BlogIndex = ({ data, location }) => {
 
 
           </div>
-          <div className="Hello" >
+          <div className="Hello">
             <div className="container">
               <div className="row">
                 <div className="col-md-6"></div>
@@ -618,20 +619,21 @@ const BlogIndex = ({ data, location }) => {
                 <div className="col-md-4">
                   <div className="summer-text">
                     <img alt='' src="smile.png" />
-                    <h3 className="mb-3"></h3>
+                    <h3 className="mb-3">{banner.banner.bannerTitle} </h3>
 
 
 
-                    <p className="mb-3">
-
+                    <p className="mb-3"><span className="redcolor">
+                    {banner.banner.offerBanner}
+                      </span>
                       {/* <span className="redcolor">Save up to £750 per person </span> on
                       selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>,
                       <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>. */}
                       <br /><br />
-              
                       {/* Great deals, with a price match
                       promise &<span className="redcolor"> deposits from £30 </span>, say
                       hello to holidays that make you smile. */}
+                       {banner.banner.descriptionBanner}
                       </p>
                     <div className="text-right">
                       <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
@@ -873,12 +875,12 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </div>
         <div className="gatsby">
-          <ol style={{ listStyle: `none` }}>
-            {
-          //  posts.map(post => {
-             // const title = banner.frontmatter.title || post.fields.slug
+          {/* <ol style={{ listStyle: `none` }}>
+            {posts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
 
-                <li key={banner.fields.slug}>
+              return (
+                <li key={post.fields.slug}>
                   <article
                     className="post-list-item"
                     itemScope
@@ -886,26 +888,25 @@ const BlogIndex = ({ data, location }) => {
                   >
                     <header>
                       <h2>
-                        <Link to={banner.fields.slug} itemProp="url">
-                          <span itemProp="headline">{}</span>
+                        <Link to={post.fields.slug} itemProp="url">
+                          <span itemProp="headline">{title}</span>
                         </Link>
                       </h2>
-                     
+                      <small>{post.frontmatter.date}</small>
                     </header>
                     <section>
-                      {/* <p
+                      <p
                         dangerouslySetInnerHTML={{
                           __html: post.frontmatter.description || post.excerpt,
                         }}
                         itemProp="description"
-                      /> */}
+                      />
                     </section>
                   </article>
                 </li>
-             
-           // })
-            }
-          </ol>
+              )
+            })}
+          </ol> */}
 
         </div>
         <div className="container">
@@ -1040,20 +1041,15 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark{
-      id
-      fields{
-        slug
-      }
-      excerpt(pruneLength: 160)
-      frontmatter {
-        banner{
-          bannerTitle
-          offerBanner
-          descriptionBanner
-          image
+    markdownRemark {
+        frontmatter {
+          banner {
+            bannerTitle
+            descriptionBanner
+            image
+            offerBanner
+          }
         }
       }
     }
-  }
 `
