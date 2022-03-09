@@ -20,3 +20,11 @@ collections:
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
+      - label: "Looking For"
+        name: "lookingFor"
+        widget: "object"
+        fields:
+          - {name: title, label: Title, required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+      

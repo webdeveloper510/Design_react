@@ -611,7 +611,7 @@ console.log(banner)
 
 
           </div>
-          <div className="Hello">
+          <div className="Hello" style={{backgroundImage: "url(" + banner.banner.image + ")"}}>
             <div className="container">
               <div className="row">
                 <div className="col-md-6"></div>
