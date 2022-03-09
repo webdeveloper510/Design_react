@@ -109,6 +109,11 @@ module.exports = {
                         description
                         image1
                       }
+                      destinations{
+                        dTitle
+                        ddescription
+                        dimage
+                      }
                       
                     }
                   }
