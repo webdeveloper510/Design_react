@@ -30,11 +30,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               description
               image1
             }
-            destinations{
-              dtitle
-              ddescription
-              dimage
-            }
+            
           }
         }
       }
