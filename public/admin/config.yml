@@ -20,13 +20,6 @@ collections:
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
-  - name: "lookingfor"
-    label: "Looking For"
-    folder: "content/homepage"
-    create: true
-    slug: "looking-for"
-    widget: "object"
-    fields:
       - label: "Looking For Section"
         name: "lookingForSection"
         widget: "object"
