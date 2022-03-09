@@ -726,11 +726,13 @@ console.log(sections)
               </div>
             </div>
             <div className="col-md-4 overhead">
-              <img alt='' src="Layer3.png" className="img-fluid w-100" />
+              <img alt='' src={ sections.destinations2.image } className="img-fluid w-100" />
               <div className="over">
-                <h3>Italy & the lakes</h3>
-                <p>Culture, beauty, beaches & sights<br />
-                  From Italy with love...</p>
+                <h3>{ sections.destinations2.title }</h3>
+                <p>{ sections.destinations2.description }
+                {/* <br />
+                  From Italy with love... */}
+                  </p>
                 <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
               </div>
@@ -740,21 +742,23 @@ console.log(sections)
           <div className="row my-2">
 
             <div className="col-md-4 overhead">
-              <img alt='' src="Layer1.png" className="img-fluid w-100" />
+              <img alt='' src={ sections.destinations3.image } className="img-fluid w-100" />
               <div className="over">
-                <h3>Carribean</h3>
-                <p>Shimmering reefs, spicy salsa, reggae,<br /> pirate hideouts to sugar sand beaches</p>
+                <h3>{ sections.destinations3.title }</h3>
+                <p>{ sections.destinations3.description }</p>
                 <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
               </div>
             </div>
 
             <div className="col-md-8 overhead">
-              <img alt='' src="Layer2.png" className="img-fluid w-100" />
+              <img alt='' src={ sections.destinations4.image } className="img-fluid w-100" />
               <div className="over1">
-                <h3>Holidays to the Balearic Islands</h3>
-                <p>Majorca, Ibiza & Menorca. Beautiful coves<br />
-                  & historic old towns make<br /> these Islands the perfect getaway</p>
+                <h3>{ sections.destinations4.d4title }</h3>
+                <p>{ sections.destinations4.description }
+                {/* <br />
+                  & historic old towns make<br /> these Islands the perfect getaway */}
+                  </p>
                 <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
               </div>
@@ -857,16 +861,16 @@ console.log(sections)
           </div>
         </div>
 
-        <div className="summer">
+        <div className="summer" style={{backgroundImage: "url(" + sections.bookNow.image + ")"}}>
           <div className="container">
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-5">
                 <div className="summer-text">
-                  <h3 className="mb-5">Book now for Summer 2022</h3>
-                  <p className="mb-5">With our safe booking policy, it’s now even more secure to book your 2022 holidays.
+                  <h3 className="mb-5">{ sections.bookNow.title }</h3>
+                  <p className="mb-5">{ sections.bookNow.description1 }
                     <br /><br />
-                    Search now and secure your next holiday with low deposits starting from £30 per person.</p>
+                    { sections.bookNow.description2 }</p>
                   <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
               </div>
             </div>
@@ -1056,6 +1060,27 @@ export const pageQuery = graphql`
             dtitle
             ddescription
             dimage
+          }
+          destinations2{
+            title
+            description
+            image
+          }
+          destinations3{
+            title
+            description
+            image
+          }
+          destinations4{
+            d4title
+            description
+            image
+          }
+          bookNow{
+            title
+            description1
+            description2
+            image
           }
         
       }

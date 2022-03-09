@@ -114,6 +114,27 @@ module.exports = {
                         ddescription
                         dimage
                       }
+                      destinations2{
+                        title
+                        description
+                        image
+                      }
+                      destinations3{
+                        title
+                        description
+                        image
+                      }
+                      destinations4{
+                        d4title
+                        description
+                        image
+                      }
+                      bookNow{
+                        title
+                        description1
+                        description2
+                        image
+                      }
                       
                     }
                   }
