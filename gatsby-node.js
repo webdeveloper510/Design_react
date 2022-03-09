@@ -24,11 +24,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               descriptionBanner
               offerBanner
               image
+            }
+            lookingForSection{
               title
               description
               image1
             }
-            
           }
         }
       }

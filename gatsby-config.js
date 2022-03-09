@@ -103,10 +103,13 @@ module.exports = {
                         descriptionBanner
                         offerBanner
                         image
+                      }
+                      lookingForSection{
                         title
                         description
                         image1
                       }
+                      
                     }
                   }
                 }
