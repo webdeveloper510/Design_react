@@ -18,8 +18,8 @@ import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const banner = data.markdownRemark.frontmatter
-console.log(banner)
+  const sections = data.markdownRemark.frontmatter
+console.log(sections)
  
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
@@ -611,7 +611,7 @@ console.log(banner)
 
 
           </div>
-          <div className="Hello" style={{backgroundImage: "url(" + banner.banner.image + ")"}}>
+          <div className="Hello" style={{backgroundImage: "url(" + sections.banner.image + ")"}}>
             <div className="container">
               <div className="row">
                 <div className="col-md-6"></div>
@@ -619,12 +619,12 @@ console.log(banner)
                 <div className="col-md-4">
                   <div className="summer-text">
                     <img alt='' src="smile.png" />
-                    <h3 className="mb-3">{banner.banner.bannerTitle} </h3>
+                    <h3 className="mb-3">{sections.banner.bannerTitle} </h3>
 
 
 
                     <p className="mb-3"><span className="redcolor">
-                    {banner.banner.offerBanner}
+                    {sections.banner.offerBanner}
                       </span>
                       {/* <span className="redcolor">Save up to £750 per person </span> on
                       selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>,
@@ -633,7 +633,7 @@ console.log(banner)
                       {/* Great deals, with a price match
                       promise &<span className="redcolor"> deposits from £30 </span>, say
                       hello to holidays that make you smile. */}
-                       {banner.banner.descriptionBanner}
+                       {sections.banner.descriptionBanner}
                       </p>
                     <div className="text-right">
                       <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
@@ -716,12 +716,10 @@ console.log(banner)
           <h3 className="my-5">Featured Destinations</h3>
           <div className="row">
             <div className="col-md-8 overhead">
-              <img alt='' src="Layer4.png" className="img-fluid w-100" />
+              <img alt='' src={ sections.destinations.dimage } className="img-fluid w-100" />
               <div className="over1">
-                <h3>Holidays to Greece & cyprus</h3>
-                <p>Amazing deals on all-inclusive holidays with<br />
-                  up to £750 off per couple and<br />
-                  1000’s of free kid’s places</p>
+                <h3>{ sections.destinations.dtitle }</h3>
+                <p>{ sections.destinations.ddescription }</p>
 
                 <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
 
