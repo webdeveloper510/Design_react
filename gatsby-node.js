@@ -25,6 +25,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               offerBanner
               image
             }
+            lookingForSection{
+              title
+              description
+              image1
+            }
           }
         }
       }
@@ -39,22 +44,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const banner = result.data.markdownRemark
+  const sections = result.data.markdownRemark
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (banner) {
+  if (sections) {
    // posts.forEach((post, index) => {
    
-
+    console.log(sections) 
       createPage({
-        path: banner.fields.slug,
+        path: sections.fields.slug,
         component: blogPost,
-        result:banner.banner
+        result:sections
         
       })
+
+      // createPage({
+      //   path: sections.fields.slug,
+      //   component: blogPost,
+      //   result:sections.lookingForSection
+        
+      // })
    // })
   }
 }

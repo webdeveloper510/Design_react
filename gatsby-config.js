@@ -104,6 +104,11 @@ module.exports = {
                         offerBanner
                         image
                       }
+                      lookingForSection{
+                        title
+                        description
+                        image1
+                      }
                       
                     }
                   }

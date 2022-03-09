@@ -1049,6 +1049,11 @@ export const pageQuery = graphql`
             image
             offerBanner
           }
+          lookingForSection{
+            title
+            description
+            image1
+          }
         
       }
     }
