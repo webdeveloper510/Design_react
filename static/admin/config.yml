@@ -8,7 +8,7 @@ collections:
   - name: "homepage" 
     label: "HomePage"
     folder: "content/homepage"
-    create: true
+    create: false
     slug: "{{year}}"
     widget: "object"
     fields:
@@ -26,17 +26,46 @@ collections:
         fields:
           - {name: "title", label: "Title", required: true, widget: "text" }
           - {label: "Description", name: "description", widget: "string"}
-          - {label: "Image1", name: "image1", widget: "image"}
+          - {label: "Image", name: "image1", widget: "image"}
           - {name: "title2", label: "Title", required: true, widget: "text" }
-          - {label: "Image2", name: "image2", widget: "image"}
+          - {label: "Image", name: "image2", widget: "image"}
           - {name: "title3", label: "Title", required: true, widget: "text" }
-          - {label: "Image3", name: "image3", widget: "image"}
+          - {label: "Image", name: "image3", widget: "image"}
       - label: "Destinations"
         name: "destinations"
         widget: "object"
         fields:
-          - {name: "dtitle", label: "Title", required: true, widget: "text" }
-          - {label: "Description", name: "ddescription", widget: "string"}
-          - {label: "Image1", name: "dimage", widget: "image"}
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "dimage", widget: "image"}
+      - label: "Destinations2"
+        name: "destinations2"
+        widget: "object"
+        fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Destinations3"
+        name: "destinations3"
+        widget: "object"
+        fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Destinations4"
+        name: "destinations4"
+        widget: "object"
+        fields:
+          - {name: "d4title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "Book Now"
+        name: "bookNow"
+        widget: "object"
+        fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description1", name: "description1", widget: "string"}
+          - {label: "Description2", name: "description2", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
 
       
