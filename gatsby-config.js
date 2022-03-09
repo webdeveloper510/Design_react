@@ -110,7 +110,7 @@ module.exports = {
                         image1
                       }
                       destinations{
-                        dTitle
+                        dtitle
                         ddescription
                         dimage
                       }

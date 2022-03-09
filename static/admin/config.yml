@@ -31,7 +31,7 @@ collections:
         name: "destinations"
         widget: "object"
         fields:
-          - {name: "title", label: "dTitle", required: true, widget: "text" }
+          - {name: "dtitle", label: "Title", required: true, widget: "text" }
           - {label: "Description", name: "ddescription", widget: "string"}
           - {label: "Image1", name: "dimage", widget: "image"}
 

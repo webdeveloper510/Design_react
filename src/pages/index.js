@@ -1055,7 +1055,7 @@ export const pageQuery = graphql`
             image1
           }
           destinations{
-            dTitle
+            dtitle
             ddescription
             dimage
           }
