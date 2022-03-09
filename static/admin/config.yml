@@ -16,7 +16,23 @@ collections:
         name: "banner"
         widget: "object"
         fields:
-          - {name: bannerTitle, label: Banner Title, required: true, widget: "text" }
+          - {name: "bannerTitle", label: "Banner Title", required: true, widget: "text" }
           - {label: "OfferBanner", name: "offerBanner", widget: "string"}
           - {label: "DescriptionBanner", name: "descriptionBanner", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
+  - name: "lookingfor"
+    label: "Looking For"
+    folder: "content/homepage"
+    create: true
+    slug: "looking-for"
+    widget: "object"
+    fields:
+      - label: "Looking For Section"
+        name: "lookingForSection"
+        widget: "object"
+        fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image1", name: "image1", widget: "image"}
+
+      
