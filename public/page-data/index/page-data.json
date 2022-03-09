@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Gatsby Starter Blog"}},"markdownRemark":{"frontmatter":{"banner":{"bannerTitle":"Hello Holidays123","descriptionBanner":"Great deals, with a price match promise & deposits from £30 , say hello to holidays that make you smile.","image":"home-alternate.png","offerBanner":"Save up to £750 per person on selected holidays to Greece , Spain ,Portugal & Italy ."}}}},"pageContext":{}},
-    "staticQueryHashes": ["2841359383","3257411868"]}
+    "result": {"data":{"site":{"siteMetadata":{"title":"Gatsby Starter Blog"}},"markdownRemark":{"frontmatter":{"banner":{"bannerTitle":"Hello Holidays","descriptionBanner":"Great deals, with a price match promise & deposits from £30 , say hello to holidays that make you smile.","image":"home-alternate.png","offerBanner":"Save up to £750 per person on selected holidays to Greece , Spain ,Portugal & Italy ."}}}},"pageContext":{}},
+    "staticQueryHashes": []}

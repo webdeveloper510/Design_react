@@ -12,9 +12,9 @@ import { faPlane, faAngleRight, faStar } from '@fortawesome/pro-solid-svg-icons'
 import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+// import Bio from "../components/bio"
+// import Layout from "../components/layout"
+// import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -1049,7 +1049,8 @@ export const pageQuery = graphql`
             image
             offerBanner
           }
-        }
+        
       }
     }
+  }
 `
