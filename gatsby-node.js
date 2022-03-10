@@ -19,6 +19,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           excerpt(pruneLength: 160)
           html
           frontmatter {
+            homepageSeo{
+              title
+              description
+              url
+              image
+            }
             banner{
               bannerTitle
               descriptionBanner

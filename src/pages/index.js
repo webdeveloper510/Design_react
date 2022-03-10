@@ -1046,6 +1046,12 @@ export const pageQuery = graphql`
     }
     markdownRemark {
         frontmatter {
+          homepageSeo{
+            title
+            description
+            url
+            image
+          }
           banner {
             bannerTitle
             descriptionBanner
