@@ -93,10 +93,12 @@ collections:
       - {label: "Description", name: "description2", widget: "string"}
       - label: "SecondSection"
         name: "secondsection"
+        widget: "object"
         fields:
           - {name: "title2", label: "Title", required: true, widget: "text" }
       - label: "OfferBanner"
         name: "offerBanner"
+        widget: "object"
         fields: 
           - {name: "smallText", label: "title", required: true, widget: "text" }
           - {label: "Description", name: "description1", widget: "string"}
@@ -108,6 +110,7 @@ collections:
           - {label: "Description", name: "description4", widget: "string"}
       - label: "ThirdSection"
         name: "thirdsection"
+        widget: "object"
         fields:
           - {name: "title", label: "Title", required: true, widget: "text" }
           - {label: "Description", name: "description1", widget: "string"}      
