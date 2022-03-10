@@ -79,35 +79,14 @@ collections:
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-  - name: "pages"
+  - name: "destination" 
+    label: "Destination"
+    folder: "content/destination"
     create: true
-    slug: "{{year}}"
-    widget: list
-    folder: "content/homepage"
-    label: "Pages"
+    slug: "Destination overview"
+    identifier_field: slug
     fields:
-      - label: "About Page"
-        name: "about"
-        folder: "content/homepage"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-      - label: "Locations Page"
-        name: "locations"
-        folder: "content/homepage"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}    
+      - {name: "title", label: "Title", required: true, widget: "text" }
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Description", name: "description1", widget: "string"}
+      - {label: "Description", name: "description2", widget: "string"}   
