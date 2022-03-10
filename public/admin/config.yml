@@ -91,8 +91,8 @@ collections:
         name: "destinationPage"
         widget: "object"
         fields:
-           - {name: "title", label: "Title", required: true, widget: "text" }
-           - {label: "Description", name: "description", widget: "string"}
+           - {name: "destinationtitle", label: "Title", required: true, widget: "text" }
+           - {label: "Description", name: "descriptiontext", widget: "string"}
            - {label: "Description", name: "description1", widget: "string"}
            - {label: "Description", name: "description2", widget: "string"}   
       - label: "SecondSection"
