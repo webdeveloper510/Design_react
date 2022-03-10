@@ -81,7 +81,7 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
   - name: "destinationpage" 
     label: "Destinationpage"
-    folder: "content/destination"
+    folder: "content/homepage"
     create: true
     widget: "object"
     slug: "Destination overview"
@@ -91,14 +91,12 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Description", name: "description1", widget: "string"}
       - {label: "Description", name: "description2", widget: "string"}
-      - label: "secondsection"
-        name: "SecondSection"
-        widget: "object"
+      - label: "SecondSection"
+        name: "secondsection"
         fields:
           - {name: "title2", label: "Title", required: true, widget: "text" }
       - label: "OfferBanner"
         name: "offerBanner"
-        widget: "object"
         fields: 
           - {name: "smallText", label: "title", required: true, widget: "text" }
           - {label: "Description", name: "description1", widget: "string"}
@@ -108,9 +106,8 @@ collections:
           - {label: "Description", name: "description3", widget: "string"}
           - {name: "smallText3", label: "title", required: true, widget: "text" }
           - {label: "Description", name: "description4", widget: "string"}
-      - label: "thirdsection"
-        name: "ThirdSection"
-        widget: "object"
+      - label: "ThirdSection"
+        name: "thirdsection"
         fields:
           - {name: "title", label: "Title", required: true, widget: "text" }
           - {label: "Description", name: "description1", widget: "string"}      
