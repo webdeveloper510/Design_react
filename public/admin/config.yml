@@ -11,6 +11,7 @@ collections:
     create: false
     slug: "{{year}}"
     widget: "object"
+    identifier_field: "Homapage Data Sections"
     fields:
       - label: "Banner"
         name: "banner"
@@ -67,5 +68,15 @@ collections:
           - {label: "Description1", name: "description1", widget: "string"}
           - {label: "Description2", name: "description2", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
-
+  - name: "homepageSeo" 
+      label: "HomePageSeo"
+      folder: "content/homepage"
+      create: false
+      slug: "seo-homepage"
+      identifier_field: "Homapage Seo Data"
+      fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Url", name: "url", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
       

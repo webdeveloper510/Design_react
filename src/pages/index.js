@@ -14,7 +14,7 @@ import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 
 // import Bio from "../components/bio"
 // import Layout from "../components/layout"
-// import Seo from "../components/seo"
+ import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -104,6 +104,7 @@ console.log(sections)
   }
   return (
     <>
+    <Seo title="sdf"/>
       <Header />
       <section>
         <div className="banner pt-5">
