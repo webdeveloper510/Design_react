@@ -79,31 +79,38 @@ collections:
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "About Page"
-        name: "about"
-        folder: "content/homepage"
+  - name: "destinationpage" 
+    label: "Destinationpage"
+    folder: "content/destination"
+    create: true
+    widget: "object"
+    slug: "Destination overview"
+    identifier_field: slug
+    fields:
+      - {name: "title", label: "Title", required: true, widget: "text" }
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Description", name: "description1", widget: "string"}
+      - {label: "Description", name: "description2", widget: "string"}
+      - label: "secondsection"
+        name: "SecondSection"
+        widget: "object"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-      - label: "Locations Page"
-        name: "locations"
-        folder: "content/homepage"
+          - {name: "title2", label: "Title", required: true, widget: "text" }
+      - label: "OfferBanner"
+        name: "offerBanner"
+        widget: "object"
+        fields: 
+          - {name: "smallText", label: "title", required: true, widget: "text" }
+          - {label: "Description", name: "description1", widget: "string"}
+          - {name: "smallText1", label: "title", required: true, widget: "text" }
+          - {label: "Description", name: "description2", widget: "string"}
+          - {name: "smallText2", label: "title", required: true, widget: "text" }
+          - {label: "Description", name: "description3", widget: "string"}
+          - {name: "smallText3", label: "title", required: true, widget: "text" }
+          - {label: "Description", name: "description4", widget: "string"}
+      - label: "thirdsection"
+        name: "ThirdSection"
+        widget: "object"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}    
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description1", widget: "string"}      
