@@ -84,7 +84,7 @@ collections:
     slug: "{{year}}"
     folder: "content/homepage"
     label: "Pages"
-    files:
+    fields:
       - label: "About Page"
         name: "about"
         folder: "content/homepage"
