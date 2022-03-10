@@ -95,6 +95,7 @@ collections:
            - {label: "Description", name: "descriptiontext", widget: "string"}
            - {label: "Description", name: "description1", widget: "string"}
            - {label: "Description", name: "description2", widget: "string"}   
+           - {label: "images", name: "beechimage", widget: "image"}   
       - label: "SecondSection"
         name: "secondsection"
         widget: "object"
