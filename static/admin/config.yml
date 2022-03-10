@@ -80,6 +80,9 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
   - name: "pages"
+    create: false
+    slug: "{{year}}"
+    folder: "content/homepage"
     label: "Pages"
     files:
       - label: "About Page"
