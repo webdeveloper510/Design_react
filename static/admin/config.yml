@@ -87,10 +87,14 @@ collections:
     slug: "Destination overview"
     identifier_field: slug
     fields:
-      - {name: "title", label: "Title", required: true, widget: "text" }
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Description", name: "description1", widget: "string"}
-      - {label: "Description", name: "description2", widget: "string"}
+      - label: "DestinationPage"
+        name: "destinationPage"
+        widget: "object"
+        fields:
+           - {name: "title", label: "Title", required: true, widget: "text" }
+           - {label: "Description", name: "description", widget: "string"}
+           - {label: "Description", name: "description1", widget: "string"}
+           - {label: "Description", name: "description2", widget: "string"}   
       - label: "SecondSection"
         name: "secondsection"
         widget: "object"
