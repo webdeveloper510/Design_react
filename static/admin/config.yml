@@ -89,4 +89,24 @@ collections:
       - {name: "title", label: "Title", required: true, widget: "text" }
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Description", name: "description1", widget: "string"}
-      - {label: "Description", name: "description2", widget: "string"}   
+      - {label: "Description", name: "description2", widget: "string"}
+      - label: "secondsection"
+        name: "SecondSection"
+        fields:
+          - {name: "title", label: "Title2", required: true, widget: "text" }
+          - label: "OfferBanner"
+            name: "offerBanner"
+            fields: 
+              - {name: "title", label: "smallText", required: true, widget: "text" }
+              - {label: "Description", name: "description1", widget: "string"}
+              - {name: "title", label: "smallText1", required: true, widget: "text" }
+              - {label: "Description", name: "description2", widget: "string"}
+              - {name: "title", label: "smallText2", required: true, widget: "text" }
+              - {label: "Description", name: "description3", widget: "string"}
+              - {name: "title", label: "smallText3", required: true, widget: "text" }
+              - {label: "Description", name: "description4", widget: "string"}
+      - label: "thirdsection"
+        name: "ThirdSection"
+        fields:
+          - {name: "title", label: "Title", required: true, widget: "text" }
+          - {label: "Description", name: "description1", widget: "string"}      
