@@ -98,12 +98,10 @@ module.exports = {
                       slug
                     }
                     frontmatter {
-                      homepageSeo{
-                        title
-                        description
-                        url
-                        image
-                      }
+                      title
+                      description
+                      url
+                      image
                       banner{
                         bannerTitle
                         descriptionBanner

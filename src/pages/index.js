@@ -104,7 +104,7 @@ console.log(sections)
   }
   return (
     <>
-    <Seo title="sdf"/>
+    <Seo title={sections.title} description={sections.description} image={sections.image} url={sections.url} />
       <Header />
       <section>
         <div className="banner pt-5">
@@ -1046,12 +1046,11 @@ export const pageQuery = graphql`
     }
     markdownRemark {
         frontmatter {
-          homepageSeo{
-            title
-            description
-            url
-            image
-          }
+          title
+          description
+          url
+          image
+   
           banner {
             bannerTitle
             descriptionBanner

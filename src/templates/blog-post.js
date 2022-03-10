@@ -83,12 +83,12 @@ export const pageQuery = graphql`
       }
       excerpt(pruneLength: 160)
       frontmatter {
-        homepageSeo{
-          title
-          description
-          url
-          image
-        }
+      
+        title
+        description
+        url
+        image
+        
         banner{
           bannerTitle
           offerBanner
