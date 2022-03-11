@@ -84,7 +84,7 @@ collections:
     create: true
     widget: "list"
     folder: "content/destination"
-    path: "{{slug}}"
+    path: "destination"
     fields:
       - label: "Destination"
         name: "destination"
