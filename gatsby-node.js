@@ -60,13 +60,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               description2
               image
             }
-            destination{
-              name
-              section1Title
-              section1{
-                description
-              }
-            }
           }
         }
       }

@@ -1088,7 +1088,6 @@ export const pageQuery = graphql`
             description2
             image
           }
-          
         
       }
     }
