@@ -732,7 +732,7 @@ function toggleNumbers5() {
                     </p>
                 </div>
                 <div className='col-md-7'>
-                    <img src={beach} height='100%'  alt='rome' className='img-fluid'/>
+                    <img src={ sections.destinationPage.beechimage } height='100%'  alt='rome' className='img-fluid'/>
                 </div>
             </div>
         </div>
@@ -975,6 +975,7 @@ export const pageQuery = graphql`
           descriptiontext
           destinationtitle
           title
+          beechimage
         }
         secondsection {
           title2

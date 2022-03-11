@@ -211,7 +211,7 @@ span.redcolor {
     line-height: 20px;
 }
 .over1 button.btn.btn-primary.float-right {
-    margin-top: -39px;
+    margin-top: -19px;
 }
 .row {
     --bs-gutter-x: 0.5rem;
@@ -565,6 +565,7 @@ a.text-yellow:hover {
     padding: 13px;
     left: 21px;
     bottom: 30px;
+    width: 70%;
 }     
 .over1 {
     background: #ffffffc4;
@@ -572,6 +573,7 @@ a.text-yellow:hover {
     padding: 13px;
     left: 21px;
     bottom: 30px;
+    width: 50%;
 }
 .last-section p {
     color: #033672;
@@ -886,6 +888,7 @@ span.Review {
     padding: 13px;
     left: 21px;
     bottom: 30px;
+    width: 70%;
 }     
 .Layer2 {
     background: #ffffffc4;
@@ -893,6 +896,7 @@ span.Review {
     padding: 13px;
     left: 21px;
     bottom: 30px;
+    width: 49%;
 }
 
 .Layer h3 {
