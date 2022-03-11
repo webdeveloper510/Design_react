@@ -79,43 +79,25 @@ collections:
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-  - name: "destinationpage" 
-    label: "Destinationpage"
-    folder: "content/homepage"
-    create: true
-    widget: "object"
-    slug: "Destination overview"
-    identifier_field: slug
-    fields:
-      - label: "DestinationPage"
-        name: "destinationPage"
-        widget: "object"
+  - name: "destinations"
+    label: "Destinations"
+    description: "Destinations List"
+    files:
+      - label: "Destination"
+        name: "destination"
+        file: "content/destination"
         fields:
-           - {name: "destinationtitle", label: "Title", required: true, widget: "text" }
-           - {label: "Description", name: "descriptiontext", widget: "string"}
-           - {label: "Description", name: "description1", widget: "string"}
-           - {label: "Description", name: "description2", widget: "string"}   
-           - {label: "images", name: "beechimage", widget: "image"}   
-      - label: "SecondSection"
-        name: "secondsection"
-        widget: "object"
-        fields:
-          - {name: "title2", label: "Title", required: true, widget: "text" }
-      - label: "OfferBanner"
-        name: "offerBanner"
-        widget: "object"
-        fields: 
-          - {name: "smallText", label: "title", required: true, widget: "text" }
-          - {label: "Description", name: "description1", widget: "string"}
-          - {name: "smallText1", label: "title", required: true, widget: "text" }
-          - {label: "Description", name: "description2", widget: "string"}
-          - {name: "smallText2", label: "title", required: true, widget: "text" }
-          - {label: "Description", name: "description3", widget: "string"}
-          - {name: "smallText3", label: "title", required: true, widget: "text" }
-          - {label: "Description", name: "description4", widget: "string"}
-      - label: "ThirdSection"
-        name: "thirdsection"
-        widget: "object"
-        fields:
-          - {name: "title", label: "Title", required: true, widget: "text" }
-          - {label: "Description", name: "description1", widget: "string"}      
+          - label: "Destination List"
+            name: "destinationList"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "text"}
+              - {label: "Section1 Title", name: "section1Title", widget: "text"}
+              - label: "Section1", 
+                 name: "section1", 
+                 widget: "list",
+                 fields: 
+                   - {label: "Description", name: "description", widget: "text"}
+                 
+              
+              
