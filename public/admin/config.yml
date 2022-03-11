@@ -86,23 +86,27 @@ collections:
     folder: "content/destination"
     path: "destination"
     fields:
-      - label: "Destination"
-        name: "destination"
-        widget: "object"
-        fields:
-            [
-              { label: "Name", name: "name", widget: "text"},
-              { label: "Section1 Title", name: "section1Title", widget: "text"},
-              {
-                label:  "Section1",
-                name:   "section1",
-                widget: "list",
-                fields:
-                    [
-                      { label: Description, name: description, widget: text }
-                    ],
-              }
-            ]
+           { 
+              label: "Destination",
+              name: "destination",
+              widget: "list",
+              fields:
+                [
+                    { label: "Name", name: "name", widget: "text"},
+                    { label: "Section1 Title", name: "section1Title", widget: "text"},
+                    {
+                      label:  "Section1",
+                      name:   "section1",
+                      widget: "list",
+                      fields:
+                          [
+                            { label: Description, name: description, widget: text }
+                          ],
+                    }
+                ]
+           }
+          
+          
             
               
               
