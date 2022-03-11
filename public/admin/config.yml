@@ -94,15 +94,15 @@ collections:
               widget: "list",
               fields:
                   [
-                    { label: "Name", name: "name", widget: "text"}
-                    { label: "Section1 Title", name: "section1Title", widget: "text"}
+                    { label: "Name", name: "name", widget: "text"},
+                    { label: "Section1 Title", name: "section1Title", widget: "text"},
                     {
                       label:  "Section1",
                       name:   "section1",
                       widget: "list",
                       fields:
                           [
-                            { label: Description, name: description, widget: text },
+                            { label: Description, name: description, widget: text }
                           ],
                     }
                   ]
