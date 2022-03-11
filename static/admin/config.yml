@@ -84,7 +84,7 @@ collections:
     create: true
     widget: "object"
     folder: "content/destination"
-    path: "{{name}}.md"
+    path: "{{name}}"
     fields:
         [
           { label: "Name", name: "name", widget: "text"},
