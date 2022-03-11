@@ -79,14 +79,14 @@ collections:
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-  - name: "destinationsList"
-    label: "Destinations List"
-    description: "Destinations List"
+  - name: "destination"
+    label: "Destination"
     create: true
+    widget: "object"
     files:
       - label: "Destination"
         name: "destination"
-        file: "content/destination/destination.md"
+        file: "content/destination/{{name}}.md"
         fields:
           - { 
               label: "Destination List",
