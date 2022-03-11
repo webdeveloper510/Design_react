@@ -86,19 +86,26 @@ collections:
     files:
       - label: "Destination"
         name: "destination"
-        file: "content/destination"
+        file: "content/destination/destination.md"
         fields:
-          - label: "Destination List"
-            name: "destinationList"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "text"}
-              - {label: "Section1 Title", name: "section1Title", widget: "text"}
-              - label:  "Section1"
-                name:   "section1"
-                widget: "list"
-                fields: 
-                   - {label: "Description", name: "description", widget: "text"}
-                 
+          - { 
+              label: "Destination List",
+              name: "destinationList",
+              widget: "list",
+              fields:
+                  [
+                    { label: "Name", name: "name", widget: "text"}
+                    { label: "Section1 Title", name: "section1Title", widget: "text"}
+                    {
+                      label:  "Section1",
+                      name:   "section1",
+                      widget: "list",
+                      fields:
+                          [
+                            { label: Description, name: description, widget: text },
+                          ],
+                    }
+                  ]
+            } 
               
               
