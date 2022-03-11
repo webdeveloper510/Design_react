@@ -79,9 +79,10 @@ collections:
       - {label: "Url", name: "url", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-  - name: "destinations"
-    label: "Destinations"
+  - name: "destinationsList"
+    label: "Destinations List"
     description: "Destinations List"
+    create: true
     files:
       - label: "Destination"
         name: "destination"
@@ -93,10 +94,10 @@ collections:
             fields:
               - {label: "Name", name: "name", widget: "text"}
               - {label: "Section1 Title", name: "section1Title", widget: "text"}
-              - label: "Section1", 
-                 name: "section1", 
-                 widget: "list",
-                 fields: 
+              - label:  "Section1"
+                name:   "section1"
+                widget: "list"
+                fields: 
                    - {label: "Description", name: "description", widget: "text"}
                  
               
