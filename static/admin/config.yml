@@ -84,21 +84,21 @@ collections:
     create: true
     widget: "object"
     folder: "content/destination"
-    path:   "{{name}}.md"
-        fields:
-            [
-              { label: "Name", name: "name", widget: "text"},
-              { label: "Section1 Title", name: "section1Title", widget: "text"},
-              {
-                label:  "Section1",
-                name:   "section1",
-                widget: "list",
-                fields:
-                    [
-                      { label: Description, name: description, widget: text }
-                    ],
-              }
-            ]
+    path: "{{name}}.md"
+    fields:
+        [
+          { label: "Name", name: "name", widget: "text"},
+          { label: "Section1 Title", name: "section1Title", widget: "text"},
+          {
+            label:  "Section1",
+            name:   "section1",
+            widget: "list",
+            fields:
+                [
+                  { label: Description, name: description, widget: text }
+                ],
+          }
+        ]
             
               
               
