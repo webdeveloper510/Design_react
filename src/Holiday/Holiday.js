@@ -16,6 +16,7 @@ import { faCalendar, faAngleRight, faUser } from '@fortawesome/pro-solid-svg-ico
 import { faStar  } from '@fortawesome/pro-solid-svg-icons';
 import { faPlaneDeparture as solidfaPlaneDeparture } from '@fortawesome/pro-solid-svg-icons';
 import { faPlaneDeparture, faSuitcaseRolling, faHeart } from '@fortawesome/pro-regular-svg-icons';
+import {Helmet} from "react-helmet";
 const images1 = [
     {
         original: 'Layer4.png',
@@ -308,6 +309,11 @@ function Holiday() {
     }
     return (
         <>
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Holiday</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <Header/>
         <section>
             <div className="tabs" id="tabs" style={{ display: 'none', marginTop: '8%' }}>

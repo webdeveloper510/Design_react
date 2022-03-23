@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./Home.css"
 import { useState } from 'react';
 import Calendar from 'react-calendar'
@@ -9,9 +9,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
+import {Helmet} from "react-helmet";
+
 
 function Home() {
+  const baseURL = "http://localhost:3000/v1";
   const [counter, setCounter] = useState(1);
+  const [meta, setMeta] = useState({});
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    getHomePageData()
+  },[]);
+  async function getHomePageData() {
+    try {
+       const res = fetch(`${baseURL}/pagemeta/homepage`)
+       const data =  (await res).json().then(res1=>{
+         setMeta(res1)
+       })
+  
+    } catch (err) {
+    //  setGetResult(err.message);
+    }
+  }
+
+
   const incrementCounter = () => setCounter(counter + 1);
   let decrementCounter = () => setCounter(counter - 1);
   if(counter<=1) {
@@ -94,6 +116,12 @@ function Home() {
   }
     return (
       <>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>{ meta.metatitle }</title>
+                <meta name="description" content={meta.metadescription}></meta>
+                <link rel="canonical" href={meta.canonical} />
+            </Helmet>
        <Header/>
     <section>
         <div className="banner pt-5">
