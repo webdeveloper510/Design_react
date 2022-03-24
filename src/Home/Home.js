@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import {
+  Link
+} from "react-router-dom";
 import "./Home.css"
 import { useState } from 'react';
 import Calendar from 'react-calendar'
@@ -16,16 +19,53 @@ function Home() {
   const baseURL = "http://localhost:3000/v1";
   const [counter, setCounter] = useState(1);
   const [meta, setMeta] = useState({});
+  const [section1, setSection1] = useState({});
+  const [section2, setSection2] = useState({});
+  const [section3, setSection3] = useState({});
+  const [section4, setSection4] = useState({});
+  const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
     // Update the document title using the browser API
     getHomePageData()
+    getHomePageSections()
+    getDestinationList()
   },[]);
   async function getHomePageData() {
     try {
        const res = fetch(`${baseURL}/pagemeta/homepage`)
        const data =  (await res).json().then(res1=>{
          setMeta(res1)
+       })
+  
+    } catch (err) {
+    //  setGetResult(err.message);
+    }
+  }
+  async function getDestinationList() {
+    try {
+       const res = fetch(`${baseURL}/destination/list`)
+       const data =  (await res).json().then(res1=>{
+           console.log(res1)
+         setDestinations(res1)
+       })
+  
+    } catch (err) {
+    //  setGetResult(err.message);
+    }
+  }
+
+  async function getHomePageSections() {
+    try {
+       const res = fetch(`${baseURL}/homepage/sections`)
+       const data =  (await res).json().then(res1=>{
+         //console.log(res1)
+         setSection1(res1.find(section=> { return section.type=='section1' } ))
+         setSection2(res1.find(section=> { return section.type=='section2' } ))
+         setSection3(res1.find(section=> { return section.type=='section3' } ))
+         setSection4(res1.find(section=> { return section.type=='section4' } ))
+         console.log(section4)
+         //setMeta(res1)
        })
   
     } catch (err) {
@@ -629,7 +669,7 @@ function Home() {
                 
         
         </div>
-        <div className="Hello">
+        <div className="Hello" style={{backgroundImage:'url('+section1.background+')'}}>
            <div className="container">
            <div className="row">
              <div className="col-md-6"></div>
@@ -637,17 +677,30 @@ function Home() {
                        <div className="col-md-4">
                            <div className="summer-text">
                            <img  alt='' src="smile.png"/>
-                             <h3 className="mb-3">Hello Holidays</h3>
+                             <h3 className="mb-3">{ section1.title }</h3>
                             
                              
                                
-                             <p className="mb-3"><span className="redcolor">Save up to £750 per person </span> on 
+                             <p className="mb-3 redcolor" ><span className="redcolor">{ section1.description1 }</span>
+                             {/* <span className="redcolor">Save up to £750 per person </span> on 
                                   selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
                                   <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
                                   <br/><br/>
                                   Great deals, with a price match 
                                   promise &<span className="redcolor"> deposits from £30 </span>, say 
-                                  hello to holidays that make you smile.</p>
+                                  hello to holidays that make you smile. */}
+                                  
+                                  </p>
+                                  <p className="mb-3">{ section1.description2 }
+                             {/* <span className="redcolor">Save up to £750 per person </span> on 
+                                  selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
+                                  <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
+                                  <br/><br/>
+                                  Great deals, with a price match 
+                                  promise &<span className="redcolor"> deposits from £30 </span>, say 
+                                  hello to holidays that make you smile. */}
+                                  
+                                  </p>
                                   <div className="text-right">
                                   <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
                          </div>
@@ -681,101 +734,62 @@ function Home() {
                {/* second Section */}
               
                <div className="container">
-                 <h3  className="my-5">I am looking for...?</h3>
+                 <h3  className="my-5">{ section2.title }</h3>
+                 {section2.sections?
                   <div className="row">
-                    <div className="col-md-6">
-                        <div className="family">
-                        <div className="bannerpack">
-                                <h3>Family Holidays </h3>
-                             </div>
-                         <div className="overlay1">
-                         
-                           <div className="row">
-                             <div className="col-md-7 col-7">
-                             <p>last minute deals <br/>
-                                from £129 per person</p>
-                             </div>
-                              <div className="col-md-5 mt-3 col-5 text-right">
-                                <button className="btn btn-primary" type="button">Search Deals
-                                  </button>
+                
+                    {
+                    section2.sections.map(sectionn=>{
+                          return <div style={{width:sectionn.percentage+'% '}}>
+                          <div className="family" style={{backgroundImage:'url('+sectionn.image+')'}}>
+                          <div className="bannerpack">
+                                  <h3>{ sectionn.title }</h3>
                               </div>
-                           </div>
-                           </div>
-                          </div>
-                      </div>
-                      <div className="col-md-2">
-                        <div className="flight">
-                      <div className="bannerpack">
-                                <h3>Flights  </h3>
-                             </div>
-                             </div>
-                       
+                          <div className="overlay1">
+                          
+                            <div className="row">
+                              <div className="col-md-7 col-7">
+                              <p>{ sectionn.description }</p>
+                              </div>
+                                <div className="col-md-5 mt-3 col-5 text-right">
+                                  <button className="btn btn-primary" type="button">Search Deals
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="holiday">
-                            <div className="bannerpack">
-                                <h3>All Inclusive Holidays   </h3>
-                             </div>
-                                <div className=" overlay2 text-right">
-                                   <button className="btn btn-primary" type="button">
-                                   Search Deals
-                                   </button>
-                                  </div>
-                              </div>
-                          </div>
+                    })
+                  }
+                  
+                     
                     </div>
+                    : null }
                </div>
                <div className="container">
-                 <h3 className="my-5">Featured Destinations</h3>
+                 <h3 className="my-5">{ section3.title }</h3>
+                 {section3.sections?
                  <div className="row">
-                   <div className="col-md-8 overhead">
-                       <img  alt='' src="Layer4.png" className="img-fluid w-100"/>
-                       <div className="over1">
-                          <h3>Holidays to Greece & cyprus</h3>
-                          <p>Amazing deals on all-inclusive holidays with<br/>
-                              up to £750 off per couple and<br/>
-                              1000’s of free kid’s places</p>
+                 {
+                    section3.sections.map(sectionns=>{
+                   return <div className="overhead my-1" style={{width:sectionns.percentage+'% '}}>
+                       <img  alt='' src={ sectionns.image } className="img-fluid w-100"/>
+                       <div className={ sectionns.percentage < 50 ? 'over' : 'over1'}>
+                          <h3>{ sectionns.title }</h3>
+                          <p> { sectionns.description }</p>
                               
                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
                                
                          </div>
                      </div>
-                     <div className="col-md-4 overhead">
-                     <img  alt='' src="Layer3.png" className="img-fluid w-100"/>
-                     <div className="over">
-                      <h3>Italy & the lakes</h3>
-                      <p>Culture, beauty, beaches & sights<br/>
-                          From Italy with love...</p>
-                          <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-                               
-                         </div>
+                     })
+                    }
+
+                    
                        </div>
-                       </div>
+                  : null }
                   
-                   <div className="row my-2">
                   
-                     <div className="col-md-4 overhead">
-                     <img  alt='' src="Layer1.png" className="img-fluid w-100"/>
-                     <div className="over">
-                      <h3>Carribean</h3>
-                      <p>Shimmering reefs, spicy salsa, reggae,<br/> pirate hideouts to sugar sand beaches</p>
-                      <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-                               
-                         </div>
-                     </div>
-                      
-                       <div className="col-md-8 overhead">
-                       <img  alt='' src="Layer2.png" className="img-fluid w-100"/>
-                       <div className="over1">
-                          <h3>Holidays to the Balearic Islands</h3>
-                          <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
-                            & historic old towns make<br/> these Islands the perfect getaway</p>
-                            <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-                               
-                         </div>
-                     </div>
-                 
-                   </div>
                    </div>
                    <div className="container my-4 ">
                    <h3 className="my-3">Package Holiday Deals</h3>
@@ -872,16 +886,15 @@ function Home() {
                        </div>
                </div>
                   
-                  <div className="summer">
+                  <div className="summer" style={{backgroundImage:'url('+section4.background+')'}}>
                     <div className="container">
                     <div className="row">
                       <div className="col-md-1"></div>
                        <div className="col-md-5">
                            <div className="summer-text">
-                             <h3 className="mb-5">Book now for Summer 2022</h3>
-                             <p className="mb-5">With our safe booking policy, it’s now even more secure to book your 2022 holidays.
-                                  <br/><br/>
-                                  Search now and secure your next holiday with low deposits starting from £30 per person.</p>
+                             <h3 className="mb-5">{ section4.title }</h3>
+                             <p className="mb-5">{ section4.description1 }</p>
+                             <p className="mb-5">{ section4.description2 }</p>
                                   <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
                          </div>
                       </div>
@@ -890,50 +903,19 @@ function Home() {
                   <div className="container">
                     <h3 className="my-3 px-4">Popular Destinations</h3>
                     <div className="row text-darkblue">
-                       <div className="col-md-3 px-5">
-                         <p><a rel="noreferrer"href="">Ibiza </a><br/>
-                         <a rel="noreferrer"href="#"> Majorca</a><br/>
-                         <a rel="noreferrer"href="#">Crete</a><br/>
-                         <a rel="noreferrer"href="#"> Cyprus</a><br/>
-                         <a rel="noreferrer"href="#"> Portugal</a><br/>
-                         <a rel="noreferrer"href="#"> Turkey</a><br/>
-                         <a rel="noreferrer"href="#"> Greece</a><br/>
-                         <a rel="noreferrer"href="#"> Zante</a>
+                    {
+                    destinations.map(destination=>{
+                      return <div className="col-md-3 px-5">
+                         <p>
+                         <Link to={'/destination/'+destination.id}>{ destination.title }</Link>
+                               
+                    
+                  
                             </p>
                          </div>
-                         <div className="col-md-3 px-5">
-                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
-                         <a rel="noreferrer"href="#"> Majorca</a><br/>
-                         <a rel="noreferrer"href="#"> Crete</a><br/>
-                         <a rel="noreferrer"href="#">Cyprus</a><br/>
-                         <a rel="noreferrer"href="#">Portugal</a><br/>
-                         <a rel="noreferrer"href="#"> Turkey</a><br/>
-                         <a rel="noreferrer"href="#">Greece</a><br/>
-                         <a rel="noreferrer"href="#"> Zante</a>
-                            </p>
-                         </div>
-                         <div className="col-md-3 px-5">
-                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
-                         <a rel="noreferrer"href="#"> Majorca</a><br/>
-                         <a rel="noreferrer"href="#"> Crete</a><br/>
-                         <a rel="noreferrer"href="#"> Cyprus</a><br/>
-                         <a rel="noreferrer"href="#">  Portugal</a><br/>
-                         <a rel="noreferrer"href="#"> Turkey</a><br/>
-                         <a rel="noreferrer"href="#"> Greece</a><br/>
-                         <a rel="noreferrer"href="#">  Zante</a>
-                            </p>
-                         </div>
-                         <div className="col-md-3 px-5">
-                         <p><a rel="noreferrer"href="">Ibiza</a><br/>
-                         <a rel="noreferrer"href="#">Majorca</a><br/>
-                         <a rel="noreferrer"href="#">Crete</a><br/>
-                         <a rel="noreferrer"href="#">Cyprus</a><br/>
-                         <a rel="noreferrer"href="#">Portugal</a><br/>
-                         <a rel="noreferrer"href="#">Turkey</a><br/>
-                         <a rel="noreferrer"href="#">Greece</a><br/>
-                         <a rel="noreferrer"href="#">Zante</a>
-                            </p>
-                         </div>
+                         })
+                        }
+                         
                       </div>
                   </div>
                      

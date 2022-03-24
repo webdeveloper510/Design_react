@@ -4,10 +4,6 @@ import ImageGallery from "react-image-gallery";
 
 const images = [
   {
-    original: "cyprus.png",
-    thumbnail: "cyprus.png",
-  },
-  {
     original: "https://picsum.photos/id/1015/1000/400/",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
   },
