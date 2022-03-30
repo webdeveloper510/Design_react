@@ -16,7 +16,7 @@ import {Helmet} from "react-helmet";
 
 
 function Home() {
-  const baseURL = "http://localhost:3000/v1";
+  const baseURL = "http://138.68.163.128:3000/v1";
   const [counter, setCounter] = useState(1);
   const [meta, setMeta] = useState({});
   const [section1, setSection1] = useState({});
