@@ -250,7 +250,7 @@ function Home() {
                                             <label >Duration</label>
                                             
                                             <select className="form-select" id="inputGroupSelect01">
-                                                <option selected>7 Nights</option>
+                                                <option value="DEFAULT">7 Nights</option>
                                                 <option value="1">1 Night</option>
                                                 <option value="2"> 2 Nights</option>
                                                 <option value="3">3 Nights</option>
@@ -306,7 +306,7 @@ function Home() {
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>I don't mind</option>
+                                                                  <option value="DEFAULT">I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -321,7 +321,7 @@ function Home() {
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -337,7 +337,7 @@ function Home() {
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -369,7 +369,7 @@ function Home() {
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -393,7 +393,7 @@ function Home() {
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -503,7 +503,7 @@ function Home() {
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>I don't mind</option>
+                                                                  <option value="DEFAULT">I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -518,7 +518,7 @@ function Home() {
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -534,7 +534,7 @@ function Home() {
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -566,7 +566,7 @@ function Home() {
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -590,7 +590,7 @@ function Home() {
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option selected>Choose...</option>
+                                                                  <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -669,7 +669,7 @@ function Home() {
                 
         
         </div>
-        <div className="Hello" style={{backgroundImage:'url('+section1.background+')'}}>
+        <div className="Hello" style={{backgroundImage:'url('+section1?.background+')'}}>
            <div className="container">
            <div className="row">
              <div className="col-md-6"></div>
@@ -677,11 +677,11 @@ function Home() {
                        <div className="col-md-4">
                            <div className="summer-text">
                            <img  alt='' src="smile.png"/>
-                             <h3 className="mb-3">{ section1.title }</h3>
+                             <h3 className="mb-3">{ section1?.title }</h3>
                             
                              
                                
-                             <p className="mb-3 redcolor" ><span className="redcolor">{ section1.description1 }</span>
+                             <p className="mb-3 redcolor" ><span className="redcolor">{ section1?.description1 }</span>
                              {/* <span className="redcolor">Save up to £750 per person </span> on 
                                   selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
                                   <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
@@ -691,7 +691,7 @@ function Home() {
                                   hello to holidays that make you smile. */}
                                   
                                   </p>
-                                  <p className="mb-3">{ section1.description2 }
+                                  <p className="mb-3">{ section1?.description2 }
                              {/* <span className="redcolor">Save up to £750 per person </span> on 
                                   selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
                                   <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
@@ -734,12 +734,12 @@ function Home() {
                {/* second Section */}
               
                <div className="container">
-                 <h3  className="my-5">{ section2.title }</h3>
-                 {section2.sections?
+                 <h3  className="my-5">{ section2?.title }</h3>
+                 {section2?.sections?
                   <div className="row">
                 
                     {
-                    section2.sections.map(sectionn=>{
+                    section2?.sections.map(sectionn=>{
                           return <div style={{width:sectionn.percentage+'% '}}>
                           <div className="family" style={{backgroundImage:'url('+sectionn.image+')'}}>
                           <div className="bannerpack">
@@ -767,11 +767,11 @@ function Home() {
                     : null }
                </div>
                <div className="container">
-                 <h3 className="my-5">{ section3.title }</h3>
-                 {section3.sections?
+                 <h3 className="my-5">{ section3?.title }</h3>
+                 {section3?.sections?
                  <div className="row">
                  {
-                    section3.sections.map(sectionns=>{
+                    section3?.sections.map(sectionns=>{
                    return <div className="overhead my-1" style={{width:sectionns.percentage+'% '}}>
                        <img  alt='' src={ sectionns.image } className="img-fluid w-100"/>
                        <div className={ sectionns.percentage < 50 ? 'over' : 'over1'}>
@@ -886,15 +886,15 @@ function Home() {
                        </div>
                </div>
                   
-                  <div className="summer" style={{backgroundImage:'url('+section4.background+')'}}>
+                  <div className="summer" style={{backgroundImage:'url('+section4?.background+')'}}>
                     <div className="container">
                     <div className="row">
                       <div className="col-md-1"></div>
                        <div className="col-md-5">
                            <div className="summer-text">
-                             <h3 className="mb-5">{ section4.title }</h3>
-                             <p className="mb-5">{ section4.description1 }</p>
-                             <p className="mb-5">{ section4.description2 }</p>
+                             <h3 className="mb-5">{ section4?.title }</h3>
+                             <p className="mb-5">{ section4?.description1 }</p>
+                             <p className="mb-5">{ section4?.description2 }</p>
                                   <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
                          </div>
                       </div>

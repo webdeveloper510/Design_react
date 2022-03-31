@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.9f066a88.chunk.css",
-    "main.js": "/static/js/main.34c59113.chunk.js",
-    "main.js.map": "/static/js/main.34c59113.chunk.js.map",
+    "main.js": "/static/js/main.064eb912.chunk.js",
+    "main.js.map": "/static/js/main.064eb912.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4da0ee49.js",
     "runtime-main.js.map": "/static/js/runtime-main.4da0ee49.js.map",
     "static/css/2.a08bd4c9.chunk.css": "/static/css/2.a08bd4c9.chunk.css",
-    "static/js/2.f6db594f.chunk.js": "/static/js/2.f6db594f.chunk.js",
-    "static/js/2.f6db594f.chunk.js.map": "/static/js/2.f6db594f.chunk.js.map",
+    "static/js/2.cc8c4c9f.chunk.js": "/static/js/2.cc8c4c9f.chunk.js",
+    "static/js/2.cc8c4c9f.chunk.js.map": "/static/js/2.cc8c4c9f.chunk.js.map",
     "static/js/3.e6677626.chunk.js": "/static/js/3.e6677626.chunk.js",
     "static/js/3.e6677626.chunk.js.map": "/static/js/3.e6677626.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.a08bd4c9.chunk.css.map": "/static/css/2.a08bd4c9.chunk.css.map",
     "static/css/main.9f066a88.chunk.css.map": "/static/css/main.9f066a88.chunk.css.map",
-    "static/js/2.f6db594f.chunk.js.LICENSE.txt": "/static/js/2.f6db594f.chunk.js.LICENSE.txt",
+    "static/js/2.cc8c4c9f.chunk.js.LICENSE.txt": "/static/js/2.cc8c4c9f.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/static/media/soaked.1361269f.png",
     "static/media/Holiday.css": "/static/media/backgroundholi.6c2af5aa.png",
     "static/media/suntours_logo.cc19c5ec.svg": "/static/media/suntours_logo.cc19c5ec.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.4da0ee49.js",
     "static/css/2.a08bd4c9.chunk.css",
-    "static/js/2.f6db594f.chunk.js",
+    "static/js/2.cc8c4c9f.chunk.js",
     "static/css/main.9f066a88.chunk.css",
-    "static/js/main.34c59113.chunk.js"
+    "static/js/main.064eb912.chunk.js"
   ]
 }

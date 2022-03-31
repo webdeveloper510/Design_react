@@ -21,6 +21,7 @@
         "react-dom": "^17.0.2",
         "react-helmet": "^6.1.0",
         "react-image-gallery": "^1.2.7",
+        "react-render-html": "^0.6.0",
         "react-router-dom": "^6.2.1",
         "react-scripts": "4.0.3",
         "react-simple-image-slider": "^2.3.0",
@@ -31,7 +32,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "postbuild": "react-spa-prerender"
     },
     "eslintConfig": {
         "extends": [
@@ -50,5 +52,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "react-spa-prerender": "^1.0.14"
     }
 }
