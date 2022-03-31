@@ -915,6 +915,15 @@ span.Review {
 .Layer button.btn.btn-primary.float-right {
     margin-top: -30px;
 }
+.Layer2 {
+    width: 49%;
+}
+.Layer {
+    width: 70%;
+}
+.overhead img {
+    height: 100%;
+}
 
 .Layer2 h3 {
     text-transform: uppercase;

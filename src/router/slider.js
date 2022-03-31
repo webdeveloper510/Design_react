@@ -2,25 +2,20 @@ import React from "react";
 import "../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 
-const images = [
-  {
-    original: "https://picsum.photos/id/1015/1000/400/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1026/1000/400/",
-    thumbnail: "https://picsum.photos/id/1026/250/150/",
-  },
+let images = [
+
 ];
 
 class ImageSliderComponent extends React.Component {
   constructor(props) {
     super(props);
+    props.images.map(image=>{
+      images.push({
+        'original': image,
+        'thumbnail': image
+      })
+    })
     this.myImageRef = React.createRef();
-    // this.onFullscreen = this.onFullscreen.bind(this);
-    // this.onPlay = this.onPlay.bind(this);
-    // this.onPause = this.onPause.bind(this);
-    // this.onMoveToSlide = this.onMoveToSlide.bind(this);
   }
 
 //   onFullscreen() {

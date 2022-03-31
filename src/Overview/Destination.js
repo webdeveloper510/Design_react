@@ -1,6 +1,7 @@
 import React,{ useEffect } from 'react';
 import "../Home/Home.css"
 import { useState } from 'react';
+import { useParams } from "react-router-dom";
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
@@ -16,19 +17,78 @@ import {Helmet} from "react-helmet";
 
 function Destination() {
     const [counter, setCounter] = useState(1);
-    const baseURL = "http://138.68.163.128:3000/v1";
+    const baseURL = "http://localhost:3003/v1";
     const [meta, setMeta] = useState({});
+    const [destinationData, setDestinationData] = useState({});
+    const [section1, setSection1] = useState([]);
+    const [section2, setSection2] = useState([]);
+    const [section3, setSection3] = useState([]);
+    const [section4, setSection4] = useState([]);
+    const [section5, setSection5] = useState([]);
+    const [section6, setSection6] = useState([]);
+    const [section7, setSection7] = useState([]);
 
+    const { destinationName } = useParams()
+    
     useEffect(() => {
         // Update the document title using the browser API
+        getDestinationPageMetaData()
         getDestinationPageData()
       },[]);
-      async function getDestinationPageData() {
+      async function getDestinationPageMetaData() {
         try {
            const res = fetch(`${baseURL}/pagemeta/destination`)
            const data =  (await res).json().then(res1=>{
                console.log(res1)
              setMeta(res1)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
+
+      async function getDestinationPageData() {
+        try {
+           const res = fetch(`${baseURL}/destination/name/${destinationName}`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1,"herer")
+             setDestinationData(res1)
+             getDestinationPageSections(res1.id)
+             //console.log(destinationData.slides)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
+
+      async function getDestinationPageSections(id) {
+        try {
+           const res = fetch(`${baseURL}/destination/${id}/sections`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1,"herer1")
+               res1.map(section=>{
+                   if(section.type=='section1'){
+                       
+                    setSection1(section)
+                   }else if(section.type=='section2'){
+                    setSection2(section)
+                    }else if(section.type=='section3'){
+                        setSection3(section)
+                    }else if(section.type=='section4'){
+                        setSection4(section)
+                    }else if(section.type=='section5'){
+                        setSection5(section)
+                    }else if(section.type=='section6'){
+                        console.log(section,"6")
+                        setSection6(section)
+                    }else if(section.type=='section7'){
+                        setSection7(section)
+                    }
+               })
+               
+             //console.log(destinationData.slides)
            })
       
         } catch (err) {
@@ -627,15 +687,18 @@ function Destination() {
                                  </div>
                                
          </div> </div> </div> </div>
+         {destinationData.slides ? 
                     <div className="He">
-                    <ImageSliderComponent />
+                    <ImageSliderComponent images={destinationData.slides}/>
                     </div>
+                     : null }
                 </div>
+               
                 <div className='container'>
                     <nav aria-label="breadcrumb " className='mt-3'>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Destinations</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cyprus</li>
+                            <li class="breadcrumb-item active" aria-current="page">{destinationData.title}</li>
                         </ol>
                     </nav>
                 </div>
@@ -750,52 +813,58 @@ function Destination() {
                     </div>
                 </div>
 
-
-                    {/* Third Section */}
-                <div className='container'>
-                    <div className='row my-5'>
-                        <div className='col-md-5'>
-                            <h3 className='mb-4'>Best beaches in Cyprus</h3>
-                            <p>The beaches of Cyprus typically feature warm Mediterranean waters and fine sand. <br/>
-                            <br/>
-                            If you’re looking for a secluded sunbathing spot, head to Golden Beach – be sure to keep an eye out for shy wild 
-                            donkeys grazing nearby. <br/>
-                            <br/>
-                            Alternatively, the shallow waters of Fig Tree Bay are perfect for families with young children, and Aphrodite’s Beach is a great choice for swimming and sightseeing.</p>
-                        </div>
-                        <div className='col-md-7'>
-                            <img src='beach.png' height='100%' className='img-fluid'/>
-                        </div>
-                    </div>
-                </div>
-                 {/* 4th Section */}
                 
-                <div className='container'>
-                    <div className='thinks'>
-                        <h3 className='my-5'>Things to do in Cyprus</h3>
-                        <p> <b>Explore the Tombs of the Kings</b> <br/>
-                    To the west of the island, close to Paphos and surrounded by desert-like landscape, sit the Tombs of the Kings. This UNESCO World Heritage Site is an underground network of tunnels and chambers dating all the way back to 4th century BC. Exploring the Egyptian-inspired resting places will give you a real feel for ancient Cypriot history, and if you get there early you can avoid the afternoon hustle, bustle and heat.
-                    <br/><br/>
-                    <b>Spend the day at Lara Beach</b><br/>
-                    A short drive along a rocky road on the Akamas Peninsula will lead you to Lara Beach, a stretch of unspoilt coastline with a reputation for natural beauty. This is a quiet spot, but Lara Restaurant is on hand for beachside dining and drinks if you need a break from the sun. To preserve this piece of paradise, you won’t find sun loungers or parasols here – though you might spot some native sea turtles and monk seals if you’re lucky.
-                    <br/><br/>
-                    <b>Discover Emira Pottery</b><br/>
-                    About a five-minute walk from Finikoudes Beach in Larnaca you will find a hidden gem called Emira Pottery. This shop sells stunning ceramics, including traditional cooking pots and decorative vases, and also offers a history of Cypriot pottery-making techniques. Whether you pick an artfully-made original piece or channel the film Ghost by creating your own vase, you’re bound to find the perfect souvenir here.
-                    <br/><br/>
-                    <b>Take a tour of the Cyprus Wine Museum</b><br/>
-                    Immerse yourself in the vineyards and exhibits at the Cyprus Wine Museum, and learn about the island’s colourful history of wine making. When the short tour is done, head downstairs to taste the fruits of the vineyard’s labours - you might even meet the friendly cat that’s made the winery his home.</p>
+                    {/* Third Section */}
+                { section1? 
+                    <div className='container'>
+                        <div className='row my-5'>
+                            <div className='col-md-5'>
+                                <h3 className='mb-4'>{section1.title}</h3>
+                                {/* <p> section1.sections[0]['description'] : null}</p> */}
+                            </div>
+                            <div className='row'>
+                            { section1.sections ? section1.sections.map(sect=>{
+                               return <div style={{width:`${sect.percentage}%`}}>
+                                   <div >
+                                    <p>{sect.description}</p>
+                                </div>
+                                <div>
+                                    <img src={sect.image} height='100%' className='img-fluid'/>
+                                </div></div>
+                            })  : null }
+                               </div> 
+                            
+                            
+                        </div>
                     </div>
-                </div>
-
+                : null }
+                 {/* 4th Section */}
+                 { section2? 
+                    <div className='container'>
+                        <div className='thinks'>
+                            <h3 className='my-5'>{section2.title}</h3>
+                            {section2.sections? 
+                                section2.sections.map(sect1=>{
+                                    return <div style={{width:`${sect1.percentage}%`}}>
+                                        <p><b>{sect1.title}</b></p>
+                                        <p>{sect1.description}</p>
+                                    </div>
+                                })
+                            : null}
+                        </div>
+                    </div>
+                : null }
 
 
                   {/* 5th Section */}
+                  { section3? 
                   <div className='container'>
                       <div className="">
-                          <h3 className='my-5'>Whats the weather like in Cyprus?</h3>
+                          <h3 className='my-5'>{section3.title}</h3>
 
-                          <p className='mb-5'>Sun-soaked Cyprus offers an average 326 days of sunshine each year, making it a great choice for a brilliant beach break. Visit in July for average coastal temperatures where the thermometer 
-                           rarely drops below 27°C. Even if you choose to see the island in its low season – between November and February – the temperature tends to be a pleasantly mild 12°C on average.</p>
+                          <p className='mb-5'>
+                          {section3.description}
+                          </p>
                       </div>
                       <div className='soaked'>
                           <div className='soaked1'></div>
@@ -864,119 +933,92 @@ function Destination() {
                       </div>
                   </div>
 
-
+                  : null }
 
                 {/* 6th Section */}
+
+                { section4? 
                 <div className="container">
-                    <h3 className="my-5">Featured Cyprus Destinations</h3>
+                    <h3 className="my-5">{section4.title}</h3>
                     <div className="row">
-                        <div className="col-md-8 overhead">
-                            <img alt='' src="paphos.png" className="img-fluid w-100 h-100" />
-                            <div className="Layer2">
-                                <h3>Paphos</h3>
-                                <p>A cosmopolitan destination with vibrant bars,<br/>
-                                     outstanding resorts and some of the best<br/>
-                                      historic sights on the Island </p>
-
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-
-                            </div>
-                        </div>
-                        <div className="col-md-4 overhead">
-                            <img alt='' src="Layer3.png" className="img-fluid w-100" />
-                            <div className="Layer">
-                                <h3>Ayia Napa</h3>
-                                <p>Lively or relaxed resorts with <br/>
-                                     stunning beaches and long hot <br/>
-                                      summers</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-
-                            </div>
-                        </div>
+                        { section4.sections? 
+                        section4.sections.map(sect2=>{
+                            return  <div class="overhead my-1" style={{width:`${sect2.percentage}%`}}>
+                                        <img alt="" src={sect2.image} class="img-fluid w-100" />
+                                        <div class="over1"><h3>{sect2.title}</h3>
+                                        <p> {sect2.description}</p>
+                                        <button class="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; </button>
+                                        </div>
+                                </div>
+                                
+                               
+                        })
+                        
+                        : null }
                     </div>
 
-                    <div className="row my-2">
-
-                        <div className="col-md-4 overhead">
-                            <img alt='' src="Layer1.png" className="img-fluid w-100" />
-                            <div className="Layer">
-                                <h3>Limassol</h3>
-                                <p>Shimmering reefs, spicy salsa,<br/> reggae, pirate hideouts to sugar <br/> sand beaches</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-
-                            </div>
-                        </div>
-
-                        <div className="col-md-8 overhead">
-                            <img alt='' src="Layer2.png" className="img-fluid w-100" />
-                            <div className="Layer2">
-                                <h3>Nissi Beach</h3>
-                                <p>Majorca, Ibiza & Menorca. Beautiful coves<br/>
-                                  & historic old towns make these Islands the<br/> perfect getaway</p>
-                                <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-
-                            </div>
-                        </div>
-
-                    </div>
+                   
                 </div>
-                
+                : null }
                 {/* 7th Section */}
-            <div className='container'>
-                <div className='mt-5 darkblue' >
-                    <h3>Things to eat in Cyprus</h3>
-                    <p>From Turkish influences to cosy Greek tavernas, the food of Cyprus is certainly something to celebrate. Grilled halloumi is a must-try, as is lahmacun – the Turkish answer to pizza, which is often sprinkled with lamb and herbs. Meze meals and fresh fish are other common dining options, accompanied by locally-made fruit juices or spirits such as ouzo or the grape-based zivania.</p>
-               
-                   <div className='row'>
-                       <div className='col-md-4'>
-                           <div className='card1 darkblue'>
-                               <img src="salad.png" className="img-fluid"/>
-                               <h3>Greek Salad</h3>
-                               <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
-                           </div>
-                       </div>
-                       <div className='col-md-4'>
-                       <div className='card1 darkblue'>
-                               <img src="grilled.png" className="img-fluid"/>
-                               <h3>Grilled Halloumi</h3>
-                               <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
-                           </div>
-                       </div>
-                       <div className='col-md-4'>
-                       <div className='card1 darkblue'>
-                               <img src="Meze.png" className="img-fluid"/>
-                               <h3>Meze</h3>
-                               <p>A traditional Greek Salad consists of sliced cucumber, tomatoes, Kalamata olives, red onion, feta and oregano</p>
-                           </div>
-                       </div>
-                   </div>
+
+                { section5? 
+                <div className="container">
+                    <div className='mt-5 darkblue' >
+                        <h3>{section5.title}</h3>
+                        <p>{section5.description}</p>
+                
+                    <div className='row'>
+                        { section5.sections ? 
+                         section5.sections.map(sect3=>{
+                            return <div className='col-md-4'>
+                                        <div className='card1 darkblue'>
+                                            <img src={sect3.image} className="img-fluid"/>
+                                            <h3>{sect3.title}</h3>
+                                            <p>{sect3.description}</p>
+                                        </div>
+                                    </div>
+                         })
+                         : null }
+                        
+                    </div>
+                    </div>
+
                 </div>
+            : null }
 
-            </div>
-
+            { section6? 
             <div className='container'>
                 <div className='darkblue'>
-                    <h3>Cultural holidays in Cyprus</h3>
-
-                      <p>Greek traditions from the south of the island and Turkish culture from the north blend harmoniously to create the unique melting pot of Cypriot culture. Sample the full spectrum of this exciting country by checking out local festivals. Limassol offers a celebration of spring with a colourful parade called Anthestiriya and the theatrical Medieval Festival takes place in Ayia Napa during October - though there are many more to choose from.</p>
-
-                    <h3>Important Information about travelling to Cyprus</h3>
-
-                   <p><b>How long does it take to fly to Cyprus?</b></p> 
-                    <p>It takes about four and a half hours to fly to Cyprus from the UK.</p>
-
-                    <p><b>What’s the time difference between the UK and Cyprus?</b></p>
-                    <p>Cyprus is two hours ahead of the time in the UK.</p>
-
-                    <p><b> What currency do they use in Cyprus?</b></p>
-                    <p>The official currency of Cyprus is the Euro.</p>
-
-                    <p><b> What language do they speak in Cyprus?</b></p>
-                   <p> The official languages spoken in Cyprus are Greek and Turkish.</p>
-
+                    <h3>{section6.title}</h3>
+                    <p>{section6.description}</p>
+                    {section6.sections ? 
+                    section6.sections.map(sect4=>{
+                       <div> <h3>{sect4.title}</h3>
+                        <p>{sect4.description}</p>
+                        </div>
+                    })
+                    : null }
+                     
                      </div>
             </div>
-
+            : null }
+            { section7? 
+            <div className='container'>
+                <div className='darkblue'>
+                    <h3>{section7.title}</h3>
+                    <p>{section7.description}</p>
+                    {section7.sections ? 
+                    section7.sections.map(sect5=>{
+                       <div> <h3>{sect5.title}</h3>
+                        <p>{sect5.description}</p>
+                        </div>
+                    })
+                    : null }
+                     
+                     </div>
+            </div>
+            : null }
             </section>
             <Footer />
         </>
