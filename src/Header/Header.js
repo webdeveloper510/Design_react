@@ -1,6 +1,8 @@
 import React from 'react'
 import mainLogo from './suntours_logo.svg';
-
+import {
+  Link
+} from "react-router-dom";
 function header() {
   return (
     <div className="container narrow">
@@ -77,8 +79,11 @@ function header() {
                           <div className="col-md-4">
                             <h4 className="mb-4 holi">Holidays </h4>
                             <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                              <li className="list-group-item first">
+                                <Link to={'/holiday/'}>All-inclusive Holidays </Link>
+                              </li>
+                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a>
+                              </li>
                               <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
                               <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
                             </ul>
@@ -96,7 +101,8 @@ function header() {
 
                         <div className="text-right">
                           <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                            <li className="list-group-item">
+                            <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link></li>
                           </ul>
                         </div>
                       </div>

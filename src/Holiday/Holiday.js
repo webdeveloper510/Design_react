@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import SimpleImageSlider from "react-simple-image-slider";
 //import 'react-calendar/dist/Calendar.css';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
@@ -17,51 +18,22 @@ import { faStar  } from '@fortawesome/pro-solid-svg-icons';
 import { faPlaneDeparture as solidfaPlaneDeparture } from '@fortawesome/pro-solid-svg-icons';
 import { faPlaneDeparture, faSuitcaseRolling, faHeart } from '@fortawesome/pro-regular-svg-icons';
 import {Helmet} from "react-helmet";
-const images1 = [
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer4.png',
-    },
-    {
-        original: 'Layer4.png',
-        thumbnail: 'Layer2.png',
-    },
-];
+let images1 = []
+const baseURL = "http://138.68.163.128/v1";
 function Holiday() {
     const [value, onChange] = useState(new Date());
+    const [meta, setMeta] = useState({});
+    const [holidayData, setHolidayData] = useState({});
+    const [section1, setSection1] = useState([]);
+    const [section2, setSection2] = useState([]);
+    const [section3, setSection3] = useState([]);
+    const [section4, setSection4] = useState([]);
+    const [section5, setSection5] = useState([]);
+    const [section6, setSection6] = useState([]);
+    const [section7, setSection7] = useState([]);
 
+
+    const { holidayId } = useParams()
     const [multiple, setMultiple] = React.useState([
         '2022-01-11T00:00',
         '2022-01-16T00:00',
@@ -98,7 +70,82 @@ function Holiday() {
             setMultipleInvalid(bookings.invalid);
         });
     }, []);
+    useEffect(() => {
+        // Update the document title using the browser API
+        getHolidayPageMetaData()
+        getHolidayPageData()
+      },[]);
 
+      async function getHolidayPageMetaData() {
+        try {
+           const res = fetch(`${baseURL}/pagemeta/holiday`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1)
+             setMeta(res1)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
+     
+      async function getHolidayPageData() {
+        try {
+           const res = fetch(`${baseURL}/holiday/${holidayId}`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1,"herer")
+               formatSlides(res1.slides)
+             setHolidayData(res1)
+             getHolidayPageSections(res1.id)
+             //console.log(destinationData.slides)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
+      async function formatSlides(slides){
+        
+      slides.map(slide=>{
+        images1.push({
+              'original':slide,
+              'thumbnail':slide
+          })
+      })
+     //images1=arrayImage
+    }
+      async function getHolidayPageSections(id) {
+        try {
+           const res = fetch(`${baseURL}/holiday/${holidayId}/sections`)
+           const data =  (await res).json().then((res1)=>{
+               console.log(res1,"herer1")
+               res1.map(section=>{
+                   if(section.type=='section1'){
+                       
+                    setSection1(section)
+                   }else if(section.type=='section2'){
+                    setSection2(section)
+                    }else if(section.type=='section3'){
+                        setSection3(section)
+                    }else if(section.type=='section4'){
+                        setSection4(section)
+                    }else if(section.type=='section5'){
+                        setSection5(section)
+                    }else if(section.type=='section6'){
+                        console.log(section,"6")
+                        setSection6(section)
+                    }else if(section.type=='section7'){
+                        setSection7(section)
+                    }
+               })
+               
+             //console.log(destinationData.slides)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
     const getPrices = (d, callback) => {
         let invalid = [];
         let labels = [];
@@ -312,7 +359,7 @@ function Holiday() {
           <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Holiday</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <link rel="canonical" href="" />
             </Helmet>
         <Header/>
         <section>
@@ -871,7 +918,7 @@ function Holiday() {
                                 <div className='looked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img  alt='' src="eye.png" className='img-fluid' />
+                                            <img  alt='' src="../eye.png" className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>62 </b> others have <b>LOOKED </b> at this hotel in the last hour</p>
@@ -881,7 +928,7 @@ function Holiday() {
                                 <div className='booked'>
                                     <div className='row'>
                                         <div className='col-3'>
-                                            <img  alt='' src="bookplan.png" className='img-fluid' />
+                                            <img  alt='' src="../bookplan.png" className='img-fluid' />
                                         </div>
                                         <div className='col-9'>
                                             <p><b>40+</b> others have <b>BOOKED </b>  this hotel in the last 7 days</p>
@@ -894,7 +941,7 @@ function Holiday() {
                             </div>
                             <ImageGallery items={images1} showIndex />
                             <div className='float-right'>
-                                <img  alt='' src="holiday_listing.png" className='img-fluid' />
+                                <img  alt='' src="../holiday_listing.png" className='img-fluid' />
                             </div>
                             <div className="tabsss">
                             <p className="mt-3">
@@ -909,28 +956,57 @@ function Holiday() {
                                 </a>
                             </p>
                             </div>
+                            {section1? 
                             <div className="collapse show collap" id="collapseExample">
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official1 hotel rating: <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/> </p>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/> </p>
 
-                                        <b>Overview</b>
-                                        <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
-                                        </p>
-                                        <p> <b> How far is the nearest beach? </b></p>
-                                        <p>The Coral Beach is 50m from the beach.</p>
+                                        {section1.sections? 
 
-                                        <p> <b>Distance from Airport</b></p>
-                                        <p>  The Coral Beach is 28km from Paphos International Airport.</p>
-
-                                        <p> <b>Rooms </b></p>
-                                        <p>Rooms at the Coral Beach all feature a private bathroom, air conditioning, TV, Wi-Fi, hairdryer, telephone, safety deposit box, and a balcony or terrace.
-                                        </p>
-                                        <p style={{ cursor: 'pointer',color:'blue' }} onClick={room} id="hide">Show More</p>
+                                            <div >
+                                            { section1.sections.map((sect,i)=>{
+                                            return <div>
+                                                
+                                                {i<3 ? 
+                                                 <div><p><b>{sect.title}</b></p>
+                                                 <p>{sect.description}</p>
+                                                    {i==2 ? <p style={{ cursor: 'pointer',color:'blue' }} onClick={room} id="hide">Show More</p> : null}
+                                                 </div>
+                                                : 
+                                                
+                                                null
+                                                }
+                                               
+                                            </div>
+                                            }) }
+                                            <div id="show" style={{ display: 'none' }}>
+                                            { section1.sections.map((sect,i)=>{
+                                            return <div >
+                                                
+                                                {i>=3 ? 
+                                                 
+                                                 <div><p><b>{sect.title}</b></p>
+                                                 <p>{sect.description}</p>
+                                                     {i== section1.sections.length-1 ?  <p style={{ cursor: 'pointer',color:'blue' }} onClick={room}>Show less </p> : null}
+                                                 </div>
+                                                : 
+                                                
+                                                null
+                                                
+                                                
+                                                }
+                                               
+                                            </div>
+                                            }) }
+                                            </div>
+                                            </div>
+                                        : null}
+                                        {/* <p style={{ cursor: 'pointer',color:'blue' }} onClick={room} id="hide">Show More</p>
                                         <div id="show" style={{ display: 'none' }}>
                                             <p> <b>Food & Drink </b></p>
                                             <p>Coral Restaurant Cuisine: International Dress code: Casual Opening Hours Breakfast: 07:00 – 10:00 Lunch: 12:30 – 14:30 Dinner: 19:00 – 22:00 Reservations: Reservations not required.
@@ -941,10 +1017,11 @@ function Holiday() {
                                             <p>Guests can enjoy use of the hotel swimming pool, spa and fitness centre, sauna, Turkish bath, communal library, bicycle rental, kids playground, complimentary Wi-Fi throughout the property, and regular entertainment.
                                             </p>
                                             <p style={{ cursor: 'pointer',color:'blue' }} onClick={room}>Show less</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
+                            : null }
                             <div className="collapse collap" id="collapseExample1">
                                 <div className="card card-body">
                                     <div className='mt-3'>
@@ -1220,7 +1297,7 @@ function Holiday() {
                                             <div className='col-md-3 text-center'>
                                                 <div className=' d-flex'>
                                                 <FontAwesomeIcon icon={solidfaPlaneDeparture} />
-                                                    <p><img  alt='' src="easy.png" className='img-fluid m-0' /> <br />Economy</p>
+                                                    <p><img  alt='' src="../easy.png" className='img-fluid m-0' /> <br />Economy</p>
                                                 </div>
                                             </div>
                                             <div className='col mt-3'>
@@ -1290,9 +1367,9 @@ function Holiday() {
                                             </div>
                                             <div className='col-md-3'>
                                                 <div className='d-flex mt-4'>
-                                                    <img  alt='' src="sum.png" className='img-fluid sum' />
+                                                    <img  alt='' src="../sum.png" className='img-fluid sum' />
                                                     <input type='number' className="form-control" />
-                                                    <img  alt='' src="add.png" className='img-fluid sum' />
+                                                    <img  alt='' src="../add.png" className='img-fluid sum' />
                                                 </div>
                                             </div>
                                         </div>
@@ -1457,7 +1534,7 @@ function Holiday() {
                                 <div className='protected'>
                                     <div className='row'>
                                         <div className='col-2'>
-                                            <img  alt='' className='img-fluid' src="pro.png" />
+                                            <img  alt='' className='img-fluid' src="../pro.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Our packages are financially protected</h5>
@@ -1466,7 +1543,7 @@ function Holiday() {
                                     </div>
                                     <div className='row mt-3'>
                                         <div className='col-2'>
-                                            <img  alt='' className='img-fluid' src="i.png" />
+                                            <img  alt='' className='img-fluid' src="../i.png" />
                                         </div>
                                         <div className='col-10'>
                                             <h5>Please remember to check the latest travel advice</h5>
@@ -1490,7 +1567,7 @@ function Holiday() {
                                                     <p>2 Adults</p>
                                                 </div>
                                                 <div className='arrow'>
-                                                    <img  alt='' src="arrow.png" className='img-fluid' />
+                                                    <img  alt='' src="../arrow.png" className='img-fluid' />
                                                 </div>
                                             </div>
                                         </div>
@@ -1540,19 +1617,19 @@ function Holiday() {
                                 <h3>Book with confidence</h3>
                                 <div className='row'>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='footer.png' className='img-fluid' />
+                                        <img  alt='' src='../footer.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>ATOL Protected</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='pay.png' className='img-fluid' />
+                                        <img  alt='' src='../pay.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Pay Monthly</p>
                                     </div>
                                     <div className='col-3 text-center my-3'>
-                                        <img  alt='' src='check.png' className='img-fluid' />
+                                        <img  alt='' src='../check.png' className='img-fluid' />
                                     </div>
                                     <div className='col-9 my-3'>
                                         <p>Price Match Guarantee</p>
@@ -1560,11 +1637,11 @@ function Holiday() {
                                 </div>
                             </div>
                             <div className='tripadvisor'>
-                                <img  alt='' src="tripad.png" className='img-fluid' />
+                                <img  alt='' src="../tripad.png" className='img-fluid' />
                                 <p>Based on 2748 reviews</p>
                                 <hr />
                                 <div className='float-right'>
-                                    <img  alt='' src="dots.png" className='img-fluid' />
+                                    <img  alt='' src="../dots.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
@@ -1575,7 +1652,7 @@ function Holiday() {
 
                                 <hr />
                                 <div className='float-right'>
-                                    <img  alt='' src="1dot.png" className='img-fluid' />
+                                    <img  alt='' src="../1dot.png" className='img-fluid' />
                                 </div>
                                 <h5>ABSOLUTE PERFECTION</h5>
                                 <p>17 December 2021</p>
