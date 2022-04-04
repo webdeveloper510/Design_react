@@ -35,6 +35,7 @@ function Destination() {
         getDestinationPageMetaData()
         getDestinationPageData()
       },[]);
+      
       async function getDestinationPageMetaData() {
         try {
            const res = fetch(`${baseURL}/pagemeta/destination`)
@@ -113,6 +114,7 @@ function Destination() {
     if (counter2 <= 1) {
         decrementCounter2 = () => setCounter(1);
     }
+
     function toggleNumbers() {
         console.log('here')
         var x = document.getElementById("filterss");
@@ -122,6 +124,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function open() {
         console.log('here1')
         var x = document.getElementById("dates");
@@ -131,6 +134,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function toggleNumbers1() {
         console.log('here')
         var x = document.getElementById("filterss1");
@@ -140,6 +144,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function toggleNumbers2() {
         console.log('here')
         var x = document.getElementById("filterss2");
@@ -149,6 +154,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function toggleNumbers3() {
         console.log('here')
         var x = document.getElementById("Destination");
@@ -158,6 +164,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function toggleNumbers4() {
         console.log('here')
         var x = document.getElementById("flight");
@@ -167,6 +174,7 @@ function Destination() {
             x.style.display = "none";
         }
     }
+
     function toggleNumbers5() {
         console.log('here')
         var x = document.getElementById("Airport");
@@ -177,40 +185,40 @@ function Destination() {
         }
     }
   
-        var settings = {
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 8,
-          slidesToScroll: 8,
-          initialSlide: 0,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 6,
-                slidesToScroll: 6,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                initialSlide: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 8,
+        slidesToScroll: 8,
+        initialSlide: 0,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            infinite: true,
+            dots: true
             }
-          ]
-        };
+        },
+        {
+            breakpoint: 600,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+            }
+        }
+        ]
+    };
     
   
     return (

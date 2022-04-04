@@ -453,7 +453,7 @@ function Home() {
                                           </div>
                                             <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
-                                        <ul className="list-group list-group-flush">
+                                          <ul className="list-group list-group-flush">
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Destination</li>
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Mediterranean</li>
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Canary Islands</li>

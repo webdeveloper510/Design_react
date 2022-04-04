@@ -9,7 +9,7 @@
         "@fortawesome/pro-solid-svg-icons": "^6.0.0",
         "@fortawesome/pro-thin-svg-icons": "^6.0.0",
         "@fortawesome/react-fontawesome": "^0.1.17",
-        "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-5.14.1.tgz",
+        "@mobiscroll/react": "file:./src/lib/mobiscroll-package/mobiscroll-react-v5.15.2.tgz",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
@@ -26,6 +26,7 @@
         "react-scripts": "4.0.3",
         "react-simple-image-slider": "^2.3.0",
         "react-slick": "^0.28.1",
+        "shortid": "^2.2.16",
         "web-vitals": "^1.0.1"
     },
     "scripts": {
