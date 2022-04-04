@@ -14,17 +14,16 @@ const Routers = () => {
   return (
     <Router>
       <Routes>
-
         <Route exact path="/" element={<Home />} />
-         <Route exact path="/filter" element={<Filter/>} /> 
-         <Route exact path="/holiday/:holidayId" element={<Holiday/>} /> 
-         <Route exact path="/Destination/:destinationName" element={<Destination/>} /> 
+        <Route exact path="/filter" element={<Filter/>} /> 
+        <Route exact path="/holiday/:holidayId" element={<Holiday/>} /> 
+        <Route exact path="/Destination/:destinationName" element={<Destination/>} /> 
 
-         <Route exact path="/Step1" element={<Step1/>} /> 
-         <Route exact path="/Step2" element={<Step2/>} /> 
-         <Route exact path="/Step3" element={<Step3/>} /> 
-         <Route exact path="/Step4" element={<Step4/>} /> 
-         <Route exact path="/Final" element={<Final/>} /> 
+        <Route exact path="/Step1" element={<Step1/>} /> 
+        <Route exact path="/Step2" element={<Step2/>} /> 
+        <Route exact path="/Step3" element={<Step3/>} /> 
+        <Route exact path="/Step4" element={<Step4/>} /> 
+        <Route exact path="/Final" element={<Final/>} /> 
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
