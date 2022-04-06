@@ -9,6 +9,7 @@ import Step3 from '../Booking/Step3';
 import Step4 from '../Booking/Step4';
 import Final from '../Booking/Final';
 import Destination from '../Overview/Destination';
+import Holiday1 from '../Holiday/Holiday1';
 
 const Routers = () => {
   return (
@@ -17,6 +18,7 @@ const Routers = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/filter" element={<Filter/>} /> 
         <Route exact path="/holiday/:holidayId" element={<Holiday/>} /> 
+        <Route exact path="/holiday1" element={<Holiday1/>} /> 
         <Route exact path="/Destination/:destinationName" element={<Destination/>} /> 
 
         <Route exact path="/Step1" element={<Step1/>} /> 

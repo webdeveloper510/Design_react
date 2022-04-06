@@ -14,8 +14,10 @@ import './Holiday.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faAngleRight, faUser } from '@fortawesome/pro-solid-svg-icons';
+import { faCalendar, faAngleRight } from '@fortawesome/pro-solid-svg-icons';
 import { faStar  } from '@fortawesome/pro-solid-svg-icons';
+import { faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
+import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
 import { faPlaneDeparture as solidfaPlaneDeparture } from '@fortawesome/pro-solid-svg-icons';
 import { faPlaneDeparture, faSuitcaseRolling, faHeart } from '@fortawesome/pro-regular-svg-icons';
 import {Helmet} from "react-helmet";
@@ -123,7 +125,8 @@ function Holiday() {
       })
      //images1=arrayImage
     }
-      async function getHolidayPageSections(id) {
+
+    async function getHolidayPageSections(id) {
         try {
            const res = fetch(`${baseURL}/holiday/${holidayId}/sections`)
            const data =  (await res).json().then((res1)=>{
@@ -154,7 +157,8 @@ function Holiday() {
         } catch (err) {
         //  setGetResult(err.message);
         }
-      }
+    }
+    
     const getPrices = (d, callback) => {
         let invalid = [];
         let labels = [];
@@ -365,13 +369,12 @@ function Holiday() {
     }
     return (
         <>
-          <Helmet>
+            {/* <Helmet>
                 <meta charSet="utf-8" />
                 <title>My Holiday</title>
-                {/* <link rel="canonical" href="" /> */}
                 <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-        <Header/>
+            </Helmet> */}
+        <Header data={false}/>
         <section>
             <div className="tabs" id="tabs" style={{ display: 'none', marginTop: '8%' }}>
 
@@ -401,7 +404,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers3} type="button"><img  alt='' src="desti.png" /><p>list</p></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers3} type="button"><FontAwesomeIcon icon={faLocationDot } /> <p>list</p></button>
                                                 </div>
 
                                             </div>
@@ -445,7 +448,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="date" className="form-control" readOnly onClick={open} />
-                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img  alt='' src="Calendar.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={open} type="button">  <FontAwesomeIcon icon={faCalendarDays} /></button>
 
                                                 </div>
 
@@ -484,7 +487,7 @@ function Holiday() {
 
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers} type="button"><img  alt='' src="rome.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers} type="button"><FontAwesomeIcon icon={faUser } /> </button>
 
                                                 </div>
 
@@ -656,7 +659,7 @@ function Holiday() {
                                                 <div className="input-group mb-3">
 
                                                     <input type="text" className="form-control" />
-                                                    <button className="btn btn-secondary " onClick={toggleNumbers4} type="button"><img  alt='' src="desti.png" /><p>list</p></button>
+                                                    <button className="btn btn-secondary " onClick={toggleNumbers4} type="button"><FontAwesomeIcon icon={faLocationDot } /> <p>list</p></button>
                                                 </div>
                                                 <div className="suggection3 " id="flight" style={{ display: 'none' }}>
                                                     <div className="flush1"></div>
@@ -677,7 +680,7 @@ function Holiday() {
                                                 <label >Check-in / Check-out</label>
                                                 <div className="input-group mb-3">
                                                     <input type="date" className="form-control" readOnly onClick={open} />
-                                                    <button className="btn btn-secondary " onClick={open} type="button">  <img  alt='' src="Calendar.png" /></button>
+                                                    <button className="btn btn-secondary " onClick={open} type="button">  <FontAwesomeIcon icon={faCalendarDays} /></button>
                                                 </div>
 
                                             </div>
@@ -686,7 +689,7 @@ function Holiday() {
                                             <label >Rooms & Guests</label>
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" aria-label="Text input with dropdown button" />
-                                                <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><img  alt='' src="rome.png" /></button>
+                                                <button className="btn btn-secondary" type="button" onClick={toggleNumbers2}><FontAwesomeIcon icon={faUser } /> </button>
                                             </div>
                                         </div>
                                         <div className="col-md-2 text-center">
@@ -846,7 +849,18 @@ function Holiday() {
                                 <div className="modal-body text-dark">
                                     <div className="row">
                                         <div className="col-md-8">
-                                            <Calendar />
+                                        <Datepicker
+                                        display="inline"
+                                        controls={['calendar']}
+                                        min={min}
+                                        max={max}
+                                        labels={singleLabels}
+                                        invalid={singleInvalid}
+                                        calendarType="month"
+                                        pages={1}
+
+                                        onPageLoading={onPageLoadingSingle}
+                                    />
                                         </div>
                                         <div className="col-md-4 dayss">
                                             <h4>How flexible</h4>
@@ -1036,10 +1050,10 @@ function Holiday() {
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official2 hotel rating: <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/> </p>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.
@@ -1072,10 +1086,10 @@ function Holiday() {
                                 <div className="card card-body">
                                     <div className='mt-3'>
                                         <p>Official3 hotel rating: <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/>
-                  <FontAwesomeIcon icon={faStar}/> </p>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/>
+                                            <FontAwesomeIcon icon={faStar}/> </p>
 
                                         <b>Overview</b>
                                         <p>  The Coral Beach Hotel and Resort is a stunning resort located right on the beachfront. Offering spacious modern accommodation in a great location, this breath-taking resort is an ideal choice for those looking to enjoy a sophisticated break in the sun.

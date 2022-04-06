@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState}from 'react'
 import mainLogo from './suntours_logo.svg';
 import {
   Link
 } from "react-router-dom";
-function header() {
+
+function Header(props) {
+  const[data,setData]=useState(props)
   return (
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -80,7 +82,7 @@ function header() {
                             <h4 className="mb-4 holi">Holidays </h4>
                             <ul className="list-group list-group-flush">
                               <li className="list-group-item first">
-                                <Link to={'/holiday/'}>All-inclusive Holidays </Link>
+                                <Link to={'/holiday/624828d4424af43b3a728fe8'}>All-inclusive Holidays </Link>
                               </li>
                               <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a>
                               </li>
@@ -102,7 +104,7 @@ function header() {
                         <div className="text-right">
                           <ul className="list-group list-group-flush ">
                             <li className="list-group-item">
-                            <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link></li>
+                            <a rel="noreferrer"href='/holiday/624828d4424af43b3a728fe8' > ALL HOLIDAYS </a></li>
                           </ul>
                         </div>
                       </div>
@@ -296,4 +298,4 @@ function header() {
   )
 }
 
-export default header
+export default Header

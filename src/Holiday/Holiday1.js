@@ -1,298 +1,341 @@
-import React from 'react';
-import {
-  Link
-} from "react-router-dom";
-import { useState,useEffect } from 'react';
-import "./Home.css"
-
+import React,{ useEffect } from 'react';
+import "../Home/Home.css"
+import { useState } from 'react';
+import { useParams } from "react-router-dom";
+import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import '@mobiscroll/react/dist/css/mobiscroll.react.min.css';
-import { Datepicker, getJson, Page, setOptions  } from '@mobiscroll/react';
+import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
+import '@mobiscroll/react/dist/css/mobiscroll.react.min.css';
+import { Datepicker, getJson, Page, setOptions  } from '@mobiscroll/react';
+import ImageSliderComponent from '../router/slider';
 import {Helmet} from "react-helmet";
 
 
-function Home() {
-  const baseURL = "http://138.68.163.128:3000/v1";
-  const baseURL1 = "http://localhost:3001/v1";
-  const [counter, setCounter] = useState(1);
-  const min = '2022-01-12T00:00';
-  const max = '2022-07-12T00:00';
-  const [meta, setMeta] = useState({});
-  const [meta1, setMeta1] = useState({});
-  const [section1, setSection1] = useState({});
-  const [section2, setSection2] = useState({});
-  const [section3, setSection3] = useState({});
-  const [section4, setSection4] = useState({});
-  const [destinations, setDestinations] = useState([]);
-  const [singleLabels, setSingleLabels] = React.useState([]);
-  const [singleInvalid, setSingleInvalid] = React.useState([]);
-  const [datetimeLabels, setDatetimeLabels] = React.useState([]);
-  const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
-  const [multipleLabels, setMultipleLabels] = React.useState([]);
-  const [multipleInvalid, setMultipleInvalid] = React.useState([]);
-  const [activeSection, setActiveSection] = React.useState('home');
-  const onPageLoadingSingle = React.useCallback((event, inst) => {
-    getPrices(event.firstDay, (bookings) => {
-        setSingleLabels(bookings.labels);
-        setSingleInvalid(bookings.invalid);
+function Holiday1() {
+    const [counter, setCounter] = useState(1);
+    const baseURL = "http://138.68.163.128:3000/v1";
+    const [meta, setMeta] = useState({});
+    const [destinationData, setDestinationData] = useState({});
+    const [section1, setSection1] = useState([]);
+    const [section2, setSection2] = useState([]);
+    const [section3, setSection3] = useState([]);
+    const [section4, setSection4] = useState([]);
+    const [section5, setSection5] = useState([]);
+    const [section6, setSection6] = useState([]);
+    const [section7, setSection7] = useState([]);
+    const [datetimeLabels, setDatetimeLabels] = React.useState([]);
+    const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
+    const [multipleLabels, setMultipleLabels] = React.useState([]);
+    const [multipleInvalid, setMultipleInvalid] = React.useState([]);
+    const [activeSection, setActiveSection] = React.useState('holiday1');
+    const min = '2022-01-12T00:00';
+    const max = '2022-07-12T00:00';
+    const [singleLabels, setSingleLabels] = React.useState([]);
+    const [singleInvalid, setSingleInvalid] = React.useState([]);
+    const { destinationName } = useParams()
+    const slides=["https://i.picsum.photos/id/1026/1000/400.jpg?hmac=WwPvherFBxu3coMXysnyhfbbH0b-bb9_uTvKnPY2I48","https://i.picsum.photos/id/1015/1000/400.jpg?hmac=QRwq0dHoUCccqSJUSPniL_B0-YFpQgEshPyDPn4oJlw"]
+    // useEffect(() => {
+    //     // Update the document title using the browser API
+    //     getDestinationPageMetaData()
+    //     getDestinationPageData()
+    //   },[]);
+      
+    //   async function getDestinationPageMetaData() {
+    //     try {
+    //        const res = fetch(`${baseURL}/pagemeta/destination`)
+    //        const data =  (await res).json().then(res1=>{
+    //            console.log(res1)
+    //          setMeta(res1)
+    //        })
+      
+    //     } catch (err) {
+    //     //  setGetResult(err.message);
+    //     }
+    //   }
 
-    });
-}, []);
+      async function getDestinationPageData() {
+        try {
+           const res = fetch(`${baseURL}/destination/name/${destinationName}`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1,"herer")
+             setDestinationData(res1)
+             getDestinationPageSections(res1.id)
+             //console.log(destinationData.slides)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
 
-const onPageLoadingDatetime = React.useCallback((event, inst) => {
-    getDatetimes(event.firstDay, (bookings) => {
-        setDatetimeLabels(bookings.labels);
-        setDatetimeInvalid(bookings.invalid);
-    });
-}, []);
+      async function getDestinationPageSections(id) {
+        try {
+           const res = fetch(`${baseURL}/destination/${id}/sections`)
+           const data =  (await res).json().then(res1=>{
+               console.log(res1,"herer1")
+               res1.map(section=>{
+                   if(section.type=='section1'){
+                       
+                    setSection1(section)
+                   }else if(section.type=='section2'){
+                    setSection2(section)
+                    }else if(section.type=='section3'){
+                        setSection3(section)
+                    }else if(section.type=='section4'){
+                        setSection4(section)
+                    }else if(section.type=='section5'){
+                        setSection5(section)
+                    }else if(section.type=='section6'){
+                        console.log(section,"6")
+                        setSection6(section)
+                    }else if(section.type=='section7'){
+                        setSection7(section)
+                    }
+               })
+               
+             //console.log(destinationData.slides)
+           })
+      
+        } catch (err) {
+        //  setGetResult(err.message);
+        }
+      }
+      const onPageLoadingSingle = React.useCallback((event, inst) => {
+        getPrices(event.firstDay, (bookings) => {
+            setSingleLabels(bookings.labels);
+            setSingleInvalid(bookings.invalid);
 
-const onPageLoadingMultiple = React.useCallback((event, inst) => {
-    getBookings(event.firstDay, (bookings) => {
-        setMultipleLabels(bookings.labels);
-        setMultipleInvalid(bookings.invalid);
-    });
-}, []);
+        });
+    }, []);
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    getHomePageData()
-    getHomePageSections()
-    getDestinationList()
-    getMetaData()
-  },[]);
-  async function getHomePageData() {
-    try {
-       const res = fetch(`${baseURL}/pagemeta/homepage`)
-       const data =  (await res).json().then(res1=>{
-        console.log(res1) 
-        setMeta(res1)
-       })
-  
-    } catch (err) {
-    //  setGetResult(err.message);
+    const onPageLoadingDatetime = React.useCallback((event, inst) => {
+        getDatetimes(event.firstDay, (bookings) => {
+            setDatetimeLabels(bookings.labels);
+            setDatetimeInvalid(bookings.invalid);
+        });
+    }, []);
+
+    const onPageLoadingMultiple = React.useCallback((event, inst) => {
+        getBookings(event.firstDay, (bookings) => {
+            setMultipleLabels(bookings.labels);
+            setMultipleInvalid(bookings.invalid);
+        });
+    }, []);
+    const getPrices = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const d = new Date(booking.d);
+
+                if (booking.price > 0) {
+                    labels.push({
+                        start: d,
+                        title: '$' + booking.price,
+                        textColor: '#e1528f'
+                    });
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
     }
-  }
-  async function getMetaData() {
-    try {
-       const res = fetch(`${baseURL1}/pagemeta/list`)
-       const data =  (await res).json().then(res1=>{
-         console.log(res1[0])
-          setMeta1(res1[0])
-       })
-  
-    } catch (err) {
-    //  setGetResult(err.message);
-    }
-  }
-  async function getDestinationList() {
-    try {
-       const res = fetch(`${baseURL}/destination/list`)
-       const data =  (await res).json().then(res1=>{
-           console.log(res1)
-         setDestinations(res1)
-       })
-  
-    } catch (err) {
-    //  setGetResult(err.message);
-    }
-  }
 
-  async function getHomePageSections() {
-    try {
-       const res = fetch(`${baseURL}/homepage/sections`)
-       const data =  (await res).json().then(res1=>{
-         //console.log(res1)
-         setSection1(res1.find(section=> { return section.type=='section1' } ))
-         setSection2(res1.find(section=> { return section.type=='section2' } ))
-         setSection3(res1.find(section=> { return section.type=='section3' } ))
-         setSection4(res1.find(section=> { return section.type=='section4' } ))
-         console.log(section4)
-         //setMeta(res1)
-       })
-  
-    } catch (err) {
-    //  setGetResult(err.message);
+    const getDatetimes = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const bDate = new Date(booking.d);
+
+                if (booking.nr > 0) {
+                    labels.push({
+                        start: bDate,
+                        title: booking.nr + ' SPOTS',
+                        textColor: '#e1528f'
+                    });
+                    invalid = [...invalid, ...booking.invalid];
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
     }
-  }
-  const getPrices = (d, callback) => {
-    let invalid = [];
-    let labels = [];
 
-    getJson('https://trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-        for (let i = 0; i < bookings.length; ++i) {
-            const booking = bookings[i];
-            const d = new Date(booking.d);
+  
 
-            if (booking.price > 0) {
-                labels.push({
-                    start: d,
-                    title: '$' + booking.price,
-                    textColor: '#e1528f'
-                });
-            } else {
-                invalid.push(d);
+    const getBookings = (d, callback) => {
+        let invalid = [];
+        let labels = [];
+
+        getJson('https://trial.mobiscroll.com/getbookings/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+            for (let i = 0; i < bookings.length; ++i) {
+                const booking = bookings[i];
+                const d = new Date(booking.d);
+
+                if (booking.nr > 0) {
+                    labels.push({
+                        start: d,
+                        title: booking.nr + ' SPOTS',
+                        textColor: '#e1528f'
+                    });
+                } else {
+                    invalid.push(d);
+                }
+            }
+            callback({ labels: labels, invalid: invalid });
+        }, 'jsonp');
+    }
+
+
+    const incrementCounter = () => setCounter(counter + 1);
+    let decrementCounter = () => setCounter(counter - 1);
+    if (counter <= 1) {
+        decrementCounter = () => setCounter(1);
+    }
+    const [counter1, setCounter1] = useState(1);
+    const incrementCounter1 = () => setCounter1(counter1 + 1);
+    let decrementCounter1 = () => setCounter1(counter1 - 1);
+    if (counter1 <= 1) {
+        decrementCounter1 = () => setCounter1(1);
+    }
+    const [counter2, setCounter2] = useState(1);
+    const incrementCounter2 = () => setCounter2(counter2 + 1);
+    let decrementCounter2 = () => setCounter2(counter2 - 1);
+    if (counter2 <= 1) {
+        decrementCounter2 = () => setCounter(1);
+    }
+
+    function toggleNumbers() {
+        console.log('here')
+        var x = document.getElementById("filterss");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function open() {
+      
+        var x = document.getElementById("dates");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function toggleNumbers1() {
+        console.log('here')
+        var x = document.getElementById("filterss1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function toggleNumbers2() {
+        console.log('here')
+        var x = document.getElementById("filterss2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function toggleNumbers3() {
+        console.log('here')
+        var x = document.getElementById("Destination");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function toggleNumbers4() {
+        console.log('here')
+        var x = document.getElementById("flight");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function toggleNumbers5() {
+        console.log('here')
+        var x = document.getElementById("Airport");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+  
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 8,
+        slidesToScroll: 8,
+        initialSlide: 0,
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            infinite: true,
+            dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
             }
         }
-        callback({ labels: labels, invalid: invalid });
-    }, 'jsonp');
-}
-
-const getDatetimes = (d, callback) => {
-    let invalid = [];
-    let labels = [];
-
-    getJson('https://mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-        for (let i = 0; i < bookings.length; ++i) {
-            const booking = bookings[i];
-            const bDate = new Date(booking.d);
-
-            if (booking.nr > 0) {
-                labels.push({
-                    start: bDate,
-                    title: booking.nr + ' SPOTS',
-                    textColor: '#e1528f'
-                });
-                invalid = [...invalid, ...booking.invalid];
-            } else {
-                invalid.push(d);
-            }
-        }
-        callback({ labels: labels, invalid: invalid });
-    }, 'jsonp');
-}
-
-const toggleSection = (section) => {
-    if (activeSection == section) {
-        setActiveSection('')
-    }
-    else {
-        setActiveSection(section)
-    }
-
-
-}
-
-const getBookings = (d, callback) => {
-    let invalid = [];
-    let labels = [];
-
-    getJson('https://trial.mobiscroll.com/getbookings/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-        for (let i = 0; i < bookings.length; ++i) {
-            const booking = bookings[i];
-            const d = new Date(booking.d);
-
-            if (booking.nr > 0) {
-                labels.push({
-                    start: d,
-                    title: booking.nr + ' SPOTS',
-                    textColor: '#e1528f'
-                });
-            } else {
-                invalid.push(d);
-            }
-        }
-        callback({ labels: labels, invalid: invalid });
-    }, 'jsonp');
-}
-
-  const incrementCounter = () => setCounter(counter + 1);
-  let decrementCounter = () => setCounter(counter - 1);
-  if(counter<=1) {
-    decrementCounter = () => setCounter(1);
-  }
-  const [counter1, setCounter1] = useState(1);
-  const incrementCounter1 = () => setCounter1(counter1 + 1);
-  let decrementCounter1 = () => setCounter1(counter1 - 1);
-  if(counter1<=1) {
-    decrementCounter1 = () => setCounter1(1);
-  }
-  const [counter2, setCounter2] = useState(1);
-  const incrementCounter2 = () => setCounter2(counter2 + 1);
-  let decrementCounter2 = () => setCounter2(counter2 - 1);
-  if(counter2<=1) {
-    decrementCounter2 = () => setCounter(1);
-  }
-  function toggleNumbers(){
-    console.log('here')
-    var x = document.getElementById("filterss");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function open(){
-    console.log('here1')
-    var x = document.getElementById("dates");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function toggleNumbers1(){
-    console.log('here')
-    var x = document.getElementById("filterss1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function toggleNumbers2(){
-    console.log('here')
-    var x = document.getElementById("filterss2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function toggleNumbers3(){
-    console.log('here')
-    var x = document.getElementById("Destination");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function toggleNumbers4(){
-    console.log('here')
-    var x = document.getElementById("flight");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
-  function toggleNumbers5(){
-    console.log('here')
-    var x = document.getElementById("Airport");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  }
+        ]
+    };
+    
+  
     return (
-      <>
-      <Helmet>
+        <>
+              <Helmet>
                 <meta charSet="utf-8" />
-                <title>{ meta1.metatitle }</title>
-                <meta name="description" content={meta1.metadescription}></meta>
-                <link rel="canonical" href={meta1.canonical} />
+                <title>{ meta.metatitle }</title>
+                <meta name="description" content={meta.metadescription}></meta>
+                <link rel="canonical" href={meta.canonical} />
             </Helmet>
-       <Header />
-    <section>
-        <div className="banner pt-5">
-           <div className=" narrow">        
+            <Header />
+            <section className='darkblue'>
+                <div className="banner pt-5 darkblue">
+                   <div className=" narrow">        
                        <div className="tabs mt-5">
                         
                       <div className="container">
@@ -377,7 +420,7 @@ const getBookings = (d, callback) => {
                                             <label >Duration</label>
                                             
                                             <select className="form-select" id="inputGroupSelect01">
-                                                <option value="DEFAULT">7 Nights</option>
+                                                <option selected>7 Nights</option>
                                                 <option value="1">1 Night</option>
                                                 <option value="2"> 2 Nights</option>
                                                 <option value="3">3 Nights</option>
@@ -433,7 +476,7 @@ const getBookings = (d, callback) => {
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">I don't mind</option>
+                                                                  <option selected>I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -448,7 +491,7 @@ const getBookings = (d, callback) => {
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -464,7 +507,7 @@ const getBookings = (d, callback) => {
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -496,7 +539,7 @@ const getBookings = (d, callback) => {
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -520,7 +563,7 @@ const getBookings = (d, callback) => {
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -563,7 +606,50 @@ const getBookings = (d, callback) => {
                                            </div>
                                          
                                 </div></div>
-              
+                                <div className="filterss" tabIndex="-1" id="dates" style={{ display: 'none' }} >
+                        <div className="">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title text-dark">Date</h5>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={open} ></button>
+                                </div>
+                                <div className="modal-body text-dark">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                        <Datepicker
+                                        display="inline"
+                                        controls={['calendar']}
+                                        min={min}
+                                        max={max}
+                                        labels={singleLabels}
+                                        invalid={singleInvalid}
+                                        calendarType="month"
+                                        pages={1}
+
+                                        onPageLoading={onPageLoadingSingle}
+                                    />
+                                        </div>
+                                        <div className="col-md-4 dayss">
+                                            <h4>How flexible</h4>
+                                            <div className="mb-3 form-check">
+                                                <input type="radio" className="form-check-input" name="day" />
+                                                <label className="form-check-label" htmlFor="exampleCheck1">Not Flexible</label>
+                                            </div>
+                                            <div className="mb-3 form-check">
+                                                <input type="radio" className="form-check-input" name="day" />
+                                                <label className="form-check-label" htmlFor="exampleCheck1">+/- 3 Days</label>
+                                            </div>
+                                            <div className="mb-3 form-check">
+                                                <input type="radio" className="form-check-input" name="day" />
+                                                <label className="form-check-label" htmlFor="exampleCheck1">+/- 7 Days  </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                                  {/*------------------ hotals section---------------------- */}
                                  <div className="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
                                   <div className="container">
@@ -580,7 +666,7 @@ const getBookings = (d, callback) => {
                                           </div>
                                             <div className="suggection3 " id="flight"  style={{display:'none'}}>
                                         <div className="flush1"></div>
-                                          <ul className="list-group list-group-flush">
+                                        <ul className="list-group list-group-flush">
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Any Destination</li>
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Mediterranean</li>
                                             <li className="list-group-item">  <input type="checkbox" className="form-check-input"/> Canary Islands</li>
@@ -630,7 +716,7 @@ const getBookings = (d, callback) => {
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">I don't mind</option>
+                                                                  <option selected>I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -645,7 +731,7 @@ const getBookings = (d, callback) => {
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -661,7 +747,7 @@ const getBookings = (d, callback) => {
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
                                                                 <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -693,7 +779,7 @@ const getBookings = (d, callback) => {
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -717,7 +803,7 @@ const getBookings = (d, callback) => {
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
                                                                       <select className="form-select" id="inputGroupSelect01">
-                                                                  <option value="DEFAULT">Choose...</option>
+                                                                  <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
                                                                   <option value="3">3</option>
@@ -754,380 +840,344 @@ const getBookings = (d, callback) => {
                                            </div>
                                  </div>
                                
-         </div>
-                     
-                       <div className="filterss" tabIndex="-1" id="dates"  style={{display:'none'}} >
-                                                  <div className="">
-                                                    <div className="modal-content">
-                                                      <div className="modal-header">
-                                                        <h5 className="modal-title text-dark">Date</h5>
-                                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"onClick={open} ></button>
-                                                      </div>
-                                                      <div className="modal-body text-dark">
-                                                       <div className="row">
-                                                            <div className="col-md-8">
-                                                            <Datepicker
-                                        display="inline"
-                                        controls={['calendar']}
-                                        min={min}
-                                        max={max}
-                                        labels={singleLabels}
-                                        invalid={singleInvalid}
-                                        calendarType="month"
-                                        pages={1}
-
-                                        onPageLoading={onPageLoadingSingle}
-                                    />
-                                                              </div>
-                                                              <div className="col-md-4 dayss">
-                                                                <h4>How flexible</h4>
-                                                                <div className="mb-3 form-check">
-                                                                      <input type="radio" className="form-check-input" name="day" />
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">Not Flexible</label>
-                                                                    </div>
-                                                                    <div className="mb-3 form-check">
-                                                                      <input type="radio" className="form-check-input" name="day"/>
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">+/- 3 Days</label>
-                                                                    </div>
-                                                                    <div className="mb-3 form-check">
-                                                                      <input type="radio" className="form-check-input"name="day"/>
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">+/- 7 Days  </label>
-                                                                    </div>
-                                                                </div>
-                                                         </div>
-                                                      </div>
-                                                     
-                                                    </div>
-                                                  </div>
-                                                </div>
-                      
-                   </div>
-                   </div>
-                  
-                
-        
-        </div>
-        <div className="Hello" style={{backgroundImage:'url('+section1?.background+')'}}>
-           <div className="container">
-           <div className="row">
-             <div className="col-md-6"></div>
-             <div className="col-md-1"></div>
-                       <div className="col-md-4">
-                           <div className="summer-text">
-                           <img  alt='' src="smile.png"/>
-                             <h3 className="mb-3">{ section1?.title }</h3>
-                            
-                             
-                               
-                             <p className="mb-3 redcolor" ><span className="redcolor">{ section1?.description1 }</span>
-                             {/* <span className="redcolor">Save up to £750 per person </span> on 
-                                  selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
-                                  <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
-                                  <br/><br/>
-                                  Great deals, with a price match 
-                                  promise &<span className="redcolor"> deposits from £30 </span>, say 
-                                  hello to holidays that make you smile. */}
-                                  
-                                  </p>
-                                  <p className="mb-3">{ section1?.description2 }
-                             {/* <span className="redcolor">Save up to £750 per person </span> on 
-                                  selected holidays to <span className="redcolor">Greece </span>,<span className="redcolor"> Spain </span>, 
-                                  <span className="redcolor">Portugal </span> & <span className="redcolor">Italy </span>.
-                                  <br/><br/>
-                                  Great deals, with a price match 
-                                  promise &<span className="redcolor"> deposits from £30 </span>, say 
-                                  hello to holidays that make you smile. */}
-                                  
-                                  </p>
-                                  <div className="text-right">
-                                  <button className="btn btn-danger btn-lg" type="button">Search deals &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
-                         </div>
-                         </div>
-                         <div className="col-md-1"></div>
-                      </div>
-             </div>
-          </div>
-          </div>
-        <div className="content text-center">
-            <div className="container">
-                   <div className="row">
-                 <div className="col-md-4 my-3">
-                      <p><FontAwesomeIcon icon={faStar} style={{color: '#46b946'}}/> Trustpilot</p>
-                      <div className="stars">
-                      <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar}/>
-                        </div>
-                     </div>
-                     <div className="col-md-4 my-3 d-flex">
-                     <img  alt='' src="footer.png" width="50px" height="50px" className="mr-3 m-0"/>
-                     <p style={{textAlign:"left",marginLeft: '10px'}}> ATOL  <br/>Protected</p>
-                  </div>
-                  <div className="col-md-4 my-3 d-flex">
-                  <i className="fa fa-check-circle"></i>
-                   <p style={{textAlign:"left"}}>Deposits from <br/> £30</p>
-                  </div>
-               </div>
-               </div>
-           </div>
-           
-               {/* second Section */}
-              
-               <div className="container">
-                 <h3  className="my-5">{ section2?.title }</h3>
-                 {section2?.sections?
-                  <div className="row">
-                
-                    {
-                    section2?.sections.map(sectionn=>{
-                          return <div style={{width:sectionn.percentage+'% '}}>
-                          <div className="family" style={{backgroundImage:'url('+sectionn.image+')'}}>
-                          <div className="bannerpack">
-                                  <h3>{ sectionn.title }</h3>
-                              </div>
-                          <div className="overlay1">
-                          
-                            <div className="row">
-                              <div className="col-md-7 col-7">
-                              <p>{ sectionn.description }</p>
-                              </div>
-                                <div className="col-md-5 mt-3 col-5 text-right">
-                                  <button className="btn btn-primary" type="button">Search Deals
-                                    </button>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    })
-                  }
-                  
-                     
+         </div> </div> </div> </div>
+         {slides ? 
+                    <div className="He">
+                    <ImageSliderComponent images={slides}/>
                     </div>
-                    : null }
-               </div>
-               <div className="container">
-                 <h3 className="my-5">{ section3?.title }</h3>
-                 {section3?.sections?
-                 <div className="row">
-                 {
-                    section3?.sections.map(sectionns=>{
-                   return <div className="overhead my-1" style={{width:sectionns.percentage+'% '}}>
-                       <img  alt='' src={ sectionns.image } className="img-fluid w-100"/>
-                       <div className={ sectionns.percentage < 50 ? 'over' : 'over1'}>
-                          <h3>{ sectionns.title }</h3>
-                          <p> { sectionns.description }</p>
-                              
-                               <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>
-                               
-                         </div>
-                     </div>
-                     })
-                    }
+                     : null }
+                </div>
+               
+                <div className='container'>
+                    <nav aria-label="breadcrumb " className='mt-3'>
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#">Destinations</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">{destinationData.title}</li>
+                        </ol>
+                    </nav>
+                </div>
 
-                    
-                       </div>
-                  : null }
-                  
-                  
-                   </div>
-                   <div className="container my-4 ">
-                   <h3 className="my-3">Package Holiday Deals</h3>
-                   <div className="row">
-                       <div className="col-md-4">
-                          <div className="hotals">
-                           
-                         
-                          <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p> <span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+
+                {/* second Section */}
+                <div className="container my-4 ">
+                    <h3 className="my-3">Deals we’ve found for you</h3>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <div className="Paphos">
+                                <div className="overlay">
+                                    <div className="row p-2">
+                                        <div className="col-md-8 col-8">
+                                            <h5>Paphos, CYP</h5>
+                                            <p>25 Mar ... 02 Apr</p>
+                                            <p> <span><FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/>
+                                        <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-4">
-                                          
-                                              <p>   <FontAwesomeIcon icon={faPlane} /> Delta</p>
+
+                                                <p>   <i className="fa fa-plane"></i> easyJet</p>
                                             </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control ">ADD TO WISHLIST</button>
                                         </div>
-                                        <div className="col-md-6 col-6 "  style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
+                                    </div>
+                                    <div className="row red">
+                                        <div className="col-md-6 col-6" style={{ padding: '0px' }}>
+                                            <button className="btn form-control ">ADD TO WISHLIST</button>
                                         </div>
-                                     </div>
-                                     </div>
-                                
-                              </div>
-                           </div>
-                           <div className="col-md-4">
-                           <div className="hotals">
-                           <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p><span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                                        <div className="col-md-6 col-6 " style={{ padding: '0px' }}>
+                                            <button className="btn btn-primary form-control">BOOK & SAVE £59 pp</button>
                                         </div>
-                                        <div className="col-md-4 col-4 text-right">
-                                            <h3><span className="youro">£</span> 329</h3>
-                                            <div className="text-right mt-4">
-                                            
-                                              <p> <FontAwesomeIcon icon={faPlane} /> Delta</p>
-                                            </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control red">ADD TO WISHLIST</button>
-                                        </div>
-                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
-                                        </div>
-                                     </div>
-                              
-                                 </div>
-                              </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <div className="col-md-4">
-                        <div className="hotals">
-                             <div className="overlay">
-                                 <div className="row p-2">
-                                    <div className="col-md-8 col-8">
-                                    <h5>Miami, FL</h5>
-                                    <p>25 Mar ... 02 Apr</p>
-                                    <p><span><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br/> Ramada Plaza Marco Polo Beach</p>
+                            <div className="Ayia">
+                                <div className="overlay">
+                                    <div className="row p-2">
+                                        <div className="col-md-8 col-8">
+                                            <h5>Ayia Napa, CYP</h5>
+                                            <p>25 Mar ... 02 Apr</p>
+                                            <p><span><FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
                                         </div>
                                         <div className="col-md-4 col-4 text-right">
                                             <h3><span className="youro">£</span> 329</h3>
                                             <div className="text-right mt-4">
-                                           
-                                              <p>  <FontAwesomeIcon icon={faPlane} /> Delta</p>
-                                            </div>
-                                            </div>    
-                                 </div>
-                                 <div className="row red">
-                                    <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                      <button className="btn form-control ">ADD TO WISHLIST</button>
-                                        </div>
-                                        <div className="col-md-6 col-6" style={{padding:'0px'}}>
-                                        <button className="btn btn-primary form-control">BOOK & SAVE $59</button>
-                                        </div>
-                                     </div>
-                              
-                                 </div>
-                              </div>
-                        </div>
-                       </div>
-               </div>
-                  
-                  <div className="summer" style={{backgroundImage:'url('+section4?.background+')'}}>
-                    <div className="container">
-                    <div className="row">
-                      <div className="col-md-1"></div>
-                       <div className="col-md-5">
-                           <div className="summer-text">
-                             <h3 className="mb-5">{ section4?.title }</h3>
-                             <p className="mb-5">{ section4?.description1 }</p>
-                             <p className="mb-5">{ section4?.description2 }</p>
-                                  <button className="btn btn-primary btn-lg" type="button">Search Holidays &nbsp;&nbsp; <FontAwesomeIcon icon={faAngleRight} /> </button>                             </div>
-                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="container">
-                    <h3 className="my-3 px-4">Popular Destinations</h3>
-                    <div className="row text-darkblue">
-                    {
-                    destinations.map(destination=>{
-                      return <div className="col-md-3 px-5">
-                         <p>
-                         <Link to={'/destination/'+destination.title}>{ destination.title }</Link>
-                               
-                    
-                  
-                            </p>
-                         </div>
-                         })
-                        }
-                         
-                      </div>
-                  </div>
-                     
-                     <div className="Contacting">
-                  <div className="container">
-                    <div className="row last-section py-4">
-                        <div className="col-md-4 px-5">
-                         <h4 className="my-3">Contacting us by Email</h4>
-                         <p><b>Send us an email with any non-
-                              urgent questions. We respond 
-                              to inquiries within 48 hours.</b></p>
-                              <form>
-                              <div className="mb-3">
-                                <input type="text" className="form-control" placeholder="Name" />
-                              </div>
-                              <div className="mb-3">
-                                
-                                <input type="email" className="form-control" placeholder="Email"/>
-                              </div>
-                              <div className="mb-3">
-                                
-                                <input type="text" className="form-control" placeholder="Booking Reference"/>
-                              </div>
-                              <div className="mb-3">
-                                
-                              <textarea className="form-control" placeholder="Question" rows="3"></textarea>
-                              </div>
-                              <div className="mb-3 text-right">
-                               <p>All Fields are Required! <button type="submit" className="btn btn-primary">Send</button></p>
-                              
-                              </div>
-                            </form>
-                          </div>
-                          <div className="col-md-4 px-5">
-                              <h4 className="my-3">Contacting us by Phone</h4>
-                              <p><b>For urgent assistance please call
-                                      our 24hr helpline, please have 
-                                      your booking reference to hand.</b></p>
-                                <p><b>Call us 24 hours a day, <br/>
-                                    7 days a week</b></p>
-                                    <h3>0800-200-9900</h3>
-                                    <p>Toll-free UK</p>
-                                    <hr/>
-                                    <h3>020-200-2000</h3>
-                                    <p>Outside the UK</p>
-                                    <div className="float-right">
-                                     <img  alt='' src="chat.png" width="50px" height="50px"/>
-                                      </div> 
-                                    <a rel="noreferrer"href="#">Chat with us online</a>
-                            </div>
-                            <div className="col-md-4 px-5">
-                              <h4 className="text-center my-3">Ask a Question?</h4>
-                              <form className="d-flex">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                              </form>
-                              <ul className="list-group my-4">
-                                <li className="list-group-item"> <a rel="noreferrer"href="#">Airline Baggage Fees</a></li>
-                                <li className="list-group-item"><a rel="noreferrer"href="#">Online Flight Check-in</a></li>
-                                <li className="list-group-item"><a rel="noreferrer"href="#">Covid 19 Travel Advisories</a></li>
-                                <li className="list-group-item"><a rel="noreferrer"href="#">Cancellation Policy</a></li>
-                                <li className="list-group-item"><a rel="noreferrer"href="#">Airport Security</a></li>
-                              </ul>
-                              </div>
-                      </div>
-                  </div>
-                  </div>
-                  
-     
 
-        </section>
-        <Footer/>
+                                                <p> <i className="fa fa-plane"></i> easyJet</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row red">
+                                        <div className="col-md-6 col-6" style={{ padding: '0px' }}>
+                                            <button className="btn form-control red">ADD TO WISHLIST</button>
+                                        </div>
+                                        <div className="col-md-6 col-6" style={{ padding: '0px' }}>
+                                            <button className="btn btn-primary form-control">BOOK & SAVE £59 pp</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="Limassol">
+                                <div className="overlay">
+                                    <div className="row p-2">
+                                        <div className="col-md-8 col-8">
+                                            <h5>Limassol, CYP</h5>
+                                            <p>25 Mar ... 02 Apr</p>
+                                            <p><span><FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/>
+                  <FontAwesomeIcon icon={faStar}/></span>Sunny Isles Beach, FL<br /> Ramada Plaza Marco Polo Beach</p>
+                                        </div>
+                                        <div className="col-md-4 col-4 text-right">
+                                            <h3><span className="youro">£</span> 329</h3>
+                                            <div className="text-right mt-4">
+
+                                                <p>  <i className="fa fa-plane"></i>easyJet</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row red">
+                                        <div className="col-md-6 col-6" style={{ padding: '0px' }}>
+                                            <button className="btn form-control ">ADD TO WISHLIST</button>
+                                        </div>
+                                        <div className="col-md-6 col-6" style={{ padding: '0px' }}>
+                                            <button className="btn btn-primary form-control">BOOK & SAVE £59 pp</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='mt-4'>
+                        <p className='staytext'>A stay in Cyprus breathes new life into familiar myths and legends. Think magnificent mountain ranges, dramatic coastlines and tranquil beach holidays, and it’s easy to see why this island is often the backdrop for tales about ancient adventures and Hellenistic heroes. With a warm Mediterranean climate, romantic coves and a rich backstory, a holiday in Cyprus is ideal for sun-seeking couples and history buffs alike.</p>
+                    </div>
+                </div>
+
+                
+                    {/* Third Section */}
+                { section1? 
+                    <div className='container'>
+                        <div className='row my-5'>
+                            <div className='col-md-5'>
+                                <h3 className='mb-4'>{section1.title}</h3>
+                                {/* <p> section1.sections[0]['description'] : null}</p> */}
+                            </div>
+                            <div className='row'>
+                            { section1.sections ? section1.sections.map(sect=>{
+                               return <div style={{width:`${sect.percentage}%`}}>
+                                   <div >
+                                    <p>{sect.description}</p>
+                                </div>
+                                <div>
+                                    <img src={sect.image} height='100%' className='img-fluid'/>
+                                </div></div>
+                            })  : null }
+                               </div> 
+                            
+                            
+                        </div>
+                    </div>
+                : null }
+                 {/* 4th Section */}
+                 { section2? 
+                    <div className='container'>
+                        <div className='thinks'>
+                            <h3 className='my-5'>{section2.title}</h3>
+                            {section2.sections? 
+                                section2.sections.map(sect1=>{
+                                    return <div style={{width:`${sect1.percentage}%`}}>
+                                        <p><b>{sect1.title}</b></p>
+                                        <p>{sect1.description}</p>
+                                    </div>
+                                })
+                            : null}
+                        </div>
+                    </div>
+                : null }
+
+
+                  {/* 5th Section */}
+                  { section3? 
+                  <div className='container'>
+                      <div className="">
+                          <h3 className='my-5'>{section3.title}</h3>
+
+                          <p className='mb-5'>
+                          {section3.description}
+                          </p>
+                      </div>
+                      {/* <div className='soaked'>
+                          <div className='soaked1'></div>
+                      <Slider {...settings} className="subitem">
+                        <div className='soakedItem '>
+                            <h4>Jan</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem active'>
+                            <h4>Feb</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Mar</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Apr</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>May</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Jun</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Jul</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Aug</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Sep</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Oct</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Nov</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        <div className='soakedItem'>
+                            <h4>Dec</h4>
+                            <h3>17<sup>o</sup> C</h3>
+                            <small>Avg. Rain: 85mm</small>
+                        </div>
+                        </Slider>
+                      </div> */}
+                  </div>
+
+                  : null }
+
+                {/* 6th Section */}
+
+                { section4? 
+                <div className="container">
+                    <h3 className="my-5">{section4.title}</h3>
+                    <div className="row">
+                        { section4.sections? 
+                        section4.sections.map(sect2=>{
+                            return  <div className="overhead my-1" style={{width:`${sect2.percentage}%`}}>
+                                        <img alt="" src={sect2.image} className="img-fluid w-100" />
+                                        <div className="over1"><h3>{sect2.title}</h3>
+                                        <p> {sect2.description}</p>
+                                        <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; </button>
+                                        </div>
+                                </div>
+                                
+                               
+                        })
+                        
+                        : null }
+                    </div>
+
+                   
+                </div>
+                : null }
+                {/* 7th Section */}
+
+                { section5? 
+                <div className="container">
+                    <div className='mt-5 darkblue' >
+                        <h3>{section5.title}</h3>
+                        <p>{section5.description}</p>
+                
+                    <div className='row'>
+                        { section5.sections ? 
+                         section5.sections.map(sect3=>{
+                            return <div className='col-md-4'>
+                                        <div className='card1 darkblue'>
+                                            <img src={sect3.image} className="img-fluid"/>
+                                            <h3>{sect3.title}</h3>
+                                            <p>{sect3.description}</p>
+                                        </div>
+                                    </div>
+                         })
+                         : null }
+                        
+                    </div>
+                    </div>
+
+                </div>
+            : null }
+
+            { section6? 
+            <div className='container'>
+                <div className='darkblue'>
+                    <h3>{section6.title}</h3>
+                    <p>{section6.description}</p>
+                    {section6.sections ? 
+                    section6.sections.map(sect4=>{
+                       <div> <h3>{sect4.title}</h3>
+                        <p>{sect4.description}</p>
+                        </div>
+                    })
+                    : null }
+                     
+                     </div>
+            </div>
+            : null }
+            { section7? 
+            <div className='container'>
+                <div className='darkblue'>
+                    <h3>{section7.title}</h3>
+                    <p>{section7.description}</p>
+                    {section7.sections ? 
+                    section7.sections.map(sect5=>{
+                       <div> <h3>{sect5.title}</h3>
+                        <p>{sect5.description}</p>
+                        </div>
+                    })
+                    : null }
+                     
+                     </div>
+            </div>
+            : null }
+            </section>
+        
+            <Footer />
         </>
     )
 }
 
-export default Home
+export default Holiday1
