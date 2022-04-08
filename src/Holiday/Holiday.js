@@ -27,6 +27,7 @@ import shortid from 'shortid';
 
 let images1 = []
 const baseURL = "http://138.68.163.128:3000/v1";
+const baseURL1 = "http://localhost:3001/v1";
 function Holiday() {
     const [value, onChange] = useState(new Date());
     const [meta, setMeta] = useState({});
@@ -89,7 +90,7 @@ function Holiday() {
 
       async function getHolidayPageMetaData() {
         try {
-           const res = fetch(`${baseURL}/pagemeta/holiday`)
+           const res = fetch(`${baseURL}/homepage/holidays`)
            const data =  (await res).json().then(res1=>{
                console.log(res1)
              setMeta(res1)
