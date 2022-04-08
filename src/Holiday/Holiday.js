@@ -370,11 +370,11 @@ function Holiday() {
     }
     return (
         <>
-            {/* <Helmet>
-                <meta charSet="utf-8" />
-                <title>My Holiday</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet> */}
+            <Helmet>
+            <title>{ holidayData.metaTitle }</title>
+                <meta name="description" content={holidayData.metaDescription}></meta>
+                <link rel="canonical" href={holidayData.canonical} />
+            </Helmet>
         <Header data={false}/>
         <section>
             <div className="tabs" id="tabs" style={{ display: 'none', marginTop: '8%' }}>

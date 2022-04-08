@@ -80,7 +80,7 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
   }
   async function getMetaData() {
     try {
-       const res = fetch(`${baseURL1}/pagemeta/list`)
+       const res = fetch(`${baseURL}/pagemeta/list`)
        const data =  (await res).json().then(res1=>{
          console.log(res1[0])
           setMeta1(res1[0])

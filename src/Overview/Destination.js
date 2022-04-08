@@ -102,7 +102,7 @@ function Destination() {
     let decrementCounter = () => setCounter(counter - 1);
     if (counter <= 1) {
         decrementCounter = () => setCounter(1);
-    }
+    } 
     const [counter1, setCounter1] = useState(1);
     const incrementCounter1 = () => setCounter1(counter1 + 1);
     let decrementCounter1 = () => setCounter1(counter1 - 1);
@@ -226,9 +226,9 @@ function Destination() {
         <>
               <Helmet>
                 <meta charSet="utf-8" />
-                <title>{ meta.metatitle }</title>
-                <meta name="description" content={meta.metadescription}></meta>
-                <link rel="canonical" href={meta.canonical} />
+                <title>{ destinationData.metaTitle }</title>
+                <meta name="description" content={destinationData.metaDescription}></meta>
+                <link rel="canonical" href={destinationData.canonical} />
             </Helmet>
             <Header />
             <section className='darkblue'>
