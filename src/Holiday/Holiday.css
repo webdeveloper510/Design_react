@@ -11,6 +11,14 @@
 .Adults {
   width: 80%;
 }
+.modal-backdrop.show {
+  opacity: .5;
+  display: none;
+  overflow: auto;
+}
+body.modal-open {
+  overflow: auto !important;
+}
 
 .arrow {
   margin: auto;
