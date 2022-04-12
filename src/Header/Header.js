@@ -104,7 +104,7 @@ function Header(props) {
                         <div className="text-right">
                           <ul className="list-group list-group-flush ">
                             <li className="list-group-item">
-                            <a rel="noreferrer"href='/holiday/624828d4424af43b3a728fe8' > ALL HOLIDAYS </a></li>
+                            <a rel="noreferrer"href='/#/holiday/624828d4424af43b3a728fe8' > ALL HOLIDAYS </a></li>
                           </ul>
                         </div>
                       </div>
