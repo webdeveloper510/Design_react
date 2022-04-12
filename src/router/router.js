@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from '../Home/Home';
 import Filter from '../Filter/Filter';
 import Holiday from '../Holiday/Holiday';
@@ -13,7 +13,7 @@ import Holiday1 from '../Holiday/Holiday1';
 
 const Routers = () => {
   return (
-    <Router>
+    <Router basename='/'>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/filter" element={<Filter/>} /> 
