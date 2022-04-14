@@ -1059,7 +1059,7 @@ const getBookings = (d, callback) => {
                     destinations.map(destination=>{
                       return <div className="col-md-3 px-5">
                          <p>
-                         <a href={'/#/destination/'+destination.title}>{ destination.title }</a>
+                         <a href={'/destination/'+destination.title}>{ destination.title }</a>
                                
                     
                   
