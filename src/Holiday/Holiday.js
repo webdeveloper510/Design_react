@@ -58,6 +58,7 @@ function Holiday() {
     const [activeSection, setActiveSection] = React.useState('home');
 
     useEffect(() => {
+
         // Update the document title using the browser API\
         //onPageLoadingSingle()
         getHolidayPageMetaData()

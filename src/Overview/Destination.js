@@ -32,14 +32,15 @@ function Destination() {
     const { destinationName } = useParams()
     
     useEffect(() => {
+        window.scrollTo(0, 0)
         // Update the document title using the browser API
-        getDestinationPageMetaData()
+        // getDestinationPageMetaData()
         getDestinationPageData()
       },[]);
       
-      async function getDestinationPageMetaData() {
+      async function getDestinationPageMetaData(id) {
         try {
-           const res = fetch(`${baseURL}/pagemeta/destination`)
+           const res = fetch(`${baseURL}/destination/destinationMeta/${id}`)
            const data =  (await res).json().then(res1=>{
                console.log(res1)
              setMeta(res1)
@@ -57,6 +58,7 @@ function Destination() {
                console.log(res1,"herer")
              setDestinationData(res1)
              getDestinationPageSections(res1.id)
+             getDestinationPageMetaData(res1.id)
              //console.log(destinationData.slides)
            })
       
@@ -697,7 +699,7 @@ function Destination() {
                                
          </div> </div> </div> </div>
          {destinationData.slides ? 
-                    <div className="He">
+                    <div className="He container">
                     <ImageSliderComponent images={destinationData.slides}/>
                     </div>
                      : null }

@@ -60,6 +60,7 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
 }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     // Update the document title using the browser API
     getHomePageData()
     getHomePageSections()
@@ -92,10 +93,22 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
   }
   async function getDestinationList() {
     try {
+      const data1=[]
        const res = fetch(`${baseURL}/destination/list`)
        const data =  (await res).json().then(res1=>{
            console.log(res1)
-         setDestinations(res1)
+           if(res1){
+        res1.map((value,key)=>{
+          console.log(value.shownOnDashboard)
+         if(value.shownOnDashboard===true){
+          data1.push(value)
+          console.log(value)
+
+         }
+        })
+           }
+           console.log(data1)
+         setDestinations(data1)
        })
   
     } catch (err) {
@@ -281,6 +294,7 @@ const getBookings = (d, callback) => {
     x.style.display = "none";
   }
   }
+
     return (
       <>
       <Helmet>
@@ -1045,7 +1059,7 @@ const getBookings = (d, callback) => {
                     destinations.map(destination=>{
                       return <div className="col-md-3 px-5">
                          <p>
-                         <Link to={'/destination/'+destination.title}>{ destination.title }</Link>
+                         <a href={'/#/destination/'+destination.title}>{ destination.title }</a>
                                
                     
                   

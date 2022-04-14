@@ -15,7 +15,7 @@ const Routers = () => {
   return (
     <Router basename='/'>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route  exact path="/" element={<Home />} />
         <Route exact path="/filter" element={<Filter/>} /> 
         <Route exact path="/holiday/:holidayId" element={<Holiday/>} /> 
         <Route exact path="/holiday1" element={<Holiday1/>} /> 

@@ -994,3 +994,7 @@ span.Review {
     bottom: 0%;
     padding: 0px;
 }
+
+.He .image-gallery-image {
+    max-height: 440px !important;
+}
