@@ -60,7 +60,7 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
 }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+
     // Update the document title using the browser API
     getHomePageData()
     getHomePageSections()
@@ -68,6 +68,7 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
     getMetaData()
   },[]);
   async function getHomePageData() {
+    window.scrollTo(0, 0)
     try {
        const res = fetch(`${baseURL}/pagemeta/homepage`)
        const data =  (await res).json().then(res1=>{
@@ -1059,7 +1060,7 @@ const getBookings = (d, callback) => {
                     destinations.map(destination=>{
                       return <div className="col-md-3 px-5">
                          <p>
-                         <a href={'/destination/'+destination.title}>{ destination.title }</a>
+                         <Link to={'/destination/'+destination.title}>{ destination.title }</Link>
                                
                     
                   

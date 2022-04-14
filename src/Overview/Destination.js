@@ -32,13 +32,14 @@ function Destination() {
     const { destinationName } = useParams()
     
     useEffect(() => {
-        window.scrollTo(0, 0)
+        
         // Update the document title using the browser API
         // getDestinationPageMetaData()
         getDestinationPageData()
       },[]);
       
       async function getDestinationPageMetaData(id) {
+        window.scrollTo(0, 0)
         try {
            const res = fetch(`${baseURL}/destination/destinationMeta/${id}`)
            const data =  (await res).json().then(res1=>{

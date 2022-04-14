@@ -104,7 +104,8 @@ function Header(props) {
                         <div className="text-right">
                           <ul className="list-group list-group-flush ">
                             <li className="list-group-item">
-                            <a href='/holiday/624828d4424af43b3a728fe8'  > ALL HOLIDAYS </a>
+                            <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link>
+                            {/* <a href='/holiday/624828d4424af43b3a728fe8'  > </a> */}
                             </li>
                           </ul>
                         </div>
