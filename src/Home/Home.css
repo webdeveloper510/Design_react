@@ -632,6 +632,13 @@ a.text-yellow:hover {
         width: 86%;
         margin-top: -24%;
     }
+    .fullwidth {
+        width:100% !important;
+        margin-bottom: 10px;
+    }
+    .banner{
+        padding: 0px !important;
+    }
     .suggection1{
         margin-left: 0px;
         width: 91%;
@@ -688,6 +695,7 @@ a.text-yellow:hover {
 
 .over1 {
     bottom: 15px;
+    width: 70%;
 }
 
 .col-md-4.overhead {margin-top: 15px;}
@@ -718,6 +726,9 @@ a.text-yellow:hover {
 }
 .col-md-2.col-4 img {
     height: 100%;
+}
+.overhead img {
+    height: 300px !important;
 }
 .over {
     background: #ffffffc4;

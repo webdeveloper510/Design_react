@@ -893,7 +893,7 @@ const getBookings = (d, callback) => {
                 
                     {
                     section2?.sections.map(sectionn=>{
-                          return <div style={{width:sectionn.percentage+'% '}}>
+                          return <div className="fullwidth" style={{width:sectionn.percentage+'% '}}>
                           <div className="family" style={{backgroundImage:'url('+sectionn.image+')'}}>
                           <div className="bannerpack">
                                   <h3>{ sectionn.title }</h3>
@@ -925,7 +925,7 @@ const getBookings = (d, callback) => {
                  <div className="row">
                  {
                     section3?.sections.map(sectionns=>{
-                   return <div className="overhead my-1" style={{width:sectionns.percentage+'% '}}>
+                   return <div className="overhead my-1 fullwidth" style={{width:sectionns.percentage+'% '}}>
                        <img  alt='' src={ sectionns.image } className="img-fluid w-100"/>
                        <div className={ sectionns.percentage < 50 ? 'over' : 'over1'}>
                           <h3>{ sectionns.title }</h3>
