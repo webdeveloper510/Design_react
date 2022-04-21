@@ -58,7 +58,7 @@ function Filter() {
                                                 Board
                                             </button>
                                         </h2>
-                                        <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -111,7 +111,7 @@ function Filter() {
                                                 Star rating
                                             </button>
                                         </h2>
-                                        <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div id="collapseTwo" className="accordion-collapse collapse"  data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
@@ -177,7 +177,7 @@ function Filter() {
                                                 <img  alt='' src="trip.png" className='img-fluid' />
                                             </button>
                                         </h2>
-                                        <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
@@ -244,7 +244,7 @@ function Filter() {
                                                 Budget per person
                                             </button>
                                         </h2>
-                                        <div id="collapsefour" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div id="collapsefour" className="accordion-collapse collapse " data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexCheckDefault" />
@@ -287,7 +287,7 @@ function Filter() {
                                                 Holiday type
                                             </button>
                                         </h2>
-                                        <div id="collapsefive" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div id="collapsefive" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -334,7 +334,7 @@ function Filter() {
                                                 Facilities
                                             </button>
                                         </h2>
-                                        <div id="collapsesix" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div id="collapsesix" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -383,7 +383,7 @@ function Filter() {
                                                 Pool
                                             </button>
                                         </h2>
-                                        <div id="collapseseven" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div id="collapseseven" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -436,7 +436,7 @@ function Filter() {
                                                 Kids
                                             </button>
                                         </h2>
-                                        <div id="collapseeight" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div id="collapseeight" className="accordion-collapse collapse " data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />

@@ -43,7 +43,7 @@ function Header(props) {
       <div className="mobile">
         <a rel="noreferrer" className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
       </div>
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex="-1"  aria-hidden="true">
         <div className="modal-dialog" style={{ marginTop: '6.75rem' }}>
           <div className="modal-content">
 
@@ -77,7 +77,7 @@ function Header(props) {
                   </div>
                   <div className="col-md-9">
                     <div className="tab-content mt-2 p-3" id="pills-tabContent">
-                      <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" aria-labelledby="pills-Holidays-tab">
+                      <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" >
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
@@ -118,7 +118,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="pills-Destinations" role="tabpanel" aria-labelledby="pills-Destinations-tab">
+                      <div className="tab-pane fade" id="pills-Destinations" role="tabpanel">
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
@@ -152,7 +152,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" aria-labelledby="pills-Hotels-tab">
+                      <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" >
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
@@ -186,7 +186,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="pills-About" role="tabpanel" aria-labelledby="pills-About-tab">
+                      <div className="tab-pane fade" id="pills-About" role="tabpanel">
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
@@ -220,7 +220,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="pills-Extras" role="tabpanel" aria-labelledby="pills-Extras-tab">
+                      <div className="tab-pane fade" id="pills-Extras" role="tabpanel">
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
@@ -254,7 +254,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </div>
-                      <div className="tab-pane fade" id="pills-Social" role="tabpanel" aria-labelledby="pills-Social-tab">
+                      <div className="tab-pane fade" id="pills-Social" role="tabpanel">
 
                         <div className="row">
                           <div className="col-md-4">

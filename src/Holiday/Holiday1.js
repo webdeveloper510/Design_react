@@ -353,7 +353,7 @@ function Holiday1() {
                         <div className="tab-content" id="myTabContent">
                           
                            {/*------------------ Package Holidays section---------------------- */}
-                            <div className="tab-pane fade show active" id="Profile" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="tab-pane fade show active" id="Profile" role="tabpanel" >
                             <div className="container">
                              <div className="flighttabs">
                                  <form>
@@ -651,7 +651,7 @@ function Holiday1() {
                         </div>
                     </div>
                                  {/*------------------ hotals section---------------------- */}
-                                 <div className="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
+                                 <div className="tab-pane fade " id="Flight" role="tabpanel" >
                                   <div className="container">
                                  <div className="flighttabs">
                                  <form>

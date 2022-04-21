@@ -325,7 +325,7 @@ const getBookings = (d, callback) => {
                         <div className="tab-content" id="myTabContent">
                           
                            {/*------------------ Package Holidays section---------------------- */}
-                            <div className="tab-pane fade show active" id="Profile" role="tabpanel" aria-labelledby="home-tab">
+                            <div className="tab-pane fade show active" id="Profile" role="tabpanel">
                             <div className="container">
                              <div className="flighttabs">
                                  <form>
@@ -580,7 +580,7 @@ const getBookings = (d, callback) => {
                                 </div></div>
               
                                  {/*------------------ hotals section---------------------- */}
-                                 <div className="tab-pane fade " id="Flight" role="tabpanel" aria-labelledby="flight-tab">
+                                 <div className="tab-pane fade " id="Flight" role="tabpanel" >
                                   <div className="container">
                                  <div className="flighttabs">
                                  <form>
@@ -659,7 +659,7 @@ const getBookings = (d, callback) => {
                                                               </div>
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
-                                                                <select className="form-select" id="inputGroupSelect8">
+                                                                <select className="form-select" id="inputGroupSelect80">
                                                                   <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -675,7 +675,7 @@ const getBookings = (d, callback) => {
                                                                 </div>
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
-                                                                <select className="form-select" id="inputGroupSelect8">
+                                                                <select className="form-select" id="inputGroupSelect18">
                                                                   <option value="DEFAULT">Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
