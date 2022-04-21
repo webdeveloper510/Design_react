@@ -1117,7 +1117,7 @@ const getBookings = (d, callback) => {
                                     <div className="float-right">
                                      <img  alt='' src="chat.png" width="50px" height="50px"/>
                                       </div> 
-                                    <a rel="noreferrer"href="#">Chat with us online</a>
+                                    <a rel="noreferrer" href="#">Chat with us online</a>
                             </div>
                             <div className="col-md-4 px-5">
                               <h4 className="text-center my-3">Ask a Question?</h4>

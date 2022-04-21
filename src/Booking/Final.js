@@ -58,7 +58,7 @@ function Final() {
                 </tbody>
               </table>
               <div className='my-3'>
-                <a href='#' className='blue fw-700'>Click here to read important information about deposits.</a> <br/>
+                <a href='#' rel="noreferrer noopener" className='blue fw-700'>Click here to read important information about deposits.</a> <br/>
                 <small>(Holiday availability and price are subject to change)</small>
               </div>
               <div className='row'>
@@ -98,16 +98,16 @@ function Final() {
 
                 <div className='row'>
                   <div className='col-6'>
-                    <p><a href="#">Supplier booking conditions</a> <br />
-                      <a href="#">Package travel rights</a><br />
-                      <a href="#">Free airport lounge terms</a><br />
-                      <a href="#">Free airport fast track terms</a><br />
-                      <a href="#">Terms of business </a></p>
+                    <p><a href="#" rel="noreferrer noopener">Supplier booking conditions</a> <br />
+                      <a href="#" rel="noreferrer">Package travel rights</a><br />
+                      <a href="#" rel="noreferrer">Free airport lounge terms</a><br />
+                      <a href="#" rel="noreferrer">Free airport fast track terms</a><br />
+                      <a href="#" rel="noreferrer">Terms of business </a></p>
                   </div>
                   <div className='col-6'>
-                    <a href="#">Insurance policy wording</a> <br />
-                    <a href="#">Insurance terms of business</a> <br />
-                    <a href="#">Insurance product information document</a>
+                    <a href="#" rel="noreferrer" >Insurance policy wording</a> <br />
+                    <a href="#" rel="noreferrer">Insurance terms of business</a> <br />
+                    <a href="#" rel="noreferrer">Insurance product information document</a>
                   </div>
                 </div>
               

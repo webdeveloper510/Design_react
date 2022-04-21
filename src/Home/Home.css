@@ -1,3 +1,5 @@
+
+
 .tabs .nav-link.active {
     color: black !important;
     background-color: #e7f5fd !important;
@@ -299,9 +301,7 @@ li.list-group-item.last {
 li.lists1 {
     font-size: 20px;
 }
-button.btn.btn-primary.form-control {
-    border-radius: 4px !important;
-}
+
 .suggection3 {
     position: absolute;
     margin-top: 0px;
@@ -626,6 +626,18 @@ a.text-yellow:hover {
     display: none;
 }
 
+.mbsc-disabled .mbsc-calendar-cell-text, .mbsc-disabled .mbsc-calendar-month-name {
+    opacity: 1 !important;
+}
+.summer {
+    margin-top: 30px;
+}
+img.image-gallery-image {
+    height: 600px;
+}
+.holidays .card svg{
+    margin: 0px;
+}
 @media only screen and (max-width: 768px) {
     .filterss1 {
         position: absolute;
@@ -636,8 +648,12 @@ a.text-yellow:hover {
         width:100% !important;
         margin-bottom: 10px;
     }
-    .banner{
-        padding: 0px !important;
+    .banner {
+        padding: 0!important;
+        margin-top: -77px;
+    }
+    img.image-gallery-image {
+        height: 300px;
     }
     .suggection1{
         margin-left: 0px;
@@ -652,7 +668,7 @@ a.text-yellow:hover {
     .mobile {
         position: absolute;
         right: 0;
-        top: 20px;
+        top: 11px;
         font-size: 29px;
     }
     h4.mb-4.holi {
@@ -662,7 +678,6 @@ a.text-yellow:hover {
         display: block;
     }
     .Holidays1 {
-
         width: 96%;
         z-index: 99;
     }
@@ -677,13 +692,14 @@ a.text-yellow:hover {
         position: absolute;
         z-index: 99;
         margin-top: -46%;
-        width: 91%;
+        width: 86%;
     }
     .hotals {
         margin-top: 15px;
     }
-    .hotals {margin-top: 15px;}
-
+    .hotals {
+        margin-top: 15px;
+    }
 
 .flight {
     margin: 15px 0px;
@@ -979,7 +995,7 @@ span.Review {
     transform: scaleX(-1);
 }
 .holidays .card svg {
-    margin-top: 23px;
+
     margin-right: 11px;
 }
 
