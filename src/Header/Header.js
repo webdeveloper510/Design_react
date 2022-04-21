@@ -19,7 +19,7 @@ function Header(props) {
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
           <a rel="noreferrer"className="navbar-brand"><img  alt='' src={mainLogo}  style={{ marginTop: '-27px', marginLeft: '-55px' }} width="301px" height="45px" /></a>
-          <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -56,22 +56,22 @@ function Header(props) {
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab" aria-controls="pills-Destinations" aria-selected="false"> <img  alt='' src={destinationImage} className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab"  aria-selected="false"> <img  alt='' src={destinationImage} className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab" aria-controls="pills-Hotels" aria-selected="false"> <img  alt='' src={hotelImage} className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab"  aria-selected="false"> <img  alt='' src={hotelImage} className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img  alt='' src={aboutImage}className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-selected="false"><img  alt='' src={aboutImage}className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img  alt='' src={holiday1Image} className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab"  aria-selected="false"><img  alt='' src={holiday1Image} className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img  alt='' src={socialImage} className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab"  aria-selected="false"><img  alt='' src={socialImage} className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
                       </li>
                     </ul>
                   </div>

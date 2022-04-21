@@ -54,7 +54,7 @@ function Filter() {
                                 <div className="accordion" id="accordionExample">
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingOne">
-                                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" >
                                                 Board
                                             </button>
                                         </h2>
@@ -107,7 +107,7 @@ function Filter() {
                                     </div>
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingTwo">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
                                                 Star rating
                                             </button>
                                         </h2>
@@ -173,7 +173,7 @@ function Filter() {
                                     </div>
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingThree">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" >
                                                 <img  alt='' src="trip.png" className='img-fluid' />
                                             </button>
                                         </h2>
@@ -240,7 +240,7 @@ function Filter() {
 
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingOne">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true">
                                                 Budget per person
                                             </button>
                                         </h2>
@@ -283,7 +283,7 @@ function Filter() {
                                     </div>
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingTwo">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseTwo">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false">
                                                 Holiday type
                                             </button>
                                         </h2>
@@ -330,7 +330,7 @@ function Filter() {
                                     </div>
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingThree">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseThree">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" >
                                                 Facilities
                                             </button>
                                         </h2>
@@ -379,7 +379,7 @@ function Filter() {
 
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingOne">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="true" >
                                                 Pool
                                             </button>
                                         </h2>
@@ -432,7 +432,7 @@ function Filter() {
                                     </div>
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingOne">
-                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" >
                                                 Kids
                                             </button>
                                         </h2>

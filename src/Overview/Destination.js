@@ -243,10 +243,10 @@ function Destination() {
                       
                        <ul className="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li className="nav-item" role="presentation">
-                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Flight + Hotel</button>
+                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab"  aria-selected="true">Flight + Hotel</button>
                             </li>
                             <li className="nav-item" role="presentation">
-                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
+                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-selected="false">Hotels</button>
                             </li>
                         </ul>
                         </div>
@@ -320,7 +320,7 @@ function Destination() {
                                         <div className="form-group">
                                             <label >Duration</label>
                                             
-                                            <select className="form-select" id="inputGroupSelect01">
+                                            <select className="form-select" id="inputGroupSelect121">
                                                 <option selected>7 Nights</option>
                                                 <option value="1">1 Night</option>
                                                 <option value="2"> 2 Nights</option>
@@ -376,7 +376,7 @@ function Destination() {
                                                         <div className="row">
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect1">
                                                                   <option selected>I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -391,7 +391,7 @@ function Destination() {
                                                               </div>
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect2">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -407,7 +407,7 @@ function Destination() {
                                                                 </div>
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect3">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -439,7 +439,7 @@ function Destination() {
                                                                  <div className="row">
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
-                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                      <select className="form-select" id="inputGroupSelect4">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -463,7 +463,7 @@ function Destination() {
                                                                         </div>
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
-                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                      <select className="form-select" id="inputGroupSelect5">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -573,7 +573,7 @@ function Destination() {
                                                         <div className="row">
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect6">
                                                                   <option selected>I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -588,7 +588,7 @@ function Destination() {
                                                               </div>
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect7">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -604,7 +604,7 @@ function Destination() {
                                                                 </div>
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
-                                                                <select className="form-select" id="inputGroupSelect01">
+                                                                <select className="form-select" id="inputGroupSelect8">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -636,7 +636,7 @@ function Destination() {
                                                                  <div className="row">
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
-                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                      <select className="form-select" id="inputGroupSelect9">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -660,7 +660,7 @@ function Destination() {
                                                                         </div>
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
-                                                                      <select className="form-select" id="inputGroupSelect01">
+                                                                      <select className="form-select" id="inputGroupSelect10">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>

@@ -314,10 +314,10 @@ const getBookings = (d, callback) => {
                       
                        <ul className="nav nav-tabs custom_tab_style1" id="myTab" role="tablist">
                             <li className="nav-item" role="presentation">
-                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-controls="home" aria-selected="true">Flight + Hotel</button>
+                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab" aria-selected="true">Flight + Hotel</button>
                             </li>
                             <li className="nav-item" role="presentation">
-                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-controls="flight" aria-selected="false">Hotels</button>
+                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-selected="false">Hotels</button>
                             </li>
                         </ul>
                         </div>
