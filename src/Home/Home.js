@@ -798,15 +798,15 @@ const getBookings = (d, callback) => {
                                                                 <h4>How flexible</h4>
                                                                 <div className="mb-3 form-check">
                                                                       <input type="radio" className="form-check-input" name="day" />
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">Not Flexible</label>
+                                                                      <label className="form-check-label" >Not Flexible</label>
                                                                     </div>
                                                                     <div className="mb-3 form-check">
                                                                       <input type="radio" className="form-check-input" name="day"/>
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">+/- 3 Days</label>
+                                                                      <label className="form-check-label">+/- 3 Days</label>
                                                                     </div>
                                                                     <div className="mb-3 form-check">
                                                                       <input type="radio" className="form-check-input"name="day"/>
-                                                                      <label className="form-check-label" htmlFor="exampleCheck1">+/- 7 Days  </label>
+                                                                      <label className="form-check-label" >+/- 7 Days  </label>
                                                                     </div>
                                                                 </div>
                                                          </div>
