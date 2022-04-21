@@ -1,5 +1,13 @@
 import React, {useState}from 'react'
 import mainLogo from './suntours_logo.svg';
+import headerImage from '../assets/Layer123.png'
+import holidayImage from '../assets/holi.png'
+import aboutImage from '../assets/about.png'
+import destinationImage from '../assets/desti.png'
+import holiday1Image from '../assets/holiday.png'
+import hotelImage from '../assets/hotels.png'
+import socialImage from '../assets/Social.png'
+
 import {
   Link
 } from "react-router-dom";
@@ -48,22 +56,22 @@ function Header(props) {
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img  alt='' src="holi.png" className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays" type="button" role="tab" aria-controls="pills-Holidays" aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab" aria-controls="pills-Destinations" aria-selected="false"> <img  alt='' src="desti.png" className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations" type="button" role="tab" aria-controls="pills-Destinations" aria-selected="false"> <img  alt='' src={destinationImage} className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab" aria-controls="pills-Hotels" aria-selected="false"> <img  alt='' src="hotels.png" className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Hotels-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotels" type="button" role="tab" aria-controls="pills-Hotels" aria-selected="false"> <img  alt='' src={hotelImage} className="img-fluid" /> Hotels  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img  alt='' src="about.png" className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link " id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About" type="button" role="tab" aria-controls="pills-About" aria-selected="false"><img  alt='' src={aboutImage}className="img-fluid" /> About Us  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img  alt='' src="holiday.png" className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Extras-tab" data-bs-toggle="pill" data-bs-target="#pills-Extras" type="button" role="tab" aria-controls="pills-Extras" aria-selected="false"><img  alt='' src={holiday1Image} className="img-fluid" /> Holiday Extras  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img  alt='' src="Social.png" className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
+                        <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" type="button" role="tab" aria-controls="pills-Social" aria-selected="false"><img  alt='' src={socialImage} className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
                       </li>
                     </ul>
                   </div>
@@ -73,7 +81,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -114,7 +122,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -148,7 +156,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -182,7 +190,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -216,7 +224,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage}className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>
@@ -251,7 +259,7 @@ function Header(props) {
                         <div className="row">
                           <div className="col-md-4">
                             <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src="layer123.png" className="mt-2 mb-2" height="111px" width="80%" />
+                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
                             <ul className="list-group list-group-flush first-list">
                               <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                             </ul>

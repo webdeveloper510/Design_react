@@ -1,5 +1,6 @@
 import React from 'react';
 import StepHeader from './StepHeader';
+import clockImage from '../assets/clock.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 function Step1() {
@@ -10,7 +11,7 @@ function Step1() {
         <div className='row py-2'>
           <div className='col-md-3 '>
             <div className='clock p-1'>
-              <img  alt='' src="clock.png" width="80px" className=' m-0' />
+              <img  alt='' src={clockImage} width="80px" className=' m-0' />
               <div className='deal'>
                 <h3 className='blue m-0'> <b> 29:59 </b></h3>
                 <p className='blue'><b>Left to book this deal! </b></p>

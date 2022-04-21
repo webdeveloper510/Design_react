@@ -440,7 +440,7 @@ const getBookings = (d, callback) => {
                                                   <div className="">
                                                     <div className="modal-content">
                                                       <div className="modal-header">
-                                                        <h5 className="modal-title text-dark">Holidays</h5>
+                                                        {/* <h5 className="modal-title text-dark">Holidays</h5> */}
                                                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={toggleNumbers}></button>
                                                       </div>
                                                       <div className="modal-body text-dark">

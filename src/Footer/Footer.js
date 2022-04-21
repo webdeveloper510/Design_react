@@ -1,4 +1,6 @@
 import React from 'react'
+import footerImage from '../assets/footerlogo.png'
+import footer from '../assets/footer.png'
 import "./Footer.css"
 function Footer() {
     return (
@@ -10,7 +12,7 @@ function Footer() {
                    <p className="user"><a rel="noreferrer"href="#" rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href="#" rel="noreferrer">Privacy </a>|<a rel="noreferrer"href="#" rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href="#" rel="noreferrer">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
-                           <img  alt='' src="footerlogo.png" height="128px"className="img-fluid"/>
+                           <img  alt='' src={footerImage} height="128px"className="img-fluid"/>
                        </div>
                        <div className="col-md-9 mt-3">
                            <h5> <b>Stay Safe whilst you travel </b> </h5>
@@ -47,7 +49,7 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src="footer.png"width="30px" height="30px"/></p>
+                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src={footer} width="30px" height="30px"/></p>
                 </div>
                 <div className="col-md-4 text-right">
                     <img  alt='' src="home-alternate.png" height="50px" className="img-fluid"/>

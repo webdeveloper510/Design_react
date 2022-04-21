@@ -1,10 +1,10 @@
 import React from 'react';
-
+import suntourImageLogo from '../assets/suntours_logo.svg'
 function StepHeader() {
   return <div className='container'>
     <div className='row'>
       <div className='col-md-2'>
-        <img  alt='' src="suntours_logo.svg" width="277px" height="60px" className='mt-3'/>
+        <img  alt='' src={suntourImageLogo} width="277px" height="60px" className='mt-3'/>
       </div>
       <div className='col'></div>
       <div className='col-md-8 text-right'>
