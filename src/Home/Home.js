@@ -873,7 +873,7 @@ const getBookings = (d, callback) => {
                         </div>
                      </div>
                      <div className="col-md-4 my-3 d-flex">
-                     <img  alt='' src="footer.png" width="50px" height="50px" className="mr-3 m-0"/>
+                     <img  alt='' src="footer.png"  className="mr-3 m-0 wit-50 hit-50"/>
                      <p style={{textAlign:"left",marginLeft: '10px'}}> ATOL  <br/>Protected</p>
                   </div>
                   <div className="col-md-4 my-3 d-flex">
@@ -1115,7 +1115,7 @@ const getBookings = (d, callback) => {
                                     <h3>020-200-2000</h3>
                                     <p>Outside the UK</p>
                                     <div className="float-right">
-                                     <img  alt='' src="chat.png" width="50px" height="50px"/>
+                                     <img  alt='' src="chat.png"className='wit-50 hit-50'/>
                                       </div> 
                                     <a rel="noreferrer" href="#">Chat with us online</a>
                             </div>

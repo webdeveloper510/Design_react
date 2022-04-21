@@ -484,6 +484,13 @@ input.form-control {
 select.form-select {
     height: 60px;
 }
+.wit-50 {
+    width: 50px;
+}
+
+.hit-50{
+    height: 50px;
+}
 .input-group.mb-3 button.btn.btn-secondary {
     background: #ffffff;
     border-color: #d9d9d9;

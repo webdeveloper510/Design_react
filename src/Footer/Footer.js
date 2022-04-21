@@ -9,10 +9,10 @@ function Footer() {
             <div className="row">
                 <div className="col-md-9">
                     <h4 className="my-3">Legal</h4>
-                   <p className="user"><a rel="noreferrer"href="#" rel="noreferrer">User Agreement </a>| <a rel="noreferrer"href="#" rel="noreferrer">Privacy </a>|<a rel="noreferrer"href="#" rel="noreferrer"> Cookies </a> | <a rel="noreferrer"href="#" rel="noreferrer">AdChoices </a></p>
+                   <p className="user"><a rel="noreferrer"href="#" >User Agreement </a>| <a rel="noreferrer" href="#" >Privacy </a>|<a href="#" rel="noreferrer"> Cookies </a> | <a href="#" rel="noreferrer">AdChoices </a></p>
                    <div className="row">
                        <div className="col-md-3 ">
-                           <img  alt='' src={footerImage} height="128px"className="img-fluid"/>
+                           <img  alt='' src={footerImage} className="img-fluid hit-125"/>
                        </div>
                        <div className="col-md-9 mt-3">
                            <h5> <b>Stay Safe whilst you travel </b> </h5>
@@ -20,9 +20,9 @@ function Footer() {
                           
                             For the latest foreign travel advice visit <a rel="noreferrer"href="www.gov.uk/foreign-travel-advice">www.gov.uk/foreign-travel-advice</a><br/>
                             <br/>
-                            Follow our <a rel="noreferrer"href="" rel="noreferrer"> travel update</a><br/><br/>
+                            Follow our <a href="#" rel="noreferrer"> travel update</a><br/><br/>
                             
-                            Visit the  <a rel="noreferrer"href="" rel="noreferrer"> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
+                            Visit the  <a href="#" rel="noreferrer"> Covid-19 Hub </a> to see how we provide guidance and protection<br/>
                             </p>
                        </div>
                    </div>
@@ -49,10 +49,10 @@ function Footer() {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src={footer} width="30px" height="30px"/></p>
+                    <p className="mt-3" style={{fontSize: '20px'}}>© 2022  Suntours Limited | Company Number: 13534409 | ATOL: 123456 <img  alt=''  src={footer} className="wit-30 hit-30"/></p>
                 </div>
                 <div className="col-md-4 text-right">
-                    <img  alt='' src="home-alternate.png" height="50px" className="img-fluid"/>
+                    <img  alt='' src="home-alternate.png"  className="img-fluid hit-50"/>
                 </div>
             </div>
             <hr/>

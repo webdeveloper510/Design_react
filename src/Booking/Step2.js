@@ -60,7 +60,7 @@ function Step2() {
                   </div>
                   <div class="mb-3 form-check text-right">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label blue fw-bold" for="exampleCheck1">Apply surname to all passengers</label>
+                    <label class="form-check-label blue fw-bold">Apply surname to all passengers</label>
                   </div>
                 </form>
               </div>
@@ -99,7 +99,7 @@ function Step2() {
                   </div>
                   <div class="mb-3 form-check ">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label blue fw-bold" for="exampleCheck1">Authorise this passenger to discuss the booking with Suntours</label>
+                    <label class="form-check-label blue fw-bold" >Authorise this passenger to discuss the booking with Suntours</label>
                   </div>
                 </form>
               </div>
@@ -110,7 +110,7 @@ function Step2() {
               <div className='discuss px-4 pt-4'>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                  <label class="form-check-label blue fw-bold" style={{ fontSize: 13 }} for="exampleCheck1">Tick this box if someone in your party requires support with disabled access on your flight, transfer or hotel</label>
+                  <label class="form-check-label blue fw-bold" style={{ fontSize: 13 }} >Tick this box if someone in your party requires support with disabled access on your flight, transfer or hotel</label>
                 </div>
                 <div class="col-md-6">
                   <label className='blue fw-700'>Name of passenger who requires support</label>
