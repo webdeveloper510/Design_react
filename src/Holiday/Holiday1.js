@@ -419,7 +419,7 @@ function Holiday1() {
                                         <div className="form-group">
                                             <label >Duration</label>
                                             
-                                            <select className="form-select" id="inputGroupSelect01">
+                                            <select className="form-select" id="inputGroupSelect0010">
                                                 <option selected>7 Nights</option>
                                                 <option value="1">1 Night</option>
                                                 <option value="2"> 2 Nights</option>

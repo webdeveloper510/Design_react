@@ -532,7 +532,7 @@ function Holiday() {
                                                         </div>
                                                         <div className="col-md-2">
                                                             <label>Adults</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect102">
                                                                 <option >Choose...</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
