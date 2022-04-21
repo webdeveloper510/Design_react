@@ -481,7 +481,7 @@ input.form-control {
     height: 60px;
 }
 
-select#inputGroupSelect01 {
+select.form-select {
     height: 60px;
 }
 .input-group.mb-3 button.btn.btn-secondary {

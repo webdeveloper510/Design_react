@@ -273,7 +273,7 @@ input.pack {
   margin-top: 19%;
 }
 
-.card select#inputGroupSelect01 {
+.card select.form-select {
   height: auto;
 }
 

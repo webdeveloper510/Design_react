@@ -461,7 +461,7 @@ function Holiday() {
                                             <div className="form-group">
                                                 <label >Duration</label>
 
-                                                <select className="form-select" id="inputGroupSelect01">
+                                                <select className="form-select" id="inputGroupSelect1">
                                                     <option >7 Nights</option>
                                                     <option value="1">1 Night</option>
                                                     <option value="2"> 2 Nights</option>
@@ -517,7 +517,7 @@ function Holiday() {
                                                     <div className="row">
                                                         <div className="col-md-4">
                                                             <label>Number of rooms</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect">
                                                                 <option >I don't mind</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -548,7 +548,7 @@ function Holiday() {
                                                         </div>
                                                         <div className="col-md-2">
                                                             <label>Children (0-17)</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect0">
                                                                 <option >Choose...</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -580,7 +580,7 @@ function Holiday() {
                                                             <div className="row">
                                                                 <div className="col-md-4">
                                                                     <label>Child 1</label>
-                                                                    <select className="form-select" id="inputGroupSelect01">
+                                                                    <select className="form-select" id="inputGroupSelect2">
                                                                         <option >Choose...</option>
                                                                         <option value="1">1</option>
                                                                         <option value="2">2</option>
@@ -604,7 +604,7 @@ function Holiday() {
                                                                 </div>
                                                                 <div className="col-md-4">
                                                                     <label>Child 2</label>
-                                                                    <select className="form-select" id="inputGroupSelect01">
+                                                                    <select className="form-select" id="inputGroupSelect02">
                                                                         <option >Choose...</option>
                                                                         <option value="1">1</option>
                                                                         <option value="2">2</option>
@@ -714,7 +714,7 @@ function Holiday() {
                                                     <div className="row">
                                                         <div className="col-md-4">
                                                             <label>Number of rooms</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect3">
                                                                 <option >I don't mind</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -729,7 +729,7 @@ function Holiday() {
                                                         </div>
                                                         <div className="col-md-2">
                                                             <label>Adults</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect03">
                                                                 <option >Choose...</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -745,7 +745,7 @@ function Holiday() {
                                                         </div>
                                                         <div className="col-md-2">
                                                             <label>Children (0-17)</label>
-                                                            <select className="form-select" id="inputGroupSelect01">
+                                                            <select className="form-select" id="inputGroupSelect4">
                                                                 <option >Choose...</option>
                                                                 <option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -777,7 +777,7 @@ function Holiday() {
                                                             <div className="row">
                                                                 <div className="col-md-4">
                                                                     <label>Child 1</label>
-                                                                    <select className="form-select" id="inputGroupSelect01">
+                                                                    <select className="form-select" id="inputGroupSelect04">
                                                                         <option >Choose...</option>
                                                                         <option value="1">1</option>
                                                                         <option value="2">2</option>
@@ -801,7 +801,7 @@ function Holiday() {
                                                                 </div>
                                                                 <div className="col-md-4">
                                                                     <label>Child 2</label>
-                                                                    <select className="form-select" id="inputGroupSelect01">
+                                                                    <select className="form-select" id="inputGroupSelect5">
                                                                         <option >Choose...</option>
                                                                         <option value="1">1</option>
                                                                         <option value="2">2</option>
@@ -1493,7 +1493,7 @@ function Holiday() {
                                             <div className='col'>
                                                 <label>Adults</label>
                                                 <div className="input-group">
-                                                    <select className="form-select" id="inputGroupSelect01">
+                                                    <select className="form-select" id="inputGroupSelect05">
                                                         <option >2</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -1507,7 +1507,7 @@ function Holiday() {
                                             <div className='col'>
                                                 <label>Children <small>(2-15 yrs)</small></label>
                                                 <div className="input-group">
-                                                    <select className="form-select" id="inputGroupSelect01">
+                                                    <select className="form-select" id="inputGroupSelect5">
                                                         <option >0</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -1521,7 +1521,7 @@ function Holiday() {
                                             <div className='col'>
                                                 <label>Infants <small>(0-23mths)</small></label>
                                                 <div className="input-group">
-                                                    <select className="form-select" id="inputGroupSelect01">
+                                                    <select className="form-select" id="inputGroupSelect06">
                                                         <option >0</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -1535,7 +1535,7 @@ function Holiday() {
                                             <div className='col'>
                                                 <label>Room(s)</label>
                                                 <div className="input-group">
-                                                    <select className="form-select" id="inputGroupSelect01">
+                                                    <select className="form-select" id="inputGroupSelect6">
                                                         <option  value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
