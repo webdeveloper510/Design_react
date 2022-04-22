@@ -137,11 +137,11 @@ function Holiday1() {
                 const d = new Date(booking.d);
 
                 if (booking.price > 0) {
-                    labels.push({
-                        start: d,
-                        title: '$' + booking.price,
-                        textColor: '#e1528f'
-                    });
+                    // labels.push({
+                    //     start: d,
+                    //     title: '$' + booking.price,
+                    //     textColor: '#e1528f'
+                    // });
                 } else {
                     invalid.push(d);
                 }

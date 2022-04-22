@@ -144,11 +144,11 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
             const d = new Date(booking.d);
 
             if (booking.price > 0) {
-                labels.push({
-                    start: d,
-                    title: '$' + booking.price,
-                    textColor: '#e1528f'
-                });
+                // labels.push({
+                //     start: d,
+                //     title: '$' + booking.price,
+                //     textColor: '#e1528f'
+                // });
             } else {
                 invalid.push(d);
             }
@@ -162,6 +162,7 @@ const getDatetimes = (d, callback) => {
     let labels = [];
 
     getJson('https://mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
+      console.log(bookings)
         for (let i = 0; i < bookings.length; ++i) {
             const booking = bookings[i];
             const bDate = new Date(booking.d);
@@ -170,7 +171,7 @@ const getDatetimes = (d, callback) => {
                 labels.push({
                     start: bDate,
                     title: booking.nr + ' SPOTS',
-                    textColor: '#e1528f'
+                    textColor: '#e1528f'  
                 });
                 invalid = [...invalid, ...booking.invalid];
             } else {
