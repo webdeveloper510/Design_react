@@ -1,7 +1,8 @@
 .books {
   border: 1px solid #ebc817;
-  background: #ebc817;
+  background: hsl(50, 84%, 51%);
   padding: 11px 28px;
+  cursor: pointer;
 }
 
 .books p {

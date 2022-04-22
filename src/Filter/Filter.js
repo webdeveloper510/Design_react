@@ -572,7 +572,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6'>
                             <div className='card'>
-                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src="image.png" className="card-img-top" />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>
@@ -611,7 +611,7 @@ function Filter() {
                         </div>
                         <div className='col-md-6 '>
                             <div className='card'>
-                                <img  alt='' src="image.png" className="card-img-top" alt="..." />
+                                <img  alt='' src="image.png" className="card-img-top"  />
                                 <div className='cardbody p-3'>
                                     <div className='row'>
                                         <div className='col-md-9'>

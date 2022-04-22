@@ -700,7 +700,7 @@ function Destination() {
                                
          </div> </div> </div> </div>
          {destinationData.slides ? 
-                    <div className="He container">
+                    <div className="He ">
                     <ImageSliderComponent images={destinationData.slides}/>
                     </div>
                      : null }
