@@ -299,13 +299,12 @@ const getBookings = (d, callback) => {
 
     return (
       <>
-      < meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>{ meta1.metaTitle }</title>
                 <meta name="description" content={meta1.metaDescription}></meta>
                 <link rel="canonical" href={meta1.canonical} />
-            </Helmet> 
+            </Helmet>
        <Header />
     <section>
         <div className="banner pt-5">
@@ -1143,7 +1142,6 @@ const getBookings = (d, callback) => {
 
         </section>
         <Footer/>
-        </meta>
         </>
     )
 }
