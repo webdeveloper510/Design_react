@@ -299,6 +299,7 @@ const getBookings = (d, callback) => {
 
     return (
       <>
+      < meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>{ meta1.metaTitle }</title>
@@ -1142,6 +1143,7 @@ const getBookings = (d, callback) => {
 
         </section>
         <Footer/>
+        </meta>
         </>
     )
 }
