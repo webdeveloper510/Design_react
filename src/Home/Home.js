@@ -301,9 +301,9 @@ const getBookings = (d, callback) => {
       <>
       <Helmet>
                 <meta charSet="utf-8" />
-                <title>{ meta1.metaTitle }</title>
-                <meta name="description" content={meta1.metaDescription}></meta>
-                <link rel="canonical" href={meta1.canonical} />
+                <title>{ meta.metaTitle }</title>
+                <meta name="description" content={meta.metaDescription}></meta>
+                <link rel="canonical" href={meta.canonical} />
             </Helmet>
        <Header />
     <section>
