@@ -17,7 +17,7 @@ import {Helmet} from "react-helmet";
 
 function Destination() {
     const [counter, setCounter] = useState(1); 
-    const baseURL = "http://138.68.163.128:3000/v1";
+    const baseURL = "http://sun-1.co.uk:3001/v1";
     const baseURL1 = "http://localhost:3001/v1";
     const [meta, setMeta] = useState({});
     const [destinationData, setDestinationData] = useState({});
