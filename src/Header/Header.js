@@ -14,6 +14,8 @@ import {
 const baseURL = "http://sun-1.co.uk:3001/v1";
 function Header(props) {
   const[data,setData]=useState([])
+  const[activeClass,setActiveClass]=useState(null) 
+  const [subMenu,setSubMenu]=useState()
 
   useEffect(() => {
     getMenu()
@@ -24,8 +26,15 @@ console.log('here working ')
     const data =  (await res).json().then(res=>{
       console.log(res)
       setData(res)
+      setSubMenu(res[0])
       
     })
+  }
+  const test =(id)=>{
+    console.log(id)
+    let activeIndex = activeClass === id ? null : id;
+    setActiveClass({activeIndex});
+    setSubMenu(data[id])
   }
   return (
     <div className="container narrow">
@@ -69,8 +78,9 @@ console.log('here working ')
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     { data.length!=0&& data.map((menu,key)=>(
-                        <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
+                        <li  className="nav-item" role="presentation">
+                          
+                        <a rel="noreferrer" className={`nav-link ${activeClass === key && 'm-active'}`} onClick={()=>test(key)}id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
                       </li>
                     ))
                                 }
@@ -93,225 +103,236 @@ console.log('here working ')
                     </ul>
                   </div>
                   <div className="col-md-9">
-                    <div className="tab-content mt-2 p-3" id="pills-tabContent">
-                      <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" >
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first">
-                                <Link to={'/holiday/624828d4424af43b3a728fe8'}>All-inclusive Holidays </Link>
-                              </li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a>
-                              </li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
-                            </ul>
-                          </div>
-                        </div>
+           {
+             subMenu&&(
+              <div className="tab-content mt-2 p-3" id="pills-tabContent">
+              <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" >
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={subMenu.image} className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-8">
+                    <h4 className="mb-4 holi">{subMenu.title} </h4>
+                    <ul className="list-group list-group-flush row">
+                      {
+                        subMenu.subMenus.length!=0 && subMenu.subMenus.map((data,index)=>(
+                          <li className="list-group-item first col-md-6">
+                          <Link to={'/holiday/624828d4424af43b3a728fe8'}>{data.title} </Link>
+                        </li>
+                        )
+                    
+                        )
+                      }
+                     
+                      {/* <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a>
+                      </li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li> */}
+                    </ul>
+                  </div>
+                  {/* <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div> */}
+                </div>
 
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item">
-                            <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link>
-                            {/* <a href='/holiday/624828d4424af43b3a728fe8'  > </a> */}
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="tab-pane fade" id="pills-Destinations" role="tabpanel">
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" >
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="tab-pane fade" id="pills-About" role="tabpanel">
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="tab-pane fade" id="pills-Extras" role="tabpanel">
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage}className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                             <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="tab-pane fade" id="pills-Social" role="tabpanel">
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item">
+                    <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link>
+                    {/* <a href='/holiday/624828d4424af43b3a728fe8'  > </a> */}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-Destinations" role="tabpanel">
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4 holi">Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-Hotels" role="tabpanel" >
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4 holi">Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-About" role="tabpanel">
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4 holi">Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-Extras" role="tabpanel">
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={headerImage}className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4 holi">Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                     <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-Social" role="tabpanel">
 
-                        <div className="row">
-                          <div className="col-md-4">
-                            <h4 className="mb-4">Featured Holidays</h4>
-                            <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
-                            <ul className="list-group list-group-flush first-list">
-                              <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4 holi">Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
+                <div className="row">
+                  <div className="col-md-4">
+                    <h4 className="mb-4">Featured Holidays</h4>
+                    <img  alt='' src={headerImage} className="mt-2 mb-2" height="111px" width="80%" />
+                    <ul className="list-group list-group-flush first-list">
+                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4 holi">Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">All-inclusive Holidays </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Beach Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Family Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> Adult Holidays </a></li>
 
-                            </ul>
-                          </div>
-                          <div className="col-md-4">
-                            <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
-                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
-                              <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
-                              <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-4">
+                    <h4 className="mb-4" style={{ opacity: 0 }}>Holidays </h4>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item first"><a rel="noreferrer"href="#">Balaerics Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Canaries Holidays  </a></li>
+                      <li className="list-group-item"><a rel="noreferrer"href="#">Spain Holidays </a></li>
+                      <li className="list-group-item last"><a rel="noreferrer"href="#"> USA Holidays  </a></li>
 
-                            </ul>
-                          </div>
-                        </div>
+                    </ul>
+                  </div>
+                </div>
 
-                        <div className="text-right">
-                          <ul className="list-group list-group-flush ">
-                            <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
-                          </ul>
-                        </div>
+                <div className="text-right">
+                  <ul className="list-group list-group-flush ">
+                    <li className="list-group-item"><a rel="noreferrer"href="#"> ALL HOLIDAYS   </a></li>
+                  </ul>
+                </div>
 
 
-                      </div>
-                    </div>
+              </div>
+            </div>
+             )
+           }
                   </div>
                 </div>
               </div>
