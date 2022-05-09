@@ -1,4 +1,4 @@
-import React, {useState}from 'react'
+import React, {useState,useEffect}from 'react'
 import mainLogo from './suntours_logo.svg';
 import headerImage from '../assets/Layer123.png'
 import holidayImage from '../assets/holi.png'
@@ -11,9 +11,22 @@ import socialImage from '../assets/Social.png'
 import {
   Link
 } from "react-router-dom";
-
+const baseURL = "http://sun-1.co.uk:3001/v1";
 function Header(props) {
-  const[data,setData]=useState(props)
+  const[data,setData]=useState([])
+
+  useEffect(() => {
+    getMenu()
+console.log('here working ')
+  },[]);
+  async function getMenu(){
+    const res = fetch(`${baseURL}/menu/getMenuList`)
+    const data =  (await res).json().then(res=>{
+      console.log(res)
+      setData(res)
+      
+    })
+  }
   return (
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -55,10 +68,14 @@ function Header(props) {
                 <div className="row">
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                      <li className="nav-item" role="presentation">
-                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />Holidays  &nbsp;&nbsp; ></a>
+                    { data.length!=0&& data.map((menu,key)=>(
+                        <li className="nav-item" role="presentation">
+                        <a rel="noreferrer" className="nav-link active" id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
                       </li>
-                      <li className="nav-item" role="presentation">
+                    ))
+                                }
+                    
+                      {/* <li className="nav-item" role="presentation">
                         <a rel="noreferrer" className="nav-link" id="pills-Destinations-tab" data-bs-toggle="pill" data-bs-target="#pills-Destinations"  role="tab"  aria-selected="false"> <img  alt='' src={destinationImage} className="img-fluid" /> Destinations  &nbsp;&nbsp; ></a>
                       </li>
                       <li className="nav-item" role="presentation">
@@ -72,7 +89,7 @@ function Header(props) {
                       </li>
                       <li className="nav-item" role="presentation">
                         <a rel="noreferrer"href="#" className="nav-link" id="pills-Social-tab" data-bs-toggle="pill" data-bs-target="#pills-Social" role="tab"  aria-selected="false"><img  alt='' src={socialImage} className="img-fluid" /> Social  &nbsp;&nbsp; ></a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="col-md-9">
