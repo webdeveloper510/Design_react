@@ -80,7 +80,7 @@ console.log('here working ')
                     { data.length!=0&& data.map((menu,key)=>(
                         <li  className="nav-item" role="presentation">
                           
-                        <a rel="noreferrer" className={`nav-link ${activeClass === key && 'm-active'}`} onClick={()=>test(key)}id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={holidayImage} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
+                        <a rel="noreferrer" className={`nav-link ${activeClass === key && 'm-active'}`} onClick={()=>test(key)}id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={menu.icon} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
                       </li>
                     ))
                                 }
@@ -110,7 +110,7 @@ console.log('here working ')
                 <div className="row">
                   <div className="col-md-4">
                     <h4 className="mb-4">Featured Holidays</h4>
-                    <img  alt='' src={subMenu.image} className="mt-2 mb-2" height="111px" width="80%" />
+                    <img  alt='' src={subMenu.image} className="mt-2 mb-2" height="111px" width="95%" />
                     <ul className="list-group list-group-flush first-list">
                       <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
                     </ul>
