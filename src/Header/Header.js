@@ -107,7 +107,7 @@ console.log('here working ')
              subMenu&&(
               <div className="tab-content mt-2 p-3" id="pills-tabContent">
               <div className="tab-pane fade show active" id="pills-Holidays" role="tabpanel" >
-                <div className="row">
+                <div className="row"> 
                   <div className="col-md-4">
                     <h4 className="mb-4">Featured Holidays</h4>
                     <img  alt='' src={subMenu.image} className="mt-2 mb-2" height="111px" width="95%" />
