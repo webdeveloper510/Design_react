@@ -61,8 +61,11 @@ i.fa.fa-bars {
     border-bottom: 1px solid #e7dbdb;
 }
 .mega-menu ul li {
-    width: 100%;
     font-weight: 600;
+}
+.list-group {
+    flex-direction: unset;
+    flex-wrap: wrap;
 }
 label {
     font-size: 13px;
@@ -291,9 +294,13 @@ span.redcolor {
     border-bottom: 2px solid yellow;
     padding-bottom: 3px;
 }
-
+.mega-menu ul li.nav-item {
+    font-weight: 600;
+    width: 100%;
+}
 li.list-group-item.first {
     border-top: 1px solid rgba(0,0,0,.125);
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
 }
 li.list-group-item.last {
     border-bottom: 1px solid rgba(0,0,0,.125) !important;
