@@ -19,7 +19,7 @@ const Routers = () => {
         <Route exact path="/filter" element={<Filter/>} /> 
         <Route exact path="/holiday/:holidayId" element={<Holiday/>} /> 
         <Route exact path="/holiday1" element={<Holiday1/>} /> 
-        <Route exact path="/Destination/:destinationName" element={<Destination/>} /> 
+        <Route exact path="/Destination/:id" element={<Destination/>} /> 
 
         <Route exact path="/Step1" element={<Step1/>} /> 
         <Route exact path="/Step2" element={<Step2/>} /> 

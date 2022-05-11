@@ -121,7 +121,7 @@ console.log('here working ')
                       {
                         subMenu.subMenus.length!=0 && subMenu.subMenus.map((data,index)=>(
                           <li className="list-group-item first col-md-6">
-                          <Link to={'/holiday/624828d4424af43b3a728fe8'}>{data.title} </Link>
+                          <a href={data.link}>{data.title} </a>
                         </li>
                         )
                     

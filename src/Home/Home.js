@@ -1061,7 +1061,7 @@ const getBookings = (d, callback) => {
                     destinations.map(destination=>{
                       return <div className="col-md-3 px-5">
                          <p>
-                         <Link to={'/destination/'+destination.title}>{ destination.title }</Link>
+                         <Link to={'/destination/'+destination.id}>{ destination.title }</Link>
                                
                     
                   

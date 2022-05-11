@@ -29,7 +29,7 @@ function Destination() {
     const [section6, setSection6] = useState([]);
     const [section7, setSection7] = useState([]);
 
-    const { destinationName } = useParams()
+    const { id } = useParams()
     
     useEffect(() => {
         
@@ -54,7 +54,8 @@ function Destination() {
 
       async function getDestinationPageData() {
         try {
-           const res = fetch(`${baseURL}/destination/name/${destinationName}`)
+           const res = fetch(`${baseURL}/destination/${id}`)
+           console.log(id)
            const data =  (await res).json().then(res1=>{
                console.log(res1,"herer")
              setDestinationData(res1)
