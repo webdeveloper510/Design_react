@@ -1,12 +1,6 @@
 import React, {useState,useEffect}from 'react'
 import mainLogo from './suntours_logo.svg';
 import headerImage from '../assets/Layer123.png'
-import holidayImage from '../assets/holi.png'
-import aboutImage from '../assets/about.png'
-import destinationImage from '../assets/desti.png'
-import holiday1Image from '../assets/holiday.png'
-import hotelImage from '../assets/hotels.png'
-import socialImage from '../assets/Social.png'
 
 import {
   Link
@@ -40,7 +34,7 @@ console.log('here working ')
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
-          <a rel="noreferrer"className="navbar-brand"><img  alt='' src={mainLogo}  style={{ marginTop: '-27px', marginLeft: '-55px' }} width="301px" height="45px" /></a>
+          <Link to={'/'} rel="noreferrer"className="navbar-brand"><img  alt='' src={mainLogo}  style={{ marginTop: '-27px', marginLeft: '-55px' }} width="301px" height="45px" /></Link>
           <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -65,7 +59,7 @@ console.log('here working ')
       <div className="mobile">
         <a rel="noreferrer" className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
       </div>
-      <div className="modal fade" id="exampleModal" tabIndex="-1"  aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex="-1" style={{paddingRight: 0, overflowX: 'auto', overflowY: 'hidden'}}  aria-hidden="true">
         <div className="modal-dialog" style={{ marginTop: '6.75rem' }}>
           <div className="modal-content">
 
