@@ -36,6 +36,7 @@ function Home() {
   const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
   const [multipleLabels, setMultipleLabels] = React.useState([]);
   const [multipleInvalid, setMultipleInvalid] = React.useState([]);
+  const [holidayList, setHolidayList] = React.useState([]);
   const [activeSection, setActiveSection] = React.useState('home');
   const onPageLoadingSingle = React.useCallback((event, inst) => {
     getPrices(event.firstDay, (bookings) => {
@@ -52,6 +53,26 @@ const onPageLoadingDatetime = React.useCallback((event, inst) => {
     });
 }, []);
 
+ async function getHolidayList(){
+  try {
+   const data1=[]
+    const res = fetch(`${baseURL}/holiday/list`)
+    const data =  (await res).json().then(res1=>{
+      console.log(res1)
+      if(res1){
+   res1.map((value,key)=>{
+    if(value.shownOnDashboard===true){
+     data1.push(value)
+    }
+   })
+      }
+    setHolidayList(data1)
+    })
+
+ } catch (err) {
+ //  setGetResult(err.message);
+ }
+}
 const onPageLoadingMultiple = React.useCallback((event, inst) => {
     getBookings(event.firstDay, (bookings) => {
         setMultipleLabels(bookings.labels);
@@ -66,6 +87,7 @@ const onPageLoadingMultiple = React.useCallback((event, inst) => {
     getHomePageSections()
     getDestinationList()
     getMetaData()
+    getHolidayList()
   },[]);
   async function getHomePageData() {
     window.scrollTo(0, 0)
@@ -1059,12 +1081,11 @@ const getBookings = (d, callback) => {
                     <div className="row text-darkblue">
                     {
                     destinations.map(destination=>{
+                      let destinationName = destination.title;
+                      destinationName = destinationName.replace(/\s+/g, '-');
                       return <div className="col-md-3 px-5">
                          <p>
-                         <Link to={'/destination/'+destination.title}>{ destination.title }</Link>
-                               
-                    
-                  
+                         <Link to={'/destination/'+destinationName}>{ destination.title }</Link>
                             </p>
                          </div>
                          })
@@ -1072,7 +1093,23 @@ const getBookings = (d, callback) => {
                          
                       </div>
                   </div>
-                     
+                  <div className="container">
+                    <h3 className="my-3 px-4">Popular Holidays</h3>
+                    <div className="row text-darkblue">
+                    {
+                    holidayList.map(holiday=>{
+                      let holidayName = holiday.title;
+                      holidayName = holidayName.replace(/\s+/g, '-');
+                      return <div className="col-md-3 px-5">
+                         <p>
+                         <Link to={'/holiday/'+holidayName}>{ holiday.title }</Link>
+                            </p>
+                         </div>
+                         })
+                        }
+                         
+                      </div>
+                  </div>
                      <div className="Contacting">
                   <div className="container">
                     <div className="row last-section py-4">

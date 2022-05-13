@@ -11,17 +11,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlane, faAngleRight, faStar,  } from '@fortawesome/pro-solid-svg-icons';
 import { faCalendar,faCalendarDays, faUser } from '@fortawesome/pro-thin-svg-icons';
 import { faLocationDot } from '@fortawesome/pro-regular-svg-icons';
-import '@mobiscroll/react/dist/css/mobiscroll.react.min.css';
-import { Datepicker, getJson, Page, setOptions  } from '@mobiscroll/react';
 import ImageSliderComponent from '../router/slider';
 import {Helmet} from "react-helmet";
 
 
 function Holiday1() {
-    const [counter, setCounter] = useState(1);
+    const [counter, setCounter] = useState(1); 
     const baseURL = "http://sun-1.co.uk:3001/v1";
-    const [meta, setMeta] = useState({});
-    const [destinationData, setDestinationData] = useState({});
+    const [holidayData, setHolidayData] = useState({});
     const [section1, setSection1] = useState([]);
     const [section2, setSection2] = useState([]);
     const [section3, setSection3] = useState([]);
@@ -29,54 +26,52 @@ function Holiday1() {
     const [section5, setSection5] = useState([]);
     const [section6, setSection6] = useState([]);
     const [section7, setSection7] = useState([]);
-    const [datetimeLabels, setDatetimeLabels] = React.useState([]);
-    const [datetimeInvalid, setDatetimeInvalid] = React.useState([]);
-    const [multipleLabels, setMultipleLabels] = React.useState([]);
-    const [multipleInvalid, setMultipleInvalid] = React.useState([]);
-    const [activeSection, setActiveSection] = React.useState('holiday1');
-    const min = '2022-01-12T00:00';
-    const max = '2022-07-12T00:00';
-    const [singleLabels, setSingleLabels] = React.useState([]);
-    const [singleInvalid, setSingleInvalid] = React.useState([]);
-    const { destinationName } = useParams()
-    const slides=["https://i.picsum.photos/id/1026/1000/400.jpg?hmac=WwPvherFBxu3coMXysnyhfbbH0b-bb9_uTvKnPY2I48","https://i.picsum.photos/id/1015/1000/400.jpg?hmac=QRwq0dHoUCccqSJUSPniL_B0-YFpQgEshPyDPn4oJlw"]
-    // useEffect(() => {
-    //     // Update the document title using the browser API
-    //     getDestinationPageMetaData()
-    //     getDestinationPageData()
-    //   },[]);
-      
-    //   async function getDestinationPageMetaData() {
-    //     try {
-    //        const res = fetch(`${baseURL}/pagemeta/destination`)
-    //        const data =  (await res).json().then(res1=>{
-    //            console.log(res1)
-    //          setMeta(res1)
-    //        })
-      
-    //     } catch (err) {
-    //     //  setGetResult(err.message);
-    //     }
-    //   }
 
-      async function getDestinationPageData() {
-        try {
-           const res = fetch(`${baseURL}/destination/name/${destinationName}`)
-           const data =  (await res).json().then(res1=>{
-               console.log(res1,"herer")
-             setDestinationData(res1)
-             getDestinationPageSections(res1.id)
-             //console.log(destinationData.slides)
-           })
-      
-        } catch (err) {
-        //  setGetResult(err.message);
+    const { holidayName } = useParams()
+    
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        // Update the document title using the browser API
+        if(holidayName.includes('-')){
+            checkDataUrl(holidayName)
         }
+        else{
+            getHolidayPageData(holidayName)
+        }
+        
+      },[]);
+      const checkDataUrl=(data)=>{
+        let name = data;
+        name = name.replace('-',' ');
+        if(name.includes('-')){
+            checkDataUrl(name)
+        }
+        else{
+            getHolidayPageData(name)
+        }
+          
       }
 
-      async function getDestinationPageSections(id) {
+      async function getHolidayPageData(name) {
+          
+          try {
+            const res = fetch(`http://sun-1.co.uk:3001/v1/holiday/name/${name}`)
+            const data =  (await res).json().then(res1=>{
+                console.log(res1,"herer")
+              setHolidayData(res1)
+               getHolidayPageSections(res1.id)
+            })
+       
+         } catch (err) {
+         //  setGetResult(err.message);
+         }
+          }
+     
+      
+
+      async function getHolidayPageSections(id) {
         try {
-           const res = fetch(`${baseURL}/destination/${id}/sections`)
+           const res = fetch(`${baseURL}/holiday/${id}/sections`)
            const data =  (await res).json().then(res1=>{
                console.log(res1,"herer1")
                res1.map(section=>{
@@ -99,112 +94,18 @@ function Holiday1() {
                     }
                })
                
-             //console.log(destinationData.slides)
            })
       
         } catch (err) {
         //  setGetResult(err.message);
         }
       }
-      const onPageLoadingSingle = React.useCallback((event, inst) => {
-        getPrices(event.firstDay, (bookings) => {
-            setSingleLabels(bookings.labels);
-            setSingleInvalid(bookings.invalid);
-
-        });
-    }, []);
-
-    const onPageLoadingDatetime = React.useCallback((event, inst) => {
-        getDatetimes(event.firstDay, (bookings) => {
-            setDatetimeLabels(bookings.labels);
-            setDatetimeInvalid(bookings.invalid);
-        });
-    }, []);
-
-    const onPageLoadingMultiple = React.useCallback((event, inst) => {
-        getBookings(event.firstDay, (bookings) => {
-            setMultipleLabels(bookings.labels);
-            setMultipleInvalid(bookings.invalid);
-        });
-    }, []);
-    const getPrices = (d, callback) => {
-        let invalid = [];
-        let labels = [];
-
-        getJson('https://trial.mobiscroll.com/getprices/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-            for (let i = 0; i < bookings.length; ++i) {
-                const booking = bookings[i];
-                const d = new Date(booking.d);
-
-                if (booking.price > 0) {
-                    // labels.push({
-                    //     start: d,
-                    //     title: '$' + booking.price,
-                    //     textColor: '#e1528f'
-                    // });
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
-    }
-
-    const getDatetimes = (d, callback) => {
-        let invalid = [];
-        let labels = [];
-
-        getJson('https://mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-            for (let i = 0; i < bookings.length; ++i) {
-                const booking = bookings[i];
-                const bDate = new Date(booking.d);
-
-                if (booking.nr > 0) {
-                    labels.push({
-                        start: bDate,
-                        title: booking.nr + ' SPOTS',
-                        textColor: '#e1528f'
-                    });
-                    invalid = [...invalid, ...booking.invalid];
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
-    }
-
-  
-
-    const getBookings = (d, callback) => {
-        let invalid = [];
-        let labels = [];
-
-        getJson('https://trial.mobiscroll.com/getbookings/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-            for (let i = 0; i < bookings.length; ++i) {
-                const booking = bookings[i];
-                const d = new Date(booking.d);
-
-                if (booking.nr > 0) {
-                    labels.push({
-                        start: d,
-                        title: booking.nr + ' SPOTS',
-                        textColor: '#e1528f'
-                    });
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
-    }
-
 
     const incrementCounter = () => setCounter(counter + 1);
     let decrementCounter = () => setCounter(counter - 1);
     if (counter <= 1) {
         decrementCounter = () => setCounter(1);
-    }
+    } 
     const [counter1, setCounter1] = useState(1);
     const incrementCounter1 = () => setCounter1(counter1 + 1);
     let decrementCounter1 = () => setCounter1(counter1 - 1);
@@ -229,7 +130,6 @@ function Holiday1() {
     }
 
     function open() {
-      
         var x = document.getElementById("dates");
         if (x.style.display === "none") {
             x.style.display = "block";
@@ -326,11 +226,12 @@ function Holiday1() {
   
     return (
         <>
+        
               <Helmet>
                 <meta charSet="utf-8" />
-                <title>{ meta.metatitle }</title>
-                <meta name="description" content={meta.metadescription}></meta>
-                <link rel="canonical" href={meta.canonical} />
+                <title>{ holidayData.metaTitle }</title>
+                <meta name="description" content={holidayData.metaDescription}></meta>
+                <link rel="canonical" href={holidayData.canonical} />
             </Helmet>
             <Header />
             <section className='darkblue'>
@@ -345,7 +246,7 @@ function Holiday1() {
                             <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Profile" type="button" role="tab"  aria-selected="true">Flight + Hotel</button>
                             </li>
                             <li className="nav-item" role="presentation">
-                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab"  aria-selected="false">Hotels</button>
+                            <button className="nav-link" id="flight-tab" data-bs-toggle="tab" data-bs-target="#Flight" type="button" role="tab" aria-selected="false">Hotels</button>
                             </li>
                         </ul>
                         </div>
@@ -353,7 +254,7 @@ function Holiday1() {
                         <div className="tab-content" id="myTabContent">
                           
                            {/*------------------ Package Holidays section---------------------- */}
-                            <div className="tab-pane fade show active" id="Profile" role="tabpanel" >
+                            <div className="tab-pane fade show active" id="Profile" role="tabpanel">
                             <div className="container">
                              <div className="flighttabs">
                                  <form>
@@ -419,7 +320,7 @@ function Holiday1() {
                                         <div className="form-group">
                                             <label >Duration</label>
                                             
-                                            <select className="form-select" id="inputGroupSelect0010">
+                                            <select className="form-select" id="inputGroupSelect121">
                                                 <option selected>7 Nights</option>
                                                 <option value="1">1 Night</option>
                                                 <option value="2"> 2 Nights</option>
@@ -475,7 +376,7 @@ function Holiday1() {
                                                         <div className="row">
                                                             <div className="col-md-4">
                                                               <label>Number of rooms</label>
-                                                                <select className="form-select" id="inputGroupSelect">
+                                                                <select className="form-select" id="inputGroupSelect1">
                                                                   <option selected>I don't mind</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -506,7 +407,7 @@ function Holiday1() {
                                                                 </div>
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
-                                                                <select className="form-select" id="inputGroupSelect1">
+                                                                <select className="form-select" id="inputGroupSelect3">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -538,7 +439,7 @@ function Holiday1() {
                                                                  <div className="row">
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
-                                                                      <select className="form-select" id="inputGroupSelect5">
+                                                                      <select className="form-select" id="inputGroupSelect4">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -562,7 +463,7 @@ function Holiday1() {
                                                                         </div>
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
-                                                                      <select className="form-select" id="inputGroupSelect2">
+                                                                      <select className="form-select" id="inputGroupSelect5">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -606,52 +507,9 @@ function Holiday1() {
                                            </div>
                                          
                                 </div></div>
-                                <div className="filterss" tabIndex="-1" id="dates" style={{ display: 'none' }} >
-                        <div className="">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <h5 className="modal-title text-dark">Date</h5>
-                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={open} ></button>
-                                </div>
-                                <div className="modal-body text-dark">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                        <Datepicker
-                                        display="inline"
-                                        controls={['calendar']}
-                                        min={min}
-                                        max={max}
-                                        labels={singleLabels}
-                                        invalid={singleInvalid}
-                                        calendarType="month"
-                                        pages={1}
-
-                                        onPageLoading={onPageLoadingSingle}
-                                    />
-                                        </div>
-                                        <div className="col-md-4 dayss">
-                                            <h4>How flexible</h4>
-                                            <div className="mb-3 form-check">
-                                                <input type="radio" className="form-check-input" name="day" />
-                                                <label className="form-check-label" >Not Flexible</label>
-                                            </div>
-                                            <div className="mb-3 form-check">
-                                                <input type="radio" className="form-check-input" name="day" />
-                                                <label className="form-check-label" >+/- 3 Days</label>
-                                            </div>
-                                            <div className="mb-3 form-check">
-                                                <input type="radio" className="form-check-input" name="day" />
-                                                <label className="form-check-label" >+/- 7 Days  </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+              
                                  {/*------------------ hotals section---------------------- */}
-                                 <div className="tab-pane fade " id="Flight" role="tabpanel" >
+                                 <div className="tab-pane fade " id="Flight" role="tabpanel">
                                   <div className="container">
                                  <div className="flighttabs">
                                  <form>
@@ -730,7 +588,7 @@ function Holiday1() {
                                                               </div>
                                                               <div className="col-md-2">
                                                               <label>Adults</label>
-                                                                <select className="form-select" id="inputGroupSelect3">
+                                                                <select className="form-select" id="inputGroupSelect7">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -746,7 +604,7 @@ function Holiday1() {
                                                                 </div>
                                                                 <div className="col-md-2">
                                                                 <label>Children (0-17)</label>
-                                                                <select className="form-select" id="inputGroupSelect7">
+                                                                <select className="form-select" id="inputGroupSelect8">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -778,7 +636,7 @@ function Holiday1() {
                                                                  <div className="row">
                                                                       <div className="col-md-4">
                                                                       <label>Child 1</label>
-                                                                      <select className="form-select" id="inputGroupSelect4">
+                                                                      <select className="form-select" id="inputGroupSelect9">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -802,7 +660,7 @@ function Holiday1() {
                                                                         </div>
                                                                         <div className="col-md-4">
                                                                         <label>Child 2</label>
-                                                                      <select className="form-select" id="inputGroupSelect8">
+                                                                      <select className="form-select" id="inputGroupSelect10">
                                                                   <option selected>Choose...</option>
                                                                   <option value="1">1</option>
                                                                   <option value="2">2</option>
@@ -841,18 +699,18 @@ function Holiday1() {
                                  </div>
                                
          </div> </div> </div> </div>
-         {slides ? 
-                    <div className="He">
-                    <ImageSliderComponent images={slides}/>
+         {holidayData.slides ? 
+                    <div className="He ">
+                    <ImageSliderComponent images={holidayData.slides}/>
                     </div>
                      : null }
                 </div>
                
                 <div className='container'>
                     <nav aria-label="breadcrumb " className='mt-3'>
-                        <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="#">Destinations</a></li>
-                            <li className="breadcrumb-item active" aria-current="page">{destinationData.title}</li>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Holiday</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{holidayData.title}</li>
                         </ol>
                     </nav>
                 </div>
@@ -974,19 +832,17 @@ function Holiday1() {
                         <div className='row my-5'>
                             <div className='col-md-5'>
                                 <h3 className='mb-4'>{section1.title}</h3>
-                                {/* <p> section1.sections[0]['description'] : null}</p> */}
-                            </div>
-                            <div className='row'>
-                            { section1.sections ? section1.sections.map(sect=>{
-                               return <div style={{width:`${sect.percentage}%`}}>
+                                <div className='row'>
+                                <div style={{width:`${section1.percentage}%`}}>
                                    <div >
-                                    <p>{sect.description}</p>
+                                    <p>{section1.description}</p>
                                 </div>
                                 <div>
-                                    <img src={sect.image} height='100%' className='img-fluid'/>
+                                    <img src={section1.image} height='100%' className='img-fluid'/>
                                 </div></div>
-                            })  : null }
-                               </div> 
+                                </div>
+                            </div>
+                        
                             
                             
                         </div>
@@ -997,14 +853,14 @@ function Holiday1() {
                     <div className='container'>
                         <div className='thinks'>
                             <h3 className='my-5'>{section2.title}</h3>
-                            {section2.sections? 
-                                section2.sections.map(sect1=>{
-                                    return <div style={{width:`${sect1.percentage}%`}}>
-                                        <p><b>{sect1.title}</b></p>
-                                        <p>{sect1.description}</p>
-                                    </div>
-                                })
-                            : null}
+                            <div style={{width:`${section2.percentage}%`}}>
+                                   <div >
+                                    <p>{section2.description}</p>
+                                </div>
+                                <div>
+                                    <img src={section2.image} height='100%' className='img-fluid'/>
+                                </div>
+                                </div>                              
                         </div>
                     </div>
                 : null }
@@ -1020,7 +876,7 @@ function Holiday1() {
                           {section3.description}
                           </p>
                       </div>
-                      {/* <div className='soaked'>
+                      <div className='soaked'>
                           <div className='soaked1'></div>
                       <Slider {...settings} className="subitem">
                         <div className='soakedItem '>
@@ -1084,7 +940,7 @@ function Holiday1() {
                             <small>Avg. Rain: 85mm</small>
                         </div>
                         </Slider>
-                      </div> */}
+                      </div>
                   </div>
 
                   : null }
@@ -1097,11 +953,11 @@ function Holiday1() {
                     <div className="row">
                         { section4.sections? 
                         section4.sections.map(sect2=>{
-                            return  <div className="overhead my-1" style={{width:`${sect2.percentage}%`}}>
-                                        <img alt="" src={sect2.image} className="img-fluid w-100" />
-                                        <div className="over1"><h3>{sect2.title}</h3>
+                            return  <div class="overhead my-1" style={{width:`${sect2.percentage}%`}}>
+                                        <img alt="" src={sect2.image} class="img-fluid w-100" />
+                                        <div class="over1"><h3>{sect2.title}</h3>
                                         <p> {sect2.description}</p>
-                                        <button className="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; </button>
+                                        <button class="btn btn-primary float-right" type="button">Search &nbsp;&nbsp; </button>
                                         </div>
                                 </div>
                                 
@@ -1174,7 +1030,6 @@ function Holiday1() {
             </div>
             : null }
             </section>
-        
             <Footer />
         </>
     )

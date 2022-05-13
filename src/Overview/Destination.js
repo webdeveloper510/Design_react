@@ -35,9 +35,25 @@ function Destination() {
         
         // Update the document title using the browser API
         // getDestinationPageMetaData()
-        getDestinationPageData()
+        if(destinationName.includes('-')){
+            checkDataUrl(destinationName)
+        }
+        else{
+            getDestinationPageData(destinationName)
+        }
+        
       },[]);
-      
+      const checkDataUrl=(data)=>{
+        let name = data;
+        name = name.replace('-',' ');
+        if(name.includes('-')){
+            checkDataUrl(name)
+        }
+        else{
+            getDestinationPageData(name)
+        }
+          
+      }
       async function getDestinationPageMetaData(id) {
         window.scrollTo(0, 0)
         try {
@@ -52,21 +68,24 @@ function Destination() {
         }
       }
 
-      async function getDestinationPageData() {
-        try {
-           const res = fetch(`${baseURL}/destination/name/${destinationName}`)
-           const data =  (await res).json().then(res1=>{
-               console.log(res1,"herer")
-             setDestinationData(res1)
-             getDestinationPageSections(res1.id)
-             getDestinationPageMetaData(res1.id)
-             //console.log(destinationData.slides)
-           })
+      async function getDestinationPageData(name) {
+          
+          try {
+            const res = fetch(`${baseURL}/destination/name/${name}`)
+            const data =  (await res).json().then(res1=>{
+                console.log(res1,"herer")
+              setDestinationData(res1)
+              getDestinationPageSections(res1.id)
+              getDestinationPageMetaData(res1.id)
+              //console.log(destinationData.slides)
+            })
+       
+         } catch (err) {
+         //  setGetResult(err.message);
+         }
+          }
+     
       
-        } catch (err) {
-        //  setGetResult(err.message);
-        }
-      }
 
       async function getDestinationPageSections(id) {
         try {

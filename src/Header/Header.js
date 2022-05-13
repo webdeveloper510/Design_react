@@ -8,27 +8,38 @@ import {
 const baseURL = "http://sun-1.co.uk:3001/v1";
 function Header(props) {
   const[data,setData]=useState([])
-  const[activeClass,setActiveClass]=useState(null) 
+  const[activeClass,setActiveClass]=useState(0) 
   const [subMenu,setSubMenu]=useState()
+  const [showMenuIcon,setMenuIcon]=useState(true)
+  const [showCloseMenuIcon,setCloseMenuIcon]=useState(false)
 
   useEffect(() => {
     getMenu()
-console.log('here working ')
   },[]);
   async function getMenu(){
     const res = fetch(`${baseURL}/menu/getMenuList`)
     const data =  (await res).json().then(res=>{
-      console.log(res)
+      console.log(res[0])
       setData(res)
       setSubMenu(res[0])
       
     })
   }
   const test =(id)=>{
-    console.log(id)
     let activeIndex = activeClass === id ? null : id;
     setActiveClass({activeIndex});
     setSubMenu(data[id])
+  }
+  const menu=(type)=>{
+console.log(type)
+if(type=='close'){
+  setCloseMenuIcon(false)
+  setMenuIcon(true)
+}
+else{
+  setMenuIcon(false)
+  setCloseMenuIcon(true)
+}
   }
   return (
     <div className="container narrow">
@@ -49,8 +60,13 @@ console.log('here working ')
               <li className="nav-item">
                 <a rel="noreferrer"className="nav-link" href="#">Manage Booking </a>
               </li>
-              <li className="nav-item">
-                <a rel="noreferrer"className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
+              <li className="nav-item" hidden={showCloseMenuIcon}> 
+                <a rel="noreferrer"className="nav-link" href="#"onClick={()=>menu('open')} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
+              </li>
+              <li className="nav-item" hidden={showMenuIcon}>
+              <div className="float-right pt-2">
+                <button type="button" className="btn-close" onClick={()=>menu('close')} data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
               </li>
             </ul>
           </div>
@@ -63,10 +79,8 @@ console.log('here working ')
         <div className="modal-dialog" style={{ marginTop: '6.75rem' }}>
           <div className="modal-content">
 
-            <div className="modal-body" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
-              <div className="float-right pt-2">
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+            <div className="modal-body" style={{ padding: '0px' }}>
+             
               <div className="mega-menu ">
                 <div className="row">
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
@@ -74,7 +88,7 @@ console.log('here working ')
                     { data.length!=0&& data.map((menu,key)=>(
                         <li  className="nav-item" role="presentation">
                           
-                        <a rel="noreferrer" className={`nav-link ${activeClass === key && 'm-active'}`} onClick={()=>test(key)}id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={menu.icon} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
+                        <a rel="noreferrer" className={`nav-link ${activeClass === key ? "active" : "Inactive"}`} onClick={()=>test(key)}id="pills-Holidays-tab" data-bs-toggle="pill" data-bs-target="#pills-Holidays"  role="tab"  aria-selected="true"> <img  alt='' src={menu.icon} className="img-fluid" />{menu.title}  &nbsp;&nbsp; </a>
                       </li>
                     ))
                                 }
@@ -106,7 +120,7 @@ console.log('here working ')
                     <h4 className="mb-4">Featured Holidays</h4>
                     <img  alt='' src={subMenu.image} className="mt-2 mb-2" height="111px" width="95%" />
                     <ul className="list-group list-group-flush first-list">
-                      <li className="list-group-item"> <a rel="noreferrer"href="#">Holidays to Greecs & Cyprus  </a></li>
+                      <li className="list-group-item"> <a href={subMenu.featuredLink}>{subMenu.featuredPlace} </a> </li>
                     </ul>
                   </div>
                   <div className="col-md-8">
@@ -140,9 +154,9 @@ console.log('here working ')
                 </div>
 
                 <div className="text-right">
-                  <ul className="list-group list-group-flush ">
+                  <ul className="list-group list-group-flush justify-content-end">
                     <li className="list-group-item">
-                    <Link to={'/holiday/624828d4424af43b3a728fe8'}>ALL HOLIDAYS </Link>
+                    <Link to={'/deal/626fecae3c4c790827d95724'}>ALL HOLIDAYS </Link>
                     {/* <a href='/holiday/624828d4424af43b3a728fe8'  > </a> */}
                     </li>
                   </ul>

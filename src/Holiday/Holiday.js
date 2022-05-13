@@ -118,7 +118,6 @@ function Holiday() {
         }
       }
       async function formatSlides(slides){
-        
       slides.map(slide=>{
         images1.push({
               'original':slide,
