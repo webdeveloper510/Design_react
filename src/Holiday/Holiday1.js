@@ -830,7 +830,7 @@ function Holiday1() {
                 { section1? 
                     <div className='container'>
                         <div className='row my-5'>
-                            <div className='col-md-5'>
+                            <div className='col-md-12'>
                                 <h3 className='mb-4'>{section1.title}</h3>
                                 <div className='row'>
                                 <div style={{width:`${section1.percentage}%`}}>
