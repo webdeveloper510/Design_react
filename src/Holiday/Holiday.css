@@ -432,10 +432,22 @@ button.btn.btn-secondary.btn-sm.mx-1 {
   box-shadow: -1px 1px 19px 0px #01af871f;
   border: none;
 }
+.buttoncross.pt-2 {
+  position: absolute;
+  right: 7px;
+}
 
 @media only screen and (max-width: 600px) {
 nav.navbar.navbar-expand-lg.navbar-light {
   position: unset;
+}
+.buttoncross.pt-2 {
+  position: relative;
+  right: 0;
+  float: right;
+  width: 100%;
+  text-align: right;
+  top: -8px;
 }
 div#bars .col-md-2 {
   padding: 10px 0px;

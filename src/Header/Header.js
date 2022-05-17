@@ -30,26 +30,21 @@ function Header(props) {
     setActiveClass({activeIndex});
     setSubMenu(data[id])
   }
-  const menu=(type)=>{
-console.log(type)
-if(type=='close'){
-  setCloseMenuIcon(false)
-  setMenuIcon(true)
-}
-else{
-  setMenuIcon(false)
-  setCloseMenuIcon(true)
-}
-  }
+
   return (
     <div className="container narrow">
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
           <Link to={'/'} rel="noreferrer"className="navbar-brand"><img  alt='' src={mainLogo}  style={{ marginTop: '-27px', marginLeft: '-55px' }} width="301px" height="45px" /></Link>
-          <button className="navbar-toggler d-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler d-none " type="button"
+          data-backdrop="static" 
+          data-keyboard="false"
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse"
+          id="navbarSupportedContent">
             <ul className="navbar-nav  mb-2 m-lg-auto">
               <li className="nav-item">
                 <a rel="noreferrer"className="nav-link " aria-current="page" href="#">Travel Alerts</a>
@@ -60,13 +55,8 @@ else{
               <li className="nav-item">
                 <a rel="noreferrer"className="nav-link" href="#">Manage Booking </a>
               </li>
-              <li className="nav-item" hidden={showCloseMenuIcon}> 
-                <a rel="noreferrer"className="nav-link" href="#"onClick={()=>menu('open')} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
-              </li>
-              <li className="nav-item" hidden={showMenuIcon}>
-              <div className="float-right pt-2">
-                <button type="button" className="btn-close" onClick={()=>menu('close')} data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+              <li className="nav-item" > 
+                <a rel="noreferrer"className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa fa-bars"></i> </a>
               </li>
             </ul>
           </div>
@@ -80,7 +70,9 @@ else{
           <div className="modal-content">
 
             <div className="modal-body" style={{ padding: '0px' }}>
-             
+            <div className="buttoncross pt-2">
+                <button type="button" className="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
               <div className="mega-menu ">
                 <div className="row">
                   <div className="col-md-3" style={{ paddingLeft: '0px', paddingTop: '0px' }}>
